@@ -4,7 +4,13 @@ import { notFound } from 'next/navigation';
 import { articles, getArticle } from '@/app/lib/blog';
 import '@/app/styles/blog.css';
 
+// Aktifkan rendering dinamis untuk path yang belum di‑generate
+export const dynamic = 'force-dynamic';
+// Non‑aktifkan ISR cache sehingga setiap request selalu mengambil data terbaru
+export const revalidate = 0;
+
 export async function generateStaticParams() {
+    // Generate static pages untuk semua artikel yang sudah ada
     return articles.map((a) => ({ id: a.id }));
 }
 
@@ -50,11 +56,14 @@ export default async function BlogDetail({
                     <span className="breadcrumb-current">Article</span>
                 </div>
 
-                <div className="blog-header" style={{ marginTop: '40px' }}>
-                    <div
-                        className="meta-pill"
-                        style={{ display: 'inline-flex', marginBottom: '24px' }}
-                    >
+                {/* Animated Holographic Glows */}
+                <div className="blog-glow-blob" />
+                <div className="blog-glow-blob secondary" />
+                <div className="blog-glow-blob tertiary" />
+
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1 }}>
+                    <div className="meta-pill">
                         <div className="meta-pill-text">
                             <span className="meta-pill-label">
                                 {article.category}
@@ -71,30 +80,32 @@ export default async function BlogDetail({
                             </span>
                         </div>
                     </div>
+
                     <h1 className="detail-title">{article.title}</h1>
-                    <div className="blog-tags" style={{ marginTop: '24px' }}>
+
+                    <div className="blog-tags">
                         {article.tags.map((tag) => (
                             <span key={tag} className="blog-tag">
                                 #{tag}
                             </span>
                         ))}
                     </div>
-                </div>
 
-                <div
-                    className="detail-content-grid"
-                    style={{ gridTemplateColumns: '1fr' }}
-                >
                     <div
-                        className="detail-main glass"
-                        style={{ padding: '40px', borderRadius: '24px' }}
+                        className="detail-content-grid"
+                        style={{ gridTemplateColumns: '1fr' }}
                     >
                         <div
-                            className="detail-text"
-                            dangerouslySetInnerHTML={{
-                                __html: article.content,
-                            }}
-                        />
+                            className="detail-main glass"
+                            style={{ padding: '40px', borderRadius: '24px' }}
+                        >
+                            <div
+                                className="detail-text"
+                                dangerouslySetInnerHTML={{
+                                    __html: article.content,
+                                }}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

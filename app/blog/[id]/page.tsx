@@ -7,7 +7,7 @@ import '@/app/styles/blog.css';
 // Aktifkan rendering dinamis untuk path yang belum di‑generate
 export const dynamic = 'force-dynamic';
 // Non‑aktifkan ISR cache sehingga setiap request selalu mengambil data terbaru
-export const revalidate = 0;
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
     // Generate static pages untuk semua artikel yang sudah ada

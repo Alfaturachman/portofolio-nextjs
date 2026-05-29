@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alfaturachman - Personal Web Portfolio & Blog
 
-## Getting Started
+A professional, interactive developer portfolio and blog built with Next.js App Router and TypeScript. The project features a custom-built Glassmorphism design system, Web3-inspired animated aesthetics, and optimized performance.
 
-First, run the development server:
+## Core Architecture
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This repository serves as both a showcase of software engineering projects and a technical blog. It was developed with a strong focus on clean architecture, fluid user experience, and search engine optimization.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Interactive Design System**: Custom vanilla CSS implementation featuring Glassmorphism, dynamic gradients, and hardware-accelerated animations.
+- **Holographic Animations**: Complex CSS keyframe animations integrated with SVG noise filters for high-end visual textures.
+- **Mouse-Tracking Interactions**: Real-time CSS variable updates bound to cursor movement for interactive footer elements.
+- **Dynamic SEO Generation**: Utilization of Next.js metadata API to dynamically generate titles, descriptions, and keywords for individual project and blog routes.
+- **Integrated Content Management**: A structured approach to managing project and article data locally without relying on heavy external CMS dependencies.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies Used
 
-## Learn More
+- **Framework**: Next.js (App Router)
+- **Language**: TypeScript
+- **Styling**: Vanilla CSS (CSS Modules & Global Variables)
+- **Icons**: FontAwesome
+- **Deployment**: Vercel
 
-To learn more about Next.js, take a look at the following resources:
+## Local Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run this project locally, ensure you have Node.js installed, then follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  Clone the repository:
 
-## Deploy on Vercel
+    ```bash
+    git clone https://github.com/Alfaturachman/portofolio-nextjs.git
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2.  Navigate to the project directory:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    cd portofolio-nextjs
+    ```
+
+3.  Install the dependencies:
+
+    ```bash
+    npm install
+    ```
+
+4.  Start the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+5.  Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+## Project Structure
+
+- `/app`: Contains the Next.js App Router layout, pages, and API routes.
+    - `/blog`: Blog index and dynamic article routing.
+    - `/detail`: Dynamic routing for project details.
+- `/app/components`: Reusable UI components (Navbar, Footer, ImageCarousel).
+- `/app/styles`: Global CSS variables, theme configurations, and component-specific stylesheets.
+- `/app/lib`: Data structures, interfaces, and content files (projects.ts, blog.ts).
+
+## Contact
+
+For inquiries or professional collaboration, please refer to the contact section within the live application.

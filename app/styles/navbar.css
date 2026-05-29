@@ -1,0 +1,149 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 24px;
+  transition: padding 0.4s ease;
+}
+
+#navbar.scrolled {
+  padding: 10px 24px;
+}
+
+.nav-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 16px;
+}
+
+.nav-logo {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.nav-logo span {
+    color: var(--accent-blue);
+}
+
+.nav-links {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.nav-link {
+    padding: 7px 14px;
+    border-radius: 99px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.2s;
+    background: none;
+    border: none;
+    line-height: 1;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--accent-blue-soft);
+    color: var(--accent-blue);
+}
+
+.theme-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+    transform: rotate(15deg);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 6px;
+    background: none;
+    border: none;
+}
+
+.hamburger span {
+    width: 22px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s;
+    display: block;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    position: absolute;
+    top: 100%;
+    left: 12px;
+    right: 12px;
+    padding: 16px;
+    border-radius: 16px;
+    margin-top: 8px;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+.mobile-link {
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.2s;
+    background: none;
+    border: none;
+    text-align: left;
+}
+
+.mobile-link:hover {
+    background: var(--accent-blue-soft);
+    color: var(--accent-blue);
+}
+
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+}

@@ -1,0 +1,215 @@
+/* ----- Modal ----- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    background: var(--card-bg);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: var(--accent);
+    color: var(--inverse-text);
+}
+
+.cert-modal-box {
+    max-width: 900px;
+    width: 90%;
+    max-height: 85svh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-modal-title {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    padding-right: 40px;
+}
+
+.cert-img-wrapper {
+    flex-grow: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-modal-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 75svh;
+    object-fit: contain;
+}
+
+/* ----- Custom Cursor ----- */
+.cursor-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    z-index: 10001;
+    pointer-events: none;
+    transition:
+        width 0.2s,
+        height 0.2s;
+    will-change: transform;
+    mix-blend-mode: difference;
+}
+
+.cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 1.5px solid #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    z-index: 10000;
+    pointer-events: none;
+    transition:
+        width 0.3s,
+        height 0.3s;
+    will-change: transform;
+    mix-blend-mode: difference;
+}
+
+.cursor-dot.pointer {
+    width: 4px;
+    height: 4px;
+}
+
+.cursor-outline.pointer {
+    width: 45px;
+    height: 50px;
+    border-color: transparent;
+}
+
+/* ----- Skeleton ----- */
+.skeleton {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.03) 25%,
+        rgba(0, 0, 0, 0.06) 37%,
+        rgba(0, 0, 0, 0.03) 63%
+    );
+    background-size: 400% 100%;
+    animation: shimmer 1.4s ease infinite;
+    z-index: 1;
+}
+
+[data-theme='dark'] .skeleton {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.03) 25%,
+        rgba(255, 255, 255, 0.08) 37%,
+        rgba(255, 255, 255, 0.03) 63%
+    );
+}
+
+/* ----- Loader ----- */
+#loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.loader-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    color: var(--text-primary);
+    overflow: hidden;
+}
+
+.loader-progress {
+    width: 200px;
+    height: 2px;
+    background: var(--border-slightly);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.loader-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--accent-blue);
+    transition: width 0.4s ease;
+    border-radius: 2px;
+}
+
+/* ----- Animations ----- */
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}

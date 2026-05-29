@@ -4,13 +4,11 @@ import { notFound } from 'next/navigation';
 import { articles, getArticle } from '@/app/lib/blog';
 import '@/app/styles/blog.css';
 
-// Aktifkan rendering dinamis untuk path yang belum di‑generate
 export const dynamic = 'force-dynamic';
-// Non‑aktifkan ISR cache sehingga setiap request selalu mengambil data terbaru
 export const dynamicParams = true;
+export const revalidate = 0;
 
 export async function generateStaticParams() {
-    // Generate static pages untuk semua artikel yang sudah ada
     return articles.map((a) => ({ id: a.id }));
 }
 

@@ -1,10 +1,15 @@
 'use client';
 
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
+
+const scrollFactors = [
+    { selector: '.hero-tag', translateY: -60 },
+    { selector: '.hero-middle-grid', translateY: -100 },
+    { selector: '.hero-bottom-row', translateY: -80 },
+] as const;
 
 export default function Hero() {
     const heroRef = useRef<HTMLElement>(null);
-    const [exit, setExit] = useState(0);
 
     useEffect(() => {
         const hero = heroRef.current;
@@ -21,7 +26,16 @@ export default function Hero() {
                         rect.top < 0
                             ? Math.min(Math.abs(rect.top) / (vh * 0.6), 1)
                             : 0;
-                    setExit(progress);
+
+                    for (const { selector, translateY } of scrollFactors) {
+                        const el = hero.querySelector(selector) as HTMLElement | null;
+                        if (!el) continue;
+                        const y = progress * translateY;
+                        const opacity = 1 - progress;
+                        el.style.opacity = String(opacity);
+                        el.style.transform = `translateY(${y}px)`;
+                    }
+
                     ticking = false;
                 });
                 ticking = true;
@@ -31,12 +45,6 @@ export default function Hero() {
         window.addEventListener('scroll', onScroll, { passive: true });
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
-
-    const s = {
-        top: { opacity: 1 - exit, transform: `translateY(${-exit * 60}px)` },
-        mid: { opacity: 1 - exit, transform: `translateY(${-exit * 100}px)` },
-        bot: { opacity: 1 - exit, transform: `translateY(${-exit * 80}px)` },
-    };
 
     return (
         <section id="home" ref={heroRef}>
@@ -156,7 +164,7 @@ export default function Hero() {
 
             <div
                 className="hero-top-row hero-tag"
-                style={{ position: 'relative', zIndex: 10, ...s.top }}
+                style={{ position: 'relative', zIndex: 10 }}
             >
                 <div className="hero-brand-pill">
                     <span className="dot" />
@@ -169,7 +177,7 @@ export default function Hero() {
 
             <div
                 className="hero-middle-grid"
-                style={{ position: 'relative', zIndex: 10, ...s.mid }}
+                style={{ position: 'relative', zIndex: 10 }}
             >
                 <div className="hero-headline-container">
                     <h1 className="hero-title-main" id="heroHeadline">
@@ -214,7 +222,7 @@ export default function Hero() {
 
             <div
                 className="hero-bottom-row"
-                style={{ position: 'relative', zIndex: 10, ...s.bot }}
+                style={{ position: 'relative', zIndex: 10 }}
             >
                 <div className="hero-stat">
                     <div className="hero-stat-icon">

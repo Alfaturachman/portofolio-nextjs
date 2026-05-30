@@ -135,6 +135,17 @@ html.has-custom-cursor button {
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+@media (max-width: 768px) {
+    .glass {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+    .glass-dark {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}
+
 .blob {
     position: absolute;
     border-radius: 50%;

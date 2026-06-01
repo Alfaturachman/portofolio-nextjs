@@ -2,8 +2,21 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faRobot, faCloud, faCode } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 
 export default function Hero() {
+    const router = useRouter();
+    const pathname = usePathname();
+
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        const [path] = href.split('#');
+        
+        if (pathname !== path) {
+            e.preventDefault();
+            router.push(href);
+        }
+    };
     return (
         <section id="home">
             <div className="blob hero-glow" aria-hidden="true" />
@@ -166,11 +179,11 @@ export default function Hero() {
                         </p>
                     </div>
                     <div className="hero-cta-group hero-ctas">
-                        <a href="#portfolio" className="btn-hero-primary">
+                        <a href="/portfolio" className="btn-hero-primary" onClick={(e) => handleNavClick(e, '/portfolio')}>
                             <span>My Projects</span>
                             <FontAwesomeIcon icon={faArrowRight} className="btn-icon" />
                         </a>
-                        <a href="#about" className="btn-hero-outline">
+                        <a href="/#about" className="btn-hero-outline" onClick={(e) => handleNavClick(e, '/#about')}>
                             <span>About Me</span>
                         </a>
                     </div>

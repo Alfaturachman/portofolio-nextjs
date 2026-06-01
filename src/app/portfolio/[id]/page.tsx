@@ -71,7 +71,7 @@ export default async function DetailPage({
                 <div className="section-max">
                     <Breadcrumb
                         items={[
-                            { label: 'Portfolio', href: '/#portfolio' },
+                            { label: 'Portfolio', href: '/portfolio' },
                             { label: project.title },
                         ]}
                     />
@@ -242,7 +242,7 @@ export default async function DetailPage({
                 <div className="section-max">
                     <div className="next-project-nav">
                         <Link
-                            href={`/detail/${prevProject.id}`}
+                            href={`/portfolio/${prevProject.id}`}
                             className="next-project-link prev"
                         >
                             <FontAwesomeIcon icon={faArrowLeft} />
@@ -261,7 +261,7 @@ export default async function DetailPage({
                             </span>
                         </div>
                         <Link
-                            href={`/detail/${nextProject.id}`}
+                            href={`/portfolio/${nextProject.id}`}
                             className="next-project-link next"
                         >
                             <FontAwesomeIcon icon={faArrowRight} />

@@ -41,3 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 MIGRATION.md
+.zai/*
+.aider.tags.cache.v4/*
+.aider.chat.history.md
+.aider.input.history

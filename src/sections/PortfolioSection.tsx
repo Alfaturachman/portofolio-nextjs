@@ -6,7 +6,9 @@ import { projects } from '@/lib/projects';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-export default function PortfolioSection() {
+export default function PortfolioSection({ limit }: { limit?: number }) {
+    const displayedProjects = limit ? projects.slice(0, limit) : projects;
+
     return (
         <section id="portfolio">
             <div className="section-max">
@@ -17,10 +19,18 @@ export default function PortfolioSection() {
                     worked on
                 </h2>
                 <div className="portfolio-grid">
-                    {projects.map((p, i) => (
+                    {displayedProjects.map((p, i) => (
                         <ProjectCard key={p.id} project={p} index={i} />
                     ))}
                 </div>
+                {limit && (
+                    <div style={{ marginTop: '48px', display: 'flex', justifyContent: 'center' }}>
+                        <Link href="/portfolio" className="btn-hero-primary">
+                            <span>View All Projects</span>
+                            <FontAwesomeIcon icon={faArrowRight} className="btn-icon" style={{ marginLeft: '8px' }} />
+                        </Link>
+                    </div>
+                )}
             </div>
         </section>
     );
@@ -43,7 +53,7 @@ function ProjectCard({
     }, []);
 
     return (
-        <Link href={`/detail/${p.id}`} className="project-card">
+        <Link href={`/portfolio/${p.id}`} className="project-card">
             <div className="project-img-wrapper">
                 {!loaded && <div className="skeleton" />}
                 <img

@@ -84,6 +84,19 @@
     height: auto;
     max-height: 75svh;
     object-fit: contain;
+    cursor: zoom-in;
+    touch-action: manipulation;
+    transition: max-height 0.25s ease;
+}
+
+.cert-modal-img.zoomed {
+    max-height: none;
+    cursor: grab;
+    transition: transform 0s;
+}
+
+.cert-modal-img.zoomed:active {
+    cursor: grabbing;
 }
 
 /* ----- Custom Cursor ----- */

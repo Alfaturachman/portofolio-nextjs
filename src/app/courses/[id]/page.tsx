@@ -163,7 +163,7 @@ export default async function CoursesPage({
                     <div className="courses-grid">
                         {courses.map((course, idx) => (
                             <div className="course-item" key={course.id}>
-                                <div className="course-number">#{idx + 1}</div>
+                                <div className="course-number">{idx + 1}</div>
                                 <div className="course-body">
                                     <h3 className="course-title">
                                         {course.title}

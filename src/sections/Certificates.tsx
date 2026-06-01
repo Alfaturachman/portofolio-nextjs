@@ -44,23 +44,12 @@ export default function Certificates() {
                             href={`/courses/${spec.id}`}
                             className="project-card cert-card"
                         >
-                            <div
-                                className="project-img-wrapper"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    e.stopPropagation();
-                                    openModal(spec.image, spec.title);
-                                }}
-                            >
+                            <div className="project-img-wrapper cert-logo-wrap">
                                 <img
-                                    src={spec.image}
-                                    alt={`${spec.title} Certificate`}
-                                    className="loaded cert-img"
-                                    loading="lazy"
+                                    src="/assets/images/logo/ibm.svg"
+                                    alt="IBM"
+                                    className="cert-brand-logo"
                                 />
-                                <div className="cert-overlay">
-                                    <i className="fas fa-search-plus" />
-                                </div>
                             </div>
                             <div className="project-content">
                                 <div className="project-tags">
@@ -113,39 +102,6 @@ export default function Certificates() {
                             </div>
                         </Link>
                     ))}
-                </div>
-            </div>
-
-            <div
-                className={`modal-overlay${modalOpen ? ' open' : ''}`}
-                onClick={closeModal}
-                role="dialog"
-                aria-modal="true"
-                aria-label={modalTitle}
-            >
-                <div
-                    className="modal-box cert-modal-box"
-                    onClick={(e) => e.stopPropagation()}
-                >
-                    <button
-                        className="modal-close"
-                        onClick={closeModal}
-                        aria-label="Close modal"
-                    >
-                        <i className="fas fa-xmark" />
-                    </button>
-                    <h3 className="modal-title cert-modal-title">
-                        {modalTitle}
-                    </h3>
-                    <div className="cert-img-wrapper">
-                        {modalOpen && modalSrc && (
-                            <img
-                                src={modalSrc}
-                                alt={modalTitle}
-                                className="cert-modal-img"
-                            />
-                        )}
-                    </div>
                 </div>
             </div>
         </section>

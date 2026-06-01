@@ -13,10 +13,12 @@ export default function About() {
                 </h2>
                 <div className="about-layout">
                     <div className="about-image-wrapper">
-                        <img
-                            src="/assets/images/profile/profile.jpg"
-                            alt="Alfaturachman Maulana Pahlevi"
-                        />
+                        <div className="about-image-frame">
+                            <img
+                                src="/assets/images/profile/profile.jpg"
+                                alt="Alfaturachman Maulana Pahlevi"
+                            />
+                        </div>
                         <div className="about-stats-row">
                             <div className="about-stat-item">
 <div className="about-stat-icon" style={{ color: '#3b82f6' }}>

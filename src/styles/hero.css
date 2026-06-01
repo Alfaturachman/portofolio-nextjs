@@ -527,6 +527,11 @@
     flex-shrink: 0;
 }
 
+[data-theme='dark'] .hero-stat-icon {
+    background: var(--accent-blue-soft);
+    border-color: transparent;
+}
+
 .hero-stat-label {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.65rem;

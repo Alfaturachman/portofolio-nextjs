@@ -1,0 +1,16 @@
+{
+    "name": "Alfaturachman Maulana Pahlevi | Software Engineer Portfolio",
+    "short_name": "Almavi",
+    "description": "Software Engineer focused on DevOps and AI solutions.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0a0a",
+    "theme_color": "#3b5bdb",
+    "icons": [
+        {
+            "src": "/assets/images/logo/logo.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}

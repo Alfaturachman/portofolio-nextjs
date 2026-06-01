@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
 import { coursesData } from '@/lib/courses';
 
 export default function Certificates() {
@@ -37,13 +38,20 @@ export default function Certificates() {
                     earned
                 </h2>
                 <div className="portfolio-grid">
-                    {coursesData.specializations.map((spec, idx) => (
-                        <div
+                    {coursesData.specializations.map((spec) => (
+                        <Link
                             key={spec.id}
+                            href={`/courses/${spec.id}`}
                             className="project-card cert-card"
-                            onClick={() => openModal(spec.image, spec.title)}
                         >
-                            <div className="project-img-wrapper">
+                            <div
+                                className="project-img-wrapper"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    openModal(spec.image, spec.title);
+                                }}
+                            >
                                 <img
                                     src={spec.image}
                                     alt={`${spec.title} Certificate`}
@@ -64,6 +72,17 @@ export default function Certificates() {
                                         <i className="fas fa-calendar-alt" />{' '}
                                         2026
                                     </span>
+                                    <span className="project-tag">
+                                        <i className="fas fa-book-open" />{' '}
+                                        {
+                                            coursesData.courses.filter(
+                                                (c) =>
+                                                    c.specializationId ===
+                                                    spec.id,
+                                            ).length
+                                        }{' '}
+                                        Courses
+                                    </span>
                                 </div>
                                 <h3 className="project-title">{spec.title}</h3>
                                 <p className="project-desc">
@@ -76,12 +95,13 @@ export default function Certificates() {
                                     )}
                                     .
                                 </p>
-                                <a
-                                    href={spec.credentialUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                <span
                                     className="project-footer"
-                                    onClick={(e) => e.stopPropagation()}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                        window.open(spec.credentialUrl, '_blank', 'noopener,noreferrer');
+                                    }}
                                 >
                                     <span className="project-link-text">
                                         View Credential
@@ -89,9 +109,9 @@ export default function Certificates() {
                                     <div className="project-arrow">
                                         <i className="fas fa-arrow-right project-arrow-icon" />
                                     </div>
-                                </a>
+                                </span>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

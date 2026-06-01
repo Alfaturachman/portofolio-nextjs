@@ -157,10 +157,7 @@ export default function Hero() {
                             </span>
                         </div>
                         <p className="hero-tagline-body">
-                            Software engineer passionate about building
-                            <strong> intelligent</strong>,
-                            <strong> scalable</strong> systems that solve real
-                            problems.
+                            Software engineer passionate about building intelligent and scalable systems that solve real problems.
                         </p>
                     </div>
                     <div className="hero-cta-group hero-ctas">

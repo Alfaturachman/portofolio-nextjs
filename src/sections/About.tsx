@@ -19,9 +19,9 @@ export default function About() {
                         />
                         <div className="about-stats-row">
                             <div className="about-stat-item">
-                                <div className="about-stat-icon" style={{ color: '#10b981' }}>
-                                    <i className="fas fa-check-circle" />
-                                </div>
+<div className="about-stat-icon" style={{ color: '#3b82f6' }}>
+    <i className="fas fa-check-circle" />
+</div>
                                 <span className="about-stat-num">12+</span>
                                 <span className="about-stat-text">Completed Projects</span>
                             </div>

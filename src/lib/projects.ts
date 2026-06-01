@@ -24,7 +24,7 @@ export const projects: Project[] = [
         github: 'https://github.com/Alfaturachman/renstra_ftdinus',
     },
     {
-        id: 'portofolio-ft',
+        id: 'portfolio-ft',
         image: '/assets/images/projects/project-portofolio-login.png',
         gallery: [
             '/assets/images/projects/project-portofolio-login.png',

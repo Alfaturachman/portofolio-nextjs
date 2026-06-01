@@ -2,6 +2,31 @@
     margin-bottom: 60px;
 }
 
+.blog-header-content {
+    padding: 48px;
+    border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.blog-header-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.blog-header-title {
+    margin: 8px 0 16px;
+}
+
+.blog-header-desc {
+    max-width: 600px;
+    margin: 0;
+}
+
 /* Subtle grain/noise overlay for the holographic glow */
 .blog-header::after {
     content: '';

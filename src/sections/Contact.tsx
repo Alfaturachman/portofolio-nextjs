@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 export default function Contact() {
     return (
         <section id="contact">
@@ -27,7 +30,7 @@ export default function Contact() {
                             <span className="premium-link-val">
                                 alfaturachmanpahlevi@gmail.com
                             </span>
-                            <i className="fas fa-arrow-right premium-link-icon" />
+                            <FontAwesomeIcon icon={faArrowRight} className="premium-link-icon" />
                         </a>
                         <a
                             href="https://www.linkedin.com/in/alfaturachman-maulana-pahlevi-4981302b6/"
@@ -39,7 +42,7 @@ export default function Contact() {
                             <span className="premium-link-val">
                                 Alfaturachman Maulana Pahlevi
                             </span>
-                            <i className="fas fa-arrow-right premium-link-icon" />
+                            <FontAwesomeIcon icon={faArrowRight} className="premium-link-icon" />
                         </a>
                         <a
                             href="https://github.com/Alfaturachman"
@@ -51,7 +54,7 @@ export default function Contact() {
                             <span className="premium-link-val">
                                 @Alfaturachman
                             </span>
-                            <i className="fas fa-arrow-right premium-link-icon" />
+                            <FontAwesomeIcon icon={faArrowRight} className="premium-link-icon" />
                         </a>
                     </div>
                 </div>

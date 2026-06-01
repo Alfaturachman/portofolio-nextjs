@@ -1,5 +1,8 @@
 'use client';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faRobot, faCloud, faCode } from '@fortawesome/free-solid-svg-icons';
+
 export default function Hero() {
     return (
         <section id="home">
@@ -140,7 +143,9 @@ export default function Hero() {
                         <br />
                         INTELLIGENT
                         <br />
-                        <span className="accented">SYSTEMS.</span>
+                        <span className="accented">
+                            SYSTEMS<span className="dot-blink">.</span>
+                        </span>
                     </h1>
                 </div>
 
@@ -163,7 +168,7 @@ export default function Hero() {
                     <div className="hero-cta-group hero-ctas">
                         <a href="#portfolio" className="btn-hero-primary">
                             <span>My Projects</span>
-                            <i className="fas fa-arrow-right btn-icon" />
+                            <FontAwesomeIcon icon={faArrowRight} className="btn-icon" />
                         </a>
                         <a href="#about" className="btn-hero-outline">
                             <span>About Me</span>
@@ -178,7 +183,7 @@ export default function Hero() {
             >
                 <div className="hero-stat">
                     <div className="hero-stat-icon">
-                        <i className="fas fa-robot" />
+                        <FontAwesomeIcon icon={faRobot} />
                     </div>
                     <div>
                         <div className="hero-stat-label">Core Expertise</div>
@@ -189,7 +194,7 @@ export default function Hero() {
                 </div>
                 <div className="hero-stat">
                     <div className="hero-stat-icon">
-                        <i className="fas fa-cloud" />
+                        <FontAwesomeIcon icon={faCloud} />
                     </div>
                     <div>
                         <div className="hero-stat-label">Infrastructure</div>
@@ -198,7 +203,7 @@ export default function Hero() {
                 </div>
                 <div className="hero-stat">
                     <div className="hero-stat-icon">
-                        <i className="fas fa-code" />
+                        <FontAwesomeIcon icon={faCode} />
                     </div>
                     <div>
                         <div className="hero-stat-label">Development</div>

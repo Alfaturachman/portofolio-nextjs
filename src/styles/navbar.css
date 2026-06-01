@@ -212,7 +212,23 @@
 }
 
 @media (min-width: 769px) {
-    .mobile-menu {
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .mobile-overlay {
+        display: block;
+    }
+}
+
+.mobile-menu {
         display: none !important;
     }
 }

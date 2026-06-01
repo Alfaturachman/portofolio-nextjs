@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { coursesData } from '@/lib/courses';
 import ImagePreview from '@/components/ImagePreview';
+import Breadcrumb from '@/components/Breadcrumb';
 import '@/styles/sections.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBuilding, faGraduationCap, faBookOpen, faExternalLinkAlt, faCertificate, faInfoCircle, faList } from '@fortawesome/free-solid-svg-icons';
 
 export async function generateStaticParams() {
     return coursesData.specializations.map((s) => ({ id: String(s.id) }));
@@ -39,13 +41,12 @@ export default async function CoursesPage({
     return (
         <section id="courses-detail">
             <div className="section-max">
-                <div className="breadcrumb">
-                    <Link href="/">Home</Link>
-                    <i className="fas fa-chevron-right breadcrumb-sep" />
-                    <Link href="/#certificates">Certificates</Link>
-                    <i className="fas fa-chevron-right breadcrumb-sep" />
-                    <span className="breadcrumb-current">{spec.title}</span>
-                </div>
+                <Breadcrumb
+                    items={[
+                        { label: 'Certificates', href: '/#certificates' },
+                        { label: spec.title },
+                    ]}
+                />
 
                 <div className="detail-header-row">
                     <div className="detail-header-info">
@@ -53,7 +54,7 @@ export default async function CoursesPage({
                         <div className="detail-meta">
                             <div className="meta-pill">
                                 <div className="meta-pill-icon">
-                                    <i className="fas fa-building" />
+                                    <FontAwesomeIcon icon={faBuilding} />
                                 </div>
                                 <div className="meta-pill-text">
                                     <span className="meta-pill-label">
@@ -66,7 +67,7 @@ export default async function CoursesPage({
                             </div>
                             <div className="meta-pill">
                                 <div className="meta-pill-icon">
-                                    <i className="fas fa-graduation-cap" />
+                                    <FontAwesomeIcon icon={faGraduationCap} />
                                 </div>
                                 <div className="meta-pill-text">
                                     <span className="meta-pill-label">
@@ -79,7 +80,7 @@ export default async function CoursesPage({
                             </div>
                             <div className="meta-pill">
                                 <div className="meta-pill-icon">
-                                    <i className="fas fa-book-open" />
+                                    <FontAwesomeIcon icon={faBookOpen} />
                                 </div>
                                 <div className="meta-pill-text">
                                     <span className="meta-pill-label">
@@ -99,7 +100,7 @@ export default async function CoursesPage({
                             rel="noopener noreferrer"
                             className="btn-action primary"
                         >
-                            <i className="fas fa-external-link-alt" />
+                            <FontAwesomeIcon icon={faExternalLinkAlt} />
                             View Credential
                         </a>
                     </div>
@@ -134,12 +135,12 @@ export default async function CoursesPage({
                         </div>
                         <div className="spec-cert-info">
                             <div className="spec-cert-badge">
-                                <i className="fas fa-certificate" />
+                                                <FontAwesomeIcon icon={faCertificate} />
                                 Specialization
                             </div>
                             <div className="spec-cert-note">
                                 <h3>
-                                    <i className="fas fa-info-circle" />
+                                    <FontAwesomeIcon icon={faInfoCircle} />
                                     About this Specialization
                                 </h3>
                                 <p>
@@ -157,7 +158,7 @@ export default async function CoursesPage({
 
                 <div className="courses-list">
                     <h2 className="detail-section-title">
-                        <i className="fas fa-list" />
+                        <FontAwesomeIcon icon={faList} />
                         Courses ({courses.length})
                     </h2>
                     <div className="courses-grid">
@@ -188,7 +189,7 @@ export default async function CoursesPage({
                                                 rel="noopener noreferrer"
                                                 className="course-credential"
                                             >
-                                                <i className="fas fa-certificate" />
+                                <FontAwesomeIcon icon={faCertificate} />
                                                 View Credential
                                             </a>
                                         )}

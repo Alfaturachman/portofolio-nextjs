@@ -1,33 +1,11 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { coursesData } from '@/lib/courses';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBuilding, faCalendarAlt, faBookOpen, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Certificates() {
-    const [modalOpen, setModalOpen] = useState(false);
-    const [modalSrc, setModalSrc] = useState('');
-    const [modalTitle, setModalTitle] = useState('');
-
-    const openModal = (src: string, title: string) => {
-        setModalSrc(src);
-        setModalTitle(title);
-        setModalOpen(true);
-    };
-
-    const closeModal = useCallback(() => {
-        setModalOpen(false);
-    }, []);
-
-    useEffect(() => {
-        if (!modalOpen) return;
-        const handleKey = (e: KeyboardEvent) => {
-            if (e.key === 'Escape') closeModal();
-        };
-        document.addEventListener('keydown', handleKey);
-        return () => document.removeEventListener('keydown', handleKey);
-    }, [modalOpen, closeModal]);
-
     return (
         <section id="certificates">
             <div className="section-max">
@@ -54,15 +32,15 @@ export default function Certificates() {
                             <div className="project-content">
                                 <div className="project-tags">
                                     <span className="project-tag">
-                                        <i className="fas fa-building" />{' '}
+                                        <FontAwesomeIcon icon={faBuilding} />{' '}
                                         {spec.provider}
                                     </span>
                                     <span className="project-tag">
-                                        <i className="fas fa-calendar-alt" />{' '}
+                                        <FontAwesomeIcon icon={faCalendarAlt} />{' '}
                                         2026
                                     </span>
                                     <span className="project-tag">
-                                        <i className="fas fa-book-open" />{' '}
+                                        <FontAwesomeIcon icon={faBookOpen} />{' '}
                                         {
                                             coursesData.courses.filter(
                                                 (c) =>
@@ -96,7 +74,7 @@ export default function Certificates() {
                                         View Credential
                                     </span>
                                     <div className="project-arrow">
-                                        <i className="fas fa-arrow-right project-arrow-icon" />
+                                        <FontAwesomeIcon icon={faArrowRight} className="project-arrow-icon" />
                                     </div>
                                 </span>
                             </div>

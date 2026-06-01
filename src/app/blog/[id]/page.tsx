@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { articles, getArticle } from '@/lib/blog';
 import '@/styles/blog.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-export const dynamic = 'force-dynamic';
-export const dynamicParams = true;
-export const revalidate = 0;
+
 
 export async function generateStaticParams() {
     return articles.map((a) => ({ id: a.id }));
@@ -48,9 +48,9 @@ export default async function BlogDetail({
             <div className="section-max">
                 <div className="breadcrumb">
                     <Link href="/">Home</Link>
-                    <i className="fas fa-chevron-right breadcrumb-sep" />
+                    <FontAwesomeIcon icon={faChevronRight} className="breadcrumb-sep" />
                     <Link href="/blog">Blog</Link>
-                    <i className="fas fa-chevron-right breadcrumb-sep" />
+                    <FontAwesomeIcon icon={faChevronRight} className="breadcrumb-sep" />
                     <span className="breadcrumb-current">Article</span>
                 </div>
 

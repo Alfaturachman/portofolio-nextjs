@@ -1,4 +1,19 @@
 import { experiences } from '@/lib/experiences';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faBriefcase,
+    faFlask,
+    faUniversity,
+    faGraduationCap,
+    type IconDefinition,
+} from '@fortawesome/free-solid-svg-icons';
+
+const iconMap: Record<string, IconDefinition> = {
+    briefcase: faBriefcase,
+    flask: faFlask,
+    university: faUniversity,
+    'graduation-cap': faGraduationCap,
+};
 
 export default function Experience() {
     return (
@@ -59,9 +74,11 @@ export default function Experience() {
                                             className="experience-org"
                                             style={{ margin: 0 }}
                                         >
-                                            <i
-                                                className={`fas fa-${exp.orgIcon}`}
-                                            />{' '}
+                                            {iconMap[exp.orgIcon] && (
+                                                <FontAwesomeIcon
+                                                    icon={iconMap[exp.orgIcon]}
+                                                />
+                                            )}
                                             {exp.org}
                                         </div>
                                         <p

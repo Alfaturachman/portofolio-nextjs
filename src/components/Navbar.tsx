@@ -1,12 +1,14 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTheme } from '@/lib/theme-context';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
     const { theme, toggleTheme } = useTheme();
     const navRef = useRef<HTMLElement>(null);
-    const menuRef = useRef<HTMLDivElement>(null);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const nav = navRef.current;
@@ -20,13 +22,8 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const toggleMenu = () => {
-        const hamburger = document.getElementById('hamburger');
-        const menu = menuRef.current;
-        if (!hamburger || !menu) return;
-        hamburger.classList.toggle('active');
-        menu.classList.toggle('open');
-    };
+    const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+    const closeMenu = () => setIsMenuOpen(false);
 
     const links = [
         { label: 'About', href: '/#about' },
@@ -62,9 +59,9 @@ export default function Navbar() {
                                 : 'Switch to dark mode'
                         }
                     >
-                        <i
-                            className={`fas ${theme === 'dark' ? 'fa-sun' : 'fa-moon'}`}
-                            aria-hidden="true"
+                        <FontAwesomeIcon
+                            icon={theme === 'dark' ? faSun : faMoon}
+                            aria-hidden={true}
                         />
                     </button>
                 </div>
@@ -78,16 +75,15 @@ export default function Navbar() {
                                 : 'Switch to dark mode'
                         }
                     >
-                        <i
-                            className={`fas ${theme === 'dark' ? 'fa-sun' : 'fa-moon'}`}
+                        <FontAwesomeIcon
+                            icon={theme === 'dark' ? faSun : faMoon}
                         />
                     </button>
                     <button
-                        className="hamburger"
-                        id="hamburger"
+                        className={`hamburger${isMenuOpen ? ' active' : ''}`}
                         onClick={toggleMenu}
                         aria-label="Toggle menu"
-                        aria-expanded="false"
+                        aria-expanded={isMenuOpen}
                         aria-controls="mobileMenu"
                         role="button"
                     >
@@ -97,9 +93,15 @@ export default function Navbar() {
                     </button>
                 </div>
             </div>
+            {isMenuOpen && (
+                <div
+                    className="mobile-overlay"
+                    onClick={closeMenu}
+                    aria-hidden="true"
+                />
+            )}
             <div
-                ref={menuRef}
-                className="mobile-menu glass"
+                className={`mobile-menu glass${isMenuOpen ? ' open' : ''}`}
                 id="mobileMenu"
                 role="menu"
             >
@@ -109,7 +111,7 @@ export default function Navbar() {
                         href={link.href}
                         className="mobile-link"
                         role="menuitem"
-                        onClick={toggleMenu}
+                        onClick={closeMenu}
                     >
                         {link.label}
                     </a>

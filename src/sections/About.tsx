@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle, faCalendarAlt, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+
 const startYear = 2022;
 const yearsExp = new Date().getFullYear() - startYear;
 
@@ -22,14 +25,14 @@ export default function About() {
                         <div className="about-stats-row">
                             <div className="about-stat-item">
 <div className="about-stat-icon" style={{ color: '#3b82f6' }}>
-    <i className="fas fa-check-circle" />
+    <FontAwesomeIcon icon={faCheckCircle} />
 </div>
                                 <span className="about-stat-num">12+</span>
                                 <span className="about-stat-text">Completed Projects</span>
                             </div>
                             <div className="about-stat-item">
                                 <div className="about-stat-icon" style={{ color: '#3b82f6' }}>
-                                    <i className="fas fa-calendar-alt" />
+                                    <FontAwesomeIcon icon={faCalendarAlt} />
                                 </div>
                                 <span className="about-stat-num">{yearsExp}+</span>
                                 <span className="about-stat-text">Years Experience</span>
@@ -83,7 +86,7 @@ export default function About() {
                                 <div className="education-card-content">
                                     <div className="education-entry">
                                         <div className="education-icon">
-                                            <i className="fas fa-graduation-cap" />
+                                            <FontAwesomeIcon icon={faGraduationCap} />
                                         </div>
                                         <div>
                                             <div
@@ -128,7 +131,7 @@ export default function About() {
                                                     'rgba(245, 158, 11, 0.1)',
                                             }}
                                         >
-                                            <i className="fas fa-graduation-cap" />
+                                            <FontAwesomeIcon icon={faGraduationCap} />
                                         </div>
                                         <div>
                                             <div

@@ -1,6 +1,9 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faArrowUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
     const footerRef = useRef<HTMLElement>(null);
@@ -60,7 +63,7 @@ export default function Footer() {
                             className="footer-cta-btn"
                         >
                             <span>Hire Me</span>
-                            <i className="fas fa-arrow-right" />
+                            <FontAwesomeIcon icon={faArrowRight} />
                         </a>
                     </div>
                     <div className="footer-side">
@@ -74,7 +77,7 @@ export default function Footer() {
                                     rel="noopener noreferrer"
                                     aria-label="GitHub"
                                 >
-                                    <i className="fab fa-github" />
+                                    <FontAwesomeIcon icon={faGithub} />
                                 </a>
                                 <a
                                     href="https://www.linkedin.com/in/alfaturachman-maulana-pahlevi-4981302b6/"
@@ -83,7 +86,7 @@ export default function Footer() {
                                     rel="noopener noreferrer"
                                     aria-label="LinkedIn"
                                 >
-                                    <i className="fab fa-linkedin" />
+                                    <FontAwesomeIcon icon={faLinkedin} />
                                 </a>
                                 <a
                                     href="https://www.instagram.com/al.mavi/"
@@ -92,7 +95,7 @@ export default function Footer() {
                                     rel="noopener noreferrer"
                                     aria-label="Instagram"
                                 >
-                                    <i className="fab fa-instagram" />
+                                    <FontAwesomeIcon icon={faInstagram} />
                                 </a>
                                 <a
                                     href="https://twitter.com/alfaturachman"
@@ -101,14 +104,14 @@ export default function Footer() {
                                     rel="noopener noreferrer"
                                     aria-label="X (Twitter)"
                                 >
-                                    <i className="fab fa-x-twitter" />
+                                    <FontAwesomeIcon icon={faXTwitter} />
                                 </a>
                                 <a
                                     href="mailto:alfaturachmanpahlevi@gmail.com"
                                     className="footer-social-icon"
                                     aria-label="Email"
                                 >
-                                    <i className="fas fa-envelope" />
+                                    <FontAwesomeIcon icon={faEnvelope} />
                                 </a>
                             </div>
                         </div>
@@ -155,7 +158,7 @@ export default function Footer() {
                             className="footer-back-top"
                             aria-label="Back to top"
                         >
-                            <i className="fas fa-arrow-up" />
+                            <FontAwesomeIcon icon={faArrowUp} />
                         </button>
                     </div>
                 </div>

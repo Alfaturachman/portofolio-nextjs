@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 export default function NotFound() {
     return (
@@ -17,7 +19,7 @@ export default function NotFound() {
                         The page you&apos;re looking for doesn&apos;t exist or has been moved.
                     </p>
                     <Link href="/" className="not-found-btn">
-                        <i className="fas fa-arrow-left" />
+                        <FontAwesomeIcon icon={faArrowLeft} />
                         Back to Home
                     </Link>
                 </div>

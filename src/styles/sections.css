@@ -1166,7 +1166,8 @@
     transition: all 0.3s ease;
 }
 
-.meta-pill-icon i {
+.meta-pill-icon i,
+.meta-pill-icon svg {
     font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1;
@@ -1179,7 +1180,8 @@
     background: var(--accent-blue-soft);
 }
 
-.meta-pill:hover .meta-pill-icon i {
+.meta-pill:hover .meta-pill-icon i,
+.meta-pill:hover .meta-pill-icon svg {
     color: var(--accent-blue);
 }
 

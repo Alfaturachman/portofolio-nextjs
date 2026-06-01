@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { projects } from '@/lib/projects';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function PortfolioSection() {
     return (
@@ -63,7 +65,7 @@ function ProjectCard({
                 <div className="project-footer">
                     <span className="project-link-text">View Details</span>
                     <div className="project-arrow">
-                        <i className="fas fa-arrow-right project-arrow-icon" />
+                        <FontAwesomeIcon icon={faArrowRight} className="project-arrow-icon" />
                     </div>
                 </div>
             </div>

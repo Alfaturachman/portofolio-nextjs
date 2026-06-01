@@ -1,3 +1,20 @@
+@keyframes pulse-dot {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.85);
+    }
+}
+
+@keyframes blink-only {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -258,6 +275,17 @@
     color: var(--accent-blue);
 }
 
+.dot-blink {
+    display: inline-block;
+    animation: blink-only 1.5s step-end infinite;
+}
+
+@media (max-width: 768px) {
+    .dot-blink {
+        animation: none;
+    }
+}
+
 @media (max-width: 480px) {
     .hero-title-main {
         font-size: clamp(3.2rem, 10vw, 3.2rem);
@@ -323,6 +351,7 @@
 }
 .hero-tagline-dots .dot-green {
     background: #28c840;
+    animation: pulse-dot 2s ease-in-out infinite;
 }
 
 .hero-tagline-title {

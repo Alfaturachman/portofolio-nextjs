@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function ImagePreview({
     src,
@@ -94,7 +96,7 @@ export default function ImagePreview({
                             onClick={close}
                             aria-label="Close modal"
                         >
-                            <i className="fas fa-xmark" />
+                            <FontAwesomeIcon icon={faXmark} />
                         </button>
                         <div className="cert-img-wrapper">
                             <img

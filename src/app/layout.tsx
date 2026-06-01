@@ -67,12 +67,9 @@ export default function RootLayout({
         <html
             lang="en"
             className={`${outfit.variable} ${plusJakarta.variable} ${dmSans.variable}`}
+            suppressHydrationWarning
         >
             <head>
-                <link
-                    rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-                />
                 <link
                     rel="icon"
                     type="image/svg+xml"
@@ -80,6 +77,18 @@ export default function RootLayout({
                 />
                 <link rel="manifest" href="/manifest.json" />
                 <meta name="theme-color" content="#3b5bdb" />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            (function() {
+                                var t = localStorage.getItem('theme');
+                                if (t === 'dark' || t === 'light') {
+                                    document.documentElement.setAttribute('data-theme', t);
+                                }
+                            })();
+                        `,
+                    }}
+                />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{

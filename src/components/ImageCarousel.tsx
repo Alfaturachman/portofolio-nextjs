@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function ImageCarousel({
     images,
@@ -31,7 +33,7 @@ export default function ImageCarousel({
                     onClick={goPrev}
                     aria-label="Previous image"
                 >
-                    <i className="fas fa-chevron-left" />
+                    <FontAwesomeIcon icon={faChevronLeft} />
                 </button>
                 <div className="gallery-image-wrapper">
                     <img
@@ -44,7 +46,7 @@ export default function ImageCarousel({
                     onClick={goNext}
                     aria-label="Next image"
                 >
-                    <i className="fas fa-chevron-right" />
+                    <FontAwesomeIcon icon={faChevronRight} />
                 </button>
                 <div className="gallery-counter">
                     {activeIndex + 1} / {images.length}

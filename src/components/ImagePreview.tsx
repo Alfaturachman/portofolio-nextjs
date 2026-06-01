@@ -112,6 +112,7 @@ export default function ImagePreview({
                                 onTouchEnd={(e) => {
                                     e.preventDefault();
                                     handleTap();
+                                    stopPan();
                                 }}
                                 onMouseDown={(e) => startPan(e.clientX, e.clientY)}
                                 onMouseMove={(e) => movePan(e.clientX, e.clientY)}
@@ -125,7 +126,7 @@ export default function ImagePreview({
                                     const t = e.touches[0];
                                     movePan(t.clientX, t.clientY);
                                 }}
-                                onTouchEnd={stopPan}
+                                
                             />
                         </div>
                     </div>

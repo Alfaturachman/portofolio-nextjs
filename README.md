@@ -1,6 +1,6 @@
 # Alfaturachman - Personal Web Portfolio & Blog
 
-A professional, interactive developer portfolio and blog built with Next.js App Router and TypeScript. The project features a custom-built Glassmorphism design system, Web3-inspired animated aesthetics, and optimized performance.
+A professional, interactive developer portfolio and blog built with Next.js App Router and TypeScript. The project features a custom-built Glassmorphism design system, and optimized performance.
 
 ## Core Architecture
 

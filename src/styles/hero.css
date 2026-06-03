@@ -11,8 +11,13 @@
 }
 
 @keyframes blink-only {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
 
 @keyframes fadeUp {
@@ -242,7 +247,7 @@
     gap: 48px;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1180px;
     margin: 48px auto;
 }
 

@@ -152,20 +152,6 @@ html.has-custom-cursor button {
     pointer-events: none;
 }
 
-.hero-glow {
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(
-        circle at center,
-        rgba(59, 91, 219, 0.08) 0%,
-        transparent 60%
-    );
-    top: -200px;
-    left: -100px;
-    opacity: 0.4;
-    filter: none;
-}
-
 .footer-glow {
     width: 800px;
     height: 800px;

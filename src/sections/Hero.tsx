@@ -19,8 +19,6 @@ export default function Hero() {
     };
     return (
         <section id="home">
-            <div className="blob hero-glow" aria-hidden="true" />
-
             <div className="hero-circuit" aria-hidden="true">
                 <svg
                     viewBox="0 0 1200 600"

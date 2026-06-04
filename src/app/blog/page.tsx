@@ -5,7 +5,7 @@ import '@/styles/blog.css';
 
 export default function BlogPage() {
     return (
-        <section id="blog-section">
+        <section id="blog-section" style={{ marginTop: '20px' }}>
             <div className="section-max">
                 <Breadcrumb items={[{ label: 'Blog' }]} />
 

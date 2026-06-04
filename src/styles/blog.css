@@ -247,6 +247,22 @@
     .blog-detail-body {
         padding: 24px;
     }
+
+    .blog-header-content {
+        padding: 32px 24px;
+    }
+
+    .blog-glow-blob {
+        display: none; /* Hide the third blob on mobile to prevent color clashing */
+    }
+
+    .blog-glow-blob.secondary {
+        display: none; /* Hide the third blob on mobile to prevent color clashing */
+    }
+
+    .blog-glow-blob.tertiary {
+        display: none; /* Hide the third blob on mobile to prevent color clashing */
+    }
 }
 
 @keyframes float-glow {

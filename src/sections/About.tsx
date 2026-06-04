@@ -26,6 +26,31 @@ export default function About() {
                                 alt="Alfaturachman Maulana Pahlevi"
                             />
                         </div>
+                    </div>
+
+                    <div className="about-content-wrapper">
+                        <h3 className="about-heading">
+                            Driven by <span className="accented">Data</span>,
+                            <br />
+                            Built with{' '}
+                            <span className="stroke-text">Code.</span>
+                        </h3>
+
+                        <p className="about-bio">
+                            I am <strong>Alfaturachman Maulana Pahlevi</strong>,
+                            a Software Engineer specializing in DevOps and
+                            AI-driven solutions. Leveraging a strong foundation
+                            in backend development, data analysis, and systems
+                            engineering, I architect scalable systems that drive
+                            real-world impact.
+                        </p>
+                        <p className="about-bio about-bio-margin">
+                            Currently, I am actively expanding my expertise in
+                            advanced <strong>Artificial Intelligence, </strong>
+                            <strong>Machine Learning, and </strong>
+                            <strong>Deep Learning.</strong>
+                        </p>
+
                         <div className="about-stats-row">
                             <div className="about-stat-item">
                                 <div
@@ -53,38 +78,6 @@ export default function About() {
                                     Years Experience
                                 </span>
                             </div>
-                        </div>
-                    </div>
-
-                    <div className="about-content-wrapper">
-                        <h3 className="about-heading">
-                            Driven by <span className="accented">Data</span>,
-                            <br />
-                            Built with{' '}
-                            <span className="stroke-text">Code.</span>
-                        </h3>
-
-                        <p className="about-bio">
-                            I am <strong>Alfaturachman Maulana Pahlevi</strong>,
-                            a Software Engineer specializing in DevOps and
-                            AI-driven solutions. Leveraging a strong foundation
-                            in backend development, data analysis, and systems
-                            engineering, I architect scalable systems that drive
-                            real-world impact.
-                        </p>
-                        <p className="about-bio about-bio-margin">
-                            Currently, I am actively expanding my expertise in
-                            advanced <strong>Artificial Intelligence, </strong>
-                            <strong>Machine Learning, and </strong>
-                            <strong>Deep Learning.</strong>
-                        </p>
-
-                        <div className="tag-row">
-                            <span className="tag">Software Engineer</span>
-                            <span className="tag">DevOps</span>
-                            <span className="tag">Artificial Intelligence</span>
-                            <span className="tag">Machine Learning</span>
-                            <span className="tag">Deep Learning</span>
                         </div>
 
                         <div className="education-card">

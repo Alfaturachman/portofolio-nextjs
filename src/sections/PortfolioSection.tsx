@@ -31,20 +31,15 @@ export default function PortfolioSection({
                     ))}
                 </div>
                 {limit && (
-                    <div
-                        style={{
-                            marginTop: '48px',
-                            display: 'flex',
-                            justifyContent: 'center',
-                        }}
-                    >
-                        <Link href="/portfolio" className="btn-hero-primary">
-                            <span>View All Projects</span>
-                            <FontAwesomeIcon
-                                icon={faArrowRight}
-                                className="btn-icon"
-                                style={{ marginLeft: '8px' }}
-                            />
+                    <div className="portfolio-view-all-container">
+                        <Link href="/portfolio" className="btn-view-all">
+                            <span>Explore All Projects</span>
+                            <div className="btn-view-all-circle">
+                                <FontAwesomeIcon
+                                    icon={faArrowRight}
+                                    className="btn-icon"
+                                />
+                            </div>
                         </Link>
                     </div>
                 )}

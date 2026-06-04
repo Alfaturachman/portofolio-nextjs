@@ -5,7 +5,15 @@ import ImagePreview from '@/components/ImagePreview';
 import Breadcrumb from '@/components/Breadcrumb';
 import '@/styles/sections.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBuilding, faGraduationCap, faBookOpen, faExternalLinkAlt, faCertificate, faInfoCircle, faList } from '@fortawesome/free-solid-svg-icons';
+import {
+    faBuilding,
+    faGraduationCap,
+    faBookOpen,
+    faExternalLinkAlt,
+    faCertificate,
+    faInfoCircle,
+    faList,
+} from '@fortawesome/free-solid-svg-icons';
 
 export async function generateStaticParams() {
     return coursesData.specializations.map((s) => ({ id: String(s.id) }));
@@ -123,6 +131,7 @@ export default async function CoursesPage({
                             <ImagePreview
                                 src={spec.image}
                                 alt={`${spec.title} Certificate`}
+                                disableZoom={true}
                             >
                                 <div className="spec-cert-image">
                                     <img
@@ -135,7 +144,7 @@ export default async function CoursesPage({
                         </div>
                         <div className="spec-cert-info">
                             <div className="spec-cert-badge">
-                                                <FontAwesomeIcon icon={faCertificate} />
+                                <FontAwesomeIcon icon={faCertificate} />
                                 Specialization
                             </div>
                             <div className="spec-cert-note">
@@ -146,10 +155,10 @@ export default async function CoursesPage({
                                 <p>
                                     This specialization certificate from{' '}
                                     <strong>{spec.provider}</strong> is earned
-                                    after completing all {courses.length} courses
-                                    below. Each course covers essential skills
-                                    and concepts that build toward the full
-                                    specialization.
+                                    after completing all {courses.length}{' '}
+                                    courses below. Each course covers essential
+                                    skills and concepts that build toward the
+                                    full specialization.
                                 </p>
                             </div>
                         </div>
@@ -189,7 +198,9 @@ export default async function CoursesPage({
                                                 rel="noopener noreferrer"
                                                 className="course-credential"
                                             >
-                                <FontAwesomeIcon icon={faCertificate} />
+                                                <FontAwesomeIcon
+                                                    icon={faCertificate}
+                                                />
                                                 View Credential
                                             </a>
                                         )}

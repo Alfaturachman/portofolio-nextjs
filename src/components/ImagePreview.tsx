@@ -8,10 +8,12 @@ export default function ImagePreview({
     src,
     alt,
     children,
+    disableZoom = false,
 }: {
     src: string;
     alt: string;
     children: React.ReactNode;
+    disableZoom?: boolean;
 }) {
     const [open, setOpen] = useState(false);
     const [zoomed, setZoomed] = useState(false);
@@ -38,6 +40,7 @@ export default function ImagePreview({
     }, [open, close]);
 
     const handleTap = () => {
+        if (disableZoom) return;
         const now = Date.now();
         if (now - lastTap.current < 300) {
             setZoomed((v) => {

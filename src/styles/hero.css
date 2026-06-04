@@ -323,11 +323,24 @@
     position: relative;
     margin-bottom: 24px;
     max-width: 380px;
-    background: var(--card-bg);
-    border: 1px solid var(--border-slightly);
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    border: 1.5px solid var(--glass-border);
     border-radius: 12px;
-    box-shadow: 0 1px 3px var(--shadow-card);
+    box-shadow:
+        0 8px 32px 0 rgba(0, 0, 0, 0.08),
+        inset 0 1px 1px rgba(255, 255, 255, 0.05);
     overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-tagline:hover {
+    transform: translateY(-2px);
+    border-color: rgba(59, 91, 219, 0.3);
+    box-shadow:
+        0 12px 40px 0 rgba(59, 91, 219, 0.1),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
 }
 
 .hero-tagline-bar {
@@ -335,8 +348,12 @@
     align-items: center;
     gap: 10px;
     padding: 10px 14px;
-    background: var(--bg-secondary);
-    border-bottom: 1px solid var(--border-slightly);
+    background: rgba(0, 0, 0, 0.03);
+    border-bottom: 1.5px solid var(--glass-border);
+}
+
+[data-theme='dark'] .hero-tagline-bar {
+    background: rgba(0, 0, 0, 0.15);
 }
 
 .hero-tagline-dots {

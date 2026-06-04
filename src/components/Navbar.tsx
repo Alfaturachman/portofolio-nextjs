@@ -49,9 +49,9 @@ export default function Navbar() {
     const links = [
         { label: 'Home', href: '/' },
         { label: 'About', href: '/#about' },
+        { label: 'Portfolio', href: '/portfolio' },
         { label: 'Skills', href: '/#skills' },
         { label: 'Experience', href: '/#experience' },
-        { label: 'Portfolio', href: '/portfolio' },
         { label: 'Certificates', href: '/#certificates' },
         { label: 'Contact', href: '/#contact' },
     ];

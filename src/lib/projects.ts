@@ -52,6 +52,7 @@ export const projects: Project[] = [
             '/assets/images/projects/project-medical-login.png',
             '/assets/images/projects/project-medical-dashboard.png',
             '/assets/images/projects/project-medical-view-pasien.png',
+            '/assets/images/projects/project-medical-data-periksa.png',
         ],
         title: 'Medical Checkup FT',
         type: 'Team',
@@ -268,8 +269,8 @@ export const projects: Project[] = [
     },
     {
         id: 'kireikies',
-        image: '/assets/images/projects/project-cookies.png',
-        gallery: ['/assets/images/projects/project-cookies.png'],
+        image: '/assets/images/projects/project-kireikies-menu.png',
+        gallery: ['/assets/images/projects/project-kireikies-menu.png'],
         title: 'Kireikies Cookies Website',
         type: 'Freelance',
         privacy: 'Public',

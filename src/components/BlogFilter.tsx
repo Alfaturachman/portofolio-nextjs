@@ -4,11 +4,7 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import type { BlogArticle } from '@/lib/types';
 
-export default function BlogFilter({
-    articles,
-}: {
-    articles: BlogArticle[];
-}) {
+export default function BlogFilter({ articles }: { articles: BlogArticle[] }) {
     const [activeCategory, setActiveCategory] = useState<string>('All');
 
     const categories = useMemo(() => {

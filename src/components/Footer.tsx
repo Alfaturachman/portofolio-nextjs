@@ -2,8 +2,17 @@
 
 import { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faArrowUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import {
+    faArrowRight,
+    faArrowUp,
+    faEnvelope,
+} from '@fortawesome/free-solid-svg-icons';
+import {
+    faGithub,
+    faLinkedin,
+    faInstagram,
+    faXTwitter,
+} from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 
@@ -12,9 +21,12 @@ export default function Footer() {
     const router = useRouter();
     const pathname = usePathname();
 
-    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const handleNavClick = (
+        e: React.MouseEvent<HTMLAnchorElement>,
+        href: string,
+    ) => {
         const [path] = href.split('#');
-        
+
         if (pathname !== path) {
             e.preventDefault();
             router.push(href);
@@ -131,30 +143,56 @@ export default function Footer() {
                         <div className="footer-card glass-dark">
                             <p className="footer-card-label">Navigate</p>
                             <div className="footer-nav-row">
-                                <a href="/" className="footer-nav-link" onClick={(e) => handleNavClick(e, '/')}>
+                                <a
+                                    href="/"
+                                    className="footer-nav-link"
+                                    onClick={(e) => handleNavClick(e, '/')}
+                                >
                                     Home
                                 </a>
-                                <a href="/#about" className="footer-nav-link" onClick={(e) => handleNavClick(e, '/#about')}>
+                                <a
+                                    href="/#about"
+                                    className="footer-nav-link"
+                                    onClick={(e) =>
+                                        handleNavClick(e, '/#about')
+                                    }
+                                >
                                     About
                                 </a>
-                                <a href="/#skills" className="footer-nav-link" onClick={(e) => handleNavClick(e, '/#skills')}>
+                                <a
+                                    href="/#skills"
+                                    className="footer-nav-link"
+                                    onClick={(e) =>
+                                        handleNavClick(e, '/#skills')
+                                    }
+                                >
                                     Skills
                                 </a>
                                 <a
                                     href="/#experience"
                                     className="footer-nav-link"
-                                    onClick={(e) => handleNavClick(e, '/#experience')}
+                                    onClick={(e) =>
+                                        handleNavClick(e, '/#experience')
+                                    }
                                 >
                                     Experience
                                 </a>
                                 <a
                                     href="/portfolio"
                                     className="footer-nav-link"
-                                    onClick={(e) => handleNavClick(e, '/portfolio')}
+                                    onClick={(e) =>
+                                        handleNavClick(e, '/portfolio')
+                                    }
                                 >
                                     Portfolio
                                 </a>
-                                <a href="/#contact" className="footer-nav-link" onClick={(e) => handleNavClick(e, '/#contact')}>
+                                <a
+                                    href="/#contact"
+                                    className="footer-nav-link"
+                                    onClick={(e) =>
+                                        handleNavClick(e, '/#contact')
+                                    }
+                                >
                                     Contact
                                 </a>
                             </div>

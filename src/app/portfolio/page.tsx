@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import PortfolioSection from '@/sections/PortfolioSection';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
     title: 'Portfolio | Alfaturachman Maulana Pahlevi',
@@ -14,7 +15,9 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
     return (
         <div className="mt-8 bg-secondary">
-            <PortfolioSection />
+            <PortfolioSection>
+                <Breadcrumb items={[{ label: 'Portfolio' }]} />
+            </PortfolioSection>
         </div>
     );
 }

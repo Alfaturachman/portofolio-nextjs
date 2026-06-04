@@ -73,10 +73,7 @@ export default function ImagePreview({
 
     return (
         <>
-            <div
-                onClick={() => setOpen(true)}
-                style={{ cursor: 'pointer' }}
-            >
+            <div onClick={() => setOpen(true)} style={{ cursor: 'pointer' }}>
                 {children}
             </div>
             {open && (
@@ -116,8 +113,12 @@ export default function ImagePreview({
                                     handleTap();
                                     stopPan();
                                 }}
-                                onMouseDown={(e) => startPan(e.clientX, e.clientY)}
-                                onMouseMove={(e) => movePan(e.clientX, e.clientY)}
+                                onMouseDown={(e) =>
+                                    startPan(e.clientX, e.clientY)
+                                }
+                                onMouseMove={(e) =>
+                                    movePan(e.clientX, e.clientY)
+                                }
                                 onMouseUp={stopPan}
                                 onMouseLeave={stopPan}
                                 onTouchStart={(e) => {
@@ -128,7 +129,6 @@ export default function ImagePreview({
                                     const t = e.touches[0];
                                     movePan(t.clientX, t.clientY);
                                 }}
-                                
                             />
                         </div>
                     </div>

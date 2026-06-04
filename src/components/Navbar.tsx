@@ -15,15 +15,18 @@ export default function Navbar() {
     const navRef = useRef<HTMLElement>(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const handleNavClick = (
+        e: React.MouseEvent<HTMLAnchorElement>,
+        href: string,
+    ) => {
         const [path] = href.split('#');
-        
+
         // If navigating to a different page, use Next.js router for SPA transition
         if (pathname !== path) {
             e.preventDefault();
             router.push(href);
         }
-        
+
         // If on the same page, do not preventDefault. Let the browser handle the hash natively.
         setIsMenuOpen(false);
     };
@@ -56,7 +59,11 @@ export default function Navbar() {
     return (
         <nav ref={navRef} id="navbar">
             <div className="nav-inner glass">
-                <Link href="/" className="nav-logo" onClick={(e) => handleNavClick(e, '/')}>
+                <Link
+                    href="/"
+                    className="nav-logo"
+                    onClick={(e) => handleNavClick(e, '/')}
+                >
                     almavi<span>.</span>
                 </Link>
                 <div className="nav-links">

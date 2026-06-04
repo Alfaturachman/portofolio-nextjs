@@ -6,12 +6,19 @@ import { projects } from '@/lib/projects';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-export default function PortfolioSection({ limit }: { limit?: number }) {
+export default function PortfolioSection({
+    limit,
+    children,
+}: {
+    limit?: number;
+    children?: React.ReactNode;
+}) {
     const displayedProjects = limit ? projects.slice(0, limit) : projects;
 
     return (
         <section id="portfolio">
             <div className="section-max">
+                {children}
                 <div className="section-eyebrow">Portfolio</div>
                 <h2 className="section-title">
                     Projects I have
@@ -24,10 +31,20 @@ export default function PortfolioSection({ limit }: { limit?: number }) {
                     ))}
                 </div>
                 {limit && (
-                    <div style={{ marginTop: '48px', display: 'flex', justifyContent: 'center' }}>
+                    <div
+                        style={{
+                            marginTop: '48px',
+                            display: 'flex',
+                            justifyContent: 'center',
+                        }}
+                    >
                         <Link href="/portfolio" className="btn-hero-primary">
                             <span>View All Projects</span>
-                            <FontAwesomeIcon icon={faArrowRight} className="btn-icon" style={{ marginLeft: '8px' }} />
+                            <FontAwesomeIcon
+                                icon={faArrowRight}
+                                className="btn-icon"
+                                style={{ marginLeft: '8px' }}
+                            />
                         </Link>
                     </div>
                 )}
@@ -75,7 +92,10 @@ function ProjectCard({
                 <div className="project-footer">
                     <span className="project-link-text">View Details</span>
                     <div className="project-arrow">
-                        <FontAwesomeIcon icon={faArrowRight} className="project-arrow-icon" />
+                        <FontAwesomeIcon
+                            icon={faArrowRight}
+                            className="project-arrow-icon"
+                        />
                     </div>
                 </div>
             </div>

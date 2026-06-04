@@ -67,7 +67,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['Cloud Computing', 'IaaS', 'PaaS', 'SaaS'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/KWII2E29GUCP',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/KWII2E29GUCP',
             credential: 'KWII2E29GUCP',
             image: '#',
         },
@@ -78,7 +79,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['Agile', 'Scrum', 'Sprint Planning', 'Kanban'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/B58WYKB58HX3',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/B58WYKB58HX3',
             credential: 'B58WYKB58HX3',
             image: '#',
         },
@@ -89,7 +91,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['Software Engineering', 'SDLC', 'UML', 'Design Patterns'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/9YNVBW6VFS74',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/9YNVBW6VFS74',
             credential: '9YNVBW6VFS74',
             image: '#',
         },
@@ -100,7 +103,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['Git', 'GitHub', 'Version Control', 'Branching'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/QU0UD8JBBN5Y',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/QU0UD8JBBN5Y',
             credential: 'QU0UD8JBBN5Y',
             image: '#',
         },
@@ -111,7 +115,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['Linux', 'Shell Scripting', 'Bash', 'Command Line'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/NTXSWHCXGP3M',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/NTXSWHCXGP3M',
             credential: 'NTXSWHCXGP3M',
             image: '#',
         },
@@ -122,7 +127,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['Python', 'Data Science', 'Pandas', 'NumPy'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/00CUZNBVXHAY',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/00CUZNBVXHAY',
             credential: '00CUZNBVXHAY',
             image: '#',
         },
@@ -133,7 +139,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['Python', 'Flask', 'REST API', 'AI'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/N0Y5ATDNQA8A',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/N0Y5ATDNQA8A',
             credential: 'N0Y5ATDNQA8A',
             image: '#',
         },
@@ -144,7 +151,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['Docker', 'Kubernetes', 'OpenShift', 'Containers'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/X9VP7V6B22F2',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/X9VP7V6B22F2',
             credential: 'X9VP7V6B22F2',
             image: '#',
         },
@@ -155,7 +163,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['Microservices', 'Serverless', 'REST API', 'Cloud Native'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/9ZP2USR1M7WN',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/9ZP2USR1M7WN',
             credential: '9ZP2USR1M7WN',
             image: '#',
         },
@@ -166,7 +175,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['TDD', 'BDD', 'Testing', 'Python'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/COIY4WLZRL9Q',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/COIY4WLZRL9Q',
             credential: 'COIY4WLZRL9Q',
             image: '#',
         },
@@ -177,7 +187,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['CI/CD', 'Jenkins', 'DevOps', 'Automation'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/TKS66EQVG4WU',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/TKS66EQVG4WU',
             credential: 'TKS66EQVG4WU',
             image: '#',
         },
@@ -188,7 +199,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['Security', 'DevSecOps', 'OWASP', 'Threat Modeling'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/GN3SHQZ0PIQT',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/GN3SHQZ0PIQT',
             credential: 'GN3SHQZ0PIQT',
             image: '#',
         },
@@ -199,7 +211,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['Monitoring', 'Observability', 'Prometheus', 'Grafana'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/4F8A0B453G7C',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/4F8A0B453G7C',
             credential: '4F8A0B453G7C',
             image: '#',
         },
@@ -210,7 +223,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['DevOps', 'CI/CD', 'Docker', 'Kubernetes'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/SUCIDKC0FR58',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/SUCIDKC0FR58',
             credential: 'SUCIDKC0FR58',
             image: '#',
         },
@@ -226,7 +240,8 @@ export const coursesData: {
                 'Data Visualization',
                 'Feature Engineering',
             ],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/SAA3BLB5E3QO',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/SAA3BLB5E3QO',
             credential: 'SAA3BLB5E3QO',
             image: '#',
         },
@@ -242,7 +257,8 @@ export const coursesData: {
                 'Python',
                 'Scikit-learn',
             ],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/6SUJ6TU2MQNA',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/6SUJ6TU2MQNA',
             credential: '6SUJ6TU2MQNA',
             image: '#',
         },
@@ -258,7 +274,8 @@ export const coursesData: {
                 'Decision Trees',
                 'SVM',
             ],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/011MJYE22PMJ',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/011MJYE22PMJ',
             credential: '011MJYE22PMJ',
             image: '#',
         },
@@ -269,7 +286,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['Clustering', 'K-Means', 'PCA', 'Anomaly Detection'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/HIMXITQQ04QJ',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/HIMXITQQ04QJ',
             credential: 'HIMXITQQ04QJ',
             image: '#',
         },
@@ -285,7 +303,8 @@ export const coursesData: {
                 'Neural Networks',
                 'TensorFlow',
             ],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/UQ9WUR4Q8OM6',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/UQ9WUR4Q8OM6',
             credential: 'UQ9WUR4Q8OM6',
             image: '#',
         },
@@ -296,7 +315,8 @@ export const coursesData: {
             provider: 'IBM',
             issuer: 'Coursera',
             skills: ['Machine Learning', 'Python', 'Capstone', 'Project'],
-            credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/HY9R2194EZJT',
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/HY9R2194EZJT',
             credential: 'HY9R2194EZJT',
             image: '#',
         },

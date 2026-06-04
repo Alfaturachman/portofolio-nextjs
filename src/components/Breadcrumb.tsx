@@ -14,7 +14,10 @@ export default function Breadcrumb({ items }: { items: Crumb[] }) {
             <Link href="/">Home</Link>
             {items.map((item, i) => (
                 <Fragment key={i}>
-                    <FontAwesomeIcon icon={faChevronRight} className="breadcrumb-sep" />
+                    <FontAwesomeIcon
+                        icon={faChevronRight}
+                        className="breadcrumb-sep"
+                    />
                     {item.href ? (
                         <Link href={item.href}>{item.label}</Link>
                     ) : (

@@ -1,7 +1,12 @@
 'use client';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faRobot, faCloud, faCode } from '@fortawesome/free-solid-svg-icons';
+import {
+    faArrowRight,
+    faRobot,
+    faCloud,
+    faCode,
+} from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 
@@ -9,9 +14,12 @@ export default function Hero() {
     const router = useRouter();
     const pathname = usePathname();
 
-    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const handleNavClick = (
+        e: React.MouseEvent<HTMLAnchorElement>,
+        href: string,
+    ) => {
         const [path] = href.split('#');
-        
+
         if (pathname !== path) {
             e.preventDefault();
             router.push(href);
@@ -150,13 +158,16 @@ export default function Hero() {
             >
                 <div className="hero-headline-container">
                     <h1 className="hero-title-main" id="heroHeadline">
-                        BUILDING
-                        <br />
-                        INTELLIGENT
-                        <br />
+                        I'M
                         <span className="accented">
-                            SYSTEMS<span className="dot-blink">.</span>
+                            {' '}
+                            ALMAVI
+                            <span className="dot-blink">.</span>
                         </span>
+                        <br />
+                        I BUILD USEFUL
+                        <br />
+                        STUFF.
                     </h1>
                 </div>
 
@@ -173,15 +184,27 @@ export default function Hero() {
                             </span>
                         </div>
                         <p className="hero-tagline-body">
-                            Software engineer passionate about building intelligent and scalable systems that solve real problems.
+                            Software engineer focused on building useful systems
+                            that solve real-world problems.
                         </p>
                     </div>
                     <div className="hero-cta-group hero-ctas">
-                        <a href="/portfolio" className="btn-hero-primary" onClick={(e) => handleNavClick(e, '/portfolio')}>
+                        <a
+                            href="/portfolio"
+                            className="btn-hero-primary"
+                            onClick={(e) => handleNavClick(e, '/portfolio')}
+                        >
                             <span>My Projects</span>
-                            <FontAwesomeIcon icon={faArrowRight} className="btn-icon" />
+                            <FontAwesomeIcon
+                                icon={faArrowRight}
+                                className="btn-icon"
+                            />
                         </a>
-                        <a href="/#about" className="btn-hero-outline" onClick={(e) => handleNavClick(e, '/#about')}>
+                        <a
+                            href="/#about"
+                            className="btn-hero-outline"
+                            onClick={(e) => handleNavClick(e, '/#about')}
+                        >
                             <span>About Me</span>
                         </a>
                     </div>

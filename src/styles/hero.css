@@ -79,7 +79,7 @@
     vector-effect: non-scaling-stroke;
     stroke-linecap: round;
     stroke-linejoin: round;
-    opacity: 0.12;
+    opacity: 0.1;
 }
 
 .circuit-worm path {
@@ -90,15 +90,15 @@
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-dasharray: 60 3000;
-    opacity: 0.35;
-    animation: wormCrawl 7s linear infinite;
+    opacity: 0.2;
+    animation: wormCrawl 8s linear infinite;
 }
 
 @media (max-width: 768px) {
     .circuit-worm path {
         animation: none;
         stroke-dasharray: none;
-        opacity: 0.15;
+        opacity: 0.02;
     }
 }
 
@@ -133,7 +133,7 @@
 }
 
 [data-theme='dark'] .circuit-base path {
-    opacity: 0.18;
+    opacity: 0.2;
 }
 
 @keyframes wormCrawl {
@@ -217,25 +217,25 @@
 }
 
 .hero-brand-text {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--text-secondary);
 }
 
 .hero-status-pill {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--accent-blue);
     background: var(--accent-blue-soft);
     padding: 6px 16px;
     border-radius: 99px;
-    border: 1px solid rgba(59, 91, 219, 0.15);
+    border: 1px solid rgba(59, 91, 219, 0.12);
 }
 
 .hero-middle-grid {
@@ -243,8 +243,8 @@
     z-index: 10;
     flex-grow: 1;
     display: grid;
-    grid-template-columns: 7fr 5fr;
-    gap: 48px;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 64px;
     align-items: center;
     width: 100%;
     max-width: 1180px;
@@ -255,7 +255,7 @@
     .hero-middle-grid {
         flex-grow: 0;
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 32px;
         margin: 0;
     }
 }
@@ -265,13 +265,15 @@
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    width: 100%;
 }
 
 .hero-title-main {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Clash Display', 'Plus Jakarta Sans', sans-serif;
     font-weight: 900;
-    font-size: clamp(2.5rem, 9.5vw, 7.5rem);
+    font-size: clamp(2.6rem, 7.8vw, 6rem);
     line-height: 0.95;
+    letter-spacing: -0.02em;
     color: var(--text-primary);
     word-wrap: break-word;
 }
@@ -293,7 +295,8 @@
 
 @media (max-width: 480px) {
     .hero-title-main {
-        font-size: clamp(3.2rem, 10vw, 3.2rem);
+        font-weight: 800;
+        font-size: clamp(2rem, 1.82rem + 0.91vw, 2.5rem);
     }
 }
 
@@ -301,7 +304,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 48px;
+    padding-left: 56px;
     border-left: 1.5px solid var(--accent);
 }
 
@@ -310,7 +313,7 @@
         padding-left: 0;
         border-left: none;
         border-top: 1.5px solid var(--accent);
-        padding-top: 20px;
+        padding-top: 24px;
         width: 100%;
     }
 }
@@ -367,7 +370,8 @@
 }
 
 .hero-tagline-body {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
     font-size: 0.9rem;
     line-height: 1.65;
     color: var(--text-secondary);
@@ -377,7 +381,7 @@
 
 .hero-tagline-body strong {
     color: var(--text-primary);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 @media (max-width: 1024px) {
@@ -454,10 +458,10 @@
     padding: 16px 24px;
     background: var(--accent);
     color: var(--inverse-text);
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     font-size: 0.8rem;
     font-weight: 700;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 8px;
@@ -467,8 +471,8 @@
 .btn-hero-primary:hover {
     background: var(--accent-blue);
     color: #fff;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(59, 91, 219, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 91, 219, 0.15);
 }
 
 .btn-hero-primary .btn-icon {
@@ -483,10 +487,10 @@
     padding: 16px 24px;
     background: var(--card-bg);
     color: var(--text-primary);
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     font-size: 0.8rem;
     font-weight: 700;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     text-decoration: none;
     border: 1.5px solid var(--accent);
@@ -567,17 +571,17 @@
 }
 
 .hero-stat-label {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     font-size: 0.65rem;
     font-weight: 700;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--text-muted);
     margin-bottom: 2px;
 }
 
 .hero-stat-val {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Satoshi', sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--text-primary);

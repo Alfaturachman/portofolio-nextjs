@@ -81,7 +81,7 @@
     color: var(--footer-text);
     letter-spacing: -0.04em;
     line-height: 1.05;
-    margin: 0 0 40px;
+    padding: 0 0 40px;
 
     /* Text Masking Preparation */
     background-size: 300% 300%;

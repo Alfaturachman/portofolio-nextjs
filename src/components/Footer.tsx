@@ -144,13 +144,6 @@ export default function Footer() {
                             <p className="footer-card-label">Navigate</p>
                             <div className="footer-nav-row">
                                 <a
-                                    href="/"
-                                    className="footer-nav-link"
-                                    onClick={(e) => handleNavClick(e, '/')}
-                                >
-                                    Home
-                                </a>
-                                <a
                                     href="/#about"
                                     className="footer-nav-link"
                                     onClick={(e) =>

@@ -332,7 +332,7 @@
 
 /* ----- Skills ----- */
 #skills {
-    background: var(--bg-primary);
+    background: var(--bg-secondary);
 }
 
 .skills-wrapper {
@@ -430,7 +430,7 @@
 
 /* ----- Experience ----- */
 #experience {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
 .experience-list {
@@ -528,6 +528,10 @@
 }
 
 /* ----- Portfolio ----- */
+#portfolio {
+    background: var(--bg-primary);
+}
+
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

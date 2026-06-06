@@ -92,11 +92,13 @@ export const projects: Project[] = [
     },
     {
         id: 'crumb-rubber',
-        image: '/assets/images/projects/project-crumb-rubber-home.png',
+        image: '/assets/images/projects/project-rubber-home.png',
         gallery: [
-            '/assets/images/projects/project-crumb-rubber-home.png',
-            '/assets/images/projects/project-crumb-rubber-register.png',
-            '/assets/images/projects/project-crumb-rubber-dashboard.png',
+            '/assets/images/projects/project-rubber-home.png',
+            '/assets/images/projects/project-rubber-login.png',
+            '/assets/images/projects/project-rubber-dashboard.png',
+            '/assets/images/projects/project-rubber-mitra.png',
+            '/assets/images/projects/project-rubber-stok.png',
         ],
         title: 'Crumb Rubber',
         type: 'Freelance',

@@ -5,7 +5,7 @@ import {
     faGraduationCap,
 } from '@fortawesome/free-solid-svg-icons';
 
-const startYear = 2022;
+const startYear = 2023;
 const yearsExp = new Date().getFullYear() - startYear;
 
 export default function About() {

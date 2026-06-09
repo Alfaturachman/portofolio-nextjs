@@ -9,8 +9,17 @@ export default function Cursor() {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
+        // HIG: Disable custom cursor when user prefers reduced motion
+        const prefersReducedMotion = window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+        ).matches;
+
         const checkMobile = () => {
-            setIsMobile(window.innerWidth <= 768 || 'ontouchstart' in window);
+            setIsMobile(
+                window.innerWidth <= 768 ||
+                    'ontouchstart' in window ||
+                    prefersReducedMotion
+            );
         };
         checkMobile();
         window.addEventListener('resize', checkMobile);

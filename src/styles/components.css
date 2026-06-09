@@ -226,3 +226,14 @@
         opacity: 1;
     }
 }
+
+/* HIG: Respect reduced motion for component animations */
+@media (prefers-reduced-motion: reduce) {
+    .skeleton {
+        animation: none;
+    }
+    .cursor-dot,
+    .cursor-outline {
+        display: none;
+    }
+}

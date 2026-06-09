@@ -269,8 +269,8 @@
 }
 
 .footer-back-top {
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -312,6 +312,16 @@
     display: inline-block;
     padding-right: 1rem;
     animation: marquee 50s linear infinite;
+}
+
+/* HIG: Respect reduced motion for marquee */
+@media (prefers-reduced-motion: reduce) {
+    .footer-marquee span {
+        animation: none;
+    }
+    .footer-heading:hover {
+        animation: none;
+    }
 }
 
 @keyframes marquee {

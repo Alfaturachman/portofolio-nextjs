@@ -279,8 +279,8 @@
 }
 
 .about-stat-icon {
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     border-radius: 10px;
     background: var(--glass-bg);
     border: 1px solid var(--border-subtle);
@@ -795,8 +795,8 @@
 }
 
 .project-arrow {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     background: var(--bg-primary);
     display: flex;
@@ -2153,4 +2153,24 @@
     top: auto;
     right: auto;
     animation: float-glow 12s ease-in-out infinite reverse;
+}
+
+/* HIG: Respect reduced motion for section animations */
+@media (prefers-reduced-motion: reduce) {
+    .not-found-blob,
+    .not-found-blob.secondary {
+        animation: none;
+    }
+    .education-card:hover,
+    .stat-card:hover,
+    .project-card:hover,
+    .experience-content:hover,
+    .next-project-link:hover,
+    .meta-pill:hover,
+    .course-item:hover {
+        transform: none;
+    }
+    .education-icon:hover {
+        transform: none;
+    }
 }

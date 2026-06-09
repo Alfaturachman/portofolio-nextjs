@@ -212,8 +212,8 @@ export const coursesData: {
             issuer: 'Coursera',
             skills: ['Monitoring', 'Observability', 'Prometheus', 'Grafana'],
             credentialUrl:
-                'https://www.coursera.org/account/accomplishments/verify/4F8A0B453G7C',
-            credential: '4F8A0B453G7C',
+                'https://www.coursera.org/account/accomplishments/verify/IOTESW68DTO6',
+            credential: 'IOTESW68DTO6',
             image: '#',
         },
         {

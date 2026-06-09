@@ -21,6 +21,7 @@ export default function Certificates() {
                             key={spec.id}
                             href={`/courses/${spec.id}`}
                             className="project-card cert-card"
+                            aria-label={`View ${spec.title} certificate`}
                         >
                             <div className="project-img-wrapper cert-logo-wrap">
                                 <img
@@ -62,14 +63,7 @@ export default function Certificates() {
                                     )}
                                     .
                                 </p>
-                                <span
-                                    className="project-footer"
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        e.stopPropagation();
-                                        window.open(spec.credentialUrl, '_blank', 'noopener,noreferrer');
-                                    }}
-                                >
+                                <span className="project-footer">
                                     <span className="project-link-text">
                                         View Credential
                                     </span>

@@ -332,3 +332,12 @@
     );
     animation: float-glow 15s ease-in-out infinite 2s;
 }
+
+/* HIG: Respect reduced motion for blog animations */
+@media (prefers-reduced-motion: reduce) {
+    .blog-glow-blob,
+    .blog-glow-blob.secondary,
+    .blog-glow-blob.tertiary {
+        animation: none;
+    }
+}

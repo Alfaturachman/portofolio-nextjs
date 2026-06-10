@@ -38,17 +38,10 @@ export default function About() {
 
                         <p className="about-bio">
                             I am <strong>Alfaturachman Maulana Pahlevi</strong>,
-                            a Software Engineer specializing in DevOps and
-                            AI-driven solutions. Leveraging a strong foundation
-                            in backend development, data analysis, and systems
-                            engineering, I architect scalable systems that drive
-                            real-world impact.
+                            a software engineer focused on DevOps and AI-driven solutions. I turn complex problems into clean, scalable systems.
                         </p>
                         <p className="about-bio about-bio-margin">
-                            Currently, I am actively expanding my expertise in
-                            advanced <strong>Artificial Intelligence, </strong>
-                            <strong>Machine Learning, and </strong>
-                            <strong>Deep Learning.</strong>
+                            My work spans backend architecture, cloud infrastructure, and intelligent systems. Currently diving deeper into <strong>Machine Learning and Deep Learning</strong> to bridge AI with production software.
                         </p>
 
                         <div className="about-stats-row">

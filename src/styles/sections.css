@@ -74,7 +74,7 @@
     font-size: 1.05rem;
     line-height: 1.8;
     color: var(--text-secondary);
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .about-bio strong {
@@ -207,14 +207,6 @@
         background 0.3s ease;
 }
 
-[data-theme='dark'] .education-icon {
-    background: var(--accent-blue-soft);
-}
-
-.education-entry:hover .education-icon {
-    transform: scale(1.1) rotate(-3deg);
-}
-
 .education-card-content {
     flex: 1;
 }
@@ -227,10 +219,6 @@
     border-radius: 8px;
     transition: background 0.25s ease;
     margin: 0 -12px;
-}
-
-.education-entry:hover {
-    background: var(--accent-blue-soft);
 }
 
 .education-entry-badge {
@@ -282,13 +270,13 @@
     width: 44px;
     height: 44px;
     border-radius: 10px;
-    background: var(--glass-bg);
+    background: var(--bg-primary);
     border: 1px solid var(--border-subtle);
     backdrop-filter: blur(18px) saturate(160%);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.85rem;
+    font-size: 1rem;
     flex-shrink: 0;
 }
 
@@ -315,7 +303,7 @@
 @media (max-width: 768px) {
     .about-stats-row {
         flex-direction: column;
-        gap: 12px;
+        gap: 16px;
     }
 }
 
@@ -2168,9 +2156,6 @@
     .next-project-link:hover,
     .meta-pill:hover,
     .course-item:hover {
-        transform: none;
-    }
-    .education-icon:hover {
         transform: none;
     }
 }

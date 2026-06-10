@@ -11,7 +11,19 @@ export default function Hero() {
         e: React.MouseEvent<HTMLAnchorElement>,
         href: string,
     ) => {
-        const [path] = href.split('#');
+        const [path, hash] = href.split('#');
+
+        // Same page anchor link — scroll to element
+        if (pathname === path && hash) {
+            e.preventDefault();
+            const el = document.getElementById(hash);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+            return;
+        }
+
+        // Different page — navigate
         if (pathname !== path) {
             e.preventDefault();
             router.push(href);
@@ -29,10 +41,10 @@ export default function Hero() {
                     <span>Available for work</span>
                 </div>
 
-                {/* Headline grid: left title + right description */}
-                <div className="hero-grid hero-fade-in-2">
-                    <div className="hero-headline-wrap">
-                        <p className="hero-greeting">Hi, I&rsquo;m Almavi.</p>
+                {/* Title + Description as one unit */}
+                <div className="hero-content hero-fade-in-2">
+                    <p className="hero-greeting">Hi, I&rsquo;m Almavi.</p>
+                    <div className="hero-grid">
                         <h1 className="hero-title">
                             I build software that{' '}
                             <span className="hero-title-highlight">
@@ -40,13 +52,11 @@ export default function Hero() {
                             </span>
                             real problems.
                         </h1>
+                        <p className="hero-description">
+                            Full-stack engineer focused on{' '}
+                            clean architecture, fluid user experience, and turning good ideas into apps that actually work.
+                        </p>
                     </div>
-                    <p className="hero-description">
-                        Full-stack engineer focused on{' '}
-                        <strong>clean architecture</strong> and fluid user
-                        experience and shipping products that make a
-                        difference — from idea to deployment.
-                    </p>
                 </div>
 
                 {/* Bottom CTA bar */}

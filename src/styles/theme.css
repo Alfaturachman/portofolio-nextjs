@@ -21,8 +21,8 @@
     --overlay-light: rgba(26, 22, 16, 0.08);
     --inverse-text: #ffffff;
     --color-white: #ffffff;
-    --footer-bg: #0f172a;
-    --footer-text: #f5f3ee;
+    --footer-bg: #f1f5f9;
+    --footer-text: #1a1610;
 }
 
 [data-theme='dark'] {

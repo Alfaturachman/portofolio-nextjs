@@ -1,6 +1,6 @@
 # Alfaturachman - Personal Web Portfolio & Blog
 
-A professional, interactive developer portfolio and blog built with Next.js App Router and TypeScript. The project features a custom-built Glassmorphism design system, and optimized performance.
+A professional, interactive developer portfolio and blog built with Next.js App Router and TypeScript. Designed following **Apple Human Interface Guidelines (HIG)** for clarity, accessibility, and a refined user experience.
 
 ## Core Architecture
 
@@ -8,11 +8,26 @@ This repository serves as both a showcase of software engineering projects and a
 
 ### Key Features
 
+- **Apple HIG Compliance**: Design system built around Apple Human Interface Guidelines — prioritizing clarity, deference, depth, and accessibility across all components.
+- **Accessible by Default**: Full `prefers-reduced-motion` support, minimum 44px touch targets, WCAG-compliant contrast ratios, `:focus-visible` indicators, and semantic HTML throughout.
+- **System Theme Detection**: Automatically respects user's `prefers-color-scheme` with manual dark/light toggle and localStorage persistence.
 - **Interactive Design System**: Custom vanilla CSS implementation featuring Glassmorphism, dynamic gradients, and hardware-accelerated animations.
 - **Holographic Animations**: Complex CSS keyframe animations integrated with SVG noise filters for high-end visual textures.
 - **Mouse-Tracking Interactions**: Real-time CSS variable updates bound to cursor movement for interactive footer elements.
 - **Dynamic SEO Generation**: Utilization of Next.js metadata API to dynamically generate titles, descriptions, and keywords for individual project and blog routes.
 - **Integrated Content Management**: A structured approach to managing project and article data locally without relying on heavy external CMS dependencies.
+
+## Design Principles
+
+This portfolio is built on **Apple Human Interface Guidelines (HIG)**:
+
+| Principle | Implementation |
+|-----------|---------------|
+| **Clarity** | High-contrast text (4.5:1+), clear typography hierarchy, legible at all sizes |
+| **Deference** | Content-first layout, UI defers to information, subtle visual cues |
+| **Depth** | Layered transitions, spatial hierarchy, subtle shadows |
+| **Accessibility** | 44px min touch targets, `prefers-reduced-motion`, `:focus-visible`, semantic HTML |
+| **Adaptability** | `prefers-color-scheme` detection, responsive layouts, system font integration |
 
 ## Technologies Used
 

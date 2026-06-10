@@ -1,6 +1,6 @@
 /* ----- About — Bento Grid HIG ----- */
 #about {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
 .about-bento-grid {
@@ -442,7 +442,7 @@
 
 /* ----- Skills ----- */
 #skills {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
 .skills-wrapper {
@@ -777,7 +777,7 @@
     width: 100%;
     aspect-ratio: 16/9;
     position: relative;
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
 .project-img-wrapper img {
@@ -941,7 +941,7 @@
 
 /* ----- Certificates ----- */
 #certificates {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
 .cert-card {
@@ -1868,7 +1868,7 @@
 }
 
 .btn-action.secondary:hover {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     transform: translateY(-2px);
 }
 
@@ -2079,7 +2079,7 @@
 #contact {
     padding: 120px 24px;
     background: var(--bg-primary);
-    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-slightly);
 }
 
 .contact-premium-wrapper {

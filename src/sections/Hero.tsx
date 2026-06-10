@@ -53,7 +53,7 @@ export default function Hero() {
                             real problems.
                         </h1>
                         <p className="hero-description">
-                            Full-stack engineer focused on{' '}
+                            Software engineer focused on{' '}
                             clean architecture, fluid user experience, and turning good ideas into apps that actually work.
                         </p>
                     </div>

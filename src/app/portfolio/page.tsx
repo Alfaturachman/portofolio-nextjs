@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
     return (
-        <div className="mt-8 bg-secondary">
+        <div className="pt-[20px]">
             <PortfolioSection>
                 <Breadcrumb items={[{ label: 'Portfolio' }]} />
             </PortfolioSection>

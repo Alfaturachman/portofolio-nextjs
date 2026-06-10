@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faChevronLeft,
@@ -39,9 +40,12 @@ export default function ImageCarousel({
                     <FontAwesomeIcon icon={faChevronLeft} />
                 </button>
                 <div className="gallery-image-wrapper">
-                    <img
+                    <Image
                         src={images[activeIndex]}
                         alt={`${title} screenshot ${activeIndex + 1}`}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 50vw"
+                        priority
                     />
                 </div>
                 <button
@@ -64,7 +68,12 @@ export default function ImageCarousel({
                             onClick={() => goTo(i)}
                             aria-label={`View image ${i + 1}`}
                         >
-                            <img src={img} alt="" />
+                            <Image
+                                src={img}
+                                alt=""
+                                fill
+                                sizes="100px"
+                            />
                         </button>
                     ))}
                 </div>

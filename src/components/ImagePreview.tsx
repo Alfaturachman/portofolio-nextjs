@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
@@ -99,7 +100,7 @@ export default function ImagePreview({
                             <FontAwesomeIcon icon={faXmark} />
                         </button>
                         <div className="cert-img-wrapper">
-                            <img
+                            <Image
                                 ref={imgRef}
                                 src={src}
                                 alt={alt}
@@ -132,6 +133,9 @@ export default function ImagePreview({
                                     const t = e.touches[0];
                                     movePan(t.clientX, t.clientY);
                                 }}
+                                width={800}
+                                height={600}
+                                unoptimized
                             />
                         </div>
                     </div>

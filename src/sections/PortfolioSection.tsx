@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { projects } from '@/lib/projects';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -56,34 +57,39 @@ function ProjectCard({
     index: number;
 }) {
     const [loaded, setLoaded] = useState(false);
-    const imgRef = useRef<HTMLImageElement>(null);
-
-    useEffect(() => {
-        if (imgRef.current?.complete) {
-            setLoaded(true);
-        }
-    }, []);
+    const [imgSrc, setImgSrc] = useState(p.image);
 
     return (
         <Link href={`/portfolio/${p.id}`} className="project-card">
             <div className="project-img-wrapper">
                 {!loaded && <div className="skeleton" />}
-                <img
-                    ref={imgRef}
-                    src={p.image}
+                <Image
+                    src={imgSrc}
                     alt={p.title}
-                    loading="lazy"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className={loaded ? 'loaded' : ''}
                     onLoad={() => setLoaded(true)}
-                    onError={(e) => {
+                    onError={() => {
+                        setImgSrc('/assets/images/projects/fallback.png');
                         setLoaded(true);
-                        e.currentTarget.src =
-                            '/assets/images/projects/fallback.png';
                     }}
+                    priority={index < 3}
                 />
             </div>
             <div className="project-content">
+                <div className="project-tags">
+                    <span className={`project-tag type-badge ${p.type.toLowerCase()}`}>
+                        {p.type}
+                    </span>
+                    {p.tags.slice(0, 3).map((tag) => (
+                        <span key={tag} className="project-tag">
+                            {tag}
+                        </span>
+                    ))}
+                </div>
                 <h3 className="project-title">{p.title}</h3>
+                <p className="project-desc">{p.cardDesc}</p>
                 <div className="project-footer">
                     <span className="project-link-text">View Details</span>
                     <div className="project-arrow">

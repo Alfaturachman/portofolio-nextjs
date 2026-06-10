@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import { coursesData } from '@/lib/courses';
 import ImagePreview from '@/components/ImagePreview';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -131,13 +132,14 @@ export default async function CoursesPage({
                             <ImagePreview
                                 src={spec.image}
                                 alt={`${spec.title} Certificate`}
-                                disableZoom={true}
                             >
                                 <div className="spec-cert-image">
-                                    <img
+                                    <Image
                                         src={spec.image}
                                         alt={`${spec.title} Certificate`}
-                                        loading="lazy"
+                                        width={800}
+                                        height={600}
+                                        priority
                                     />
                                 </div>
                             </ImagePreview>
@@ -170,9 +172,9 @@ export default async function CoursesPage({
                         <FontAwesomeIcon icon={faList} />
                         Courses ({courses.length})
                     </h2>
-                    <div className="courses-grid">
+                    <ul className="courses-grid">
                         {courses.map((course, idx) => (
-                            <div className="course-item" key={course.id}>
+                            <li className="course-item" key={course.id}>
                                 <div className="course-number">{idx + 1}</div>
                                 <div className="course-body">
                                     <h3 className="course-title">
@@ -205,9 +207,9 @@ export default async function CoursesPage({
                                             </a>
                                         )}
                                 </div>
-                            </div>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
                 </div>
             </div>
         </section>

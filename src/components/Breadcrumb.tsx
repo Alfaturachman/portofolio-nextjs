@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -10,21 +9,28 @@ interface Crumb {
 
 export default function Breadcrumb({ items }: { items: Crumb[] }) {
     return (
-        <div className="breadcrumb">
-            <Link href="/">Home</Link>
-            {items.map((item, i) => (
-                <Fragment key={i}>
-                    <FontAwesomeIcon
-                        icon={faChevronRight}
-                        className="breadcrumb-sep"
-                    />
-                    {item.href ? (
-                        <Link href={item.href}>{item.label}</Link>
-                    ) : (
-                        <span className="breadcrumb-current">{item.label}</span>
-                    )}
-                </Fragment>
-            ))}
-        </div>
+        <nav className="breadcrumb" aria-label="Breadcrumb">
+            <ol className="breadcrumb-list">
+                <li>
+                    <Link href="/">Home</Link>
+                </li>
+                {items.map((item, i) => (
+                    <li key={i}>
+                        <FontAwesomeIcon
+                            icon={faChevronRight}
+                            className="breadcrumb-sep"
+                            aria-hidden="true"
+                        />
+                        {item.href ? (
+                            <Link href={item.href}>{item.label}</Link>
+                        ) : (
+                            <span className="breadcrumb-current" aria-current="page">
+                                {item.label}
+                            </span>
+                        )}
+                    </li>
+                ))}
+            </ol>
+        </nav>
     );
 }

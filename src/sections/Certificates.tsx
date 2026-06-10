@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { coursesData } from '@/lib/courses';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding, faCalendarAlt, faBookOpen, faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -24,9 +25,11 @@ export default function Certificates() {
                             aria-label={`View ${spec.title} certificate`}
                         >
                             <div className="project-img-wrapper cert-logo-wrap">
-                                <img
+                                <Image
                                     src="/assets/images/logo/ibm.svg"
                                     alt="IBM"
+                                    width={120}
+                                    height={40}
                                     className="cert-brand-logo"
                                 />
                             </div>

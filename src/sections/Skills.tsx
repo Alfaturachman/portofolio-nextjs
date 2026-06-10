@@ -1,4 +1,5 @@
 import { skillsCategories } from '@/lib/experiences';
+import Image from 'next/image';
 
 const toolIcons: Record<string, string> = {
     html: '/assets/images/logo/html.svg',
@@ -39,9 +40,11 @@ export default function Skills() {
                                     <div className="tool-pill" key={tool.name}>
                                         <span className="tool-icon">
                                             {toolIcons[tool.icon] ? (
-                                                <img
+                                                <Image
                                                     src={toolIcons[tool.icon]}
                                                     alt={tool.name}
+                                                    width={24}
+                                                    height={24}
                                                 />
                                             ) : (
                                                 <i

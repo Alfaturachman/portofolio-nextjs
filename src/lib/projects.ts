@@ -3,11 +3,11 @@ import type { Project } from './types';
 export const projects: Project[] = [
     {
         id: 'renstra-ft',
-        image: '/assets/images/projects/project-renstra-login.png',
+        image: '/assets/images/projects/project-rencana-strategis-login.png',
         gallery: [
-            '/assets/images/projects/project-renstra-login.png',
-            '/assets/images/projects/project-renstra.png',
-            '/assets/images/projects/project-renstra-hasil.png',
+            '/assets/images/projects/project-rencana-strategis-login.png',
+            '/assets/images/projects/project-rencana-strategis.png',
+            '/assets/images/projects/project-rencana-strategis-hasil.png',
         ],
         title: 'RENSTRA FT',
         type: 'Team',

@@ -43,8 +43,11 @@ export const skillsCategories = [
         title: 'Frontend Architecture',
         desc: 'Building resilient, component-driven user interfaces with modern web standards and responsive performance in mind.',
         tools: [
-            { name: 'HTML/CSS', icon: 'html' },
+            { name: 'HTML', icon: 'html' },
+            { name: 'CSS', icon: 'css' },
+            { name: 'Tailwind CSS', icon: 'tailwind' },
             { name: 'JavaScript', icon: 'javascript' },
+            { name: 'TypeScript', icon: 'typescript' },
             { name: 'React', icon: 'react' },
             { name: 'Next.js', icon: 'nextjs' },
         ],
@@ -53,11 +56,14 @@ export const skillsCategories = [
         title: 'Backend & APIs',
         desc: 'Designing scalable server-side architectures, robust RESTful APIs, and efficient database models.',
         tools: [
+            { name: 'Node.js', icon: 'nodejs' },
             { name: 'Python', icon: 'python' },
+            { name: 'Django', icon: 'django' },
             { name: 'PHP', icon: 'php' },
             { name: 'Laravel', icon: 'laravel' },
             { name: 'CodeIgniter', icon: 'codeigniter' },
             { name: 'MySQL', icon: 'mysql' },
+            { name: 'PostgreSQL', icon: 'postgresql' },
         ],
     },
     {

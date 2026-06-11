@@ -17,6 +17,12 @@ const toolIcons: Record<string, string> = {
     github: '/assets/images/logo/github.svg',
     docker: '/assets/images/logo/docker.svg',
     figma: '/assets/images/logo/figma.svg',
+    css: '/assets/images/logo/css.svg',
+    tailwind: '/assets/images/logo/tailwind.svg',
+    postgresql: '/assets/images/logo/postgresql.svg',
+    nodejs: '/assets/images/logo/nodejs.svg',
+    typescript: '/assets/images/logo/typescript.svg',
+    django: '/assets/images/logo/django.svg',
 };
 
 export default function Skills() {

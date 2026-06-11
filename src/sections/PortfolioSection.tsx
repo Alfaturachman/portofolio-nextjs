@@ -79,14 +79,14 @@ function ProjectCard({
             </div>
             <div className="project-content">
                 <div className="project-tags">
-                    <span className={`project-tag type-badge ${p.type.toLowerCase()}`}>
-                        {p.type}
-                    </span>
                     {p.tags.slice(0, 3).map((tag) => (
                         <span key={tag} className="project-tag">
                             {tag}
                         </span>
                     ))}
+                    {p.tags.length > 3 && (
+                        <span className="project-tag">+{p.tags.length - 3}</span>
+                    )}
                 </div>
                 <h3 className="project-title">{p.title}</h3>
                 <p className="project-desc">{p.cardDesc}</p>

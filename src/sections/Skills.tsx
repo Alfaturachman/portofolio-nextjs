@@ -1,5 +1,10 @@
+'use client';
+
 import { skillsCategories } from '@/lib/experiences';
 import Image from 'next/image';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const toolIcons: Record<string, string> = {
     html: '/assets/images/logo/html.svg',
@@ -23,9 +28,24 @@ const toolIcons: Record<string, string> = {
     nodejs: '/assets/images/logo/nodejs.svg',
     typescript: '/assets/images/logo/typescript.svg',
     django: '/assets/images/logo/django.svg',
+    'adobe-illustrator-cc': '/assets/images/logo/adobe-illustrator-cc.svg',
 };
 
 export default function Skills() {
+    const [expanded, setExpanded] = useState<Set<number>>(new Set());
+
+    const toggleCategory = (idx: number) => {
+        setExpanded((prev) => {
+            const next = new Set(prev);
+            if (next.has(idx)) {
+                next.delete(idx);
+            } else {
+                next.add(idx);
+            }
+            return next;
+        });
+    };
+
     return (
         <section id="skills">
             <div className="section-max">
@@ -35,35 +55,47 @@ export default function Skills() {
                     <br />I master
                 </h2>
                 <div className="skills-wrapper">
-                    {skillsCategories.map((cat, idx) => (
-                        <div className="skill-category" key={cat.title}>
-                            <div className="category-header">
-                                <h3 className="category-title">{cat.title}</h3>
-                                <p className="category-desc">{cat.desc}</p>
-                            </div>
-                            <div className="category-tools">
-                                {cat.tools.map((tool) => (
-                                    <div className="tool-pill" key={tool.name}>
-                                        <span className="tool-icon">
-                                            {toolIcons[tool.icon] ? (
-                                                <Image
-                                                    src={toolIcons[tool.icon]}
-                                                    alt={tool.name}
-                                                    width={24}
-                                                    height={24}
-                                                />
-                                            ) : (
-                                                <i
-                                                    className={`fab fa-${tool.icon}`}
-                                                />
-                                            )}
-                                        </span>
-                                        {tool.name}
+                    {skillsCategories.map((cat, idx) => {
+                        const isExpanded = expanded.has(idx);
+                        return (
+                            <div className="skill-category" key={cat.title}>
+                                <button
+                                    className="category-header"
+                                    onClick={() => toggleCategory(idx)}
+                                    aria-expanded={isExpanded}
+                                >
+                                    <div>
+                                        <h3 className="category-title">{cat.title}</h3>
+                                        <p className="category-desc">{cat.desc}</p>
                                     </div>
-                                ))}
+                                    <div className={`category-chevron${isExpanded ? ' is-expanded' : ''}`}>
+                                        <FontAwesomeIcon icon={faChevronDown} />
+                                    </div>
+                                </button>
+                                <div className={`category-tools${isExpanded ? ' is-expanded' : ''}`}>
+                                    {cat.tools.map((tool) => (
+                                        <div className="tool-pill" key={tool.name}>
+                                            <span className="tool-icon">
+                                                {toolIcons[tool.icon] ? (
+                                                    <Image
+                                                        src={toolIcons[tool.icon]}
+                                                        alt={tool.name}
+                                                        width={24}
+                                                        height={24}
+                                                    />
+                                                ) : (
+                                                    <i
+                                                        className={`fab fa-${tool.icon}`}
+                                                    />
+                                                )}
+                                            </span>
+                                            {tool.name}
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
             </div>
         </section>

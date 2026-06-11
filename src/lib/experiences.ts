@@ -76,6 +76,7 @@ export const skillsCategories = [
             { name: 'GitHub', icon: 'github' },
             { name: 'Docker', icon: 'docker' },
             { name: 'Figma', icon: 'figma' },
+            { name: 'Adobe Illustrator', icon: 'adobe-illustrator-cc' },
         ],
     },
 ];

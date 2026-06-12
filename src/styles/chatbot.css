@@ -24,6 +24,23 @@
     background: rgba(17, 24, 39, 0.8);
 }
 
+.chatbot-toggle img.chatbot-toggle-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    pointer-events: none;
+    filter: brightness(0);
+}
+
+[data-theme='dark'] .chatbot-toggle img.chatbot-toggle-icon {
+    filter: none;
+}
+
+.chatbot-toggle:hover img.chatbot-toggle-icon,
+.chatbot-toggle.open img.chatbot-toggle-icon {
+    filter: none;
+}
+
 .chatbot-toggle:hover {
     transform: scale(1.1);
     color: #fff;
@@ -80,12 +97,20 @@
     width: 32px;
     height: 32px;
     border-radius: 8px;
-    background: linear-gradient(135deg, var(--accent-blue), #7c3aed);
+    background: var(--accent-blue);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.9rem;
     color: #fff;
+    overflow: hidden;
+}
+
+.chatbot-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 4px;
 }
 
 .chatbot-name {
@@ -137,13 +162,21 @@
     width: 56px;
     height: 56px;
     border-radius: 16px;
-    background: linear-gradient(135deg, var(--accent-blue), #7c3aed);
+    background: var(--accent-blue);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     color: #fff;
     margin-bottom: 4px;
+    overflow: hidden;
+}
+
+.chatbot-welcome-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
 }
 
 .chatbot-welcome-title {

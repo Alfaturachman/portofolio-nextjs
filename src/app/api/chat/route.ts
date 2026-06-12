@@ -107,7 +107,7 @@ function containsBlocked(text: string): boolean {
     });
 }
 
-const systemPrompt = `You are a helpful assistant for Alfaturachman Maulana Pahlevi's portfolio website. Your name is "almavi bot".
+const systemPrompt = `You are a helpful assistant for Alfaturachman Maulana Pahlevi's portfolio website. Your name is "mapi".
 
 About Alfaturachman:
 - Full name: Alfaturachman Maulana Pahlevi
@@ -141,7 +141,37 @@ Rules:
 - Keep responses brief and helpful.
 - Use "almavi" to refer to Alfaturachman.`;
 
+const rateLimit = new Map<string, number[]>();
+
+function isRateLimited(ip: string, maxReqs = 10, windowMs = 60_000): boolean {
+    const now = Date.now();
+    const timestamps = rateLimit.get(ip) ?? [];
+
+    const recent = timestamps.filter((t) => now - t < windowMs);
+
+    if (recent.length >= maxReqs) {
+        rateLimit.set(ip, recent);
+        return true;
+    }
+
+    recent.push(now);
+    rateLimit.set(ip, recent);
+    return false;
+}
+
 export async function POST(request: NextRequest) {
+    const ip =
+        request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ??
+        request.headers.get('x-real-ip') ??
+        'unknown';
+
+    if (isRateLimited(ip)) {
+        return Response.json(
+            { error: 'Too many requests. Please wait a moment before sending another message.' },
+            { status: 429 },
+        );
+    }
+
     const { messages } = await request.json();
     const apiKey = process.env.GROQ_API_KEY;
 

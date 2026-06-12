@@ -604,7 +604,8 @@
 }
 
 [data-theme='dark'] .tool-icon img[src*='nextjs'],
-[data-theme='dark'] .tool-icon img[src*='github'] {
+[data-theme='dark'] .tool-icon img[src*='github'],
+[data-theme='dark'] .tool-icon img[src*='django'] {
     filter: brightness(0) invert(1);
 }
 

@@ -1,13 +1,14 @@
 'use client';
 
-import { useState, useRef, useEffect, useCallback, type ReactNode } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faRobot,
-    faCommentDots,
-    faTimes,
-    faPaperPlane,
-} from '@fortawesome/free-solid-svg-icons';
+    useState,
+    useRef,
+    useEffect,
+    useCallback,
+    type ReactNode,
+} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 function renderContent(text: string): ReactNode {
     const urlRegex = /(https?:\/\/[^\s]+)/g;
@@ -23,7 +24,13 @@ function renderContent(text: string): ReactNode {
         }
         if (match.startsWith('http')) {
             segments.push(
-                <a key={key++} href={match} target="_blank" rel="noopener noreferrer" className="chatbot-link">
+                <a
+                    key={key++}
+                    href={match}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="chatbot-link"
+                >
                     {match}
                 </a>,
             );
@@ -38,7 +45,10 @@ function renderContent(text: string): ReactNode {
     };
 
     let m: RegExpExecArray | null;
-    const combined = new RegExp(`(${urlRegex.source}|${pathRegex.source.slice(1, -1)})`, 'g');
+    const combined = new RegExp(
+        `(${urlRegex.source}|${pathRegex.source.slice(1, -1)})`,
+        'g',
+    );
     while ((m = combined.exec(text)) !== null) {
         addMatch(m[0], m.index);
     }
@@ -159,6 +169,19 @@ export default function Chatbot() {
 
             const data = await res.json();
 
+            if (res.status === 429) {
+                setMessages((prev) => [
+                    ...prev,
+                    {
+                        role: 'assistant',
+                        content:
+                            data.error ??
+                            'Terlalu banyak permintaan. Silakan tunggu beberapa saat.',
+                    },
+                ]);
+                return;
+            }
+
             setMessages((prev) => [
                 ...prev,
                 {
@@ -174,7 +197,8 @@ export default function Chatbot() {
                 ...prev,
                 {
                     role: 'assistant',
-                    content: 'Connection error. Please check your network and try again.',
+                    content:
+                        'Connection error. Please check your network and try again.',
                 },
             ]);
         } finally {
@@ -204,8 +228,10 @@ export default function Chatbot() {
                 aria-expanded={isOpen}
                 aria-controls="chatbot-panel"
             >
-                <FontAwesomeIcon
-                    icon={isOpen ? faTimes : faCommentDots}
+                <img
+                    src="/assets/images/logo/api.svg"
+                    alt="mapi"
+                    className="chatbot-toggle-icon"
                 />
             </button>
 
@@ -222,17 +248,18 @@ export default function Chatbot() {
                         className="chatbot-panel"
                         role="dialog"
                         aria-modal="true"
-                        aria-label="Chat with Almavi Bot"
+                        aria-label="Chat with mapi"
                     >
                         <div className="chatbot-header">
                             <div className="chatbot-header-info">
                                 <div className="chatbot-avatar">
-                                    <FontAwesomeIcon icon={faRobot} />
-                                </div>
-                                <div>
-                                    <p className="chatbot-name">
-                                        Almavi Bot
-                                    </p>
+                                    <img
+                                        src="/assets/images/logo/api.svg"
+                        alt="mapi"
+                    />
+                </div>
+                <div>
+                    <p className="chatbot-name">mapi</p>
                                     <p className="chatbot-status">
                                         {loading ? 'Thinking...' : 'Online'}
                                     </p>
@@ -250,17 +277,20 @@ export default function Chatbot() {
                         {!chatStarted ? (
                             <div className="chatbot-welcome">
                                 <div className="chatbot-welcome-icon">
-                                    <FontAwesomeIcon icon={faRobot} />
+                                    <img
+                                        src="/assets/images/logo/api.svg"
+                                        alt="mapi"
+                                    />
                                 </div>
                                 <h2 className="chatbot-welcome-title">
-                                    What can I help you with?
+                                    Hi, I&rsquo;m mapi. How can I help?
                                 </h2>
                                 <div className="chatbot-welcome-input-wrap">
                                     <div className="chatbot-input-wrap">
                                         <textarea
                                             ref={inputRef}
                                             className="chatbot-input"
-                                            placeholder="Ask anything..."
+                                            placeholder="Ask me anything you want"
                                             rows={1}
                                             value={input}
                                             onChange={(e) => {
@@ -275,12 +305,15 @@ export default function Chatbot() {
                                             disabled={!input.trim()}
                                             aria-label="Send message"
                                         >
-                                            <FontAwesomeIcon icon={faPaperPlane} />
+                                            <FontAwesomeIcon
+                                                icon={faPaperPlane}
+                                            />
                                         </button>
                                     </div>
                                 </div>
                                 <p className="chatbot-disclaimer">
-                                    Almavi Bot can make mistakes. Ask about skills, projects, or experience.
+                                    mapi can make mistakes. ask about skills,
+                                    projects, or experience.
                                 </p>
                             </div>
                         ) : (
@@ -291,7 +324,9 @@ export default function Chatbot() {
                                             key={i}
                                             className={`chatbot-msg ${msg.role}`}
                                         >
-                                            <div className={`chatbot-msg-content ${msg.role}`}>
+                                            <div
+                                                className={`chatbot-msg-content ${msg.role}`}
+                                            >
                                                 {renderContent(msg.content)}
                                             </div>
                                         </div>
@@ -313,7 +348,7 @@ export default function Chatbot() {
                                         <textarea
                                             ref={inputRef}
                                             className="chatbot-input"
-                                            placeholder="Ask anything..."
+                                            placeholder="Ask me anything you want"
                                             rows={1}
                                             value={input}
                                             onChange={(e) => {
@@ -329,11 +364,14 @@ export default function Chatbot() {
                                             disabled={loading || !input.trim()}
                                             aria-label="Send message"
                                         >
-                                            <FontAwesomeIcon icon={faPaperPlane} />
+                                            <FontAwesomeIcon
+                                                icon={faPaperPlane}
+                                            />
                                         </button>
                                     </div>
                                     <p className="chatbot-disclaimer">
-                                        Almavi Bot can make mistakes. Ask about skills, projects, or experience.
+                                        mapi can make mistakes. ask about
+                                        skills, projects, or experience.
                                     </p>
                                 </div>
                             </>

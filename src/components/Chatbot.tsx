@@ -9,6 +9,7 @@ import {
 } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { useChatbot } from '@/lib/chatbot-context';
 
 function renderContent(text: string): ReactNode {
     const urlRegex = /(https?:\/\/[^\s]+)/g;
@@ -68,14 +69,13 @@ interface Message {
 const FOCUSABLE = 'button, textarea, [tabindex]:not([tabindex="-1"])';
 
 export default function Chatbot() {
-    const [isOpen, setIsOpen] = useState(false);
+    const { isOpen, setIsOpen } = useChatbot();
     const [chatStarted, setChatStarted] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState('');
     const [loading, setLoading] = useState(false);
     const endRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLTextAreaElement>(null);
-    const toggleRef = useRef<HTMLButtonElement>(null);
     const panelRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -88,7 +88,6 @@ export default function Chatbot() {
             setTimeout(() => inputRef.current?.focus(), 300);
         } else {
             document.body.style.overflow = '';
-            toggleRef.current?.focus();
         }
         return () => {
             document.body.style.overflow = '';
@@ -220,21 +219,6 @@ export default function Chatbot() {
 
     return (
         <>
-            <button
-                ref={toggleRef}
-                className={`chatbot-toggle${isOpen ? ' open' : ''}`}
-                onClick={() => setIsOpen(!isOpen)}
-                aria-label={isOpen ? 'Close chat' : 'Open chat'}
-                aria-expanded={isOpen}
-                aria-controls="chatbot-panel"
-            >
-                <img
-                    src="/assets/images/logo/api.svg"
-                    alt="mapi"
-                    className="chatbot-toggle-icon"
-                />
-            </button>
-
             {isOpen && (
                 <>
                     <div
@@ -255,11 +239,11 @@ export default function Chatbot() {
                                 <div className="chatbot-avatar">
                                     <img
                                         src="/assets/images/logo/api.svg"
-                        alt="mapi"
-                    />
-                </div>
-                <div>
-                    <p className="chatbot-name">mapi</p>
+                                        alt="mapi"
+                                    />
+                                </div>
+                                <div>
+                                    <p className="chatbot-name">mapi</p>
                                     <p className="chatbot-status">
                                         {loading ? 'Thinking...' : 'Online'}
                                     </p>

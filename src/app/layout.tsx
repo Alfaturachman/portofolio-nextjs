@@ -9,6 +9,7 @@ import Footer from '@/components/Footer';
 import Cursor from '@/components/Cursor';
 import Chatbot from '@/components/Chatbot';
 import { ThemeProvider } from '@/lib/theme-context';
+import { ChatbotProvider } from '@/lib/chatbot-context';
 
 const outfit = Outfit({
     subsets: ['latin'],
@@ -125,12 +126,14 @@ export default function RootLayout({
                     <a href="#main-content" className="skip-link">
                         Skip to content
                     </a>
-                    <Navbar />
-                    <main id="main-content" className="flex-1">
-                        {children}
-                    </main>
-                    <Footer />
-                    <Chatbot />
+                    <ChatbotProvider>
+                        <Navbar />
+                        <main id="main-content" className="flex-1">
+                            {children}
+                        </main>
+                        <Footer />
+                        <Chatbot />
+                    </ChatbotProvider>
                 </ThemeProvider>
             </body>
         </html>

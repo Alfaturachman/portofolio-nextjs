@@ -7,11 +7,13 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
+import { useChatbot } from '@/lib/chatbot-context';
 
 const FOCUSABLE = 'a, button, [tabindex]:not([tabindex="-1"])';
 
 export default function Navbar() {
     const { theme, toggleTheme } = useTheme();
+    const { isOpen: chatOpen, toggle: toggleChat } = useChatbot();
     const router = useRouter();
     const pathname = usePathname();
     const navRef = useRef<HTMLElement>(null);
@@ -136,6 +138,20 @@ export default function Navbar() {
                             aria-hidden={true}
                         />
                     </button>
+                    <button
+                        className="nav-link chatbot-desktop-toggle"
+                        onClick={toggleChat}
+                        aria-label={chatOpen ? 'Close chat' : 'Open chat'}
+                        aria-expanded={chatOpen}
+                        aria-controls="chatbot-panel"
+                    >
+                        <svg viewBox="0 0 1000 1000" className="chatbot-desktop-icon" aria-hidden="true">
+                            <path d="M246.7,526.7h506.7c25.8,0,46.7,20.9,46.7,46.7l0,0c0,165.7-134.3,300-300,300l0,0c-165.7,0-300-134.3-300-300l0,0C200,547.6,220.9,526.7,246.7,526.7z"/>
+                            <path d="M712.1,214.5c-54.3-54.3-129.3-87.9-212.1-87.9s-157.8,33.6-212.1,87.9C233.6,268.8,200,343.8,200,426.6c0,25.8,20.9,46.7,46.7,46.7h506.6c12.9,0,24.6-5.2,33-13.7c8.5-8.5,13.7-20.1,13.7-33C800,343.8,766.4,268.8,712.1,214.5z M444.6,389.2c-15.7,15.7-37.4,25.4-61.3,25.4c-47.9,0-86.7-38.8-86.7-86.7c0-24,9.7-45.6,25.4-61.3c15.7-15.7,37.4-25.4,61.3-25.4s45.6,9.7,61.3,25.4c15.7,15.7,25.4,37.4,25.4,61.3C470,351.8,460.3,373.5,444.6,389.2z M677.9,389.2c-15.7,15.7-37.3,25.4-61.2,25.4c-47.9,0-86.7-38.8-86.7-86.7c0-24,9.7-45.6,25.4-61.3c15.7-15.7,37.4-25.4,61.3-25.4s45.6,9.7,61.3,25.4c15.7,15.7,25.4,37.4,25.4,61.3C703.3,351.8,693.6,373.5,677.9,389.2z"/>
+                            <path d="M906.7,700H960c22.1,0,40-17.9,40-40v-53.3c0-44.2-35.8-80-80-80h-53.3c-22.1,0-40,17.9-40,40V620C826.7,664.2,862.5,700,906.7,700z"/>
+                            <path d="M93.3,700H40c-22.1,0-40-17.9-40-40v-53.3c0-44.2,35.8-80,80-80h53.3c22.1,0,40,17.9,40,40V620C173.3,664.2,137.5,700,93.3,700z"/>
+                        </svg>
+                    </button>
                 </div>
                 <div className="nav-actions">
                     <button
@@ -150,6 +166,20 @@ export default function Navbar() {
                         <FontAwesomeIcon
                             icon={theme === 'dark' ? faSun : faMoon}
                         />
+                    </button>
+                    <button
+                        className={`nav-mobile-theme${chatOpen ? ' open' : ''}`}
+                        onClick={toggleChat}
+                        aria-label={chatOpen ? 'Close chat' : 'Open chat'}
+                        aria-expanded={chatOpen}
+                        aria-controls="chatbot-panel"
+                    >
+                        <svg viewBox="0 0 1000 1000" className="chatbot-toggle-icon" aria-hidden="true">
+                            <path d="M246.7,526.7h506.7c25.8,0,46.7,20.9,46.7,46.7l0,0c0,165.7-134.3,300-300,300l0,0c-165.7,0-300-134.3-300-300l0,0C200,547.6,220.9,526.7,246.7,526.7z"/>
+                            <path d="M712.1,214.5c-54.3-54.3-129.3-87.9-212.1-87.9s-157.8,33.6-212.1,87.9C233.6,268.8,200,343.8,200,426.6c0,25.8,20.9,46.7,46.7,46.7h506.6c12.9,0,24.6-5.2,33-13.7c8.5-8.5,13.7-20.1,13.7-33C800,343.8,766.4,268.8,712.1,214.5z M444.6,389.2c-15.7,15.7-37.4,25.4-61.3,25.4c-47.9,0-86.7-38.8-86.7-86.7c0-24,9.7-45.6,25.4-61.3c15.7-15.7,37.4-25.4,61.3-25.4s45.6,9.7,61.3,25.4c15.7,15.7,25.4,37.4,25.4,61.3C470,351.8,460.3,373.5,444.6,389.2z M677.9,389.2c-15.7,15.7-37.3,25.4-61.2,25.4c-47.9,0-86.7-38.8-86.7-86.7c0-24,9.7-45.6,25.4-61.3c15.7-15.7,37.4-25.4,61.3-25.4s45.6,9.7,61.3,25.4c15.7,15.7,25.4,37.4,25.4,61.3C703.3,351.8,693.6,373.5,677.9,389.2z"/>
+                            <path d="M906.7,700H960c22.1,0,40-17.9,40-40v-53.3c0-44.2-35.8-80-80-80h-53.3c-22.1,0-40,17.9-40,40V620C826.7,664.2,862.5,700,906.7,700z"/>
+                            <path d="M93.3,700H40c-22.1,0-40-17.9-40-40v-53.3c0-44.2,35.8-80,80-80h53.3c22.1,0,40,17.9,40,40V620C173.3,664.2,137.5,700,93.3,700z"/>
+                        </svg>
                     </button>
                     <button
                         className={`hamburger${isMenuOpen ? ' active' : ''}`}

@@ -7,6 +7,7 @@ config.autoAddCss = false;
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Cursor from '@/components/Cursor';
+import Chatbot from '@/components/Chatbot';
 import { ThemeProvider } from '@/lib/theme-context';
 
 const outfit = Outfit({
@@ -129,6 +130,7 @@ export default function RootLayout({
                         {children}
                     </main>
                     <Footer />
+                    <Chatbot />
                 </ThemeProvider>
             </body>
         </html>

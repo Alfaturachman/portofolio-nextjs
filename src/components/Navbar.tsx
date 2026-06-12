@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import { useTheme } from '@/lib/theme-context';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
@@ -8,11 +8,14 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 
+const FOCUSABLE = 'a, button, [tabindex]:not([tabindex="-1"])';
+
 export default function Navbar() {
     const { theme, toggleTheme } = useTheme();
     const router = useRouter();
     const pathname = usePathname();
     const navRef = useRef<HTMLElement>(null);
+    const menuRef = useRef<HTMLDivElement>(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleNavClick = (
@@ -21,13 +24,11 @@ export default function Navbar() {
     ) => {
         const [path] = href.split('#');
 
-        // If navigating to a different page, use Next.js router for SPA transition
         if (pathname !== path) {
             e.preventDefault();
             router.push(href);
         }
 
-        // If on the same page, do not preventDefault. Let the browser handle the hash natively.
         setIsMenuOpen(false);
     };
 
@@ -46,6 +47,48 @@ export default function Navbar() {
     const toggleMenu = () => setIsMenuOpen((prev) => !prev);
     const closeMenu = () => setIsMenuOpen(false);
 
+    useEffect(() => {
+        if (!isMenuOpen) return;
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') setIsMenuOpen(false);
+        };
+        document.addEventListener('keydown', handleKeyDown);
+        return () => document.removeEventListener('keydown', handleKeyDown);
+    }, [isMenuOpen]);
+
+    const trapFocus = useCallback((e: KeyboardEvent) => {
+        if (e.key !== 'Tab' || !isMenuOpen) return;
+        const menu = menuRef.current;
+        if (!menu) return;
+
+        const focusable = menu.querySelectorAll<HTMLElement>(FOCUSABLE);
+        if (focusable.length === 0) return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey) {
+            if (document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            }
+        } else {
+            if (document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        }
+    }, [isMenuOpen]);
+
+    useEffect(() => {
+        if (!isMenuOpen) return;
+        const menu = menuRef.current;
+        if (!menu) return;
+
+        menu.addEventListener('keydown', trapFocus);
+        return () => menu.removeEventListener('keydown', trapFocus);
+    }, [isMenuOpen, trapFocus]);
+
     const links = [
         { label: 'Home', href: '/' },
         { label: 'About', href: '/#about' },
@@ -57,22 +100,24 @@ export default function Navbar() {
     ];
 
     return (
-        <nav ref={navRef} id="navbar">
+        <nav ref={navRef} id="navbar" aria-label="Main navigation">
             <div className="nav-inner glass">
                 <Link
                     href="/"
                     className="nav-logo"
                     onClick={(e) => handleNavClick(e, '/')}
+                    aria-label="Home"
                 >
                     almavi<span>.</span>
                 </Link>
-                <div className="nav-links">
+                <div className="nav-links" role="list">
                     {links.map((link) => (
                         <a
                             key={link.href}
                             href={link.href}
-                            className="nav-link"
+                            className={'nav-link'}
                             onClick={(e) => handleNavClick(e, link.href)}
+                            role="listitem"
                         >
                             {link.label}
                         </a>
@@ -109,14 +154,13 @@ export default function Navbar() {
                     <button
                         className={`hamburger${isMenuOpen ? ' active' : ''}`}
                         onClick={toggleMenu}
-                        aria-label="Toggle menu"
+                        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                         aria-expanded={isMenuOpen}
                         aria-controls="mobileMenu"
-                        role="button"
                     >
-                        <span />
-                        <span />
-                        <span />
+                        <span aria-hidden="true" />
+                        <span aria-hidden="true" />
+                        <span aria-hidden="true" />
                     </button>
                 </div>
             </div>
@@ -128,15 +172,17 @@ export default function Navbar() {
                 />
             )}
             <div
+                ref={menuRef}
                 className={`mobile-menu glass${isMenuOpen ? ' open' : ''}`}
                 id="mobileMenu"
                 role="menu"
+                aria-label="Navigation menu"
             >
                 {links.map((link) => (
                     <a
                         key={link.href}
                         href={link.href}
-                        className="mobile-link"
+                        className={'mobile-link'}
                         role="menuitem"
                         onClick={(e) => handleNavClick(e, link.href)}
                     >

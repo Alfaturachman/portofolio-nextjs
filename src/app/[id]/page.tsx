@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { coursesData } from '@/lib/courses';
 import ImagePreview from '@/components/ImagePreview';
 import Breadcrumb from '@/components/Breadcrumb';
-import '@/styles/sections.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faBuilding,
@@ -17,7 +16,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export async function generateStaticParams() {
-    return coursesData.specializations.map((s) => ({ id: String(s.id) }));
+    return coursesData.specializations.map((s) => ({ id: s.id }));
 }
 
 export async function generateMetadata({
@@ -26,7 +25,7 @@ export async function generateMetadata({
     params: Promise<{ id: string }>;
 }): Promise<Metadata> {
     const { id } = await params;
-    const spec = coursesData.specializations.find((s) => s.id === Number(id));
+    const spec = coursesData.specializations.find((s) => s.id === id);
     if (!spec) return { title: 'Not Found' };
     return {
         title: `${spec.title} Courses | Portfolio`,
@@ -40,7 +39,7 @@ export default async function CoursesPage({
     params: Promise<{ id: string }>;
 }) {
     const { id } = await params;
-    const spec = coursesData.specializations.find((s) => s.id === Number(id));
+    const spec = coursesData.specializations.find((s) => s.id === id);
     if (!spec) notFound();
 
     const courses = coursesData.courses.filter(
@@ -147,20 +146,20 @@ export default async function CoursesPage({
                         <div className="spec-cert-info">
                             <div className="spec-cert-badge">
                                 <FontAwesomeIcon icon={faCertificate} />
-                                Specialization
+                                Profesional Certificate
                             </div>
                             <div className="spec-cert-note">
                                 <h3>
                                     <FontAwesomeIcon icon={faInfoCircle} />
-                                    About this Specialization
+                                    About this Professional Certificate
                                 </h3>
                                 <p>
-                                    This specialization certificate from{' '}
+                                    This Professional Certificate from{' '}
                                     <strong>{spec.provider}</strong> is earned
                                     after completing all {courses.length}{' '}
                                     courses below. Each course covers essential
                                     skills and concepts that build toward the
-                                    full specialization.
+                                    full Professional Certificate.
                                 </p>
                             </div>
                         </div>

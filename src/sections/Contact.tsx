@@ -30,7 +30,10 @@ export default function Contact() {
                             <span className="premium-link-val">
                                 alfaturachmanpahlevi@gmail.com
                             </span>
-                            <FontAwesomeIcon icon={faArrowRight} className="premium-link-icon" />
+                            <FontAwesomeIcon
+                                icon={faArrowRight}
+                                className="premium-link-icon"
+                            />
                         </a>
                         <a
                             href="https://www.linkedin.com/in/alfaturachman-maulana-pahlevi-4981302b6/"
@@ -42,7 +45,10 @@ export default function Contact() {
                             <span className="premium-link-val">
                                 Alfaturachman Maulana Pahlevi
                             </span>
-                            <FontAwesomeIcon icon={faArrowRight} className="premium-link-icon" />
+                            <FontAwesomeIcon
+                                icon={faArrowRight}
+                                className="premium-link-icon"
+                            />
                         </a>
                         <a
                             href="https://github.com/Alfaturachman"
@@ -54,7 +60,10 @@ export default function Contact() {
                             <span className="premium-link-val">
                                 @Alfaturachman
                             </span>
-                            <FontAwesomeIcon icon={faArrowRight} className="premium-link-icon" />
+                            <FontAwesomeIcon
+                                icon={faArrowRight}
+                                className="premium-link-icon"
+                            />
                         </a>
                     </div>
                 </div>

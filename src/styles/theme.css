@@ -80,7 +80,7 @@ html {
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     overflow-x: clip;
 }
 
@@ -240,7 +240,7 @@ button:focus-visible {
 }
 
 .section-title {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-weight: 800;
     font-size: clamp(2rem, 4vw, 3.2rem);
     letter-spacing: -0.03em;

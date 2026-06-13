@@ -85,7 +85,9 @@ function ProjectCard({
                         </span>
                     ))}
                     {p.tags.length > 3 && (
-                        <span className="project-tag">+{p.tags.length - 3}</span>
+                        <span className="project-tag">
+                            +{p.tags.length - 3}
+                        </span>
                     )}
                 </div>
                 <h3 className="project-title">{p.title}</h3>

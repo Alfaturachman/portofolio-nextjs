@@ -24,7 +24,10 @@ export default function Breadcrumb({ items }: { items: Crumb[] }) {
                         {item.href ? (
                             <Link href={item.href}>{item.label}</Link>
                         ) : (
-                            <span className="breadcrumb-current" aria-current="page">
+                            <span
+                                className="breadcrumb-current"
+                                aria-current="page"
+                            >
                                 {item.label}
                             </span>
                         )}

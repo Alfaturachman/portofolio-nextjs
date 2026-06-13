@@ -4,7 +4,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { coursesData } from '@/lib/courses';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBuilding, faCalendarAlt, faBookOpen, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {
+    faBuilding,
+    faCalendarAlt,
+    faBookOpen,
+    faArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
 
 export default function Certificates() {
     return (
@@ -20,7 +25,7 @@ export default function Certificates() {
                     {coursesData.specializations.map((spec) => (
                         <Link
                             key={spec.id}
-                            href={`/courses/${spec.id}`}
+                            href={`/${spec.id}`}
                             className="project-card cert-card"
                             aria-label={`View ${spec.title} certificate`}
                         >
@@ -31,6 +36,7 @@ export default function Certificates() {
                                     width={120}
                                     height={40}
                                     className="cert-brand-logo"
+                                    style={{ width: 'auto', height: 'auto' }}
                                 />
                             </div>
                             <div className="project-content">
@@ -71,7 +77,10 @@ export default function Certificates() {
                                         View Credential
                                     </span>
                                     <div className="project-arrow">
-                                        <FontAwesomeIcon icon={faArrowRight} className="project-arrow-icon" />
+                                        <FontAwesomeIcon
+                                            icon={faArrowRight}
+                                            className="project-arrow-icon"
+                                        />
                                     </div>
                                 </span>
                             </div>

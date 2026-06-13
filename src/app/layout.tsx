@@ -73,6 +73,7 @@ export default function RootLayout({
             lang="en"
             className={`${outfit.variable} ${plusJakarta.variable} ${dmSans.variable}`}
             suppressHydrationWarning
+            data-scroll-behavior="smooth"
         >
             <head>
                 <link

@@ -27,7 +27,7 @@ export interface BlogArticle {
 }
 
 export interface Specialization {
-    id: number;
+    id: string;
     title: string;
     provider: string;
     issuer: string;
@@ -39,7 +39,7 @@ export interface Specialization {
 
 export interface Course {
     id: number;
-    specializationId: number;
+    specializationId: string;
     title: string;
     provider: string;
     issuer: string;

@@ -68,12 +68,7 @@ export default function ImageCarousel({
                             onClick={() => goTo(i)}
                             aria-label={`View image ${i + 1}`}
                         >
-                            <Image
-                                src={img}
-                                alt=""
-                                fill
-                                sizes="100px"
-                            />
+                            <Image src={img} alt="" fill sizes="100px" />
                         </button>
                     ))}
                 </div>

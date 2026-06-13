@@ -68,6 +68,7 @@
 }
 
 .cert-img-wrapper {
+    position: relative;
     flex-grow: 1;
     border-radius: 12px;
     overflow: hidden;
@@ -183,7 +184,7 @@
 }
 
 .loader-text {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 800;
     letter-spacing: -0.05em;

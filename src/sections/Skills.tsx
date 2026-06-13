@@ -65,20 +65,33 @@ export default function Skills() {
                                     aria-expanded={isExpanded}
                                 >
                                     <div>
-                                        <h3 className="category-title">{cat.title}</h3>
-                                        <p className="category-desc">{cat.desc}</p>
+                                        <h3 className="category-title">
+                                            {cat.title}
+                                        </h3>
+                                        <p className="category-desc">
+                                            {cat.desc}
+                                        </p>
                                     </div>
-                                    <div className={`category-chevron${isExpanded ? ' is-expanded' : ''}`}>
+                                    <div
+                                        className={`category-chevron${isExpanded ? ' is-expanded' : ''}`}
+                                    >
                                         <FontAwesomeIcon icon={faChevronDown} />
                                     </div>
                                 </button>
-                                <div className={`category-tools${isExpanded ? ' is-expanded' : ''}`}>
+                                <div
+                                    className={`category-tools${isExpanded ? ' is-expanded' : ''}`}
+                                >
                                     {cat.tools.map((tool) => (
-                                        <div className="tool-pill" key={tool.name}>
+                                        <div
+                                            className="tool-pill"
+                                            key={tool.name}
+                                        >
                                             <span className="tool-icon">
                                                 {toolIcons[tool.icon] ? (
                                                     <Image
-                                                        src={toolIcons[tool.icon]}
+                                                        src={
+                                                            toolIcons[tool.icon]
+                                                        }
                                                         alt={tool.name}
                                                         width={24}
                                                         height={24}

@@ -42,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
 
     const coursePages: MetadataRoute.Sitemap = coursesData.specializations.map((s) => ({
-        url: `${BASE_URL}/courses/${s.id}`,
+        url: `${BASE_URL}/${s.id}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.5,

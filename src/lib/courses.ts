@@ -6,7 +6,7 @@ export const coursesData: {
 } = {
     specializations: [
         {
-            id: 1,
+            id: 'ibm-devops-software-engineering',
             title: 'IBM DevOps and Software Engineering',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -25,7 +25,7 @@ export const coursesData: {
             image: '/assets/certificate/Specializations/IBM DevOps and Software Engineering.jpg',
         },
         {
-            id: 2,
+            id: 'ibm-machine-learning',
             title: 'IBM Machine Learning',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -50,7 +50,7 @@ export const coursesData: {
     courses: [
         {
             id: 1,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'Introduction to DevOps',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -62,7 +62,7 @@ export const coursesData: {
         },
         {
             id: 2,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'Introduction to Cloud Computing',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -74,7 +74,7 @@ export const coursesData: {
         },
         {
             id: 3,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'Introduction to Agile Development and Scrum',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -86,7 +86,7 @@ export const coursesData: {
         },
         {
             id: 4,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'Introduction to Software Engineering',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -98,7 +98,7 @@ export const coursesData: {
         },
         {
             id: 5,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'Getting Started with Git and GitHub',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -110,7 +110,7 @@ export const coursesData: {
         },
         {
             id: 6,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'Hands-on Introduction to Linux Commands and Shell Scripting',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -122,7 +122,7 @@ export const coursesData: {
         },
         {
             id: 7,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'Python for Data Science, AI & Development',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -134,7 +134,7 @@ export const coursesData: {
         },
         {
             id: 8,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'Developing AI Applications with Python and Flask',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -146,7 +146,7 @@ export const coursesData: {
         },
         {
             id: 9,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'Introduction to Containers w/ Docker, Kubernetes & OpenShift',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -158,7 +158,7 @@ export const coursesData: {
         },
         {
             id: 10,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'Application Development using Microservices and Serverless',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -170,7 +170,7 @@ export const coursesData: {
         },
         {
             id: 11,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'Introduction to Test and Behavior Driven Development',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -182,7 +182,7 @@ export const coursesData: {
         },
         {
             id: 12,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'Continuous Integration and Continuous Delivery (CI/CD)',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -194,7 +194,7 @@ export const coursesData: {
         },
         {
             id: 13,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'Application Security for Developers and DevOps Professionals',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -206,7 +206,7 @@ export const coursesData: {
         },
         {
             id: 14,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'Monitoring and Observability for Development and DevOps',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -218,7 +218,7 @@ export const coursesData: {
         },
         {
             id: 15,
-            specializationId: 1,
+            specializationId: 'ibm-devops-software-engineering',
             title: 'DevOps Capstone Project',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -230,7 +230,7 @@ export const coursesData: {
         },
         {
             id: 16,
-            specializationId: 2,
+            specializationId: 'ibm-machine-learning',
             title: 'Exploratory Data Analysis for Machine Learning',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -247,7 +247,7 @@ export const coursesData: {
         },
         {
             id: 17,
-            specializationId: 2,
+            specializationId: 'ibm-machine-learning',
             title: 'Supervised Machine Learning: Regression',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -264,7 +264,7 @@ export const coursesData: {
         },
         {
             id: 18,
-            specializationId: 2,
+            specializationId: 'ibm-machine-learning',
             title: 'Supervised Machine Learning: Classification',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -281,7 +281,7 @@ export const coursesData: {
         },
         {
             id: 19,
-            specializationId: 2,
+            specializationId: 'ibm-machine-learning',
             title: 'Unsupervised Machine Learning',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -293,7 +293,7 @@ export const coursesData: {
         },
         {
             id: 20,
-            specializationId: 2,
+            specializationId: 'ibm-machine-learning',
             title: 'Deep Learning and Reinforcement Learning',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -310,7 +310,7 @@ export const coursesData: {
         },
         {
             id: 21,
-            specializationId: 2,
+            specializationId: 'ibm-machine-learning',
             title: 'Machine Learning Capstone',
             provider: 'IBM',
             issuer: 'Coursera',

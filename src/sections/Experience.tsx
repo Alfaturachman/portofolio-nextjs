@@ -39,7 +39,9 @@ export default function Experience() {
                                 </div>
                             </div>
                             <div className="experience-content">
-                                <h3 className="experience-title">{exp.title}</h3>
+                                <h3 className="experience-title">
+                                    {exp.title}
+                                </h3>
                                 <div className="experience-org">
                                     {iconMap[exp.orgIcon] && (
                                         <FontAwesomeIcon
@@ -48,9 +50,7 @@ export default function Experience() {
                                     )}
                                     {exp.org}
                                 </div>
-                                <p className="experience-desc">
-                                    {exp.desc}
-                                </p>
+                                <p className="experience-desc">{exp.desc}</p>
                             </div>
                         </div>
                     ))}

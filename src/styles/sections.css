@@ -101,7 +101,7 @@
 }
 
 .bento-bio-heading {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-size: clamp(1.8rem, 3.5vw, 2.4rem);
     font-weight: 800;
     line-height: 1.15;
@@ -168,7 +168,7 @@
 }
 
 .bento-stat-number {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-size: 2.2rem;
     font-weight: 800;
     color: var(--text-primary);
@@ -184,7 +184,7 @@
 
 /* Focus Card Specifics */
 .bento-card-title {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--text-primary);
@@ -301,7 +301,7 @@
 }
 
 .bento-edu-title {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-size: 1.05rem;
     font-weight: 600;
     color: var(--text-primary);
@@ -512,7 +512,7 @@
 }
 
 .category-title {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--text-primary);
@@ -588,7 +588,7 @@
     backdrop-filter: blur(18px) saturate(160%);
     border: 1px solid var(--border-subtle);
     border-radius: 16px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-jakarta), sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-primary);
@@ -649,7 +649,7 @@
 }
 
 .experience-date {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-jakarta), sans-serif;
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--text-primary);
@@ -692,7 +692,7 @@
 }
 
 .experience-title {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: var(--text-primary);
@@ -950,7 +950,7 @@
 }
 
 .project-title {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--text-primary);
@@ -1035,17 +1035,14 @@
     align-items: center;
     justify-content: center;
     background: var(--bg-primary);
-    padding: 20px;
+    padding: 96px;
     position: relative;
 }
 
 .cert-brand-logo {
-    width: 100%;
-    max-width: 120px;
-    height: auto;
     display: block;
+    max-width: 100%;
     position: static !important;
-    object-fit: contain !important;
     opacity: 1 !important;
     transform: none !important;
 }
@@ -1153,7 +1150,7 @@
 }
 
 .spec-cert-note h3 {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--text-primary);
@@ -1249,7 +1246,7 @@
 }
 
 .course-number {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--accent-blue);
@@ -1273,7 +1270,7 @@
 }
 
 .course-title {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-size: 1.05rem;
     font-weight: 700;
     color: var(--text-primary);
@@ -1360,7 +1357,7 @@
 
 .breadcrumb {
     margin-bottom: 32px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-jakarta), sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
 }
@@ -1427,7 +1424,7 @@
 }
 
 .detail-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-jakarta), sans-serif;
     font-weight: 800;
     font-size: clamp(2.5rem, 6vw, 4rem);
     line-height: 1.1;
@@ -1729,7 +1726,7 @@
     font-weight: 600;
     padding: 6px 14px;
     border-radius: 99px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-jakarta), sans-serif;
     z-index: 10;
 }
 
@@ -1849,7 +1846,7 @@
 }
 
 .detail-section-title {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-primary);
@@ -1884,7 +1881,7 @@
 }
 
 .detail-sidebar-title {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-weight: 700;
     font-size: 1rem;
     color: var(--text-primary);
@@ -1923,7 +1920,7 @@
     gap: 10px;
     padding: 16px 24px;
     border-radius: 12px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-jakarta), sans-serif;
     font-weight: 700;
     font-size: 0.9rem;
     text-decoration: none;
@@ -2059,7 +2056,7 @@
     color: var(--text-muted);
     font-size: 0.85rem;
     font-weight: 700;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-jakarta), sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -2145,7 +2142,7 @@
 }
 
 .next-project-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-jakarta), sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-primary);
@@ -2171,7 +2168,7 @@
 }
 
 .contact-huge-text {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--font-jakarta), sans-serif;
     font-weight: 800;
     font-size: clamp(3rem, 9vw, 7rem);
     line-height: 0.95;
@@ -2195,7 +2192,7 @@
     font-size: clamp(1.1rem, 2vw, 1.4rem);
     color: var(--text-secondary);
     line-height: 1.5;
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-dm-sans), sans-serif;
 }
 
 .contact-premium-links {
@@ -2223,7 +2220,7 @@
 }
 
 .premium-link-val {
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-dm-sans), sans-serif;
     font-size: 1.1rem;
     color: var(--text-secondary);
     flex-grow: 1;
@@ -2291,7 +2288,7 @@
 }
 
 .not-found-code {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-size: clamp(5rem, 15vw, 7rem);
     font-weight: 900;
     line-height: 1;
@@ -2306,7 +2303,7 @@
 }
 
 .not-found-title {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--font-outfit), sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-primary);

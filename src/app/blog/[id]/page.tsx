@@ -5,8 +5,7 @@ import { articles, getArticle } from '@/lib/blog';
 import '@/styles/blog.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
-
+import SafeHtml from '@/components/SafeHtml';
 
 export async function generateStaticParams() {
     return articles.map((a) => ({ id: a.id }));
@@ -78,12 +77,9 @@ export default async function BlogDetail({
                 </div>
 
                 <div className="blog-detail-content">
-                    <div
-                        className="blog-detail-body"
-                        dangerouslySetInnerHTML={{
-                            __html: article.content,
-                        }}
-                    />
+                    <div className="blog-detail-body">
+                        <SafeHtml html={article.content} />
+                    </div>
                 </div>
             </div>
         </section>

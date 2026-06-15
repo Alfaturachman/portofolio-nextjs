@@ -120,7 +120,8 @@ export const projects: Project[] = [
         gallery: [
             '/assets/images/projects/project-iconnet-home.png',
             '/assets/images/projects/project-iconnet-login.png',
-            '/assets/images/projects/project-iconnet-langganan.png',
+            '/assets/images/projects/project-iconnet-beranda.png',
+            '/assets/images/projects/project-iconnet-pelanggan.png',
         ],
         title: 'Iconnet Monitoring',
         type: 'Freelance',

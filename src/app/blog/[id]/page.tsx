@@ -1,11 +1,9 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { articles, getArticle } from '@/lib/blog';
 import '@/styles/blog.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import SafeHtml from '@/components/SafeHtml';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export async function generateStaticParams() {
     return articles.map((a) => ({ id: a.id }));
@@ -45,13 +43,12 @@ export default async function BlogDetail({
     return (
         <section id="blog-detail-section">
             <div className="section-max">
-                <div className="breadcrumb">
-                    <Link href="/">Home</Link>
-                    <FontAwesomeIcon icon={faChevronRight} className="breadcrumb-sep" />
-                    <Link href="/blog">Blog</Link>
-                    <FontAwesomeIcon icon={faChevronRight} className="breadcrumb-sep" />
-                    <span className="breadcrumb-current">Article</span>
-                </div>
+                <Breadcrumb
+                    items={[
+                        { label: 'Blog', href: '/blog' },
+                        { label: 'Article' },
+                    ]}
+                />
 
                 <div className="blog-detail-header">
                     <div className="blog-detail-meta">
@@ -59,11 +56,14 @@ export default async function BlogDetail({
                             {article.category}
                         </span>
                         <span className="blog-detail-date">
-                            {new Date(article.date).toLocaleDateString('en-US', {
-                                month: 'long',
-                                day: 'numeric',
-                                year: 'numeric',
-                            })}
+                            {new Date(article.date).toLocaleDateString(
+                                'en-US',
+                                {
+                                    month: 'long',
+                                    day: 'numeric',
+                                    year: 'numeric',
+                                },
+                            )}
                         </span>
                     </div>
                     <h1 className="blog-detail-title">{article.title}</h1>

@@ -1,6 +1,8 @@
 import { type NextRequest } from 'next/server';
 import { projects } from '@/lib/projects';
 import { experiences, skillsCategories } from '@/lib/experiences';
+import { Ratelimit } from '@upstash/ratelimit';
+import { Redis } from '@upstash/redis';
 
 const blockedWords = [
     'kontol',
@@ -99,12 +101,15 @@ const blockedWords = [
     'breast',
 ];
 
+const blockedPattern = new RegExp(
+    `\\b(${blockedWords
+        .map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+        .join('|')})\\b`,
+    'i',
+);
+
 function containsBlocked(text: string): boolean {
-    const lower = text.toLowerCase();
-    return blockedWords.some((word) => {
-        const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        return new RegExp(`\\b${escaped}\\b`, 'i').test(lower);
-    });
+    return blockedPattern.test(text);
 }
 
 const systemPrompt = `You are a helpful assistant for Alfaturachman Maulana Pahlevi's portfolio website. Your name is "mapi".
@@ -141,22 +146,77 @@ Rules:
 - Keep responses brief and helpful.
 - Use "almavi" to refer to Alfaturachman.`;
 
-const rateLimit = new Map<string, number[]>();
+// If environment variables are missing (e.g. locally), we fall back to the in-memory map rate limiter
+const hasRedis = !!(
+    process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+);
 
-function isRateLimited(ip: string, maxReqs = 10, windowMs = 60_000): boolean {
+let ratelimit: Ratelimit | null = null;
+if (hasRedis) {
+    try {
+        ratelimit = new Ratelimit({
+            redis: Redis.fromEnv(),
+            limiter: Ratelimit.slidingWindow(10, '60 s'),
+            analytics: true,
+            prefix: 'ratelimit:portfolio',
+        });
+    } catch (error) {
+        console.error(
+            'Failed to initialize Upstash Redis Rate Limiter:',
+            error,
+        );
+    }
+}
+
+// ponytail: memory rate limiter fallback is local to the serverless container instance and will reset on container restart. Upgrade path: configure UPSTASH_REDIS_REST_URL/TOKEN.
+const memoryRateLimit = new Map<string, number[]>();
+
+function isRateLimitedMemory(
+    ip: string,
+    maxReqs = 10,
+    windowMs = 60_000,
+): boolean {
     const now = Date.now();
-    const timestamps = rateLimit.get(ip) ?? [];
 
+    // Prevent memory leak by cleanup of expired entries when Map size exceeds 1000
+    if (memoryRateLimit.size > 1000) {
+        for (const [key, timestamps] of memoryRateLimit.entries()) {
+            const active = timestamps.filter((t) => now - t < windowMs);
+            if (active.length === 0) {
+                memoryRateLimit.delete(key);
+            } else {
+                memoryRateLimit.set(key, active);
+            }
+        }
+    }
+
+    const timestamps = memoryRateLimit.get(ip) ?? [];
     const recent = timestamps.filter((t) => now - t < windowMs);
 
     if (recent.length >= maxReqs) {
-        rateLimit.set(ip, recent);
+        memoryRateLimit.set(ip, recent);
         return true;
     }
 
     recent.push(now);
-    rateLimit.set(ip, recent);
+    memoryRateLimit.set(ip, recent);
     return false;
+}
+
+async function checkRateLimit(ip: string): Promise<boolean> {
+    if (ratelimit) {
+        try {
+            const { success } = await ratelimit.limit(ip);
+            return !success;
+        } catch (error) {
+            console.error(
+                'Rate limiting via Upstash Redis failed, falling back to memory:',
+                error,
+            );
+            return isRateLimitedMemory(ip);
+        }
+    }
+    return isRateLimitedMemory(ip);
 }
 
 export async function POST(request: NextRequest) {
@@ -165,14 +225,34 @@ export async function POST(request: NextRequest) {
         request.headers.get('x-real-ip') ??
         'unknown';
 
-    if (isRateLimited(ip)) {
+    const isLimited = await checkRateLimit(ip);
+    if (isLimited) {
         return Response.json(
-            { error: 'Too many requests. Please wait a moment before sending another message.' },
+            {
+                error: 'Too many requests. Please wait a moment before sending another message.',
+            },
             { status: 429 },
         );
     }
 
-    const { messages } = await request.json();
+    let body;
+    try {
+        body = await request.json();
+    } catch {
+        return Response.json(
+            { error: 'Invalid JSON request body.' },
+            { status: 400 },
+        );
+    }
+
+    const { messages } = body;
+    if (!messages || !Array.isArray(messages)) {
+        return Response.json(
+            { error: 'Messages must be a valid array.' },
+            { status: 400 },
+        );
+    }
+
     const apiKey = process.env.GROQ_API_KEY;
 
     if (!apiKey) {
@@ -185,7 +265,10 @@ export async function POST(request: NextRequest) {
     }
 
     const lastUserMsg = messages
-        .filter((m: { role: string }) => m.role === 'user')
+        .filter(
+            (m: { role: string; content?: string }) =>
+                m.role === 'user' && typeof m.content === 'string',
+        )
         .at(-1);
     if (lastUserMsg && containsBlocked(lastUserMsg.content)) {
         return Response.json({
@@ -224,7 +307,13 @@ export async function POST(request: NextRequest) {
         } catch {
             detail = await res.text().catch(() => detail);
         }
-        return Response.json({ error: detail }, { status: res.status });
+        console.error('Groq API error details:', detail);
+        return Response.json(
+            {
+                error: 'Maaf, terjadi kesalahan saat memproses permintaan Anda.',
+            },
+            { status: res.status },
+        );
     }
 
     const data = await res.json();

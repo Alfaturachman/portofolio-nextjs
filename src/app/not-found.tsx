@@ -1,14 +1,11 @@
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import './not-found.css';
 
 export default function NotFound() {
     return (
         <>
-            <style>{`
-                #navbar, #footer, .skip-link { display: none !important; }
-                #main-content { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 0; }
-            `}</style>
             <div className="not-found">
                 <div className="not-found-card">
                     <div className="not-found-blob" aria-hidden="true" />

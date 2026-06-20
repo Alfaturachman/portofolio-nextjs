@@ -42,7 +42,7 @@ export default async function BlogDetail({
 
     return (
         <section id="blog-detail-section">
-            <div className="section-max">
+            <div className="section-max pt-20">
                 <Breadcrumb
                     items={[
                         { label: 'Blog', href: '/blog' },

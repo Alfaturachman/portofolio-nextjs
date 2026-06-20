@@ -17,9 +17,10 @@
     border-radius: 24px;
     padding: 24px;
     box-shadow: 0 4px 24px var(--shadow-card);
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-                border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition:
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
 }
@@ -315,6 +316,28 @@
     margin: 0;
 }
 
+.bento-edu-status-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bento-edu-date {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+@media (min-width: 768px) {
+    .bento-edu-status-wrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
 .bento-edu-status {
     font-family: var(--font-sans);
     font-size: 0.8rem;
@@ -566,7 +589,10 @@
         max-height: 0;
         overflow: hidden;
         opacity: 0;
-        transition: max-height 0.35s ease, opacity 0.3s ease, margin 0.3s ease;
+        transition:
+            max-height 0.35s ease,
+            opacity 0.3s ease,
+            margin 0.3s ease;
         margin-top: 0;
         gap: 0;
     }
@@ -598,8 +624,8 @@
 
 .tool-pill:hover {
     transform: translateY(-2px) scale(1);
-    border-color: color-mix(in srgb, var(--accent-blue) 10%, transparent);
     box-shadow: 0 4px 8px rgba(37, 99, 235, 0.12);
+    border-color: color-mix(in srgb, var(--accent-blue) 10%, transparent);
 }
 
 .tool-icon {
@@ -686,9 +712,9 @@
 }
 
 .experience-content:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(160, 148, 130, 0.05);
-    border-color: rgba(59, 91, 219, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(160, 148, 130, 0.1);
+    border-color: color-mix(in srgb, var(--accent-blue) 10%, transparent);
 }
 
 .experience-title {
@@ -710,13 +736,33 @@
     margin-bottom: 20px;
 }
 
-.experience-desc {
+.experience-desc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.experience-desc-list li {
     font-size: 0.95rem;
     line-height: 1.7;
     color: var(--text-secondary);
     font-weight: 400;
-    white-space: pre-line;
+    position: relative;
+    padding-left: 20px;
 }
+
+.experience-desc-list li::before {
+    content: '•';
+    position: absolute;
+    left: 4px;
+    top: 0;
+    color: var(--accent-blue);
+    font-weight: bold;
+}
+
 
 /* ----- Portfolio ----- */
 #portfolio {
@@ -850,7 +896,8 @@
 
 .project-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-color: color-mix(in srgb, var(--accent-blue) 10%, transparent);
 }
 
 .project-img-wrapper {

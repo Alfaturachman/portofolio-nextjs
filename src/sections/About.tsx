@@ -116,11 +116,16 @@ export default function About() {
                                     </span>
                                 </div>
                                 <p className="bento-edu-meta">
-                                    Universitas Dian Nuswantoro Semarang
+                                    Dian Nuswantoro University
                                 </p>
-                                <span className="bento-edu-status">
-                                    In Progress
-                                </span>
+                                <div className="bento-edu-status-wrapper">
+                                    <span className="bento-edu-status">
+                                        In Progress
+                                    </span>
+                                    <span className="bento-edu-date">
+                                        September 2025 - September 2027
+                                    </span>
+                                </div>
                             </li>
                             <li className="bento-education-item">
                                 <div className="bento-edu-header">
@@ -132,11 +137,16 @@ export default function About() {
                                     </span>
                                 </div>
                                 <p className="bento-edu-meta">
-                                    Universitas Dian Nuswantoro Semarang
+                                    Dian Nuswantoro University
                                 </p>
-                                <span className="bento-edu-status bento-edu-status--graduated">
-                                    Graduated
-                                </span>
+                                <div className="bento-edu-status-wrapper">
+                                    <span className="bento-edu-status bento-edu-status--graduated">
+                                        Graduated
+                                    </span>
+                                    <span className="bento-edu-date">
+                                        September 2022 - September 2025
+                                    </span>
+                                </div>
                             </li>
                         </ul>
                     </div>

@@ -50,7 +50,13 @@ export default function Experience() {
                                     )}
                                     {exp.org}
                                 </div>
-                                <p className="experience-desc">{exp.desc}</p>
+                                <ul className="experience-desc-list">
+                                    {exp.desc.split('\n').map((line, lIdx) => (
+                                        <li key={lIdx}>
+                                            {line.replace(/^•\s*/, '')}
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
                     ))}

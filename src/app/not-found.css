@@ -1,0 +1,13 @@
+#navbar,
+#footer,
+.skip-link {
+    display: none !important;
+}
+
+#main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;
+}

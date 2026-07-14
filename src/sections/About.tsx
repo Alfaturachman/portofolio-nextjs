@@ -26,7 +26,7 @@ export default function About() {
                     <div className="bento-card bento-card--profile">
                         <div className="bento-profile-frame">
                             <Image
-                                src="/assets/images/profile/pp_black_white.jpg"
+                                src="/assets/images/profile/pp_almavi.jpg"
                                 alt="Alfaturachman Maulana Pahlevi"
                                 width={400}
                                 height={500}

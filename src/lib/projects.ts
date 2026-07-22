@@ -272,10 +272,10 @@ export const projects: Project[] = [
     },
     {
         id: 'sertifikasi',
-        image: '/assets/images/projects/project-sertfikasi-data-scientist-cover.png',
+        image: '/assets/images/projects/project-sertfikasi-data-scientist-cover.jpg',
         gallery: [
-            '/assets/images/projects/project-sertfikasi-data-scientist-cover.png',
-            '/assets/images/projects/project-sertfikasi-data-scientist-infografis.png',
+            '/assets/images/projects/project-sertfikasi-data-scientist-cover.jpg',
+            '/assets/images/projects/project-sertfikasi-data-scientist-infografis.jpg',
         ],
         title: 'BNSP Data Scientist Certification',
         type: 'Freelance',

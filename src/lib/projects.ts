@@ -271,6 +271,27 @@ export const projects: Project[] = [
         github: '#',
     },
     {
+        id: 'sertifikasi',
+        image: '/assets/images/projects/project-sertfikasi-data-scientist-cover.png',
+        gallery: [
+            '/assets/images/projects/project-sertfikasi-data-scientist-cover.png',
+            '/assets/images/projects/project-sertfikasi-data-scientist-infografis.png',
+        ],
+        title: 'BNSP Data Scientist Certification',
+        type: 'Freelance',
+        privacy: 'Public',
+        cardDesc:
+            'Leak-free stroke risk screening machine learning system using Kaggle clinical data contextualized for Posbindu PTM Semarang City, adhering to CRISP-DM and 11 SKKNI BNSP units.',
+        desc: 'An end-to-end Machine Learning stroke risk screening system and executive visual portfolio developed for the Certified Data Scientist (BNSP) assessment. Built using a clinical stroke dataset from Kaggle contextualized for the Posbindu PTM program in Semarang City under strict CRISP-DM methodology and 11 SKKNI competency units, the project engineers a leak-free preprocessing pipeline. It benchmarks 5 ML algorithms—achieving a champion Logistic Regression F1-score of 0.6538 (+11.55% over baseline literature)—and integrates SHAP (SHapley Additive exPlanations) for transparent clinical feature interpretability.',
+        role: 'Data Scientist',
+        year: '2026',
+        websiteType: 'Infografis',
+        sector: 'Education',
+        tags: ['Data Science', 'Machine Learning', 'Infografis', 'CRISP-DM', 'SHAP', 'Python'],
+        demo: '#',
+        github: 'https://github.com/Alfaturachman/data-scientist-bnsp',
+    },
+    {
         id: 'kireikies',
         image: '/assets/images/projects/project-kireikies-menu.png',
         gallery: ['/assets/images/projects/project-kireikies-menu.png'],

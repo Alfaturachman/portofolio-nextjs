@@ -44,7 +44,9 @@ export default function ImageCarousel({
                         src={images[activeIndex]}
                         alt={`${title} screenshot ${activeIndex + 1}`}
                         fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 50vw"
+                        sizes="100vw"
+                        quality={95}
+                        unoptimized
                         priority
                     />
                 </div>

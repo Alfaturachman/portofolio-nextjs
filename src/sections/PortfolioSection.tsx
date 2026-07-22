@@ -67,7 +67,8 @@ function ProjectCard({
                     src={imgSrc}
                     alt={p.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                    quality={90}
                     className={loaded ? 'loaded' : ''}
                     onLoad={() => setLoaded(true)}
                     onError={() => {

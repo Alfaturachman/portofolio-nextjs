@@ -2,7 +2,7 @@ import type { Experience } from './types';
 
 export const experiences: Experience[] = [
     {
-        date: '2024 — Present',
+        date: 'AUG 2024 — PRESENT',
         badge: 'Current',
         title: 'Full Stack & AI Developer',
         org: 'Freelance / Independent Projects',
@@ -10,7 +10,7 @@ export const experiences: Experience[] = [
         desc: '• Architecting and deploying end-to-end software solutions.\n• Building robust backend systems and seamless user interfaces.\n• Integrating intelligent AI features and machine learning models.\n• Transforming complex business requirements into scalable applications.',
     },
     {
-        date: '2025',
+        date: 'NOV 2025',
         badge: 'National Finalist',
         badgeType: 'ghost',
         title: 'National Student Scientific Week (PIMNAS) 38',
@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
         desc: '• Selected as a National Finalist to represent the university at the prestigious 38th PIMNAS.\n• Engineered a web platform and integrated an IoT device for real-time lung sound analysis.\n• Showcased this technological innovation to compete alongside top student researchers nationwide.',
     },
     {
-        date: '2024 — 2025',
+        date: 'JUN 2024 — JUL 2025',
         badge: 'Internship',
         badgeType: 'ghost',
         title: 'Web Developer Intern',
@@ -28,7 +28,7 @@ export const experiences: Experience[] = [
         desc: '• Engineered a core academic information system in direct collaboration with stakeholders.\n• Architected scalable relational database schemas and optimized RESTful API integrations.\n• Built a resilient frontend to streamline the operational workflows of university staff.',
     },
     {
-        date: '2022 — 2025',
+        date: 'SEP 2022 — JUL 2025',
         badge: 'Education',
         badgeType: 'ghost',
         title: 'Associate Degree in Informatics',

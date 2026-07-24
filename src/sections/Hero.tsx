@@ -64,7 +64,7 @@ export default function Hero() {
                 <div className="hero-cta-bar hero-fade-in-3">
                     <Link
                         href="/portfolio"
-                        className="hero-cta-btn"
+                        className="hero-cta-btn hero-cta-btn-primary"
                         onClick={(e) => handleNavClick(e, '/portfolio')}
                         aria-label="View my projects"
                     >

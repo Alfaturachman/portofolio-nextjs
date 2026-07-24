@@ -277,7 +277,7 @@ export const projects: Project[] = [
             '/assets/images/projects/project-sertfikasi-data-scientist-cover.jpg',
             '/assets/images/projects/project-sertfikasi-data-scientist-info.jpg',
         ],
-        title: 'BNSP Data Scientist Certification',
+        title: 'BNSP Data Scientist',
         type: 'Freelance',
         privacy: 'Public',
         cardDesc:

@@ -98,7 +98,6 @@ export default function Navbar() {
         { label: 'Skills', href: '/#skills' },
         { label: 'Experience', href: '/#experience' },
         { label: 'Certificates', href: '/#certificates' },
-        { label: 'Contact', href: '/#contact' },
     ];
 
     return (

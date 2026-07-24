@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { projects } from '@/lib/projects';
 import ImageCarousel from '@/components/ImageCarousel';
 import Breadcrumb from '@/components/Breadcrumb';
+import ProjectMeta from '@/components/ProjectMeta';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -78,97 +79,12 @@ export default async function DetailPage({
 
                     <h1 className="detail-title">{project.title}</h1>
 
-                    <div className="detail-meta">
-                        <div className="meta-pill">
-                            <div className="meta-pill-icon">
-                                <FontAwesomeIcon icon={faBriefcase} />
-                            </div>
-                            <div className="meta-pill-text">
-                                <span className="meta-pill-label">Role</span>
-                                <span className="meta-pill-value">
-                                    {project.role}
-                                </span>
-                            </div>
-                        </div>
-                        <div className="meta-pill">
-                            <div className="meta-pill-icon">
-                                <FontAwesomeIcon icon={faCalendar} />
-                            </div>
-                            <div className="meta-pill-text">
-                                <span className="meta-pill-label">Year</span>
-                                <span className="meta-pill-value">
-                                    {project.year}
-                                </span>
-                            </div>
-                        </div>
-                        <div
-                            className={`meta-pill ${project.type === 'Team' ? 'type-team' : 'type-freelance'}`}
-                        >
-                            <div className="meta-pill-icon">
-                                <FontAwesomeIcon
-                                    icon={
-                                        project.type === 'Team'
-                                            ? faUsers
-                                            : faUser
-                                    }
-                                />
-                            </div>
-                            <div className="meta-pill-text">
-                                <span className="meta-pill-label">Type</span>
-                                <span className="meta-pill-value">
-                                    {project.type}
-                                </span>
-                            </div>
-                        </div>
-                        <div className="meta-pill">
-                            <div className="meta-pill-icon">
-                                <FontAwesomeIcon icon={faGlobe} />
-                            </div>
-                            <div className="meta-pill-text">
-                                <span className="meta-pill-label">
-                                    Category
-                                </span>
-                                <span className="meta-pill-value">
-                                    {project.websiteType}
-                                </span>
-                            </div>
-                        </div>
-                        <div className="meta-pill">
-                            <div className="meta-pill-icon">
-                                <FontAwesomeIcon icon={faBuilding} />
-                            </div>
-                            <div className="meta-pill-text">
-                                <span className="meta-pill-label">Sector</span>
-                                <span className="meta-pill-value">
-                                    {project.sector}
-                                </span>
-                            </div>
-                        </div>
-                        <div
-                            className={`meta-pill ${project.privacy === 'Public' ? 'privacy-public' : 'privacy-private'}`}
-                        >
-                            <div className="meta-pill-icon">
-                                <FontAwesomeIcon
-                                    icon={
-                                        project.privacy === 'Public'
-                                            ? faLockOpen
-                                            : faLock
-                                    }
-                                />
-                            </div>
-                            <div className="meta-pill-text">
-                                <span className="meta-pill-label">Privacy</span>
-                                <span className="meta-pill-value">
-                                    {project.privacy}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
                     <ImageCarousel
                         images={project.gallery}
                         title={project.title}
                     />
+
+                    <ProjectMeta project={project} />
 
                     <div className="detail-content-grid">
                         <div className="detail-main">
@@ -256,9 +172,14 @@ export default async function DetailPage({
                             </div>
                         </Link>
                         <div className="next-project-nav-divider">
-                            <span className="next-project-nav-dot">
-                                <FontAwesomeIcon icon={faThLarge} />
-                            </span>
+                            <Link
+                                href="/portfolio"
+                                className="next-project-nav-dot"
+                                aria-label="View all projects"
+                                title="View all projects"
+                            >
+                                <FontAwesomeIcon icon={faLayerGroup} />
+                            </Link>
                         </div>
                         <Link
                             href={`/portfolio/${nextProject.id}`}

@@ -123,7 +123,7 @@ export default function About() {
                                         In Progress
                                     </span>
                                     <span className="bento-edu-date">
-                                        September 2025 - September 2027
+                                        September 2025 - July 2027
                                     </span>
                                 </div>
                             </li>
@@ -144,7 +144,7 @@ export default function About() {
                                         Graduated
                                     </span>
                                     <span className="bento-edu-date">
-                                        September 2022 - September 2025
+                                        September 2022 - July 2025
                                     </span>
                                 </div>
                             </li>

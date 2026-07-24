@@ -11,27 +11,10 @@ import {
     faGithub,
     faLinkedin,
     faInstagram,
-    faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import Link from 'next/link';
-import { useRouter, usePathname } from 'next/navigation';
 
 export default function Footer() {
     const footerRef = useRef<HTMLElement>(null);
-    const router = useRouter();
-    const pathname = usePathname();
-
-    const handleNavClick = (
-        e: React.MouseEvent<HTMLAnchorElement>,
-        href: string,
-    ) => {
-        const [path] = href.split('#');
-
-        if (pathname !== path) {
-            e.preventDefault();
-            router.push(href);
-        }
-    };
 
     useEffect(() => {
         const footer = footerRef.current;
@@ -58,155 +41,86 @@ export default function Footer() {
 
     return (
         <footer id="footer" ref={footerRef}>
-            <div className="blob footer-glow" aria-hidden="true" />
-            <div className="footer-marquee" aria-hidden="true">
-                <span>
-                    almavi &bull; almavi &bull; almavi &bull; almavi &bull;{' '}
-                    almavi &bull; almavi &bull; almavi &bull; almavi &bull;{' '}
-                </span>
-                <span>
-                    almavi &bull; almavi &bull; almavi &bull; almavi &bull;{' '}
-                    almavi &bull; almavi &bull; almavi &bull; almavi &bull;{' '}
-                </span>
-            </div>
             <div className="footer-inner">
-                <div className="footer-grid">
-                    <div className="footer-cta-card glass-dark">
-                        <div className="footer-intro-wrap">
-                            <span className="footer-intro-line" />
-                            <p className="footer-intro">
-                                Have an interesting project?
-                            </p>
-                        </div>
-                        <h2 className="footer-heading">
-                            Let&apos;s work
-                            <br />
-                            together.
+                {/* Hero CTA Box */}
+                <div className="footer-hero-card">
+                    <div className="footer-hero-text">
+                        <h2 className="footer-hero-heading">
+                            Let&apos;s build <br />
+                            something great together.
                         </h2>
+                        <p className="footer-hero-subtext">
+                            Open to collaborations, freelance projects, <br className="desktop-only-br" />
+                            and new opportunities.
+                        </p>
+                    </div>
+                    <div className="footer-hero-action">
                         <a
                             href="mailto:alfaturachmanpahlevi@gmail.com"
-                            className="footer-cta-btn"
+                            className="footer-hero-btn"
                         >
-                            <span>Hire Me</span>
+                            <span>Let&apos;s Work Together</span>
                             <FontAwesomeIcon icon={faArrowRight} />
                         </a>
                     </div>
-                    <div className="footer-side">
-                        <div className="footer-card glass-dark">
-                            <p className="footer-card-label">Connect</p>
-                            <div className="footer-social-row">
-                                <a
-                                    href="https://github.com/Alfaturachman"
-                                    className="footer-social-icon"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="GitHub"
-                                >
-                                    <FontAwesomeIcon icon={faGithub} />
-                                </a>
-                                <a
-                                    href="https://www.linkedin.com/in/alfaturachman-maulana-pahlevi-4981302b6/"
-                                    className="footer-social-icon"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="LinkedIn"
-                                >
-                                    <FontAwesomeIcon icon={faLinkedin} />
-                                </a>
-                                <a
-                                    href="https://www.instagram.com/al.mavi/"
-                                    className="footer-social-icon"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="Instagram"
-                                >
-                                    <FontAwesomeIcon icon={faInstagram} />
-                                </a>
-                                <a
-                                    href="https://twitter.com/alfaturachman"
-                                    className="footer-social-icon"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="X (Twitter)"
-                                >
-                                    <FontAwesomeIcon icon={faXTwitter} />
-                                </a>
-                                <a
-                                    href="mailto:alfaturachmanpahlevi@gmail.com"
-                                    className="footer-social-icon"
-                                    aria-label="Email"
-                                >
-                                    <FontAwesomeIcon icon={faEnvelope} />
-                                </a>
-                            </div>
-                        </div>
-                        <div className="footer-card glass-dark">
-                            <p className="footer-card-label">Navigate</p>
-                            <div className="footer-nav-row">
-                                <a
-                                    href="/#about"
-                                    className="footer-nav-link"
-                                    onClick={(e) =>
-                                        handleNavClick(e, '/#about')
-                                    }
-                                >
-                                    About
-                                </a>
-                                <a
-                                    href="/#skills"
-                                    className="footer-nav-link"
-                                    onClick={(e) =>
-                                        handleNavClick(e, '/#skills')
-                                    }
-                                >
-                                    Skills
-                                </a>
-                                <a
-                                    href="/#experience"
-                                    className="footer-nav-link"
-                                    onClick={(e) =>
-                                        handleNavClick(e, '/#experience')
-                                    }
-                                >
-                                    Experience
-                                </a>
-                                <a
-                                    href="/portfolio"
-                                    className="footer-nav-link"
-                                    onClick={(e) =>
-                                        handleNavClick(e, '/portfolio')
-                                    }
-                                >
-                                    Portfolio
-                                </a>
-                                <a
-                                    href="/#contact"
-                                    className="footer-nav-link"
-                                    onClick={(e) =>
-                                        handleNavClick(e, '/#contact')
-                                    }
-                                >
-                                    Contact
-                                </a>
-                            </div>
+                </div>
+
+                {/* Middle Connect Row */}
+                <div className="footer-mid-row">
+                    <div className="footer-connect-block">
+                        <p className="footer-connect-label">CONNECT</p>
+                        <div className="footer-social-row">
+                            <a
+                                href="https://github.com/Alfaturachman"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="footer-social-link"
+                            >
+                                <FontAwesomeIcon icon={faGithub} />
+                                <span>GitHub</span>
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/alfaturachman-maulana-pahlevi-4981302b6/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="footer-social-link"
+                            >
+                                <FontAwesomeIcon icon={faLinkedin} />
+                                <span>LinkedIn</span>
+                            </a>
+                            <a
+                                href="https://www.instagram.com/al.mavi/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="footer-social-link"
+                            >
+                                <FontAwesomeIcon icon={faInstagram} />
+                                <span>Instagram</span>
+                            </a>
+                            <a
+                                href="mailto:alfaturachmanpahlevi@gmail.com"
+                                className="footer-social-link"
+                            >
+                                <FontAwesomeIcon icon={faEnvelope} />
+                                <span>Email</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div className="footer-bar">
-                    <div className="footer-bar-left">
-                        <span className="footer-copy">
-                            &copy; 2026 Alfaturachman Maulana Pahlevi
-                        </span>
-                    </div>
-                    <div className="footer-bar-right">
-                        <button
-                            onClick={scrollToTop}
-                            className="footer-back-top"
-                            aria-label="Back to top"
-                        >
-                            <FontAwesomeIcon icon={faArrowUp} />
-                        </button>
-                    </div>
+
+                {/* Bottom Bar */}
+                <div className="footer-bottom-bar">
+                    <span className="footer-copyright-text">
+                        &copy; {new Date().getFullYear()} Alfaturachman Maulana Pahlevi
+                    </span>
+                    <button
+                        onClick={scrollToTop}
+                        className="footer-back-to-top-btn"
+                        aria-label="Back to top"
+                    >
+                        <span className="footer-back-to-top-text">Back to top</span>
+                        <FontAwesomeIcon icon={faArrowUp} />
+                    </button>
                 </div>
             </div>
         </footer>

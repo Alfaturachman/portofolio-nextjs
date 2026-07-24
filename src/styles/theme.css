@@ -1,6 +1,6 @@
 :root {
     color-scheme: light;
-    --bg-primary: #f8fafc;
+    --bg-primary: #f4f4f6;
     --bg-secondary: #f1f5f9;
     --glass-bg: rgba(255, 255, 255, 0.45);
     --glass-border: rgba(255, 255, 255, 0.5);
@@ -23,7 +23,7 @@
     --overlay-light: rgba(26, 22, 16, 0.08);
     --inverse-text: #ffffff;
     --color-white: #ffffff;
-    --footer-bg: #f1f5f9;
+    --footer-bg: #f0f0f3;
     --footer-text: #1a1610;
 }
 

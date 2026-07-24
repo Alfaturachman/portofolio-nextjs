@@ -13,21 +13,19 @@
 /* Bento Cards: Apple HIG Premium Card Aesthetic */
 .bento-card {
     background: var(--card-bg);
-    border: 1px solid var(--border-subtle);
     border-radius: 24px;
     padding: 24px;
-    box-shadow: var(--box-shadow);
+    transform: translateZ(0) scale(1);
+    will-change: transform, box-shadow;
     transition:
-        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-        border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        transform .6s cubic-bezier(.22, 1, .36, 1),
+        box-shadow .6s cubic-bezier(.22, 1, .36, 1);
     position: relative;
     overflow: hidden;
 }
 
 .bento-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateZ(0) scale(1.012);
 }
 
 /* Profile Card Specifics */
@@ -801,7 +799,6 @@
     background: var(--glass-bg);
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
-    box-shadow: var(--box-shadow);
     transition:
         transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
         box-shadow 0.3s ease,
@@ -817,7 +814,6 @@
 
 .experience-content:hover {
     transform: scale3d(1.01,1.01,1.01);
-    box-shadow: 2px 4px 16px #00000029;
 }
 
 .experience-content:active {
@@ -1074,8 +1070,6 @@
 
 .project-card {
     background: var(--card-bg);
-    border: 1px solid var(--border-subtle);
-    box-shadow: var(--box-shadow);
     border-radius: 24px;
     transition:
         transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
@@ -1089,14 +1083,13 @@
 
 .project-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .project-img-wrapper {
     width: 100%;
     aspect-ratio: 16/9;
     position: relative;
-    background: var(--bg-primary);
+    background: white;
 }
 
 .project-img-wrapper img {
@@ -1273,7 +1266,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-primary);
+    background: white;
     padding: 96px;
     position: relative;
 }

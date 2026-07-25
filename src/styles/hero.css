@@ -1,4 +1,4 @@
-/* ===== Hero Section — Reference-Inspired Layout ===== */
+/* ===== Hero Section ===== */
 
 /* ----- Background Pattern ----- */
 .hero-bg-pattern {
@@ -252,7 +252,22 @@
 
 .hero-cta-btn-primary:hover {
     background: var(--accent-blue);
-    color: #ffffff;
+    color: white;
+}
+
+[data-theme='dark'] .hero-cta-btn-primary {
+    background: white;
+    color: var(--bg-primary);
+}
+
+[data-theme='dark'] .hero-cta-btn-primary:hover {
+    background: var(--accent-blue);
+    color: white;
+}
+
+
+[data-theme='dark'] .hero-cta-bar {
+    background: var(--bg-primary);
 }
 
 .hero-cta-divider {

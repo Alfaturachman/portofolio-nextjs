@@ -1,0 +1,118 @@
+/* ===== 404 / Error Page ===== */
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 24px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 560px;
+}
+
+.not-found-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 24px;
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+}
+
+.not-found-code {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: clamp(5rem, 15vw, 7rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.06em;
+    background: linear-gradient(135deg, var(--accent-blue), #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.not-found-title {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.not-found-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+}
+
+.not-found-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    border-radius: 12px;
+    background: var(--accent);
+    color: var(--inverse-text);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.not-found-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(59, 91, 219, 0.25);
+}
+
+.not-found-blob {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(59, 91, 219, 0.15) 0%,
+        transparent 60%
+    );
+    pointer-events: none;
+    top: -40%;
+    right: -30%;
+    animation: float-glow 8s ease-in-out infinite;
+}
+
+.not-found-blob.secondary {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(
+        circle,
+        rgba(16, 185, 129, 0.12) 0%,
+        transparent 60%
+    );
+    bottom: -30%;
+    left: -30%;
+    top: auto;
+    right: auto;
+    animation: float-glow 12s ease-in-out infinite reverse;
+}
+
+/* HIG: Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .not-found-blob,
+    .not-found-blob.secondary {
+        animation: none;
+    }
+}

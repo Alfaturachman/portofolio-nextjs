@@ -34,9 +34,10 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
                 aria-label="Toggle Project Specifications"
             >
                 <div className="meta-toggle-left">
-                    <FontAwesomeIcon icon={faInfoCircle} className="meta-toggle-icon" />
+                    <div className="meta-pill-icon">
+                        <FontAwesomeIcon icon={faInfoCircle} />
+                    </div>
                     <span>Project Specifications</span>
-                    <span className="meta-count-badge">6</span>
                 </div>
                 <FontAwesomeIcon
                     icon={faChevronDown}

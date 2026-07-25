@@ -1,0 +1,470 @@
+/* ===== About Section ===== */
+#about {
+    background: var(--bg-primary);
+}
+
+.about-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    margin-top: 56px;
+}
+
+/* Bento Cards: Apple HIG Premium Card Aesthetic */
+.bento-card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 24px;
+    transform: translateZ(0) scale(1);
+    will-change: transform, box-shadow;
+    transition:
+        transform .6s cubic-bezier(.22, 1, .36, 1),
+        box-shadow .6s cubic-bezier(.22, 1, .36, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.bento-card:hover {
+    transform: translateZ(0) scale(1.012);
+}
+
+/* Profile Card Specifics */
+.bento-card--profile {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bento-profile-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    display: block;
+}
+
+.bento-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card--profile:hover .bento-profile-img {
+    transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+    .bento-profile-frame {
+        aspect-ratio: 1/1;
+    }
+    .bento-profile-img {
+        object-position: bottom center;
+    }
+}
+
+.bento-profile-location {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 99px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.bento-location-icon {
+    color: var(--accent-blue);
+}
+
+/* Bio Card Specifics */
+.bento-card--bio {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bento-bio-heading {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.bento-heading-accent {
+    color: var(--accent-blue);
+}
+
+.bento-bio-body {
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bento-bio-body strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Stats Card Specifics */
+.bento-card--stat {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bento-stat-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.bento-stat-icon-wrapper--blue {
+    color: var(--accent-blue);
+    background: var(--accent-blue-soft);
+}
+
+.bento-stat-icon-wrapper--green {
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+}
+
+[data-theme='dark'] .bento-stat-icon-wrapper--green {
+    color: #34d399;
+    background: rgba(52, 211, 153, 0.15);
+}
+
+.bento-stat-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bento-stat-number {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.bento-stat-label {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Focus Card Specifics */
+.bento-card-title {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bento-focus-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bento-focus-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.focus-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.focus-bullet--ai {
+    background: #a855f7;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+.focus-bullet--devops {
+    background: var(--accent-blue);
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
+}
+
+.focus-bullet--backend {
+    background: #10b981;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+.bento-focus-list li strong {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.bento-focus-list li p {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Education Card Specifics */
+.bento-card--education {
+    display: flex;
+    flex-direction: column;
+}
+
+.bento-title-icon {
+    color: var(--accent-blue);
+}
+
+.bento-education-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bento-education-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.bento-education-item:not(:last-child) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 768px) {
+    .bento-education-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .bento-education-item:not(:last-child) {
+        padding-bottom: 0;
+        border-bottom: none;
+        padding-right: 32px;
+        border-right: 1px solid var(--border-subtle);
+    }
+}
+
+.bento-edu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.bento-edu-title {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.bento-edu-meta {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.bento-edu-status-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bento-edu-date {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+@media (min-width: 768px) {
+    .bento-edu-status-wrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.bento-edu-status {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #d97706;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bento-edu-status::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: currentColor;
+    border-radius: 50%;
+}
+
+[data-theme='dark'] .bento-edu-status {
+    color: #fbbf24;
+}
+
+.bento-edu-status--graduated {
+    color: #059669;
+}
+
+[data-theme='dark'] .bento-edu-status--graduated {
+    color: #34d399;
+}
+
+/* HIG: Dark mode overrides to meet 4.5:1 contrast ratio */
+[data-theme='dark'] .about-education-badge--progress {
+    color: #f59e0b; /* Light amber */
+    background: rgba(245, 158, 11, 0.2);
+}
+
+[data-theme='dark'] .about-education-badge--done {
+    color: #34d399; /* Light green */
+    background: rgba(16, 185, 129, 0.2);
+}
+
+.about-education-badge {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+.about-education-badge--progress {
+    color: #b45309;
+    background: rgba(245, 158, 11, 0.12);
+}
+
+.about-education-badge--done {
+    color: #047857;
+    background: rgba(16, 185, 129, 0.12);
+}
+
+/* Responsive Bento Grid Configurations */
+@media (min-width: 768px) {
+    .about-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bento-card--bio {
+        grid-column: span 2;
+    }
+
+    .bento-card--education {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-bento-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto;
+    }
+
+    .bento-card--profile {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+
+    .bento-card--bio {
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .bento-card--stat:nth-of-type(3) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .bento-card--stat:nth-of-type(4) {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+
+    .bento-card--education {
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+    }
+}
+
+/* HIG Prefers Reduced Motion Specific Override */
+@media (prefers-reduced-motion: reduce) {
+    .bento-card {
+        transition: none !important;
+    }
+    .bento-card:hover {
+        transform: none !important;
+    }
+    .bento-profile-img {
+        transition: none !important;
+    }
+    .bento-card--profile:hover .bento-profile-img {
+        transform: none !important;
+    }
+}
+
+/* ----- Stats Hover ----- */
+.stat-card {
+    cursor: default;
+}
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+[data-theme='dark'] .stat-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}

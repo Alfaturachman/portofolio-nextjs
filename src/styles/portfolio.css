@@ -1,0 +1,295 @@
+/* ===== Portfolio Section ===== */
+#portfolio {
+    background: var(--bg-primary);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 56px;
+}
+
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ----- View All Projects Redesign ----- */
+.portfolio-view-all-container {
+    margin-top: 56px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-view-all {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 28px;
+    border-radius: 99px;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-view-all::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-blue);
+    transform: translateX(-101%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 0;
+    border-radius: 99px;
+}
+
+.btn-view-all span {
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-view-all-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--accent-blue-soft);
+    color: var(--accent-blue);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.btn-view-all-circle svg {
+    font-size: 0.85rem;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-view-all:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-blue);
+    color: #ffffff !important;
+}
+
+[data-theme='dark'] .btn-view-all:hover {
+    box-shadow: 0 12px 28px rgba(59, 130, 246, 0.35);
+}
+
+.btn-view-all:hover::before {
+    transform: translateX(0);
+}
+
+.btn-view-all:hover .btn-view-all-circle {
+    background: #ffffff;
+    color: var(--accent-blue);
+    transform: translateX(4px);
+}
+
+.btn-view-all:hover .btn-view-all-circle svg {
+    transform: scale(1.1);
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    transition:
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+}
+
+.project-img-wrapper {
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+    background: white;
+}
+
+.project-img-wrapper img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition:
+        opacity 0.6s ease-in-out,
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-img-wrapper img.loaded {
+    opacity: 1;
+}
+
+.project-card:hover .project-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px 20px 24px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.project-tag {
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-lighter);
+    transition: all 0.3s ease;
+}
+
+.project-tag i {
+    margin-right: 4px;
+}
+
+.project-tag.type-badge.team {
+    color: var(--accent-blue);
+    border-color: rgba(59, 91, 219, 0.2);
+    background: var(--accent-blue-soft);
+}
+
+.project-tag.type-badge.freelance {
+    color: #d97706;
+    border-color: rgba(217, 119, 6, 0.2);
+    background: rgba(217, 119, 6, 0.1);
+}
+
+[data-theme='dark'] .project-tag.type-badge.freelance {
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.1);
+    border-color: rgba(251, 191, 36, 0.15);
+}
+
+.project-card:hover .project-tag {
+    background: var(--card-bg);
+    border-color: var(--border-subtle);
+    color: var(--text-primary);
+}
+
+.project-card:hover .project-tag.type-badge.team {
+    background: var(--card-bg);
+    border-color: var(--border-subtle);
+    color: var(--accent-blue);
+}
+
+.project-card:hover .project-tag.type-badge.freelance {
+    background: var(--card-bg);
+    border-color: var(--border-subtle);
+    color: #d97706;
+}
+
+[data-theme='dark'] .project-card:hover .project-tag.type-badge.freelance {
+    color: #fbbf24;
+}
+
+.project-title {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.project-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    font-weight: 400;
+    flex-grow: 1;
+}
+
+.project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    margin-top: auto;
+    border-top: 1px solid var(--border-subtle);
+    text-decoration: none;
+}
+
+.project-link-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.project-card:hover .project-link-text {
+    opacity: 1;
+}
+
+.project-arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-arrow {
+    background: var(--accent-blue);
+    color: #fff;
+}
+
+.project-arrow-icon {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: rotate(-45deg);
+}
+
+.project-card:hover .project-arrow-icon {
+    transform: rotate(0deg);
+}

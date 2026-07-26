@@ -93,10 +93,6 @@
     color: #ffffff !important;
 }
 
-[data-theme='dark'] .btn-view-all:hover {
-    box-shadow: 0 12px 28px rgba(59, 130, 246, 0.35);
-}
-
 .btn-view-all:hover::before {
     transform: translateX(0);
 }

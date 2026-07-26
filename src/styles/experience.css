@@ -33,7 +33,6 @@
         padding: 24px 20px;
         backdrop-filter: blur(20px) saturate(180%);
         -webkit-backdrop-filter: blur(20px) saturate(180%);
-        box-shadow: var(--box-shadow);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
         user-select: none;
@@ -226,6 +225,7 @@
 
 .experience-toggle-btn.mobile-only {
     display: none;
+    background: var(--bg-primary);
 }
 
 .experience-toggle-btn.desktop-only {

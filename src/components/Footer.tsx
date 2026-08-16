@@ -50,8 +50,7 @@ export default function Footer() {
                             something great together.
                         </h2>
                         <p className="footer-hero-subtext">
-                            Open to collaborations, freelance projects, <br className="desktop-only-br" />
-                            and new opportunities.
+                            Open to collaborations, freelance projects, and new opportunities.
                         </p>
                     </div>
                     <div className="footer-hero-action">

@@ -102,8 +102,11 @@
         transition: background 0.25s ease, transform 0.25s ease;
     }
 
-    .category-header:hover .category-chevron,
-    .category-chevron:hover {
+    [data-theme='dark'] .category-chevron {
+        background: var(--card-bg);
+    }
+
+    .category-header:hover .category-chevron {
         background: var(--accent-blue-soft);
     }
 

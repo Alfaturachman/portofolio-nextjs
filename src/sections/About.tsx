@@ -49,21 +49,18 @@ export default function About() {
                             <p>
                                 I am{' '}
                                 <strong>Alfaturachman Maulana Pahlevi</strong>,
-                                a software engineer focused on DevOps and
-                                AI-driven solutions. I specialize in turning
-                                complex architectural and computational problems
-                                into clean, highly scalable, and
-                                production-ready systems.
+                                a Software Engineer specializing in backend
+                                development and DevOps. I build and maintain
+                                reliable software systems, with a focus on clean
+                                architecture, maintainable code, and practical
+                                solutions to complex engineering problems.
                             </p>
+
                             <p>
-                                My primary expertise spans backend
-                                infrastructure, cloud engineering, and
-                                intelligent workflow automation. I am currently
-                                diving deeper into{' '}
-                                <strong>Machine Learning</strong> and{' '}
-                                <strong>Deep Learning</strong> architectures to
-                                seamlessly bridge AI capability with production
-                                software.
+                                Currently, I am expanding my knowledge into
+                                Machine Learning and Deep Learning, exploring how
+                                AI can be applied to real-world software
+                                systems.
                             </p>
                         </div>
                     </div>

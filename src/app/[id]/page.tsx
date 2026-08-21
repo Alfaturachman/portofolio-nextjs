@@ -168,7 +168,6 @@ export default async function CoursesPage({
 
                 <div className="courses-list">
                     <h2 className="detail-section-title">
-                        <FontAwesomeIcon icon={faList} />
                         Courses ({courses.length})
                     </h2>
                     <ul className="courses-grid">

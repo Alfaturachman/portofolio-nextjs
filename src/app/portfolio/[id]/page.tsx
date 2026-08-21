@@ -89,7 +89,6 @@ export default async function DetailPage({
                     <div className="detail-content-grid">
                         <div className="detail-main">
                             <h2 className="detail-section-title">
-                                <FontAwesomeIcon icon={faLayerGroup} />
                                 Overview
                             </h2>
                             <p className="detail-text">{project.desc}</p>

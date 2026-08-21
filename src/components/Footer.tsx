@@ -12,9 +12,11 @@ import {
     faLinkedin,
     faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
+import { useI18n } from '@/lib/i18n/i18n-context';
 
 export default function Footer() {
     const footerRef = useRef<HTMLElement>(null);
+    const { t } = useI18n();
 
     useEffect(() => {
         const footer = footerRef.current;
@@ -46,11 +48,12 @@ export default function Footer() {
                 <div className="footer-hero-card">
                     <div className="footer-hero-text">
                         <h2 className="footer-hero-heading">
-                            Let&apos;s build <br />
-                            something great together.
+                            {t.footer.heroHeadingLine1}
+                            <br />
+                            {t.footer.heroHeadingLine2}
                         </h2>
                         <p className="footer-hero-subtext">
-                            Open to collaborations, freelance projects, and new opportunities.
+                            {t.footer.heroSubtext}
                         </p>
                     </div>
                     <div className="footer-hero-action">
@@ -58,7 +61,7 @@ export default function Footer() {
                             href="mailto:alfaturachmanpahlevi@gmail.com"
                             className="footer-hero-btn"
                         >
-                            <span>Let&apos;s Work Together</span>
+                            <span>{t.footer.heroBtn}</span>
                             <FontAwesomeIcon icon={faArrowRight} />
                         </a>
                     </div>
@@ -67,7 +70,9 @@ export default function Footer() {
                 {/* Middle Connect Row */}
                 <div className="footer-mid-row">
                     <div className="footer-connect-block">
-                        <p className="footer-connect-label">CONNECT</p>
+                        <p className="footer-connect-label">
+                            {t.footer.connectLabel}
+                        </p>
                         <div className="footer-social-row">
                             <a
                                 href="https://github.com/Alfaturachman"
@@ -115,9 +120,11 @@ export default function Footer() {
                     <button
                         onClick={scrollToTop}
                         className="footer-back-to-top-btn"
-                        aria-label="Back to top"
+                        aria-label={t.footer.backToTopAria}
                     >
-                        <span className="footer-back-to-top-text">Back to top</span>
+                        <span className="footer-back-to-top-text">
+                            {t.footer.backToTop}
+                        </span>
                         <FontAwesomeIcon icon={faArrowUp} />
                     </button>
                 </div>

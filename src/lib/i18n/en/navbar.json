@@ -1,0 +1,16 @@
+{
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "skills": "Skills",
+    "experience": "Experience",
+    "certificates": "Certificates",
+    "mainNavAria": "Main navigation",
+    "menuAria": "Navigation menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode",
+    "openChat": "Open chat",
+    "closeChat": "Close chat"
+}

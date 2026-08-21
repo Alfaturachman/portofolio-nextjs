@@ -91,6 +91,12 @@
     transform: rotate(30deg) scale(1.1);
 }
 
+.lang-toggle {
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
 .nav-actions {
     display: none;
     align-items: center;

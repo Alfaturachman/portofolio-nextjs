@@ -1,0 +1,17 @@
+{
+    "eyebrow": "Portofolio",
+    "titleLine1": "Proyek yang pernah",
+    "titleLine2": "saya kerjakan",
+    "viewAll": "Jelajahi Semua Proyek",
+    "cardViewDetails": "Lihat Detail",
+    "meta": {
+        "toggleAria": "Tampilkan Spesifikasi Proyek",
+        "toggleLabel": "Spesifikasi Proyek",
+        "role": "Peran",
+        "year": "Tahun",
+        "type": "Tipe",
+        "category": "Kategori",
+        "sector": "Sektor",
+        "privacy": "Privasi"
+    }
+}

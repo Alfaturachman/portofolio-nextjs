@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { useTheme } from '@/lib/theme-context';
+import { useI18n } from '@/lib/i18n/i18n-context';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,6 +14,7 @@ const FOCUSABLE = 'a, button, [tabindex]:not([tabindex="-1"])';
 
 export default function Navbar() {
     const { theme, toggleTheme } = useTheme();
+    const { lang, toggleLang, t } = useI18n();
     const { isOpen: chatOpen, toggle: toggleChat } = useChatbot();
     const router = useRouter();
     const pathname = usePathname();
@@ -92,16 +94,16 @@ export default function Navbar() {
     }, [isMenuOpen, trapFocus]);
 
     const links = [
-        { label: 'Home', href: '/' },
-        { label: 'About', href: '/#about' },
-        { label: 'Portfolio', href: '/portfolio' },
-        { label: 'Skills', href: '/#skills' },
-        { label: 'Experience', href: '/#experience' },
-        { label: 'Certificates', href: '/#certificates' },
+        { label: t.navbar.home, href: '/' },
+        { label: t.navbar.about, href: '/#about' },
+        { label: t.navbar.portfolio, href: '/portfolio' },
+        { label: t.navbar.skills, href: '/#skills' },
+        { label: t.navbar.experience, href: '/#experience' },
+        { label: t.navbar.certificates, href: '/#certificates' },
     ];
 
     return (
-        <nav ref={navRef} id="navbar" aria-label="Main navigation">
+        <nav ref={navRef} id="navbar" aria-label={t.navbar.mainNavAria}>
             <div className="nav-inner glass">
                 <Link
                     href="/"
@@ -124,12 +126,23 @@ export default function Navbar() {
                         </a>
                     ))}
                     <button
+                        className="nav-link lang-toggle"
+                        onClick={toggleLang}
+                        aria-label={
+                            lang === 'en'
+                                ? 'Switch to Indonesian'
+                                : 'Ganti ke Bahasa Inggris'
+                        }
+                    >
+                        {lang === 'en' ? 'ID' : 'EN'}
+                    </button>
+                    <button
                         className="nav-link theme-toggle"
                         onClick={toggleTheme}
                         aria-label={
                             theme === 'dark'
-                                ? 'Switch to light mode'
-                                : 'Switch to dark mode'
+                                ? t.navbar.switchToLight
+                                : t.navbar.switchToDark
                         }
                     >
                         <FontAwesomeIcon
@@ -140,7 +153,7 @@ export default function Navbar() {
                     <button
                         className="nav-link chatbot-desktop-toggle"
                         onClick={toggleChat}
-                        aria-label={chatOpen ? 'Close chat' : 'Open chat'}
+                        aria-label={chatOpen ? t.navbar.closeChat : t.navbar.openChat}
                         aria-expanded={chatOpen}
                         aria-controls="chatbot-panel"
                     >
@@ -154,12 +167,23 @@ export default function Navbar() {
                 </div>
                 <div className="nav-actions">
                     <button
+                        className="nav-mobile-theme lang-toggle"
+                        onClick={toggleLang}
+                        aria-label={
+                            lang === 'en'
+                                ? 'Switch to Indonesian'
+                                : 'Ganti ke Bahasa Inggris'
+                        }
+                    >
+                        {lang === 'en' ? 'ID' : 'EN'}
+                    </button>
+                    <button
                         className="nav-mobile-theme"
                         onClick={toggleTheme}
                         aria-label={
                             theme === 'dark'
-                                ? 'Switch to light mode'
-                                : 'Switch to dark mode'
+                                ? t.navbar.switchToLight
+                                : t.navbar.switchToDark
                         }
                     >
                         <FontAwesomeIcon
@@ -183,7 +207,7 @@ export default function Navbar() {
                     <button
                         className={`hamburger${isMenuOpen ? ' active' : ''}`}
                         onClick={toggleMenu}
-                        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+                        aria-label={isMenuOpen ? t.navbar.closeMenu : t.navbar.openMenu}
                         aria-expanded={isMenuOpen}
                         aria-controls="mobileMenu"
                     >
@@ -205,7 +229,7 @@ export default function Navbar() {
                 className={`mobile-menu glass${isMenuOpen ? ' open' : ''}`}
                 id="mobileMenu"
                 role="menu"
-                aria-label="Navigation menu"
+                aria-label={t.navbar.menuAria}
             >
                 {links.map((link) => (
                     <a

@@ -15,6 +15,7 @@ import {
     faInfoCircle,
 } from '@fortawesome/free-solid-svg-icons';
 import type { Project } from '@/lib/types';
+import { useI18n } from '@/lib/i18n/i18n-context';
 
 interface ProjectMetaProps {
     project: Project;
@@ -22,6 +23,7 @@ interface ProjectMetaProps {
 
 export default function ProjectMeta({ project }: ProjectMetaProps) {
     const [isOpen, setIsOpen] = useState(false);
+    const { t } = useI18n();
 
     return (
         <div className={`detail-meta-wrapper ${isOpen ? 'is-open' : ''}`}>
@@ -31,13 +33,13 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
                 className="meta-toggle-btn"
                 onClick={() => setIsOpen(!isOpen)}
                 aria-expanded={isOpen}
-                aria-label="Toggle Project Specifications"
+                aria-label={t.portfolio.meta.toggleAria}
             >
                 <div className="meta-toggle-left">
                     <div className="meta-pill-icon">
                         <FontAwesomeIcon icon={faInfoCircle} />
                     </div>
-                    <span>Project Specifications</span>
+                    <span>{t.portfolio.meta.toggleLabel}</span>
                 </div>
                 <FontAwesomeIcon
                     icon={faChevronDown}
@@ -52,7 +54,7 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
                         <FontAwesomeIcon icon={faBriefcase} />
                     </div>
                     <div className="meta-pill-text">
-                        <span className="meta-pill-label">Role</span>
+                        <span className="meta-pill-label">{t.portfolio.meta.role}</span>
                         <span className="meta-pill-value">{project.role}</span>
                     </div>
                 </div>
@@ -62,7 +64,7 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
                         <FontAwesomeIcon icon={faCalendar} />
                     </div>
                     <div className="meta-pill-text">
-                        <span className="meta-pill-label">Year</span>
+                        <span className="meta-pill-label">{t.portfolio.meta.year}</span>
                         <span className="meta-pill-value">{project.year}</span>
                     </div>
                 </div>
@@ -72,7 +74,7 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
                         <FontAwesomeIcon icon={project.type === 'Team' ? faUsers : faUser} />
                     </div>
                     <div className="meta-pill-text">
-                        <span className="meta-pill-label">Type</span>
+                        <span className="meta-pill-label">{t.portfolio.meta.type}</span>
                         <span className="meta-pill-value">{project.type}</span>
                     </div>
                 </div>
@@ -82,7 +84,7 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
                         <FontAwesomeIcon icon={faGlobe} />
                     </div>
                     <div className="meta-pill-text">
-                        <span className="meta-pill-label">Category</span>
+                        <span className="meta-pill-label">{t.portfolio.meta.category}</span>
                         <span className="meta-pill-value">{project.websiteType}</span>
                     </div>
                 </div>
@@ -92,7 +94,7 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
                         <FontAwesomeIcon icon={faBuilding} />
                     </div>
                     <div className="meta-pill-text">
-                        <span className="meta-pill-label">Sector</span>
+                        <span className="meta-pill-label">{t.portfolio.meta.sector}</span>
                         <span className="meta-pill-value">{project.sector}</span>
                     </div>
                 </div>
@@ -102,7 +104,7 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
                         <FontAwesomeIcon icon={project.privacy === 'Public' ? faLockOpen : faLock} />
                     </div>
                     <div className="meta-pill-text">
-                        <span className="meta-pill-label">Privacy</span>
+                        <span className="meta-pill-label">{t.portfolio.meta.privacy}</span>
                         <span className="meta-pill-value">{project.privacy}</span>
                     </div>
                 </div>

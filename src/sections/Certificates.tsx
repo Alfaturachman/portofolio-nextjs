@@ -10,16 +10,19 @@ import {
     faBookOpen,
     faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
+import { useI18n } from '@/lib/i18n/i18n-context';
 
 export default function Certificates() {
+    const { t } = useI18n();
+
     return (
         <section id="certificates">
             <div className="section-max">
-                <div className="section-eyebrow">Certificates</div>
+                <div className="section-eyebrow">{t.certificates.eyebrow}</div>
                 <h2 className="section-title">
-                    Certificates I have
+                    {t.certificates.titleLine1}
                     <br />
-                    earned
+                    {t.certificates.titleLine2}
                 </h2>
                 <div className="portfolio-grid">
                     {coursesData.specializations.map((spec) => (
@@ -27,7 +30,7 @@ export default function Certificates() {
                             key={spec.id}
                             href={`/${spec.id}`}
                             className="project-card cert-card"
-                            aria-label={`View ${spec.title} certificate`}
+                            aria-label={`${t.certificates.viewSpecAria}${spec.title}`}
                         >
                             <div className="project-img-wrapper cert-logo-wrap">
                                 <Image
@@ -58,23 +61,23 @@ export default function Certificates() {
                                                     spec.id,
                                             ).length
                                         }{' '}
-                                        Courses
+                                        {t.certificates.coursesTag}
                                     </span>
                                 </div>
                                 <h3 className="project-title">{spec.title}</h3>
                                 <p className="project-desc">
-                                    Professional certification from{' '}
-                                    {spec.provider} that covers the fundamentals
-                                    of{' '}
+                                    {t.certificates.certDescPre}
+                                    {spec.provider}
+                                    {t.certificates.certDescMid}
                                     {spec.title.replace(
                                         `${spec.provider} `,
                                         '',
                                     )}
-                                    .
+                                    {t.certificates.certDescPost}
                                 </p>
                                 <span className="project-footer">
                                     <span className="project-link-text">
-                                        View Credential
+                                        {t.certificates.viewCredential}
                                     </span>
                                     <div className="project-arrow">
                                         <FontAwesomeIcon

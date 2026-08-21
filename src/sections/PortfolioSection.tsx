@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { projects } from '@/lib/projects';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { useI18n } from '@/lib/i18n/i18n-context';
 
 export default function PortfolioSection({
     limit,
@@ -14,17 +15,18 @@ export default function PortfolioSection({
     limit?: number;
     children?: React.ReactNode;
 }) {
+    const { t } = useI18n();
     const displayedProjects = limit ? projects.slice(0, limit) : projects;
 
     return (
         <section id="portfolio">
             <div className="section-max">
                 {children}
-                <div className="section-eyebrow">Portfolio</div>
+                <div className="section-eyebrow">{t.portfolio.eyebrow}</div>
                 <h2 className="section-title">
-                    Projects I have
+                    {t.portfolio.titleLine1}
                     <br />
-                    worked on
+                    {t.portfolio.titleLine2}
                 </h2>
                 <div className="portfolio-grid">
                     {displayedProjects.map((p, i) => (
@@ -34,7 +36,7 @@ export default function PortfolioSection({
                 {limit && (
                     <div className="portfolio-view-all-container">
                         <Link href="/portfolio" className="btn-view-all">
-                            <span>Explore All Projects</span>
+                            <span>{t.portfolio.viewAll}</span>
                             <div className="btn-view-all-circle">
                                 <FontAwesomeIcon
                                     icon={faArrowRight}
@@ -58,6 +60,7 @@ function ProjectCard({
 }) {
     const [loaded, setLoaded] = useState(false);
     const [imgSrc, setImgSrc] = useState(p.image);
+    const { t } = useI18n();
 
     return (
         <Link href={`/portfolio/${p.id}`} className="project-card">
@@ -94,7 +97,9 @@ function ProjectCard({
                 <h3 className="project-title">{p.title}</h3>
                 <p className="project-desc">{p.cardDesc}</p>
                 <div className="project-footer">
-                    <span className="project-link-text">View Details</span>
+                    <span className="project-link-text">
+                        {t.portfolio.cardViewDetails}
+                    </span>
                     <div className="project-arrow">
                         <FontAwesomeIcon
                             icon={faArrowRight}

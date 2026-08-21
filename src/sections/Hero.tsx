@@ -2,10 +2,12 @@
 
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
+import { useI18n } from '@/lib/i18n/i18n-context';
 
 export default function Hero() {
     const router = useRouter();
     const pathname = usePathname();
+    const { t } = useI18n();
 
     const handleNavClick = (
         e: React.MouseEvent<HTMLAnchorElement>,
@@ -38,24 +40,22 @@ export default function Hero() {
                 {/* Status badge */}
                 <div className="hero-badge hero-fade-in-1">
                     <span className="hero-badge-dot" aria-hidden="true" />
-                    <span>Available for work</span>
+                    <span>{t.hero.badge}</span>
                 </div>
 
                 {/* Title + Description as one unit */}
                 <div className="hero-content hero-fade-in-2">
-                    <p className="hero-greeting">Hi, I&rsquo;m Almavi.</p>
+                    <p className="hero-greeting">{t.hero.greeting}</p>
                     <div className="hero-grid">
                         <h1 className="hero-title">
-                            I build software that{' '}
+                            {t.hero.titlePre}
                             <span className="hero-title-highlight">
-                                solves{' '}
+                                {t.hero.titleHighlight}
                             </span>
-                            real problems.
+                            {t.hero.titlePost}
                         </h1>
                         <p className="hero-description">
-                            Software engineer focused on clean architecture,
-                            fluid user experience, and turning good ideas into
-                            apps that actually work.
+                            {t.hero.description}
                         </p>
                     </div>
                 </div>
@@ -66,18 +66,18 @@ export default function Hero() {
                         href="/portfolio"
                         className="hero-cta-btn hero-cta-btn-primary"
                         onClick={(e) => handleNavClick(e, '/portfolio')}
-                        aria-label="View my projects"
+                        aria-label={t.hero.ctaProjectsAria}
                     >
-                        View Projects
+                        {t.hero.ctaProjects}
                     </Link>
                     <div className="hero-cta-divider" aria-hidden="true" />
                     <Link
                         href="/#about"
                         className="hero-cta-btn"
                         onClick={(e) => handleNavClick(e, '/#about')}
-                        aria-label="Learn more about me"
+                        aria-label={t.hero.ctaAboutAria}
                     >
-                        About Me
+                        {t.hero.ctaAbout}
                     </Link>
                 </div>
             </div>

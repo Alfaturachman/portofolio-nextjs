@@ -1,0 +1,17 @@
+{
+    "eyebrow": "Portfolio",
+    "titleLine1": "Projects I have",
+    "titleLine2": "worked on",
+    "viewAll": "Explore All Projects",
+    "cardViewDetails": "View Details",
+    "meta": {
+        "toggleAria": "Toggle Project Specifications",
+        "toggleLabel": "Project Specifications",
+        "role": "Role",
+        "year": "Year",
+        "type": "Type",
+        "category": "Category",
+        "sector": "Sector",
+        "privacy": "Privacy"
+    }
+}

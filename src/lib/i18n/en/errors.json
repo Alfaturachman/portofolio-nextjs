@@ -1,0 +1,9 @@
+{
+    "fallbackTitle": "Something went wrong",
+    "fallbackDescPre": "An error occurred while rendering the ",
+    "fallbackDescPost": " section. Please try reloading or head back home.",
+    "tryAgain": "Try again",
+    "backHome": "Back to Home",
+    "notFoundTitle": "Page not found",
+    "notFoundDesc": "The page you're looking for doesn't exist or has been moved."
+}

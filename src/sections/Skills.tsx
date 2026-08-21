@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { useI18n } from '@/lib/i18n/i18n-context';
 
 const toolIcons: Record<string, string> = {
     html: '/assets/images/logo/html.svg',
@@ -33,6 +34,7 @@ const toolIcons: Record<string, string> = {
 
 export default function Skills() {
     const [expanded, setExpanded] = useState<Set<number>>(new Set());
+    const { t } = useI18n();
 
     const toggleCategory = (idx: number) => {
         setExpanded((prev) => {
@@ -49,14 +51,18 @@ export default function Skills() {
     return (
         <section id="skills">
             <div className="section-max">
-                <div className="section-eyebrow">Skills</div>
+                <div className="section-eyebrow">{t.skills.eyebrow}</div>
                 <h2 className="section-title">
-                    Tools &amp; technologies
-                    <br />I master
+                    {t.skills.titleLine1}
+                    <br />
+                    {t.skills.titleLine2}
                 </h2>
                 <div className="skills-wrapper">
                     {skillsCategories.map((cat, idx) => {
                         const isExpanded = expanded.has(idx);
+                        // ponytail: fallback keeps a new category visible in EN
+                        // until its translation is added to skills.json
+                        const translated = t.skills.categories[idx];
                         return (
                             <div className="skill-category" key={cat.title}>
                                 <button
@@ -66,10 +72,10 @@ export default function Skills() {
                                 >
                                     <div>
                                         <h3 className="category-title">
-                                            {cat.title}
+                                            {translated?.title ?? cat.title}
                                         </h3>
                                         <p className="category-desc">
-                                            {cat.desc}
+                                            {translated?.desc ?? cat.desc}
                                         </p>
                                     </div>
                                     <div

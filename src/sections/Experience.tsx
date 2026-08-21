@@ -12,6 +12,7 @@ import {
     faChevronDown,
     type IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
+import { useI18n } from '@/lib/i18n/i18n-context';
 
 const iconMap: Record<string, IconDefinition> = {
     briefcase: faBriefcase,
@@ -20,8 +21,20 @@ const iconMap: Record<string, IconDefinition> = {
     'graduation-cap': faGraduationCap,
 };
 
-function ExperienceCard({ exp, isDefaultOpen }: { exp: ExpType; isDefaultOpen: boolean }) {
+// ponytail: translations are looked up by index; a new entry in
+// experiences.ts falls back to its English data until experience.json catches up.
+function ExperienceCard({
+    exp,
+    isDefaultOpen,
+    idx,
+}: {
+    exp: ExpType;
+    isDefaultOpen: boolean;
+    idx: number;
+}) {
     const [isOpen, setIsOpen] = useState(isDefaultOpen);
+    const { t } = useI18n();
+    const tr = t.experience.items[idx];
 
     return (
         <div
@@ -39,9 +52,9 @@ function ExperienceCard({ exp, isDefaultOpen }: { exp: ExpType; isDefaultOpen: b
         >
             <div className="experience-meta">
                 <div className="experience-meta-info">
-                    <div className="experience-date">{exp.date}</div>
+                    <div className="experience-date">{tr?.date ?? exp.date}</div>
                     <div className={`experience-badge${exp.badgeType === 'ghost' ? ' ghost' : ''}`}>
-                        {exp.badge}
+                        {tr?.badge ?? exp.badge}
                     </div>
                 </div>
                 <div className="experience-toggle-btn mobile-only" aria-hidden="true">
@@ -52,17 +65,19 @@ function ExperienceCard({ exp, isDefaultOpen }: { exp: ExpType; isDefaultOpen: b
                 </div>
             </div>
 
-            <div className="experience-content">
-                <div className="experience-header">
-                    <div className="experience-header-info">
-                        <h3 className="experience-title">{exp.title}</h3>
-                        <div className="experience-org">
-                            {iconMap[exp.orgIcon] && (
-                                <FontAwesomeIcon icon={iconMap[exp.orgIcon]} />
-                            )}
-                            {exp.org}
+                <div className="experience-content">
+                    <div className="experience-header">
+                        <div className="experience-header-info">
+                            <h3 className="experience-title">
+                                {tr?.title ?? exp.title}
+                            </h3>
+                            <div className="experience-org">
+                                {iconMap[exp.orgIcon] && (
+                                    <FontAwesomeIcon icon={iconMap[exp.orgIcon]} />
+                                )}
+                                {tr?.org ?? exp.org}
+                            </div>
                         </div>
-                    </div>
                     <div className="experience-toggle-btn desktop-only" aria-hidden="true">
                         <FontAwesomeIcon
                             icon={faChevronDown}
@@ -73,9 +88,13 @@ function ExperienceCard({ exp, isDefaultOpen }: { exp: ExpType; isDefaultOpen: b
 
                 <div className="experience-body">
                     <ul className="experience-desc-list">
-                        {exp.desc.split('\n').map((line, lIdx) => (
-                            <li key={lIdx}>{line.replace(/^•\s*/, '')}</li>
-                        ))}
+                        {(tr?.desc ?? exp.desc)
+                            .split('\n')
+                            .map((line, lIdx) => (
+                                <li key={lIdx}>
+                                    {line.replace(/^•\s*/, '')}
+                                </li>
+                            ))}
                     </ul>
                 </div>
             </div>
@@ -84,18 +103,25 @@ function ExperienceCard({ exp, isDefaultOpen }: { exp: ExpType; isDefaultOpen: b
 }
 
 export default function Experience() {
+    const { t } = useI18n();
+
     return (
         <section id="experience">
             <div className="section-max">
-                <div className="section-eyebrow">Experience</div>
+                <div className="section-eyebrow">{t.experience.eyebrow}</div>
                 <h2 className="section-title">
-                    My journey &amp;
+                    {t.experience.titleLine1}
                     <br />
-                    career history
+                    {t.experience.titleLine2}
                 </h2>
                 <div className="experience-list">
                     {experiences.map((exp, idx) => (
-                        <ExperienceCard key={idx} exp={exp} isDefaultOpen={idx === 0} />
+                        <ExperienceCard
+                            key={idx}
+                            exp={exp}
+                            isDefaultOpen={idx === 0}
+                            idx={idx}
+                        />
                     ))}
                 </div>
             </div>

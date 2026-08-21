@@ -1,0 +1,35 @@
+{
+    "eyebrow": "Experience",
+    "titleLine1": "My journey &",
+    "titleLine2": "career history",
+    "items": [
+        {
+            "date": "AUG 2024 — PRESENT",
+            "badge": "Current",
+            "title": "Full Stack & AI Developer",
+            "org": "Freelance / Independent Projects",
+            "desc": "• Architecting and deploying end-to-end software solutions.\n• Building robust backend systems and seamless user interfaces.\n• Integrating intelligent AI features and machine learning models.\n• Transforming complex business requirements into scalable applications."
+        },
+        {
+            "date": "NOV 2025",
+            "badge": "National Finalist",
+            "title": "National Student Scientific Week (PIMNAS) 38",
+            "org": "Ministry of Education and Culture (Kemendikbud)",
+            "desc": "• Selected as a National Finalist to represent the university at the prestigious 38th PIMNAS.\n• Engineered a web platform and integrated an IoT device for real-time lung sound analysis.\n• Showcased this technological innovation to compete alongside top student researchers nationwide."
+        },
+        {
+            "date": "JUN 2024 — JUL 2025",
+            "badge": "Internship",
+            "title": "Web Developer Intern",
+            "org": "UDINUS Faculty of Engineering",
+            "desc": "• Engineered a core academic information system in direct collaboration with stakeholders.\n• Architected scalable relational database schemas and optimized RESTful API integrations.\n• Built a resilient frontend to streamline the operational workflows of university staff."
+        },
+        {
+            "date": "SEP 2022 — JUL 2025",
+            "badge": "Education",
+            "title": "Associate Degree in Informatics",
+            "org": "Dian Nuswantoro University",
+            "desc": "• Graduated with a strong specialization in Software Engineering.\n• Shipped real-world applications ranging from full-stack web platforms to native Android apps.\n• Mastered state management, scalable database design, and end-to-end deployment pipelines."
+        }
+    ]
+}

@@ -3,9 +3,11 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import type { BlogArticle } from '@/lib/types';
+import { useI18n } from '@/lib/i18n/i18n-context';
 
 export default function BlogFilter({ articles }: { articles: BlogArticle[] }) {
     const [activeCategory, setActiveCategory] = useState<string>('All');
+    const { lang, t } = useI18n();
 
     const categories = useMemo(() => {
         const uniqueCategories = new Set(articles.map((a) => a.category));
@@ -26,7 +28,7 @@ export default function BlogFilter({ articles }: { articles: BlogArticle[] }) {
                         onClick={() => setActiveCategory(cat)}
                         className={`blog-filter-btn ${activeCategory === cat ? 'active' : ''}`}
                     >
-                        {cat}
+                        {cat === 'All' ? t.blog.filterAll : cat}
                     </button>
                 ))}
             </div>
@@ -44,7 +46,7 @@ export default function BlogFilter({ articles }: { articles: BlogArticle[] }) {
                             </span>
                             <span>
                                 {new Date(article.date).toLocaleDateString(
-                                    'en-US',
+                                    lang === 'id' ? 'id-ID' : 'en-US',
                                     {
                                         month: 'short',
                                         day: 'numeric',
@@ -74,7 +76,7 @@ export default function BlogFilter({ articles }: { articles: BlogArticle[] }) {
                         color: 'var(--text-muted)',
                     }}
                 >
-                    No articles found in this category.
+                    {t.blog.noArticles}
                 </div>
             )}
         </>

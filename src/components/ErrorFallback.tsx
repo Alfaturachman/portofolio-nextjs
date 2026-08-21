@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle, faRedo, faHome } from '@fortawesome/free-solid-svg-icons';
+import { useI18n } from '@/lib/i18n/i18n-context';
 
 interface ErrorFallbackProps {
     error: Error & { digest?: string };
@@ -16,6 +17,8 @@ export default function ErrorFallback({
     reset,
     moduleName = 'Application',
 }: ErrorFallbackProps) {
+    const { t } = useI18n();
+
     useEffect(() => {
         // Log the error to console/logging services
         console.error(`Error caught by ${moduleName} boundary:`, error);
@@ -31,20 +34,21 @@ export default function ErrorFallback({
                     <FontAwesomeIcon icon={faExclamationTriangle} />
                 </div>
 
-                <h1 className="error-fallback-title">Something went wrong</h1>
+                <h1 className="error-fallback-title">{t.errors.fallbackTitle}</h1>
                 <p className="error-fallback-desc">
-                    An error occurred while rendering the {moduleName.toLowerCase()} section. 
-                    Please try reloading or head back home.
+                    {t.errors.fallbackDescPre}
+                    {moduleName.toLowerCase()}
+                    {t.errors.fallbackDescPost}
                 </p>
 
                 <div className="error-fallback-actions">
                     <button onClick={reset} className="error-btn primary">
                         <FontAwesomeIcon icon={faRedo} />
-                        Try again
+                        {t.errors.tryAgain}
                     </button>
                     <Link href="/" className="error-btn secondary">
                         <FontAwesomeIcon icon={faHome} />
-                        Back to Home
+                        {t.errors.backHome}
                     </Link>
                 </div>
             </div>

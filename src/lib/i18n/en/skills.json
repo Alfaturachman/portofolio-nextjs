@@ -1,0 +1,19 @@
+{
+    "eyebrow": "Skills",
+    "titleLine1": "Tools & technologies",
+    "titleLine2": "I master",
+    "categories": [
+        {
+            "title": "Frontend Architecture",
+            "desc": "Building resilient, component-driven user interfaces with modern web standards and responsive performance in mind."
+        },
+        {
+            "title": "Backend & APIs",
+            "desc": "Designing scalable server-side architectures, robust RESTful APIs, and efficient database models."
+        },
+        {
+            "title": "Mobile & Platform Tooling",
+            "desc": "Building native applications and ensuring reliable version control, containerization, and design workflow."
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "eyebrow": "Keahlian",
+    "titleLine1": "Teknologi & alat",
+    "titleLine2": "yang saya kuasai",
+    "categories": [
+        {
+            "title": "Arsitektur Frontend",
+            "desc": "Membangun antarmuka pengguna yang tangguh dan berbasis komponen dengan standar web modern serta performa responsif."
+        },
+        {
+            "title": "Backend & API",
+            "desc": "Merancang arsitektur sisi server yang skalabel, RESTful API yang andal, dan model basis data yang efisien."
+        },
+        {
+            "title": "Mobile & Tools Platform",
+            "desc": "Membangun aplikasi native serta memastikan version control, containerization, dan alur kerja desain yang andal."
+        }
+    ]
+}

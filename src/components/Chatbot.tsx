@@ -10,6 +10,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { useChatbot } from '@/lib/chatbot-context';
+import { useI18n } from '@/lib/i18n/i18n-context';
 
 function renderContent(text: string): ReactNode {
     const urlRegex = /(https?:\/\/[^\s]+)/g;
@@ -70,6 +71,7 @@ const FOCUSABLE = 'button, textarea, [tabindex]:not([tabindex="-1"])';
 
 export default function Chatbot() {
     const { isOpen, setIsOpen } = useChatbot();
+    const { t } = useI18n();
     const [chatStarted, setChatStarted] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState('');
@@ -188,7 +190,7 @@ export default function Chatbot() {
                     content:
                         data.content ??
                         data.error ??
-                        'Sorry, I encountered an error. Please try again.',
+                        t.chatbot.errorGeneric,
                 },
             ]);
         } catch {
@@ -196,8 +198,7 @@ export default function Chatbot() {
                 ...prev,
                 {
                     role: 'assistant',
-                    content:
-                        'Connection error. Please check your network and try again.',
+                    content: t.chatbot.errorNetwork,
                 },
             ]);
         } finally {
@@ -232,7 +233,7 @@ export default function Chatbot() {
                         className="chatbot-panel"
                         role="dialog"
                         aria-modal="true"
-                        aria-label="Chat with mapi"
+                        aria-label={t.chatbot.panelAria}
                     >
                         <div className="chatbot-header">
                             <div className="chatbot-header-info">
@@ -245,14 +246,16 @@ export default function Chatbot() {
                                 <div>
                                     <p className="chatbot-name">mapi</p>
                                     <p className="chatbot-status">
-                                        {loading ? 'Thinking...' : 'Online'}
+                                        {loading
+                                            ? t.chatbot.statusThinking
+                                            : t.chatbot.statusOnline}
                                     </p>
                                 </div>
                             </div>
                             <button
                                 className="chatbot-close"
                                 onClick={close}
-                                aria-label="Close chat"
+                                aria-label={t.chatbot.closeAria}
                             >
                                 <FontAwesomeIcon icon={faTimes} />
                             </button>
@@ -267,14 +270,14 @@ export default function Chatbot() {
                                     />
                                 </div>
                                 <h2 className="chatbot-welcome-title">
-                                    Hi, I&rsquo;m mapi. How can I help?
+                                    {t.chatbot.welcomeTitle}
                                 </h2>
                                 <div className="chatbot-welcome-input-wrap">
                                     <div className="chatbot-input-wrap">
                                         <textarea
                                             ref={inputRef}
                                             className="chatbot-input"
-                                            placeholder="Ask me anything you want"
+                                            placeholder={t.chatbot.placeholder}
                                             rows={1}
                                             value={input}
                                             onChange={(e) => {
@@ -287,7 +290,7 @@ export default function Chatbot() {
                                             className="chatbot-send"
                                             onClick={sendMessage}
                                             disabled={!input.trim()}
-                                            aria-label="Send message"
+                                            aria-label={t.chatbot.sendAria}
                                         >
                                             <FontAwesomeIcon
                                                 icon={faPaperPlane}
@@ -296,8 +299,7 @@ export default function Chatbot() {
                                     </div>
                                 </div>
                                 <p className="chatbot-disclaimer">
-                                    mapi can make mistakes. ask about skills,
-                                    projects, or experience.
+                                    {t.chatbot.disclaimer}
                                 </p>
                             </div>
                         ) : (
@@ -332,7 +334,7 @@ export default function Chatbot() {
                                         <textarea
                                             ref={inputRef}
                                             className="chatbot-input"
-                                            placeholder="Ask me anything you want"
+                                            placeholder={t.chatbot.placeholder}
                                             rows={1}
                                             value={input}
                                             onChange={(e) => {
@@ -346,7 +348,7 @@ export default function Chatbot() {
                                             className="chatbot-send"
                                             onClick={sendMessage}
                                             disabled={loading || !input.trim()}
-                                            aria-label="Send message"
+                                            aria-label={t.chatbot.sendAria}
                                         >
                                             <FontAwesomeIcon
                                                 icon={faPaperPlane}
@@ -354,8 +356,7 @@ export default function Chatbot() {
                                         </button>
                                     </div>
                                     <p className="chatbot-disclaimer">
-                                        mapi can make mistakes. ask about
-                                        skills, projects, or experience.
+                                        {t.chatbot.disclaimer}
                                     </p>
                                 </div>
                             </>

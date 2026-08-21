@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -6,19 +8,22 @@ import {
     faGraduationCap,
     faMapMarkerAlt,
 } from '@fortawesome/free-solid-svg-icons';
+import { useI18n } from '@/lib/i18n/i18n-context';
 
 const startYear = 2023;
 const yearsExp = new Date().getFullYear() - startYear;
 
 export default function About() {
+    const { t } = useI18n();
+
     return (
-        <section id="about" aria-label="About me">
+        <section id="about" aria-label={t.about.sectionAria}>
             <div className="section-max">
-                <div className="section-eyebrow">About Me</div>
+                <div className="section-eyebrow">{t.about.eyebrow}</div>
                 <h2 className="section-title">
-                    Who I am,
+                    {t.about.titleLine1}
                     <br />
-                    and what I do
+                    {t.about.titleLine2}
                 </h2>
 
                 <div className="about-bento-grid">
@@ -39,29 +44,26 @@ export default function About() {
                     {/* Card 2: Biography */}
                     <div className="bento-card bento-card--bio">
                         <h3 className="bento-bio-heading">
-                            Driven by{' '}
-                            <span className="bento-heading-accent">Data</span>,
+                            {t.about.bioHead1Pre}
+                            <span className="bento-heading-accent">
+                                {t.about.bioHead1Accent}
+                            </span>
+                            {t.about.bioHead1Post}
                             <br />
-                            built with{' '}
-                            <span className="bento-heading-accent">Code</span>.
+                            {t.about.bioHead2Pre}
+                            <span className="bento-heading-accent">
+                                {t.about.bioHead2Accent}
+                            </span>
+                            {t.about.bioHead2Post}
                         </h3>
                         <div className="bento-bio-body">
                             <p>
-                                I am{' '}
-                                <strong>Alfaturachman Maulana Pahlevi</strong>,
-                                a Software Engineer specializing in backend
-                                development and DevOps. I build and maintain
-                                reliable software systems, with a focus on clean
-                                architecture, maintainable code, and practical
-                                solutions to complex engineering problems.
+                                {t.about.bioP1Pre}{' '}
+                                <strong>{t.about.bioP1Name}</strong>
+                                {t.about.bioP1Post}
                             </p>
 
-                            <p>
-                                Currently, I am expanding my knowledge into
-                                Machine Learning and Deep Learning, exploring how
-                                AI can be applied to real-world software
-                                systems.
-                            </p>
+                            <p>{t.about.bioP2}</p>
                         </div>
                     </div>
 
@@ -73,7 +75,7 @@ export default function About() {
                         <div className="bento-stat-info">
                             <span className="bento-stat-number">12+</span>
                             <span className="bento-stat-label">
-                                Projects Completed
+                                {t.about.statProjectsLabel}
                             </span>
                         </div>
                     </div>
@@ -88,7 +90,7 @@ export default function About() {
                                 {yearsExp}+
                             </span>
                             <span className="bento-stat-label">
-                                Years of Experience
+                                {t.about.statYearsLabel}
                             </span>
                         </div>
                     </div>
@@ -100,24 +102,24 @@ export default function About() {
                                 icon={faGraduationCap}
                                 className="bento-title-icon"
                             />
-                            Education
+                            {t.about.educationTitle}
                         </h3>
                         <ul className="bento-education-list">
                             <li className="bento-education-item">
                                 <div className="bento-edu-header">
                                     <h4 className="bento-edu-title">
-                                        Bachelor&apos;s Degree in IT
+                                        {t.about.edu1Title}
                                     </h4>
                                     <span className="about-education-badge about-education-badge--progress">
                                         S.Kom.
                                     </span>
                                 </div>
                                 <p className="bento-edu-meta">
-                                    Dian Nuswantoro University
+                                    {t.about.eduUni}
                                 </p>
                                 <div className="bento-edu-status-wrapper">
                                     <span className="bento-edu-status">
-                                        In Progress
+                                        {t.about.eduStatusInProgress}
                                     </span>
                                     <span className="bento-edu-date">
                                         September 2025 - July 2027
@@ -127,18 +129,18 @@ export default function About() {
                             <li className="bento-education-item">
                                 <div className="bento-edu-header">
                                     <h4 className="bento-edu-title">
-                                        Associate Degree in IT
+                                        {t.about.edu2Title}
                                     </h4>
                                     <span className="about-education-badge about-education-badge--done">
                                         A.Md.Kom
                                     </span>
                                 </div>
                                 <p className="bento-edu-meta">
-                                    Dian Nuswantoro University
+                                    {t.about.eduUni}
                                 </p>
                                 <div className="bento-edu-status-wrapper">
                                     <span className="bento-edu-status bento-edu-status--graduated">
-                                        Graduated
+                                        {t.about.eduStatusGraduated}
                                     </span>
                                     <span className="bento-edu-date">
                                         September 2022 - July 2025

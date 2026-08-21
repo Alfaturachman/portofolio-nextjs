@@ -10,6 +10,7 @@ import Cursor from '@/components/Cursor';
 import Chatbot from '@/components/Chatbot';
 import { ThemeProvider } from '@/lib/theme-context';
 import { ChatbotProvider } from '@/lib/chatbot-context';
+import { LanguageProvider } from '@/lib/i18n/i18n-context';
 
 const outfit = Outfit({
     subsets: ['latin'],
@@ -123,18 +124,20 @@ export default function RootLayout({
             </head>
             <body className="min-h-full flex flex-col">
                 <ThemeProvider>
-                    <Cursor />
-                    <a href="#main-content" className="skip-link">
-                        Skip to content
-                    </a>
-                    <ChatbotProvider>
-                        <Navbar />
-                        <main id="main-content" className="flex-1">
-                            {children}
-                        </main>
-                        <Footer />
-                        <Chatbot />
-                    </ChatbotProvider>
+                    <LanguageProvider>
+                        <Cursor />
+                        <a href="#main-content" className="skip-link">
+                            Skip to content
+                        </a>
+                        <ChatbotProvider>
+                            <Navbar />
+                            <main id="main-content" className="flex-1">
+                                {children}
+                            </main>
+                            <Footer />
+                            <Chatbot />
+                        </ChatbotProvider>
+                    </LanguageProvider>
                 </ThemeProvider>
             </body>
         </html>

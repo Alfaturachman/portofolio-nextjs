@@ -1,25 +1,25 @@
+'use client';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { useI18n } from '@/lib/i18n/i18n-context';
 
 export default function Contact() {
+    const { t } = useI18n();
+
     return (
         <section id="contact">
             <div className="contact-premium-wrapper">
                 <h2 className="contact-huge-text">
-                    Let&apos;s build
+                    {t.contact.hugeLine1}
                     <br />
-                    something
+                    {t.contact.hugeLine2}
                     <br />
-                    <span className="accented">extraordinary.</span>
+                    <span className="accented">{t.contact.hugeLine3Accent}</span>
                 </h2>
 
                 <div className="contact-premium-info">
-                    <p className="contact-premium-desc">
-                        I&apos;m currently available for freelance work and open
-                        to new opportunities. Whether you have an idea in mind
-                        or just want to say hi, let&apos;s create an impact
-                        together.
-                    </p>
+                    <p className="contact-premium-desc">{t.contact.desc}</p>
 
                     <div className="contact-premium-links">
                         <a

@@ -1,0 +1,16 @@
+{
+    "home": "Beranda",
+    "about": "Tentang",
+    "portfolio": "Portofolio",
+    "skills": "Keahlian",
+    "experience": "Pengalaman",
+    "certificates": "Sertifikat",
+    "mainNavAria": "Navigasi utama",
+    "menuAria": "Menu navigasi",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu",
+    "switchToLight": "Ganti ke mode terang",
+    "switchToDark": "Ganti ke mode gelap",
+    "openChat": "Buka obrolan",
+    "closeChat": "Tutup obrolan"
+}

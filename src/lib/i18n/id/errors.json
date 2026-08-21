@@ -1,0 +1,9 @@
+{
+    "fallbackTitle": "Terjadi kesalahan",
+    "fallbackDescPre": "Terjadi kesalahan saat menampilkan bagian ",
+    "fallbackDescPost": ", silakan coba muat ulang atau kembali ke beranda.",
+    "tryAgain": "Coba Lagi",
+    "backHome": "Kembali ke Beranda",
+    "notFoundTitle": "Halaman tidak ditemukan",
+    "notFoundDesc": "Halaman yang Anda cari tidak ada atau sudah dipindahkan."
+}

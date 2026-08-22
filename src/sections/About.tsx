@@ -3,15 +3,10 @@
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faCode,
-    faBriefcase,
     faGraduationCap,
     faMapMarkerAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import { useI18n } from '@/lib/i18n/i18n-context';
-
-const startYear = 2023;
-const yearsExp = new Date().getFullYear() - startYear;
 
 export default function About() {
     const { t } = useI18n();
@@ -43,19 +38,6 @@ export default function About() {
 
                     {/* Card 2: Biography */}
                     <div className="bento-card bento-card--bio">
-                        <h3 className="bento-bio-heading">
-                            {t.about.bioHead1Pre}
-                            <span className="bento-heading-accent">
-                                {t.about.bioHead1Accent}
-                            </span>
-                            {t.about.bioHead1Post}
-                            <br />
-                            {t.about.bioHead2Pre}
-                            <span className="bento-heading-accent">
-                                {t.about.bioHead2Accent}
-                            </span>
-                            {t.about.bioHead2Post}
-                        </h3>
                         <div className="bento-bio-body">
                             <p>
                                 {t.about.bioP1Pre}{' '}
@@ -64,34 +46,6 @@ export default function About() {
                             </p>
 
                             <p>{t.about.bioP2}</p>
-                        </div>
-                    </div>
-
-                    {/* Card 3: Project Count Stat */}
-                    <div className="bento-card bento-card--stat">
-                        <div className="bento-stat-icon-wrapper bento-stat-icon-wrapper--blue">
-                            <FontAwesomeIcon icon={faCode} />
-                        </div>
-                        <div className="bento-stat-info">
-                            <span className="bento-stat-number">12+</span>
-                            <span className="bento-stat-label">
-                                {t.about.statProjectsLabel}
-                            </span>
-                        </div>
-                    </div>
-
-                    {/* Card 4: Experience Stat */}
-                    <div className="bento-card bento-card--stat">
-                        <div className="bento-stat-icon-wrapper bento-stat-icon-wrapper--green">
-                            <FontAwesomeIcon icon={faBriefcase} />
-                        </div>
-                        <div className="bento-stat-info">
-                            <span className="bento-stat-number">
-                                {yearsExp}+
-                            </span>
-                            <span className="bento-stat-label">
-                                {t.about.statYearsLabel}
-                            </span>
                         </div>
                     </div>
 

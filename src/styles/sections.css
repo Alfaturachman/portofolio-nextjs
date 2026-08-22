@@ -9,7 +9,6 @@
 /* HIG: Respect reduced motion for section animations */
 @media (prefers-reduced-motion: reduce) {
     .education-card:hover,
-    .stat-card:hover,
     .project-card:hover,
     .experience-content:hover,
     .next-project-link:hover,

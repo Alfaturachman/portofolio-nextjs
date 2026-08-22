@@ -13,5 +13,15 @@
         "category": "Kategori",
         "sector": "Sektor",
         "privacy": "Privasi"
+    },
+    "detail": {
+        "overview": "Ringkasan",
+        "technologies": "Teknologi",
+        "liveDemo": "Lihat Demo",
+        "sourceCode": "Kode Sumber",
+        "privateNotice": "Ini adalah proyek internal dan tidak dapat diakses secara publik.",
+        "prevProject": "Proyek Sebelumnya",
+        "nextProject": "Proyek Berikutnya",
+        "viewAllProjects": "Lihat semua proyek"
     }
 }

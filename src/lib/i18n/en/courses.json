@@ -1,0 +1,12 @@
+{
+    "provider": "Provider",
+    "issuer": "Issuer",
+    "courses": "Courses",
+    "skillsCovered": "Skills Covered",
+    "viewCredential": "View Credential",
+    "certBadge": "Professional Certificate",
+    "aboutTitle": "About this Professional Certificate",
+    "aboutPre": "This Professional Certificate from ",
+    "aboutMid": " is earned after completing all ",
+    "aboutEnd": " courses below. Each course covers essential skills and concepts that build toward the full Professional Certificate."
+}

@@ -1,0 +1,12 @@
+{
+    "provider": "Penyedia",
+    "issuer": "Penerbit",
+    "courses": "Kursus",
+    "skillsCovered": "Keahlian yang Dipelajari",
+    "viewCredential": "Lihat Kredensial",
+    "certBadge": "Sertifikat Profesional",
+    "aboutTitle": "Tentang Sertifikat Profesional Ini",
+    "aboutPre": "Sertifikat Profesional ini dari ",
+    "aboutMid": " diperoleh setelah menyelesaikan seluruh ",
+    "aboutEnd": " kursus di bawah ini. Setiap kursus mencakup keterampilan dan konsep penting yang membangun menuju Sertifikat Profesional penuh."
+}

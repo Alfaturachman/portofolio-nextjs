@@ -6,6 +6,7 @@ import skills from './skills.json';
 import experience from './experience.json';
 import portfolio from './portfolio.json';
 import certificates from './certificates.json';
+import courses from './courses.json';
 import contact from './contact.json';
 import footer from './footer.json';
 import chatbot from './chatbot.json';
@@ -25,6 +26,7 @@ const id: typeof en = {
     experience,
     portfolio,
     certificates,
+    courses,
     contact,
     footer,
     chatbot,

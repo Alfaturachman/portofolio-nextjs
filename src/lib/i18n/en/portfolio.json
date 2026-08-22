@@ -13,5 +13,15 @@
         "category": "Category",
         "sector": "Sector",
         "privacy": "Privacy"
+    },
+    "detail": {
+        "overview": "Overview",
+        "technologies": "Technologies",
+        "liveDemo": "Live Demo",
+        "sourceCode": "Source Code",
+        "privateNotice": "This is an internal project and cannot be publicly accessed.",
+        "prevProject": "Previous Project",
+        "nextProject": "Next Project",
+        "viewAllProjects": "View all projects"
     }
 }

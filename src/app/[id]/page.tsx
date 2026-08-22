@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { coursesData } from '@/lib/courses';
 import ImagePreview from '@/components/ImagePreview';
 import Breadcrumb from '@/components/Breadcrumb';
+import Tx from '@/components/Tx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faBuilding,
@@ -66,7 +67,7 @@ export default async function CoursesPage({
                                 </div>
                                 <div className="meta-pill-text">
                                     <span className="meta-pill-label">
-                                        Provider
+                                        <Tx k="courses.provider" />
                                     </span>
                                     <span className="meta-pill-value">
                                         {spec.provider}
@@ -79,7 +80,7 @@ export default async function CoursesPage({
                                 </div>
                                 <div className="meta-pill-text">
                                     <span className="meta-pill-label">
-                                        Issuer
+                                        <Tx k="courses.issuer" />
                                     </span>
                                     <span className="meta-pill-value">
                                         {spec.issuer}
@@ -92,7 +93,7 @@ export default async function CoursesPage({
                                 </div>
                                 <div className="meta-pill-text">
                                     <span className="meta-pill-label">
-                                        Courses
+                                        <Tx k="courses.courses" />
                                     </span>
                                     <span className="meta-pill-value">
                                         {courses.length}
@@ -109,13 +110,15 @@ export default async function CoursesPage({
                             className="btn-action primary"
                         >
                             <FontAwesomeIcon icon={faExternalLinkAlt} />
-                            View Credential
+                            <Tx k="courses.viewCredential" />
                         </a>
                     </div>
                 </div>
 
                 <div className="spec-skills">
-                    <h3 className="detail-sidebar-title">Skills Covered</h3>
+                    <h3 className="detail-sidebar-title">
+                        <Tx k="courses.skillsCovered" />
+                    </h3>
                     <div className="tech-stack-list">
                         {spec.skills.map((s) => (
                             <span className="tech-tag" key={s}>
@@ -146,20 +149,19 @@ export default async function CoursesPage({
                         <div className="spec-cert-info">
                             <div className="spec-cert-badge">
                                 <FontAwesomeIcon icon={faCertificate} />
-                                Profesional Certificate
+                                <Tx k="courses.certBadge" />
                             </div>
                             <div className="spec-cert-note">
                                 <h3>
                                     <FontAwesomeIcon icon={faInfoCircle} />
-                                    About this Professional Certificate
+                                    <Tx k="courses.aboutTitle" />
                                 </h3>
                                 <p>
-                                    This Professional Certificate from{' '}
-                                    <strong>{spec.provider}</strong> is earned
-                                    after completing all {courses.length}{' '}
-                                    courses below. Each course covers essential
-                                    skills and concepts that build toward the
-                                    full Professional Certificate.
+                                    <Tx k="courses.aboutPre" />
+                                    <strong>{spec.provider}</strong>
+                                    <Tx k="courses.aboutMid" />
+                                    {courses.length}
+                                    <Tx k="courses.aboutEnd" />
                                 </p>
                             </div>
                         </div>
@@ -168,7 +170,7 @@ export default async function CoursesPage({
 
                 <div className="courses-list">
                     <h2 className="detail-section-title">
-                        Courses ({courses.length})
+                        <Tx k="courses.courses" /> ({courses.length})
                     </h2>
                     <ul className="courses-grid">
                         {courses.map((course, idx) => (
@@ -201,7 +203,7 @@ export default async function CoursesPage({
                                                 <FontAwesomeIcon
                                                     icon={faCertificate}
                                                 />
-                                                View Credential
+                                                <Tx k="courses.viewCredential" />
                                             </a>
                                         )}
                                 </div>

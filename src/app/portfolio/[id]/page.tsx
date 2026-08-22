@@ -4,24 +4,10 @@ import { projects } from '@/lib/projects';
 import ImageCarousel from '@/components/ImageCarousel';
 import Breadcrumb from '@/components/Breadcrumb';
 import ProjectMeta from '@/components/ProjectMeta';
-import Link from 'next/link';
+import Tx from '@/components/Tx';
+import NextProjectNav from '@/components/NextProjectNav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faBriefcase,
-    faGlobe,
-    faBuilding,
-    faLayerGroup,
-    faExternalLinkAlt,
-    faInfoCircle,
-    faArrowLeft,
-    faThLarge,
-    faArrowRight,
-    faCalendar,
-    faUsers,
-    faUser,
-    faLockOpen,
-    faLock,
-} from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export async function generateStaticParams() {
@@ -89,7 +75,7 @@ export default async function DetailPage({
                     <div className="detail-content-grid">
                         <div className="detail-main">
                             <h2 className="detail-section-title">
-                                Overview
+                                <Tx k="portfolio.detail.overview" />
                             </h2>
                             <p className="detail-text">{project.desc}</p>
                         </div>
@@ -97,7 +83,7 @@ export default async function DetailPage({
                         <aside className="detail-sidebar">
                             <div className="detail-sidebar-card">
                                 <h3 className="detail-sidebar-title">
-                                    Technologies
+                                    <Tx k="portfolio.detail.technologies" />
                                 </h3>
                                 <div className="tech-stack-list">
                                     {project.tags.map((t) => (
@@ -116,12 +102,12 @@ export default async function DetailPage({
                                             className="btn-action primary"
                                         >
                                             <FontAwesomeIcon icon={faExternalLinkAlt} />
-                                            Live Demo
+                                            <Tx k="portfolio.detail.liveDemo" />
                                         </a>
                                     ) : (
                                         <span className="btn-action primary disabled">
                                             <FontAwesomeIcon icon={faExternalLinkAlt} />
-                                            Live Demo
+                                            <Tx k="portfolio.detail.liveDemo" />
                                         </span>
                                     )}
                                     {isGithubLink &&
@@ -133,7 +119,7 @@ export default async function DetailPage({
                                                 className="btn-action secondary"
                                             >
                                                 <FontAwesomeIcon icon={faGithub} />
-                                                Source Code
+                                                <Tx k="portfolio.detail.sourceCode" />
                                             </a>
                                         )}
                                 </div>
@@ -142,8 +128,7 @@ export default async function DetailPage({
                                     <div className="project-alert">
                                         <FontAwesomeIcon icon={faInfoCircle} />
                                         <span>
-                                            This is an internal project and
-                                            cannot be publicly accessed.
+                                            <Tx k="portfolio.detail.privateNotice" />
                                         </span>
                                     </div>
                                 )}
@@ -155,46 +140,10 @@ export default async function DetailPage({
 
             <section className="next-project-section">
                 <div className="section-max">
-                    <div className="next-project-nav">
-                        <Link
-                            href={`/portfolio/${prevProject.id}`}
-                            className="next-project-link prev"
-                        >
-                            <FontAwesomeIcon icon={faArrowLeft} />
-                            <div className="next-project-text">
-                                <span className="next-project-label">
-                                    Previous Project
-                                </span>
-                                <span className="next-project-title">
-                                    {prevProject.title}
-                                </span>
-                            </div>
-                        </Link>
-                        <div className="next-project-nav-divider">
-                            <Link
-                                href="/portfolio"
-                                className="next-project-nav-dot"
-                                aria-label="View all projects"
-                                title="View all projects"
-                            >
-                                <FontAwesomeIcon icon={faLayerGroup} />
-                            </Link>
-                        </div>
-                        <Link
-                            href={`/portfolio/${nextProject.id}`}
-                            className="next-project-link next"
-                        >
-                            <FontAwesomeIcon icon={faArrowRight} />
-                            <div className="next-project-text">
-                                <span className="next-project-label">
-                                    Next Project
-                                </span>
-                                <span className="next-project-title">
-                                    {nextProject.title}
-                                </span>
-                            </div>
-                        </Link>
-                    </div>
+                    <NextProjectNav
+                        prev={{ id: prevProject.id, title: prevProject.title }}
+                        next={{ id: nextProject.id, title: nextProject.title }}
+                    />
                 </div>
             </section>
         </>

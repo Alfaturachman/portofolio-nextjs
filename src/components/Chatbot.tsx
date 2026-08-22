@@ -12,54 +12,67 @@ import { faTimes, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { useChatbot } from '@/lib/chatbot-context';
 import { useI18n } from '@/lib/i18n/i18n-context';
 
+const urlRegex = /(https?:\/\/[^\s]+)/g;
+const pathRegex = /(\/(?:portfolio|blog)\/[^\s\.,;:!?)]+)/g;
+// ponytail: markdown cleanup covers the formats the LLM is instructed not to emit (**bold**, `code`, [text](url), headings, bullets); exotic syntax passes through.
+const mdLinkRegex = /\[([^\]\n]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+)\)/g;
+
+function stripMarkdownArtifacts(text: string): string {
+    return text
+        .replace(/\*\*([^*]+)\*\*/g, '$1')
+        .replace(/`([^`]*)`/g, '$1')
+        .replace(/^#{1,6}\s+/gm, '')
+        .replace(/^[ \t]*[-•*][ \t]+/gm, '');
+}
+
 function renderContent(text: string): ReactNode {
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
-    const pathRegex = /(\/(?:portfolio|blog)\/[^\s\.,;:!?)]+)/g;
-
-    const segments: ReactNode[] = [];
-    let lastIndex = 0;
+    const nodes: ReactNode[] = [];
     let key = 0;
+    let lastIndex = 0;
 
-    const addMatch = (match: string, index: number) => {
-        if (index > lastIndex) {
-            segments.push(text.slice(lastIndex, index));
-        }
-        if (match.startsWith('http')) {
-            segments.push(
-                <a
-                    key={key++}
-                    href={match}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="chatbot-link"
-                >
-                    {match}
-                </a>,
-            );
-        } else {
-            segments.push(
-                <a key={key++} href={match} className="chatbot-link">
-                    {match}
-                </a>,
-            );
-        }
-        lastIndex = index + match.length;
+    const pushLink = (label: string, href: string) => {
+        const external = href.startsWith('http');
+        nodes.push(
+            <a
+                key={key++}
+                href={href}
+                {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                className="chatbot-link"
+            >
+                {label}
+            </a>,
+        );
     };
 
+    const pushAutoLinks = (chunk: string) => {
+        const combined = new RegExp(
+            `(${urlRegex.source}|${pathRegex.source.slice(1, -1)})`,
+            'g',
+        );
+        let idx = 0;
+        let m: RegExpExecArray | null;
+        while ((m = combined.exec(chunk)) !== null) {
+            if (m.index > idx) nodes.push(chunk.slice(idx, m.index));
+            pushLink(m[0], m[0]);
+            idx = m.index + m[0].length;
+        }
+        if (idx < chunk.length) nodes.push(chunk.slice(idx));
+    };
+
+    mdLinkRegex.lastIndex = 0;
     let m: RegExpExecArray | null;
-    const combined = new RegExp(
-        `(${urlRegex.source}|${pathRegex.source.slice(1, -1)})`,
-        'g',
-    );
-    while ((m = combined.exec(text)) !== null) {
-        addMatch(m[0], m.index);
+    while ((m = mdLinkRegex.exec(text)) !== null) {
+        if (m.index > lastIndex) {
+            pushAutoLinks(stripMarkdownArtifacts(text.slice(lastIndex, m.index)));
+        }
+        pushLink(m[1].trim(), m[2]);
+        lastIndex = m.index + m[0].length;
     }
-
     if (lastIndex < text.length) {
-        segments.push(text.slice(lastIndex));
+        pushAutoLinks(stripMarkdownArtifacts(text.slice(lastIndex)));
     }
 
-    return segments.length > 0 ? segments : text;
+    return nodes.length > 0 ? nodes : text;
 }
 
 interface Message {
@@ -168,7 +181,7 @@ export default function Chatbot() {
                 }),
             });
 
-            const data = await res.json();
+            const data = await res.json().catch(() => null);
 
             if (res.status === 429) {
                 setMessages((prev) => [
@@ -176,7 +189,7 @@ export default function Chatbot() {
                     {
                         role: 'assistant',
                         content:
-                            data.error ??
+                            data?.error ??
                             'Terlalu banyak permintaan. Silakan tunggu beberapa saat.',
                     },
                 ]);
@@ -187,10 +200,9 @@ export default function Chatbot() {
                 ...prev,
                 {
                     role: 'assistant',
-                    content:
-                        data.content ??
-                        data.error ??
-                        t.chatbot.errorGeneric,
+                    content: res.ok
+                        ? (data?.content ?? t.chatbot.errorGeneric)
+                        : t.chatbot.errorGeneric,
                 },
             ]);
         } catch {

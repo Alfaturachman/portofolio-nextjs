@@ -23,7 +23,7 @@
     --overlay-light: rgba(26, 22, 16, 0.08);
     --inverse-text: #ffffff;
     --color-white: #ffffff;
-    --footer-bg: #f4f4f6;
+    --footer-bg: #f5f5f7;
     --footer-text: #1a1610;
 }
 
@@ -139,7 +139,6 @@ html.has-custom-cursor button {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     border: 1px solid var(--glass-border);
-    box-shadow: 0 8px 32px 0 var(--glass-shadow);
 }
 
 .glass-dark {

@@ -11,6 +11,7 @@ This repository serves as both a showcase of software engineering projects and a
 - **Apple HIG Compliance**: Design system built around Apple Human Interface Guidelines — prioritizing clarity, deference, depth, and accessibility across all components.
 - **Accessible by Default**: Full `prefers-reduced-motion` support, minimum 44px touch targets, WCAG-compliant contrast ratios, `:focus-visible` indicators, and semantic HTML throughout.
 - **System Theme Detection**: Automatically respects user's `prefers-color-scheme` with manual dark/light toggle and localStorage persistence.
+- **Bilingual Interface (EN/ID)**: Client-side language switcher in the navbar backed by per-section JSON dictionaries (`src/lib/i18n/en/`, `src/lib/i18n/id/`), `localStorage` persistence, and compile-time key parity between translations.
 - **Interactive Design System**: Custom vanilla CSS implementation featuring Glassmorphism, dynamic gradients, and hardware-accelerated animations.
 - **Holographic Animations**: Complex CSS keyframe animations integrated with SVG noise filters for high-end visual textures.
 - **Mouse-Tracking Interactions**: Real-time CSS variable updates bound to cursor movement for interactive footer elements.
@@ -69,12 +70,12 @@ To run this project locally, ensure you have Node.js installed, then follow thes
 
 ## Project Structure
 
-- `/app`: Contains the Next.js App Router layout, pages, and API routes.
-    - `/blog`: Blog index and dynamic article routing.
-    - `/detail`: Dynamic routing for project details.
-- `/app/components`: Reusable UI components (Navbar, Footer, ImageCarousel).
-- `/app/styles`: Global CSS variables, theme configurations, and component-specific stylesheets.
-- `/app/lib`: Data structures, interfaces, and content files (projects.ts, blog.ts).
+- `/src/app`: Next.js App Router layout, pages (blog, portfolio, courses), error/loading states, and API routes (`/api/chat`).
+- `/src/components`: Reusable UI components (Navbar, Footer, ImageCarousel, Chatbot).
+- `/src/sections`: Page sections (Hero, About, Skills, Experience, PortfolioSection, Certificates, Contact).
+- `/src/styles`: Global CSS variables, theme configurations, and component-specific stylesheets.
+- `/src/lib`: Data structures, interfaces, and content files (projects.ts, blog.ts).
+    - `/src/lib/i18n`: Language context plus per-section EN/ID JSON dictionaries powering the language switcher.
 
 ## Contact
 

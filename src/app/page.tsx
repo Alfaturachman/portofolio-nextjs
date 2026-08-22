@@ -14,9 +14,9 @@ export default function Home() {
             <Hero />
             <About />
             <PortfolioSection limit={3} />
-            <Skills />
             <Experience />
             <Certificates />
+            <Skills />
             {/* <Contact /> */}
         </>
     );

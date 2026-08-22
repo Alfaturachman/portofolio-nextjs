@@ -4,29 +4,27 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 16px 24px;
+    padding: 12px 24px;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 #navbar.scrolled {
-    padding: 10px 24px;
+    padding: 12px 24px;
 }
 
 #navbar.scrolled .nav-inner {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     border-color: var(--glass-border);
 }
 
 .nav-inner {
     max-width: 1180px;
     margin: 0 auto;
-    padding: 12px 24px;
+    padding: 8px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 16px;
     transition: all 0.3s ease;
-    border: 1px solid transparent;
 }
 
 #navbar .nav-inner.glass {
@@ -110,11 +108,9 @@
     height: 44px;
     min-height: 44px;
     padding: 0;
-    background: var(--card-bg);
-    border: 1px solid var(--border-subtle);
     border-radius: 10px;
     cursor: pointer;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     transition: all 0.3s ease;
     font-size: 1rem;
     align-items: center;
@@ -123,7 +119,7 @@
 
 .nav-mobile-theme:hover {
     background: var(--border-subtle);
-    color: var(--text-primary);
+    color: var(--accent-blue);
 }
 
 .hamburger {
@@ -137,8 +133,6 @@
     height: 44px;
     min-height: 44px;
     padding: 0;
-    background: var(--card-bg);
-    border: 1px solid var(--border-subtle);
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -147,7 +141,7 @@
 .hamburger span {
     width: 20px;
     height: 2px;
-    background: var(--text-primary);
+    background: var(--text-secondary);
     border-radius: 2px;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: block;
@@ -158,7 +152,7 @@
 }
 
 .hamburger.active span {
-    background: var(--text-primary);
+    background: var(--text-secondary);
 }
 
 .hamburger.active span:nth-child(1) {

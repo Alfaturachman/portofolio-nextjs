@@ -94,10 +94,10 @@ export default function Navbar() {
     }, [isMenuOpen, trapFocus]);
 
     const links = [
-        { label: t.navbar.home, href: '/' },
-        { label: t.navbar.about, href: '/#about' },
+        // { label: t.navbar.home, href: '/' },
+        // { label: t.navbar.about, href: '/#about' },
         { label: t.navbar.portfolio, href: '/portfolio' },
-        { label: t.navbar.skills, href: '/#skills' },
+        // { label: t.navbar.skills, href: '/#skills' },
         { label: t.navbar.experience, href: '/#experience' },
         { label: t.navbar.certificates, href: '/#certificates' },
     ];
@@ -134,7 +134,7 @@ export default function Navbar() {
                                 : 'Ganti ke Bahasa Inggris'
                         }
                     >
-                        {lang === 'en' ? 'ID' : 'EN'}
+                        {lang === 'en' ? 'EN' : 'ID'}
                     </button>
                     <button
                         className="nav-link theme-toggle"
@@ -146,7 +146,7 @@ export default function Navbar() {
                         }
                     >
                         <FontAwesomeIcon
-                            icon={theme === 'dark' ? faSun : faMoon}
+                            icon={theme === 'dark' ? faMoon : faSun}
                             aria-hidden={true}
                         />
                     </button>
@@ -175,7 +175,7 @@ export default function Navbar() {
                                 : 'Ganti ke Bahasa Inggris'
                         }
                     >
-                        {lang === 'en' ? 'ID' : 'EN'}
+                        {lang === 'en' ? 'EN' : 'ID'}
                     </button>
                     <button
                         className="nav-mobile-theme"
@@ -187,7 +187,7 @@ export default function Navbar() {
                         }
                     >
                         <FontAwesomeIcon
-                            icon={theme === 'dark' ? faSun : faMoon}
+                            icon={theme === 'dark' ? faMoon : faSun}
                         />
                     </button>
                     <button

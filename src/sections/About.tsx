@@ -36,14 +36,20 @@ export default function About() {
                         </div>
                     </div>
 
-                    {/* Card 2: Biography */}
+                    {/* Card 2: Identity */}
+                    <div className="bento-card bento-card--id">
+                        <h3 className="bento-id-name">
+                            {t.about.name}
+                        </h3>
+                        <p className="bento-id-role">
+                            {t.about.role}
+                        </p>
+                    </div>
+
+                    {/* Card 3: Biography */}
                     <div className="bento-card bento-card--bio">
                         <div className="bento-bio-body">
-                            <p>
-                                {t.about.bioP1Pre}{' '}
-                                <strong>{t.about.bioP1Name}</strong>
-                                {t.about.bioP1Post}
-                            </p>
+                            <p>{t.about.bioIntro}</p>
 
                             <p>{t.about.bioP2}</p>
                         </div>

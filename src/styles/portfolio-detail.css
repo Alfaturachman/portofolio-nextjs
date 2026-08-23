@@ -647,7 +647,7 @@
 
 .detail-sidebar-card {
     background: var(--card-bg);
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border-subtle);
     border-radius: 16px;
     padding: 32px;
 }
@@ -787,13 +787,7 @@
 }
 
 .next-project-link:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-    border-color: rgba(59, 91, 219, 0.2);
-}
-
-[data-theme='dark'] .next-project-link:hover {
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+    transform: translateZ(0) scale(1.012);
 }
 
 .next-project-link.prev {

@@ -6,30 +6,23 @@
         {
             "date": "AGU 2024 — SEKARANG",
             "badge": "Saat Ini",
-            "title": "Developer Full Stack & AI",
+            "title": "Developer Full Stack & ML",
             "org": "Freelance / Proyek Independen",
-            "desc": "• Merancang dan menerapkan solusi perangkat lunak end-to-end.\n• Membangun sistem backend yang tangguh dan antarmuka pengguna yang mulus.\n• Mengintegrasikan fitur AI cerdas dan model machine learning.\n• Mengubah kebutuhan bisnis yang kompleks menjadi aplikasi yang skalabel."
+            "desc": "• Mengembangkan aplikasi web dan perangkat lunak secara end-to-end.\n• Membangun layanan backend, basis data, dan antarmuka pengguna.\n• Menjelajah machine learning, deep learning, dan integrasi AI.\n• Menerjemahkan kebutuhan proyek menjadi solusi perangkat lunak yang fungsional."
         },
         {
             "date": "NOV 2025",
             "badge": "Finalis Nasional",
             "title": "Pekan Ilmiah Mahasiswa Nasional (PIMNAS) 38",
             "org": "Kementerian Pendidikan dan Kebudayaan (Kemendikbud)",
-            "desc": "• Terpilih sebagai Finalis Nasional untuk mewakili universitas pada PIMNAS ke-38 yang bergengsi.\n• Membangun platform web dan mengintegrasikan perangkat IoT untuk analisis suara paru-paru secara real-time.\n• Memperkenalkan inovasi teknologi ini untuk bersaing bersama peneliti mahasiswa terbaik se-negeri."
+            "desc": "• Terpilih sebagai Finalis Nasional untuk mewakili universitas pada PIMNAS ke-38.\n• Mengembangkan platform web dan mengintegrasikan perangkat IoT untuk analisis suara paru-paru secara real-time.\n• Presentasi proyek sebagai bagian dari tim lomba nasional universitas."
         },
         {
             "date": "JUN 2024 — JUL 2025",
             "badge": "Magang",
             "title": "Magang Web Developer",
             "org": "Fakultas Teknik UDINUS",
-            "desc": "• Membangun sistem informasi akademik inti dengan kolaborasi langsung bersama stakeholder.\n• Merancang skema basis data relasional yang skalabel dan mengoptimalkan integrasi RESTful API.\n• Membangun frontend yang tangguh untuk mempermudah alur kerja operasional staf universitas."
-        },
-        {
-            "date": "SEP 2022 — JUL 2025",
-            "badge": "Pendidikan",
-            "title": "Diploma Informatika",
-            "org": "Universitas Dian Nuswantoro",
-            "desc": "• Lulus dengan spesialisasi kuat di bidang Rekayasa Perangkat Lunak.\n• Menghasilkan aplikasi dunia nyata mulai dari platform web full-stack hingga aplikasi Android native.\n• Menguasai state management, desain basis data yang skalabel, dan pipeline deployment end-to-end."
+            "desc": "• Mengembangkan sistem informasi akademik bekerja sama dengan stakeholder universitas.\n• Merancang skema basis data relasional dan mengintegrasikan RESTful API.\n• Mengembangkan frontend untuk mempermudah alur kerja operasional staf universitas."
         }
     ]
 }

@@ -160,28 +160,6 @@ export const projects: Project[] = [
         github: 'https://github.com/Alfaturachman/disnaker_agenda',
     },
     {
-        id: 'disnaker-monitoring',
-        image: '/assets/images/projects/project-disnaker-monitoring-login.png',
-        gallery: [
-            '/assets/images/projects/project-disnaker-monitoring-login.png',
-            '/assets/images/projects/project-disnaker-monitoring-home.png',
-            '/assets/images/projects/project-disnaker-monitoring-berita.png',
-        ],
-        title: 'Disnaker Monitoring Berita',
-        type: 'Freelance',
-        privacy: 'Private',
-        cardDesc:
-            'A web-based application for media monitoring and information management developed for the Manpower Office (Disnaker).',
-        desc: 'A web-based application for media monitoring and information management developed for the Manpower Office (Disnaker). This system allows users to monitor media coverage, track trends, and generate reports. It features keyword tracking and sentiment analysis categorization to help the public relations team respond effectively to emerging issues.',
-        role: 'Full-Stack Developer',
-        year: '2025',
-        websiteType: 'Monitoring System',
-        sector: 'Government',
-        tags: ['CodeIgniter', 'PHP', 'MySQL', 'Bootstrap', 'jQuery'],
-        demo: '#',
-        github: 'https://github.com/Alfaturachman/disnaker_monitoring',
-    },
-    {
         id: 'stedi',
         image: '/assets/images/projects/project-stedi-login.png',
         gallery: [

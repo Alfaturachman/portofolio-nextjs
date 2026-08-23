@@ -223,7 +223,7 @@
 }
 
 .chatbot-msg-content.assistant:not(.loading) {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
 .chatbot-msg-content.loading {

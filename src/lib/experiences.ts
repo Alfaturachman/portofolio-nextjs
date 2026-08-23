@@ -4,10 +4,10 @@ export const experiences: Experience[] = [
     {
         date: 'AUG 2024 — PRESENT',
         badge: 'Current',
-        title: 'Full Stack & AI Developer',
+        title: 'Full Stack & ML Developer',
         org: 'Freelance / Independent Projects',
         orgIcon: 'briefcase',
-        desc: '• Architecting and deploying end-to-end software solutions.\n• Building robust backend systems and seamless user interfaces.\n• Integrating intelligent AI features and machine learning models.\n• Transforming complex business requirements into scalable applications.',
+        desc: '• Developing end-to-end web and software applications.\n• Building backend services, databases, and user interfaces.\n• Exploring machine learning, deep learning, and AI integration.\n• Translating project requirements into functional software solutions.',
     },
     {
         date: 'NOV 2025',
@@ -16,7 +16,7 @@ export const experiences: Experience[] = [
         title: 'National Student Scientific Week (PIMNAS) 38',
         org: 'Ministry of Education and Culture (Kemendikbud)',
         orgIcon: 'flask',
-        desc: '• Selected as a National Finalist to represent the university at the prestigious 38th PIMNAS.\n• Engineered a web platform and integrated an IoT device for real-time lung sound analysis.\n• Showcased this technological innovation to compete alongside top student researchers nationwide.',
+        desc: '• Selected as a National Finalist to represent the university at the 38th PIMNAS.\n• Developed a web platform and integrated an IoT device for real-time lung sound analysis.\n• Presented the project as part of the university national-level competition entry.',
     },
     {
         date: 'JUN 2024 — JUL 2025',
@@ -25,23 +25,14 @@ export const experiences: Experience[] = [
         title: 'Web Developer Intern',
         org: 'UDINUS Faculty of Engineering',
         orgIcon: 'university',
-        desc: '• Engineered a core academic information system in direct collaboration with stakeholders.\n• Architected scalable relational database schemas and optimized RESTful API integrations.\n• Built a resilient frontend to streamline the operational workflows of university staff.',
-    },
-    {
-        date: 'SEP 2022 — JUL 2025',
-        badge: 'Education',
-        badgeType: 'ghost',
-        title: 'Associate Degree in Informatics',
-        org: 'Dian Nuswantoro University',
-        orgIcon: 'graduation-cap',
-        desc: '• Graduated with a strong specialization in Software Engineering.\n• Shipped real-world applications ranging from full-stack web platforms to native Android apps.\n• Mastered state management, scalable database design, and end-to-end deployment pipelines.',
+        desc: '• Developed an academic information system in collaboration with university stakeholders.\n• Designed relational database schemas and integrated RESTful APIs.\n• Developed frontend interfaces to streamline operational workflows for university staff.',
     },
 ];
 
 export const skillsCategories = [
     {
         title: 'Frontend Architecture',
-        desc: 'Building resilient, component-driven user interfaces with modern web standards and responsive performance in mind.',
+        desc: 'Building responsive and maintainable user interfaces using modern web technologies and component-based development.',
         tools: [
             { name: 'HTML', icon: 'html' },
             { name: 'CSS', icon: 'css' },
@@ -54,7 +45,7 @@ export const skillsCategories = [
     },
     {
         title: 'Backend & APIs',
-        desc: 'Designing scalable server-side architectures, robust RESTful APIs, and efficient database models.',
+        desc: 'Developing server-side applications, RESTful APIs, and relational database systems for web applications.',
         tools: [
             { name: 'Node.js', icon: 'nodejs' },
             { name: 'Python', icon: 'python' },
@@ -68,7 +59,7 @@ export const skillsCategories = [
     },
     {
         title: 'Mobile & Platform Tooling',
-        desc: 'Building native applications and ensuring reliable version control, containerization, and design workflow.',
+        desc: 'Working with mobile development, version control, containerization, and design tools across different projects.',
         tools: [
             { name: 'Kotlin', icon: 'kotlin' },
             { name: 'Java', icon: 'java' },

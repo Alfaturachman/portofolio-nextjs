@@ -1,5 +1,25 @@
 import type { NextConfig } from 'next';
 
+// ponytail: dev-only 'unsafe-eval' exists because React's dev tooling requires it;
+// production builds keep the strict policy.
+const isDev = process.env.NODE_ENV === 'development';
+
+const csp = [
+    "default-src 'self'",
+    // ponytail: 'unsafe-inline' stays until Next.js nonce-based CSP; inline theme-init script and font styles require it.
+    `script-src 'self' 'unsafe-inline'${
+        isDev ? " 'unsafe-eval'" : ''
+    } https://va.vercel-scripts.com`,
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: blob:",
+    "font-src 'self' data:",
+    "connect-src 'self' https://va.vercel-scripts.com",
+    "frame-ancestors 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    'upgrade-insecure-requests',
+].join('; ');
+
 const nextConfig: NextConfig = {
     turbopack: {
         root: process.cwd(),
@@ -31,19 +51,7 @@ const nextConfig: NextConfig = {
                 },
                 {
                     key: 'Content-Security-Policy',
-                    value: [
-                        "default-src 'self'",
-                        // ponytail: 'unsafe-inline' stays until Next.js nonce-based CSP; inline theme-init script and font styles require it.
-                        "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
-                        "style-src 'self' 'unsafe-inline'",
-                        "img-src 'self' data: blob:",
-                        "font-src 'self' data:",
-                        "connect-src 'self' https://va.vercel-scripts.com",
-                        "frame-ancestors 'none'",
-                        "base-uri 'self'",
-                        "form-action 'self'",
-                        'upgrade-insecure-requests',
-                    ].join('; '),
+                    value: csp,
                 },
             ],
         },

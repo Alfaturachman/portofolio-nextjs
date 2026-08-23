@@ -5,15 +5,15 @@
     "categories": [
         {
             "title": "Arsitektur Frontend",
-            "desc": "Membangun antarmuka pengguna yang tangguh dan berbasis komponen dengan standar web modern serta performa responsif."
+            "desc": "Membangun antarmuka pengguna yang responsif dan mudah dirawat dengan teknologi web modern dan pengembangan berbasis komponen."
         },
         {
             "title": "Backend & API",
-            "desc": "Merancang arsitektur sisi server yang skalabel, RESTful API yang andal, dan model basis data yang efisien."
+            "desc": "Mengembangkan aplikasi sisi server, RESTful API, dan sistem basis data relasional untuk aplikasi web."
         },
         {
             "title": "Mobile & Tools Platform",
-            "desc": "Membangun aplikasi native serta memastikan version control, containerization, dan alur kerja desain yang andal."
+            "desc": "Bekerja dengan pengembangan mobile, version control, containerization, dan tools desain di berbagai proyek."
         }
     ]
 }

@@ -5,15 +5,15 @@
     "categories": [
         {
             "title": "Frontend Architecture",
-            "desc": "Building resilient, component-driven user interfaces with modern web standards and responsive performance in mind."
+            "desc": "Building responsive and maintainable user interfaces using modern web technologies and component-based development."
         },
         {
             "title": "Backend & APIs",
-            "desc": "Designing scalable server-side architectures, robust RESTful APIs, and efficient database models."
+            "desc": "Developing server-side applications, RESTful APIs, and relational database systems for web applications."
         },
         {
             "title": "Mobile & Platform Tooling",
-            "desc": "Building native applications and ensuring reliable version control, containerization, and design workflow."
+            "desc": "Working with mobile development, version control, containerization, and design tools across different projects."
         }
     ]
 }

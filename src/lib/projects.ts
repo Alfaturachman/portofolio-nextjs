@@ -13,7 +13,7 @@ export const projects: Project[] = [
         type: 'Team',
         privacy: 'Private',
         cardDesc:
-            'Information System for Strategic Plan (RENSTRA) for monitoring and reporting Key Performance Indicators (KPI/IKU) and lecturer workload (EWMP).',
+            'Web system for monitoring the faculty strategic plan KPIs and lecturer workload.',
         desc: 'Information System for Strategic Plan (RENSTRA) for monitoring and reporting Key Performance Indicators (KPI/IKU) and lecturer workload (EWMP). Facilitates the university in monitoring annual target achievements. The dashboard provides clear visualizations of progress against multi-year strategic goals, allowing faculty leadership to make data-driven decisions and adjust operational tactics when specific targets fall behind schedule.',
         role: 'Backend Developer',
         year: '2024',
@@ -35,7 +35,7 @@ export const projects: Project[] = [
         type: 'Team',
         privacy: 'Private',
         cardDesc:
-            'Management and documentation system for the entire academic cycle of FT courses.',
+            'Centralized system for managing and documenting course materials across the Engineering Faculty.',
         desc: 'Management and documentation system for the entire academic cycle of FT courses. Enables tracking of syllabi, course materials, and assignments in one integrated platform for lecturers and students. The platform standardizes the course documentation process across the Engineering Faculty, ensuring that all course materials are centrally stored, easily accessible, and properly versioned for accreditation purposes.',
         role: 'Backend Developer',
         year: '2025',
@@ -58,7 +58,7 @@ export const projects: Project[] = [
         type: 'Team',
         privacy: 'Private',
         cardDesc:
-            'A healthcare management platform integrated with IoT-based self-service health kiosks for monitoring and recording patient health data.',
+            'Health platform that records patient data from IoT self-service health kiosks.',
         desc: 'A web-based healthcare management system developed to support Anjungan Kesehatan Mandiri (Independent Health Kiosks) using IoT technology. Health data collected through the kiosks is transmitted via API and stored within the platform for monitoring, analysis, and reporting. This project was a collaborative initiative between FT Universitas Dian Nuswantoro and the Semarang Health Department to enhance digital healthcare services and improve public access to health monitoring.',
         role: 'Backend & API Developer',
         year: '2024',
@@ -80,7 +80,7 @@ export const projects: Project[] = [
         type: 'Freelance',
         privacy: 'Private',
         cardDesc:
-            'A web portal for ATR/BPN Central Java featuring an administrative system for managing incoming/outgoing letters and disposition workflows.',
+            'Web portal for managing official letters, dispositions, and agendas at ATR/BPN Central Java.',
         desc: 'A web portal for the Regional Office of ATR/BPN Central Java. It features a comprehensive administrative system for managing incoming and outgoing letters, tracking disposition workflows, scheduling agendas, and distributing public information. This system significantly improves the efficiency of internal administrative processes and provides better public access to land-related information in Central Java.',
         role: 'Full-Stack Developer',
         year: '2024',
@@ -104,7 +104,7 @@ export const projects: Project[] = [
         type: 'Freelance',
         privacy: 'Private',
         cardDesc:
-            'Inventory management system for the crumb rubber industry, including raw material recording, processed products, and reports.',
+            'Inventory system for tracking raw materials, production, and stock in a crumb rubber factory.',
         desc: 'Inventory management system for the crumb rubber industry, including raw material recording, processed products, and real-time stock reports to improve factory operational efficiency. The system tracks the entire production lifecycle from the intake of raw rubber materials, through processing stages, to the final crumb rubber products ready for shipping.',
         role: 'Full-Stack Developer',
         year: '2023',
@@ -127,7 +127,7 @@ export const projects: Project[] = [
         type: 'Freelance',
         privacy: 'Private',
         cardDesc:
-            'Iconnet monitoring application for tracking and recording Iconnet service outage reports.',
+            'Web app for reporting and tracking Iconnet internet service outages.',
         desc: 'A web-based monitoring system for Iconnet services that enables users to report service disruptions and allows technicians to track, manage, and resolve those reports efficiently. The system features a user-friendly dashboard for monitoring the status of outage reports in real-time, complete with notification workflows and historical reporting for service performance analysis.',
         role: 'Full-Stack Developer',
         year: '2024',
@@ -149,7 +149,7 @@ export const projects: Project[] = [
         type: 'Freelance',
         privacy: 'Private',
         cardDesc:
-            'Agenda Mediasi application for managing and scheduling mediation sessions at the Manpower Office (Disnaker).',
+            'App for scheduling and recording labor mediation sessions at the Manpower Office.',
         desc: 'A web-based agenda mediation system for the Manpower Office (Disnaker) to manage the scheduling, recording, and tracking of mediation sessions between workers and employers. Streamlines the mediation process with digital records, status tracking, and report generation.',
         role: 'Full-Stack Developer',
         year: '2025',
@@ -171,7 +171,7 @@ export const projects: Project[] = [
         type: 'Team',
         privacy: 'Private',
         cardDesc:
-            'STEDI is a medical device that can record lung sounds and analyze them using artificial intelligence to assist in diagnosis.',
+            'Digital stethoscope device that analyzes recorded lung sounds using AI to support diagnosis.',
         desc: 'STEDI is a medical device that can record lung sounds and analyze them using artificial intelligence. This system is expected to help doctors diagnose lung diseases more quickly and accurately using deep learning models.',
         role: 'AI & Backend Developer',
         year: '2025',
@@ -193,7 +193,7 @@ export const projects: Project[] = [
         type: 'Freelance',
         privacy: 'Private',
         cardDesc:
-            'Posyandu information system for recording toddler development and immunization schedules, replacing the manual pink book.',
+            'Digital replacement of the manual pink book for toddler growth records and immunization schedules.',
         desc: "A web-based Posyandu information system built with Laravel PHP to digitize toddler growth and immunization records. Every week, children's immunizations and developmental progress are recorded — replacing the traditional pink book (Buku Pink) system with a fully digital, searchable, and reportable database.",
         role: 'Full-Stack Developer',
         year: '2025',
@@ -216,7 +216,7 @@ export const projects: Project[] = [
         type: 'Freelance',
         privacy: 'Public',
         cardDesc:
-            'NomadenStuff Ecommerce is an e-commerce application for thrift shop.',
+            'E-commerce web app for a thrift shop with product reservations and shipping calculation.',
         desc: 'NomadenStuff Ecommerce is a specialized e-commerce application built for a thrift shop business. The platform manages unique, single-item inventory typical in thrifting, offering features like product reservations, detailed sizing guides, and automated shipping calculations.',
         role: 'Full-Stack Developer',
         year: '2023',
@@ -238,7 +238,7 @@ export const projects: Project[] = [
         type: 'Freelance',
         privacy: 'Private',
         cardDesc:
-            'Public complaint management information system for the province of Central Java.',
+            'Platform for citizens to submit and track public complaints in Central Java.',
         desc: 'A web-based complaint management information system for the province of Central Java (Pusdataru Jateng) that allows citizens to submit, track, and manage public complaints digitally. Built with Laravel and MySQL, the system streamlines the workflow from complaint submission through verification, assignment to relevant departments, and resolution tracking.',
         role: 'Full-Stack Developer',
         year: '2025',
@@ -259,7 +259,7 @@ export const projects: Project[] = [
         type: 'Freelance',
         privacy: 'Public',
         cardDesc:
-            'Leak-free stroke risk screening machine learning system using Kaggle clinical data contextualized for Posbindu PTM Semarang City, adhering to CRISP-DM and 11 SKKNI BNSP units.',
+            'Machine learning system for stroke risk screening, built for the BNSP data scientist certification.',
         desc: 'An end-to-end Machine Learning stroke risk screening system and executive visual portfolio developed for the Certified Data Scientist (BNSP) assessment. Built using a clinical stroke dataset from Kaggle contextualized for the Posbindu PTM program in Semarang City under strict CRISP-DM methodology and 11 SKKNI competency units, the project engineers a leak-free preprocessing pipeline. It benchmarks 5 ML algorithms—achieving a champion Logistic Regression F1-score of 0.6538 (+11.55% over baseline literature)—and integrates SHAP (SHapley Additive exPlanations) for transparent clinical feature interpretability.',
         role: 'Data Scientist',
         year: '2026',
@@ -277,7 +277,7 @@ export const projects: Project[] = [
         type: 'Freelance',
         privacy: 'Public',
         cardDesc:
-            'Website for Kireikies Cookies store, showcasing product catalog and store information.',
+            'Product catalog website for the Kireikies Cookies store.',
         desc: 'Website for Kireikies Cookies store, showcasing product catalog and store information. This project was built with a focus on clean UI and smooth user experience to enhance artisan product branding.',
         role: 'Frontend Developer',
         year: '2026',

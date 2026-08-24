@@ -36,18 +36,16 @@ export default function About() {
                         </div>
                     </div>
 
-                    {/* Card 2: Identity */}
-                    <div className="bento-card bento-card--id">
-                        <h3 className="bento-id-name">
-                            {t.about.name}
-                        </h3>
-                        <p className="bento-id-role">
-                            {t.about.role}
-                        </p>
-                    </div>
-
-                    {/* Card 3: Biography */}
+                    {/* Card 2: Biography */}
                     <div className="bento-card bento-card--bio">
+                        <div className="bento-id-head">
+                            <h3 className="bento-id-name">
+                                {t.about.name}
+                            </h3>
+                            <p className="bento-id-role">
+                                {t.about.role}
+                            </p>
+                        </div>
                         <div className="bento-bio-body">
                             <p>{t.about.bioIntro}</p>
 
@@ -81,9 +79,14 @@ export default function About() {
                                     <span className="bento-edu-status">
                                         {t.about.eduStatusInProgress}
                                     </span>
-                                    <span className="bento-edu-date">
-                                        September 2025 - July 2027
-                                    </span>
+                                    <div className="bento-edu-schedule">
+                                        <span className="bento-edu-date">
+                                            September 2025 - July 2027
+                                        </span>
+                                        <span className="bento-edu-gpa">
+                                            {t.about.edu1Gpa}
+                                        </span>
+                                    </div>
                                 </div>
                             </li>
                             <li className="bento-education-item">
@@ -102,9 +105,14 @@ export default function About() {
                                     <span className="bento-edu-status bento-edu-status--graduated">
                                         {t.about.eduStatusGraduated}
                                     </span>
-                                    <span className="bento-edu-date">
-                                        September 2022 - July 2025
-                                    </span>
+                                    <div className="bento-edu-schedule">
+                                        <span className="bento-edu-date">
+                                            September 2022 - July 2025
+                                        </span>
+                                        <span className="bento-edu-gpa">
+                                            {t.about.edu2Gpa}
+                                        </span>
+                                    </div>
                                 </div>
                             </li>
                         </ul>

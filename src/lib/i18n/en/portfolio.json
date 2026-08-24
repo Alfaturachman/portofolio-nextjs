@@ -4,6 +4,21 @@
     "titleLine2": "worked on",
     "viewAll": "Explore All Projects",
     "cardViewDetails": "View Details",
+    "cardDescriptions": {
+        "renstra-ft": "Web system for monitoring the faculty strategic plan KPIs and lecturer workload.",
+        "portfolio-ft": "Centralized system for managing and documenting course materials across the Engineering Faculty.",
+        "medical-checkup-ft": "Health platform that records patient data from IoT self-service health kiosks.",
+        "atr-bpn-jateng": "Web portal for managing official letters, dispositions, and agendas at ATR/BPN Central Java.",
+        "crumb-rubber": "Inventory system for tracking raw materials, production, and stock in a crumb rubber factory.",
+        "iconnet-monitoring": "Web app for reporting and tracking Iconnet internet service outages.",
+        "disnaker-agenda": "App for scheduling and recording labor mediation sessions at the Manpower Office.",
+        "stedi": "Digital stethoscope device that analyzes recorded lung sounds using AI to support diagnosis.",
+        "posyandu": "Digital replacement of the manual pink book for toddler growth records and immunization schedules.",
+        "nomadenstuff": "E-commerce web app for a thrift shop with product reservations and shipping calculation.",
+        "pusdataru-jateng": "Platform for citizens to submit and track public complaints in Central Java.",
+        "sertifikasi": "Machine learning system for stroke risk screening, built for the BNSP data scientist certification.",
+        "kireikies": "Product catalog website for the Kireikies Cookies store."
+    },
     "meta": {
         "toggleAria": "Toggle Project Specifications",
         "toggleLabel": "Project Specifications",

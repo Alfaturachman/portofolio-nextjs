@@ -95,7 +95,11 @@ function ProjectCard({
                     )}
                 </div>
                 <h3 className="project-title">{p.title}</h3>
-                <p className="project-desc">{p.cardDesc}</p>
+                <p className="project-desc">
+                    {(t.portfolio.cardDescriptions as Record<string, string>)[
+                        p.id
+                    ] ?? p.cardDesc}
+                </p>
                 <div className="project-footer">
                     <span className="project-link-text">
                         {t.portfolio.cardViewDetails}

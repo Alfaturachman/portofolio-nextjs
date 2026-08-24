@@ -4,6 +4,21 @@
     "titleLine2": "saya kerjakan",
     "viewAll": "Jelajahi Semua Proyek",
     "cardViewDetails": "Lihat Detail",
+    "cardDescriptions": {
+        "renstra-ft": "Sistem web untuk memantau KPI rencana strategis fakultas dan beban kerja dosen.",
+        "portfolio-ft": "Sistem terpusat untuk mengelola dan mendokumentasikan materi kuliah di lingkungan Fakultas Teknik.",
+        "medical-checkup-ft": "Platform kesehatan yang mencatat data pasien dari anjungan kesehatan mandiri berbasis IoT.",
+        "atr-bpn-jateng": "Portal web untuk mengelola surat resmi, disposisi, dan agenda di ATR/BPN Jawa Tengah.",
+        "crumb-rubber": "Sistem inventori untuk melacak bahan baku, produksi, dan stok di pabrik crumb rubber.",
+        "iconnet-monitoring": "Aplikasi web untuk melaporkan dan melacak gangguan layanan internet Iconnet.",
+        "disnaker-agenda": "Aplikasi penjadwalan dan pencatatan sesi mediasi ketenagakerjaan di Dinas Tenaga Kerja.",
+        "stedi": "Perangkat stetoskop digital yang menganalisis rekaman suara paru-paru menggunakan AI untuk mendukung diagnosis.",
+        "posyandu": "Pengganti digital Buku Pink manual untuk catatan tumbuh kembang balita dan jadwal imunisasi.",
+        "nomadenstuff": "Aplikasi web e-commerce untuk thrift shop dengan fitur reservasi produk dan perhitungan ongkir.",
+        "pusdataru-jateng": "Platform bagi warga untuk mengajukan dan melacak pengaduan publik di Jawa Tengah.",
+        "sertifikasi": "Sistem machine learning untuk skrining risiko stroke, dibangun untuk sertifikasi data scientist BNSP.",
+        "kireikies": "Website katalog produk untuk toko Kireikies Cookies."
+    },
     "meta": {
         "toggleAria": "Tampilkan Spesifikasi Proyek",
         "toggleLabel": "Spesifikasi Proyek",

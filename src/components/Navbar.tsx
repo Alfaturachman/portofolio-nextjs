@@ -95,7 +95,7 @@ export default function Navbar() {
 
     const links = [
         // { label: t.navbar.home, href: '/' },
-        // { label: t.navbar.about, href: '/#about' },
+        { label: t.navbar.about, href: '/#about' },
         { label: t.navbar.portfolio, href: '/portfolio' },
         // { label: t.navbar.skills, href: '/#skills' },
         { label: t.navbar.experience, href: '/#experience' },

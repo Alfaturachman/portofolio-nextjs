@@ -39,7 +39,6 @@ export default function Certificates() {
                                     width={120}
                                     height={40}
                                     className="cert-brand-logo"
-                                    style={{ width: 'auto', height: 'auto' }}
                                 />
                             </div>
                             <div className="project-content">

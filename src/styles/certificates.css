@@ -14,14 +14,18 @@
     align-items: center;
     justify-content: center;
     background: white;
-    padding: 96px;
     position: relative;
 }
 
-.cert-brand-logo {
+/* ponytail: needs 2 classes to out-rank .project-img-wrapper img,
+   which stretches every img to fill the card */
+.cert-logo-wrap .cert-brand-logo {
     display: block;
-    max-width: 100%;
     position: static !important;
+    width: auto;
+    height: 48px;
+    max-width: 60%;
+    object-fit: contain;
     opacity: 1 !important;
     transform: none !important;
 }

@@ -1,12 +1,12 @@
 {
-    "panelAria": "Ngobrol dengan mapi",
+    "panelAria": "Ngobrol dengan Mavi",
     "statusThinking": "Berpikir...",
     "statusOnline": "Online",
     "closeAria": "Tutup obrolan",
-    "welcomeTitle": "Hai, saya mapi. Ada yang bisa dibantu?",
+    "welcomeTitle": "Hai, saya Mavi. Ada yang bisa dibantu?",
     "placeholder": "Tanyakan apa saja",
     "sendAria": "Kirim pesan",
-    "disclaimer": "mapi bisa saja keliru. tanyakan tentang keahlian, proyek, atau pengalaman.",
+    "disclaimer": "Mavi bisa saja keliru. tanyakan tentang keahlian, proyek, atau pengalaman.",
     "errorGeneric": "Maaf, terjadi kesalahan. Silakan coba lagi.",
     "errorNetwork": "Kesalahan koneksi. Periksa jaringan Anda dan coba lagi."
 }

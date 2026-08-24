@@ -252,11 +252,11 @@ export default function Chatbot() {
                                 <div className="chatbot-avatar">
                                     <img
                                         src="/assets/images/logo/api.svg"
-                                        alt="mapi"
+                                        alt="Mavi"
                                     />
                                 </div>
                                 <div>
-                                    <p className="chatbot-name">mapi</p>
+                                    <p className="chatbot-name">Mavi</p>
                                     <p className="chatbot-status">
                                         {loading
                                             ? t.chatbot.statusThinking
@@ -278,7 +278,7 @@ export default function Chatbot() {
                                 <div className="chatbot-welcome-icon">
                                     <img
                                         src="/assets/images/logo/api.svg"
-                                        alt="mapi"
+                                        alt="Mavi"
                                     />
                                 </div>
                                 <h2 className="chatbot-welcome-title">

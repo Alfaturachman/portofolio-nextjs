@@ -112,7 +112,7 @@ function containsBlocked(text: string): boolean {
     return blockedPattern.test(text);
 }
 
-const systemPrompt = `You are a helpful assistant for Alfaturachman Maulana Pahlevi's portfolio website. Your name is "mapi".
+const systemPrompt = `You are a helpful assistant for Alfaturachman Maulana Pahlevi's portfolio website. Your name is "Mavi".
 
 About Alfaturachman:
 - Full name: Alfaturachman Maulana Pahlevi

@@ -161,11 +161,11 @@ export const projects: Project[] = [
     },
     {
         id: 'disnaker-agenda',
-        image: '/assets/images/projects/project-disnaker-agenda-mediasi-login.png',
+        image: '/assets/images/projects/project-disnaker-mediasi-login.png',
         gallery: [
-            '/assets/images/projects/project-disnaker-agenda-mediasi-login.png',
-            '/assets/images/projects/project-disnaker-agenda-mediasi-home.png',
-            '/assets/images/projects/project-disnaker-agenda-mediasi-riwayat.png',
+            '/assets/images/projects/project-disnaker-mediasi-login.png',
+            '/assets/images/projects/project-disnaker-mediasi-home.png',
+            '/assets/images/projects/project-disnaker-mediasi-riwayat.png',
         ],
         title: 'Disnaker Agenda Mediasi',
         type: 'Freelance',

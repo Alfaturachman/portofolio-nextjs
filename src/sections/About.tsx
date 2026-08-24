@@ -80,11 +80,11 @@ export default function About() {
                                         {t.about.eduStatusInProgress}
                                     </span>
                                     <div className="bento-edu-schedule">
-                                        <span className="bento-edu-date">
-                                            September 2025 - July 2027
-                                        </span>
                                         <span className="bento-edu-gpa">
                                             {t.about.edu1Gpa}
+                                        </span>
+                                        <span className="bento-edu-date">
+                                            September 2025 - July 2027
                                         </span>
                                     </div>
                                 </div>
@@ -106,11 +106,11 @@ export default function About() {
                                         {t.about.eduStatusGraduated}
                                     </span>
                                     <div className="bento-edu-schedule">
-                                        <span className="bento-edu-date">
-                                            September 2022 - July 2025
-                                        </span>
                                         <span className="bento-edu-gpa">
                                             {t.about.edu2Gpa}
+                                        </span>
+                                        <span className="bento-edu-date">
+                                            September 2022 - July 2025
                                         </span>
                                     </div>
                                 </div>

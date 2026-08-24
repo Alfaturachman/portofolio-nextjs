@@ -12,7 +12,43 @@
         "type": "Tipe",
         "category": "Kategori",
         "sector": "Sektor",
-        "privacy": "Privasi"
+        "privacy": "Privasi",
+        "values": {
+            "role": {
+                "Backend Developer": "Developer Backend",
+                "Backend & API Developer": "Developer Backend & API",
+                "Full-Stack Developer": "Developer Full-Stack",
+                "AI & Backend Developer": "Developer AI & Backend",
+                "Data Scientist": "Data Scientist",
+                "Frontend Developer": "Developer Frontend"
+            },
+            "type": {
+                "Team": "Tim",
+                "Freelance": "Freelance"
+            },
+            "category": {
+                "Information System": "Sistem Informasi",
+                "Web Portal": "Portal Web",
+                "Monitoring System": "Sistem Monitoring",
+                "AI Web App": "Aplikasi Web AI",
+                "E-Commerce": "E-Commerce",
+                "Infographic": "Infografis",
+                "Landing Page": "Landing Page"
+            },
+            "sector": {
+                "Academic": "Akademik",
+                "Healthcare": "Kesehatan",
+                "Government": "Pemerintahan",
+                "Manufacturing": "Manufaktur",
+                "Corporate": "Korporat",
+                "Retail": "Ritel",
+                "Education": "Edukasi"
+            },
+            "privacy": {
+                "Public": "Publik",
+                "Private": "Privat"
+            }
+        }
     },
     "detail": {
         "overview": "Ringkasan",
@@ -22,6 +58,21 @@
         "privateNotice": "Ini adalah proyek internal dan tidak dapat diakses secara publik.",
         "prevProject": "Proyek Sebelumnya",
         "nextProject": "Proyek Berikutnya",
-        "viewAllProjects": "Lihat semua proyek"
+        "viewAllProjects": "Lihat semua proyek",
+        "descriptions": {
+            "renstra-ft": "Sistem Informasi Rencana Strategis (RENSTRA) untuk pemantauan dan pelaporan Key Performance Indicators (KPI/IKU) serta beban kerja dosen (EWMP). Memfasilitasi universitas dalam memantau pencapaian target tahunan. Dashboard menyajikan visualisasi progres terhadap target strategis multi-tahun secara jelas, sehingga pimpinan fakultas dapat mengambil keputusan berbasis data dan menyesuaikan taktik operasional ketika target tertentu tertinggal dari jadwal.",
+            "portfolio-ft": "Sistem manajemen dan dokumentasi seluruh siklus akademik mata kuliah FT. Memungkinkan pelacakan silabus, bahan ajar, dan tugas dalam satu platform terintegrasi untuk dosen dan mahasiswa. Platform ini membakukan proses dokumentasi perkuliahan di lingkungan Fakultas Teknik, memastikan semua materi kuliah tersimpan terpusat, mudah diakses, dan pengelolaan versinya rapi untuk keperluan akreditasi.",
+            "medical-checkup-ft": "Sistem manajemen kesehatan berbasis web yang dikembangkan untuk mendukung Anjungan Kesehatan Mandiri menggunakan teknologi IoT. Data kesehatan yang dikumpulkan melalui anjungan dikirimkan via API dan disimpan dalam platform untuk keperluan monitoring, analisis, dan pelaporan. Proyek ini merupakan kolaborasi antara FT Universitas Dian Nuswantoro dan Dinas Kesehatan Kota Semarang untuk meningkatkan layanan kesehatan digital serta memperluas akses masyarakat terhadap pemantauan kesehatan.",
+            "atr-bpn-jateng": "Portal web untuk Kantor Wilayah ATR/BPN Jawa Tengah. Dilengkapi sistem administrasi komprehensif untuk mengelola surat masuk dan keluar, melacak alur disposisi, penjadwalan agenda, hingga distribusi informasi publik. Sistem ini meningkatkan efisiensi proses administrasi internal secara signifikan serta memberikan akses informasi pertanahan yang lebih baik bagi masyarakat Jawa Tengah.",
+            "crumb-rubber": "Sistem manajemen inventori untuk industri crumb rubber, mencakup pencatatan bahan baku, produk olahan, dan laporan stok real-time untuk meningkatkan efisiensi operasional pabrik. Sistem memantau seluruh siklus produksi mulai dari pemasukan bahan baku karet, tahap pengolahan, hingga produk crumb rubber akhir yang siap dikirim.",
+            "iconnet-monitoring": "Sistem monitoring berbasis web untuk layanan Iconnet yang memungkinkan pengguna melaporkan gangguan layanan dan teknisi untuk melacak, mengelola, serta menyelesaikan laporan tersebut secara efisien. Sistem dilengkapi dashboard yang mudah digunakan untuk memantau status laporan gangguan secara real-time, lengkap dengan alur notifikasi dan riwayat laporan untuk analisis performa layanan.",
+            "disnaker-agenda": "Sistem agenda mediasi berbasis web untuk Dinas Tenaga Kerja (Disnaker) guna mengelola penjadwalan, pencatatan, dan pelacakan sesi mediasi antara pekerja dan pengusaha. Menyederhanakan proses mediasi dengan catatan digital, pelacakan status, dan pembuatan laporan.",
+            "stedi": "STEDI adalah perangkat medis yang dapat merekam suara paru-paru dan menganalisisnya menggunakan kecerdasan buatan. Sistem ini diharapkan membantu dokter mendiagnosis penyakit paru lebih cepat dan akurat menggunakan model deep learning.",
+            "posyandu": "Sistem informasi Posyandu berbasis web yang dibangun dengan Laravel PHP untuk mendigitalkan catatan tumbuh kembang balita dan imunisasi. Setiap minggu, imunisasi dan perkembangan anak dicatat — menggantikan sistem Buku Pink tradisional dengan basis data digital yang dapat dicari dan dilaporkan sepenuhnya.",
+            "nomadenstuff": "NomadenStuff Ecommerce adalah aplikasi e-commerce yang dibangun khusus untuk bisnis thrift shop. Platform ini mengelola inventaris unik berupa barang satuan yang khas di dunia thrifting, dengan fitur seperti reservasi produk, panduan ukuran yang detail, dan perhitungan ongkos kirim otomatis.",
+            "pusdataru-jateng": "Sistem informasi manajemen pengaduan berbasis web untuk Provinsi Jawa Tengah (Pusdataru Jateng) yang memungkinkan warga mengajukan, melacak, dan mengelola pengaduan publik secara digital. Dibangun dengan Laravel dan MySQL, sistem ini merapikan alur kerja mulai dari pengajuan pengaduan, verifikasi, penugasan ke dinas terkait, hingga pelacakan penyelesaian.",
+            "sertifikasi": "Sistem Machine Learning end-to-end untuk skrining risiko stroke beserta portofolio visual eksekutif yang dikembangkan untuk asesmen Certified Data Scientist (BNSP). Dibangun menggunakan dataset klinis stroke dari Kaggle yang dikontekstualisasikan untuk program Posbindu PTM di Kota Semarang dengan metodologi CRISP-DM yang ketat dan 11 unit kompetensi SKKNI, proyek ini membangun pipeline preprocessing bebas kebocoran data. Sistem membandingkan 5 algoritma ML — mencapai F1-score Logistic Regression terbaik sebesar 0,6538 (+11,55% dari baseline literatur) — serta mengintegrasikan SHAP (SHapley Additive exPlanations) untuk interpretabilitas fitur klinis yang transparan.",
+            "kireikies": "Website untuk toko Kireikies Cookies yang menampilkan katalog produk dan informasi toko. Proyek ini dibangun dengan fokus pada UI yang bersih dan pengalaman pengguna yang halus untuk memperkuat branding produk artisan."
+        }
     }
 }

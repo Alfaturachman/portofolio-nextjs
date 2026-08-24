@@ -24,6 +24,9 @@ interface ProjectMetaProps {
 export default function ProjectMeta({ project }: ProjectMetaProps) {
     const [isOpen, setIsOpen] = useState(false);
     const { t } = useI18n();
+    const V = t.portfolio.meta.values;
+    const val = (dict: Record<string, string> | undefined, key: string) =>
+        dict?.[key] ?? key;
 
     return (
         <div className={`detail-meta-wrapper ${isOpen ? 'is-open' : ''}`}>
@@ -55,7 +58,7 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
                     </div>
                     <div className="meta-pill-text">
                         <span className="meta-pill-label">{t.portfolio.meta.role}</span>
-                        <span className="meta-pill-value">{project.role}</span>
+                        <span className="meta-pill-value">{val(V?.role, project.role)}</span>
                     </div>
                 </div>
 
@@ -75,7 +78,7 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
                     </div>
                     <div className="meta-pill-text">
                         <span className="meta-pill-label">{t.portfolio.meta.type}</span>
-                        <span className="meta-pill-value">{project.type}</span>
+                        <span className="meta-pill-value">{val(V?.type, project.type)}</span>
                     </div>
                 </div>
 
@@ -85,7 +88,7 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
                     </div>
                     <div className="meta-pill-text">
                         <span className="meta-pill-label">{t.portfolio.meta.category}</span>
-                        <span className="meta-pill-value">{project.websiteType}</span>
+                        <span className="meta-pill-value">{val(V?.category, project.websiteType)}</span>
                     </div>
                 </div>
 
@@ -95,7 +98,7 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
                     </div>
                     <div className="meta-pill-text">
                         <span className="meta-pill-label">{t.portfolio.meta.sector}</span>
-                        <span className="meta-pill-value">{project.sector}</span>
+                        <span className="meta-pill-value">{val(V?.sector, project.sector)}</span>
                     </div>
                 </div>
 
@@ -105,7 +108,7 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
                     </div>
                     <div className="meta-pill-text">
                         <span className="meta-pill-label">{t.portfolio.meta.privacy}</span>
-                        <span className="meta-pill-value">{project.privacy}</span>
+                        <span className="meta-pill-value">{val(V?.privacy, project.privacy)}</span>
                     </div>
                 </div>
             </div>

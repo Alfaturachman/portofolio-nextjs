@@ -12,7 +12,43 @@
         "type": "Type",
         "category": "Category",
         "sector": "Sector",
-        "privacy": "Privacy"
+        "privacy": "Privacy",
+        "values": {
+            "role": {
+                "Backend Developer": "Backend Developer",
+                "Backend & API Developer": "Backend & API Developer",
+                "Full-Stack Developer": "Full-Stack Developer",
+                "AI & Backend Developer": "AI & Backend Developer",
+                "Data Scientist": "Data Scientist",
+                "Frontend Developer": "Frontend Developer"
+            },
+            "type": {
+                "Team": "Team",
+                "Freelance": "Freelance"
+            },
+            "category": {
+                "Information System": "Information System",
+                "Web Portal": "Web Portal",
+                "Monitoring System": "Monitoring System",
+                "AI Web App": "AI Web App",
+                "E-Commerce": "E-Commerce",
+                "Infographic": "Infographic",
+                "Landing Page": "Landing Page"
+            },
+            "sector": {
+                "Academic": "Academic",
+                "Healthcare": "Healthcare",
+                "Government": "Government",
+                "Manufacturing": "Manufacturing",
+                "Corporate": "Corporate",
+                "Retail": "Retail",
+                "Education": "Education"
+            },
+            "privacy": {
+                "Public": "Public",
+                "Private": "Private"
+            }
+        }
     },
     "detail": {
         "overview": "Overview",
@@ -22,6 +58,21 @@
         "privateNotice": "This is an internal project and cannot be publicly accessed.",
         "prevProject": "Previous Project",
         "nextProject": "Next Project",
-        "viewAllProjects": "View all projects"
+        "viewAllProjects": "View all projects",
+        "descriptions": {
+            "renstra-ft": "Information System for Strategic Plan (RENSTRA) for monitoring and reporting Key Performance Indicators (KPI/IKU) and lecturer workload (EWMP). Facilitates the university in monitoring annual target achievements. The dashboard provides clear visualizations of progress against multi-year strategic goals, allowing faculty leadership to make data-driven decisions and adjust operational tactics when specific targets fall behind schedule.",
+            "portfolio-ft": "Management and documentation system for the entire academic cycle of FT courses. Enables tracking of syllabi, course materials, and assignments in one integrated platform for lecturers and students. The platform standardizes the course documentation process across the Engineering Faculty, ensuring that all course materials are centrally stored, easily accessible, and properly versioned for accreditation purposes.",
+            "medical-checkup-ft": "A web-based healthcare management system developed to support Anjungan Kesehatan Mandiri (Independent Health Kiosks) using IoT technology. Health data collected through the kiosks is transmitted via API and stored within the platform for monitoring, analysis, and reporting. This project was a collaborative initiative between FT Universitas Dian Nuswantoro and the Semarang Health Department to enhance digital healthcare services and improve public access to health monitoring.",
+            "atr-bpn-jateng": "A web portal for the Regional Office of ATR/BPN Central Java. It features a comprehensive administrative system for managing incoming and outgoing letters, tracking disposition workflows, scheduling agendas, and distributing public information. This system significantly improves the efficiency of internal administrative processes and provides better public access to land-related information in Central Java.",
+            "crumb-rubber": "Inventory management system for the crumb rubber industry, including raw material recording, processed products, and real-time stock reports to improve factory operational efficiency. The system tracks the entire production lifecycle from the intake of raw rubber materials, through processing stages, to the final crumb rubber products ready for shipping.",
+            "iconnet-monitoring": "A web-based monitoring system for Iconnet services that enables users to report service disruptions and allows technicians to track, manage, and resolve those reports efficiently. The system features a user-friendly dashboard for monitoring the status of outage reports in real-time, complete with notification workflows and historical reporting for service performance analysis.",
+            "disnaker-agenda": "A web-based agenda mediation system for the Manpower Office (Disnaker) to manage the scheduling, recording, and tracking of mediation sessions between workers and employers. Streamlines the mediation process with digital records, status tracking, and report generation.",
+            "stedi": "STEDI is a medical device that can record lung sounds and analyze them using artificial intelligence. This system is expected to help doctors diagnose lung diseases more quickly and accurately using deep learning models.",
+            "posyandu": "A web-based Posyandu information system built with Laravel PHP to digitize toddler growth and immunization records. Every week, children's immunizations and developmental progress are recorded — replacing the traditional pink book (Buku Pink) system with a fully digital, searchable, and reportable database.",
+            "nomadenstuff": "NomadenStuff Ecommerce is a specialized e-commerce application built for a thrift shop business. The platform manages unique, single-item inventory typical in thrifting, offering features like product reservations, detailed sizing guides, and automated shipping calculations.",
+            "pusdataru-jateng": "A web-based complaint management information system for the province of Central Java (Pusdataru Jateng) that allows citizens to submit, track, and manage public complaints digitally. Built with Laravel and MySQL, the system streamlines the workflow from complaint submission through verification, assignment to relevant departments, and resolution tracking.",
+            "sertifikasi": "An end-to-end Machine Learning stroke risk screening system and executive visual portfolio developed for the Certified Data Scientist (BNSP) assessment. Built using a clinical stroke dataset from Kaggle contextualized for the Posbindu PTM program in Semarang City under strict CRISP-DM methodology and 11 SKKNI competency units, the project engineers a leak-free preprocessing pipeline. It benchmarks 5 ML algorithms—achieving a champion Logistic Regression F1-score of 0.6538 (+11.55% over baseline literature)—and integrates SHAP (SHapley Additive exPlanations) for transparent clinical feature interpretability.",
+            "kireikies": "Website for Kireikies Cookies store, showcasing product catalog and store information. This project was built with a focus on clean UI and smooth user experience to enhance artisan product branding."
+        }
     }
 }

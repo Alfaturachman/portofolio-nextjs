@@ -77,7 +77,12 @@ export default async function DetailPage({
                             <h2 className="detail-section-title">
                                 <Tx k="portfolio.detail.overview" />
                             </h2>
-                            <p className="detail-text">{project.desc}</p>
+                            <p className="detail-text">
+                                <Tx
+                                    k={`portfolio.detail.descriptions.${project.id}`}
+                                    fallback={project.desc}
+                                />
+                            </p>
                         </div>
 
                         <aside className="detail-sidebar">

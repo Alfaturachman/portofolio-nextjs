@@ -53,8 +53,14 @@ function ExperienceCard({
             <div className="experience-meta">
                 <div className="experience-meta-info">
                     <div className="experience-date">{tr?.date ?? exp.date}</div>
-                    <div className={`experience-badge${exp.badgeType === 'ghost' ? ' ghost' : ''}`}>
-                        {tr?.badge ?? exp.badge}
+                    <h3 className="experience-title mobile-only">
+                        {tr?.title ?? exp.title}
+                    </h3>
+                    <div className="experience-org mobile-only">
+                        {iconMap[exp.orgIcon] && (
+                            <FontAwesomeIcon icon={iconMap[exp.orgIcon]} />
+                        )}
+                        {tr?.org ?? exp.org}
                     </div>
                 </div>
                 <div className="experience-toggle-btn mobile-only" aria-hidden="true">
@@ -67,7 +73,7 @@ function ExperienceCard({
 
                 <div className="experience-content">
                     <div className="experience-header">
-                        <div className="experience-header-info">
+                        <div className="experience-header-info desktop-only">
                             <h3 className="experience-title">
                                 {tr?.title ?? exp.title}
                             </h3>
@@ -108,12 +114,7 @@ export default function Experience() {
     return (
         <section id="experience">
             <div className="section-max">
-                <div className="section-eyebrow">{t.experience.eyebrow}</div>
-                <h2 className="section-title">
-                    {t.experience.titleLine1}
-                    <br />
-                    {t.experience.titleLine2}
-                </h2>
+                <h2 className="section-title">{t.experience.eyebrow}</h2>
                 <div className="experience-list">
                     {experiences.map((exp, idx) => (
                         <ExperienceCard

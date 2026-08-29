@@ -91,7 +91,7 @@
 @media (max-width: 1024px) {
     #home {
         min-height: auto;
-        padding: 128px 24px 96px;
+        padding: 120px 24px 96px;
     }
     .hero-inner {
         gap: 64px;
@@ -100,7 +100,7 @@
 
 @media (max-width: 768px) {
     #home {
-        padding: 144px 24px 64px;
+        padding: 140px 24px 64px;
     }
     .hero-inner {
         gap: 48px;
@@ -170,7 +170,7 @@
 .hero-title {
     font-family: var(--font-outfit), sans-serif;
     font-weight: 700;
-    font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+    font-size: clamp(44px, 5vw, 72px);
     line-height: 1.05;
     letter-spacing: -0.035em;
     color: var(--text-primary);

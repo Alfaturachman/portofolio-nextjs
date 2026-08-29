@@ -14,12 +14,7 @@ export default function About() {
     return (
         <section id="about" aria-label={t.about.sectionAria}>
             <div className="section-max">
-                <div className="section-eyebrow">{t.about.eyebrow}</div>
-                <h2 className="section-title">
-                    {t.about.titleLine1}
-                    <br />
-                    {t.about.titleLine2}
-                </h2>
+                <h2 className="section-title">{t.about.eyebrow}</h2>
 
                 <div className="about-bento-grid">
                     {/* Card 1: Profile Photo */}

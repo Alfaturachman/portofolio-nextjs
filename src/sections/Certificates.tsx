@@ -18,12 +18,7 @@ export default function Certificates() {
     return (
         <section id="certificates">
             <div className="section-max">
-                <div className="section-eyebrow">{t.certificates.eyebrow}</div>
-                <h2 className="section-title">
-                    {t.certificates.titleLine1}
-                    <br />
-                    {t.certificates.titleLine2}
-                </h2>
+                <h2 className="section-title">{t.certificates.eyebrow}</h2>
                 <div className="portfolio-grid">
                     {coursesData.specializations.map((spec) => (
                         <Link

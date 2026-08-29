@@ -22,12 +22,7 @@ export default function PortfolioSection({
         <section id="portfolio">
             <div className="section-max">
                 {children}
-                <div className="section-eyebrow">{t.portfolio.eyebrow}</div>
-                <h2 className="section-title">
-                    {t.portfolio.titleLine1}
-                    <br />
-                    {t.portfolio.titleLine2}
-                </h2>
+                <h2 className="section-title">{t.portfolio.eyebrow}</h2>
                 <div className="portfolio-grid">
                     {displayedProjects.map((p, i) => (
                         <ProjectCard key={p.id} project={p} index={i} />

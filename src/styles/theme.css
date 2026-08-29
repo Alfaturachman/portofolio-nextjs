@@ -250,12 +250,12 @@ button:focus-visible {
 }
 
 section {
-    padding: 100px 24px;
+    padding: 80px 24px;
     overflow-x: clip;
 }
 
 @media (max-width: 480px) {
     section {
-        padding: 120px 24px;
+        padding: 60px 24px;
     }
 }

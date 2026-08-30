@@ -20,7 +20,7 @@ export default function PortfolioSection({
 
     return (
         <section id="portfolio">
-            <div className="section-max">
+            <div className="container">
                 {children}
                 <h2 className="section-title">{t.portfolio.eyebrow}</h2>
                 <div className="portfolio-grid">
@@ -73,7 +73,7 @@ function ProjectCard({
                         setImgSrc('/assets/images/projects/fallback.png');
                         setLoaded(true);
                     }}
-                    priority={index < 3}
+                    priority={index < 1}
                 />
             </div>
             <div className="project-content">

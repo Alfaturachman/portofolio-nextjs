@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { experiences } from '@/lib/experiences';
 import type { Experience as ExpType } from '@/lib/types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,12 +8,10 @@ import {
     faFlask,
     faUniversity,
     faGraduationCap,
-    faChevronDown,
-    type IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
 import { useI18n } from '@/lib/i18n/i18n-context';
 
-const iconMap: Record<string, IconDefinition> = {
+const iconMap: Record<string, any> = {
     briefcase: faBriefcase,
     flask: faFlask,
     university: faUniversity,
@@ -32,77 +29,37 @@ function ExperienceCard({
     isDefaultOpen: boolean;
     idx: number;
 }) {
-    const [isOpen, setIsOpen] = useState(isDefaultOpen);
     const { t } = useI18n();
     const tr = t.experience.items[idx];
 
     return (
-        <div
-            className={`experience-item ${isOpen ? 'is-open' : ''}`}
-            onClick={() => setIsOpen(!isOpen)}
-            role="button"
-            tabIndex={0}
-            aria-expanded={isOpen}
-            onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    setIsOpen(!isOpen);
-                }
-            }}
-        >
-            <div className="experience-meta">
-                <div className="experience-meta-info">
-                    <div className="experience-date">{tr?.date ?? exp.date}</div>
-                    <h3 className="experience-title mobile-only">
-                        {tr?.title ?? exp.title}
-                    </h3>
-                    <div className="experience-org mobile-only">
-                        {iconMap[exp.orgIcon] && (
-                            <FontAwesomeIcon icon={iconMap[exp.orgIcon]} />
-                        )}
-                        {tr?.org ?? exp.org}
-                    </div>
-                </div>
-                <div className="experience-toggle-btn mobile-only" aria-hidden="true">
-                    <FontAwesomeIcon
-                        icon={faChevronDown}
-                        className={`experience-chevron ${isOpen ? 'rotate' : ''}`}
-                    />
-                </div>
+        <div className="experience-list-item">
+            <div className="experience-timeline-container">
+                <span className="experience-dot"></span>
+                <span className="experience-line"></span>
             </div>
-
-                <div className="experience-content">
-                    <div className="experience-header">
-                        <div className="experience-header-info desktop-only">
-                            <h3 className="experience-title">
-                                {tr?.title ?? exp.title}
-                            </h3>
-                            <div className="experience-org">
-                                {iconMap[exp.orgIcon] && (
-                                    <FontAwesomeIcon icon={iconMap[exp.orgIcon]} />
-                                )}
-                                {tr?.org ?? exp.org}
-                            </div>
-                        </div>
-                    <div className="experience-toggle-btn desktop-only" aria-hidden="true">
-                        <FontAwesomeIcon
-                            icon={faChevronDown}
-                            className={`experience-chevron ${isOpen ? 'rotate' : ''}`}
-                        />
-                    </div>
-                </div>
-
-                <div className="experience-body">
-                    <ul className="experience-desc-list">
-                        {(tr?.desc ?? exp.desc)
-                            .split('\n')
-                            .map((line, lIdx) => (
-                                <li key={lIdx}>
-                                    {line.replace(/^•\s*/, '')}
-                                </li>
-                            ))}
-                    </ul>
-                </div>
+            <div className="experience-content-wrapper">
+                <p className="experience-date">
+                    {tr?.date ?? exp.date}
+                </p>
+                <h3 className="experience-title">
+                    {tr?.title ?? exp.title}
+                </h3>
+                <p className="experience-org">
+                    {iconMap[exp.orgIcon] && (
+                        <FontAwesomeIcon icon={iconMap[exp.orgIcon]} />
+                    )}
+                    {tr?.org ?? exp.org}
+                </p>
+                <ul className="experience-desc-list">
+                    {(tr?.desc ?? exp.desc)
+                        .split('\n')
+                        .map((line, lIdx) => (
+                            <li key={lIdx}>
+                                {line.replace(/^•\s*/, '')}
+                            </li>
+                        ))}
+                </ul>
             </div>
         </div>
     );
@@ -113,7 +70,7 @@ export default function Experience() {
 
     return (
         <section id="experience">
-            <div className="section-max">
+            <div className="container">
                 <h2 className="section-title">{t.experience.eyebrow}</h2>
                 <div className="experience-list">
                     {experiences.map((exp, idx) => (

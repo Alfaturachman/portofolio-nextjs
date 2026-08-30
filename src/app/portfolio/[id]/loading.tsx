@@ -2,7 +2,7 @@ export default function DetailLoading() {
     return (
         <>
             <section id="detail-header">
-                <div className="section-max">
+                <div className="container">
                     <div
                         style={{
                             width: 200,

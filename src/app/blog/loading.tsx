@@ -6,7 +6,7 @@ import '@/styles/blog.css';
 export default function BlogListLoading() {
     return (
         <section id="blog-section" style={{ marginTop: '20px' }}>
-            <div className="section-max">
+            <div className="container">
                 <div
                     className="breadcrumb"
                     style={{

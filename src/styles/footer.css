@@ -20,32 +20,13 @@
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 1180px;
+    max-width: 768px;
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 32px;
 }
 
 /* Apple HIG Hero Card (Vibrancy & Glassmorphism) */
-.footer-hero-card {
-    padding: 56px 64px;
-    border-radius: 36px;
-    background: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    transition: all 0.5s ease;
-}
-
-[data-theme='dark'] .footer-hero-card {
-    background: rgba(17, 24, 39, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-hero-card:hover {
-    transform: translateY(-4px);
-}
 
 .footer-hero-heading {
     font-family: var(--font-outfit), -apple-system, BlinkMacSystemFont, sans-serif;
@@ -116,6 +97,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 24px;
 }
 
 /* Connect Social Links */
@@ -133,7 +116,7 @@
     margin: 0 0 14px 0;
 }
 
-.footer-social-row {
+.footer-socials {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -181,8 +164,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 24px;
-    border-top: 1px solid var(--border-subtle);
 }
 
 .footer-copyright-text {
@@ -243,15 +224,6 @@
         padding: 48px 20px 28px;
     }
 
-    .footer-hero-card {
-        padding: 40px 36px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 28px;
-        border-radius: 28px;
-        background: #ffffff;
-    }
-
     .footer-hero-btn {
         width: 100%;
         justify-content: center;
@@ -262,7 +234,7 @@
         gap: 32px;
     }
 
-    .footer-social-row {
+    .footer-socials {
         gap: 12px 16px;
     }
 }
@@ -270,17 +242,6 @@
 @media (max-width: 600px) {
     #footer {
         padding: 32px 24px 24px;
-    }
-
-    .footer-inner {
-        gap: 28px;
-    }
-
-    .footer-hero-card {
-        padding: 28px 20px;
-        border-radius: 24px;
-        gap: 20px;
-        background: #ffffff;
     }
 
     .footer-hero-heading {
@@ -310,7 +271,7 @@
         margin-bottom: 12px;
     }
 
-    .footer-social-row {
+    .footer-socials {
         gap: 10px;
     }
 

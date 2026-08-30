@@ -49,7 +49,7 @@ export default async function CoursesPage({
 
     return (
         <section id="courses-detail">
-            <div className="section-max">
+            <div className="container">
                 <Breadcrumb
                     items={[
                         { label: 'Certificates', href: '/#certificates' },

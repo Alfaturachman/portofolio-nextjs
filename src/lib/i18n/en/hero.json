@@ -1,10 +1,10 @@
 {
     "badge": "Available for work",
     "greeting": "Hi, I'm Almavi.",
+    "role": "Software Engineer",
     "titlePre": "I build software that ",
     "titleHighlight": "solves ",
     "titlePost": "real problems.",
-    "description": "Software engineer focused on clean architecture, fluid user experience, and turning good ideas into apps that actually work.",
     "ctaProjects": "View Projects",
     "ctaProjectsAria": "View my projects",
     "ctaAbout": "About Me",

@@ -55,7 +55,7 @@ export default async function DetailPage({
     return (
         <>
             <section id="detail-header">
-                <div className="section-max">
+                <div className="container">
                     <Breadcrumb
                         items={[
                             { label: 'Portfolio', href: '/portfolio' },
@@ -144,7 +144,7 @@ export default async function DetailPage({
             </section>
 
             <section className="next-project-section">
-                <div className="section-max">
+                <div className="container">
                     <NextProjectNav
                         prev={{ id: prevProject.id, title: prevProject.title }}
                         next={{ id: nextProject.id, title: nextProject.title }}

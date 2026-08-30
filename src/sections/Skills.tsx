@@ -50,7 +50,7 @@ export default function Skills() {
 
     return (
         <section id="skills">
-            <div className="section-max">
+            <div className="container">
                 <h2 className="section-title">{t.skills.eyebrow}</h2>
                 <div className="skills-wrapper">
                     {skillsCategories.map((cat, idx) => {

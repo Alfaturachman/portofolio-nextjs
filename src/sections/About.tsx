@@ -13,34 +13,12 @@ export default function About() {
 
     return (
         <section id="about" aria-label={t.about.sectionAria}>
-            <div className="section-max">
+            <div className="container">
                 <h2 className="section-title">{t.about.eyebrow}</h2>
 
                 <div className="about-bento-grid">
-                    {/* Card 1: Profile Photo */}
-                    <div className="bento-card bento-card--profile">
-                        <div className="bento-profile-frame">
-                            <Image
-                                src="/assets/images/profile/profile_almavi.PNG"
-                                alt="Alfaturachman Maulana Pahlevi"
-                                width={400}
-                                height={500}
-                                priority={false}
-                                className="bento-profile-img"
-                            />
-                        </div>
-                    </div>
-
                     {/* Card 2: Biography */}
                     <div className="bento-card bento-card--bio">
-                        <div className="bento-id-head">
-                            <h3 className="bento-id-name">
-                                {t.about.name}
-                            </h3>
-                            <p className="bento-id-role">
-                                {t.about.role}
-                            </p>
-                        </div>
                         <div className="bento-bio-body">
                             <p>{t.about.bioIntro}</p>
 

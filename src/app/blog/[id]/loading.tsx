@@ -5,7 +5,7 @@ import '@/styles/blog.css';
 export default function BlogDetailLoading() {
     return (
         <section id="blog-detail-section">
-            <div className="section-max">
+            <div className="container">
                 <div className="breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
                     <div style={{ width: 40, height: 16, background: 'var(--border-subtle)', borderRadius: 4 }} />
                     <FontAwesomeIcon icon={faChevronRight} className="breadcrumb-sep" />

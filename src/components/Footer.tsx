@@ -44,36 +44,13 @@ export default function Footer() {
     return (
         <footer id="footer" ref={footerRef}>
             <div className="footer-inner">
-                {/* Hero CTA Box */}
-                <div className="footer-hero-card">
-                    <div className="footer-hero-text">
-                        <h2 className="footer-hero-heading">
-                            {t.footer.heroHeadingLine1}
-                            <br />
-                            {t.footer.heroHeadingLine2}
-                        </h2>
-                        <p className="footer-hero-subtext">
-                            {t.footer.heroSubtext}
-                        </p>
-                    </div>
-                    <div className="footer-hero-action">
-                        <a
-                            href="mailto:alfaturachmanpahlevi@gmail.com"
-                            className="footer-hero-btn"
-                        >
-                            <span>{t.footer.heroBtn}</span>
-                            <FontAwesomeIcon icon={faArrowRight} />
-                        </a>
-                    </div>
-                </div>
-
                 {/* Middle Connect Row */}
                 <div className="footer-mid-row">
                     <div className="footer-connect-block">
                         <p className="footer-connect-label">
                             {t.footer.connectLabel}
                         </p>
-                        <div className="footer-social-row">
+                        <div className="footer-socials">
                             <a
                                 href="https://github.com/Alfaturachman"
                                 target="_blank"

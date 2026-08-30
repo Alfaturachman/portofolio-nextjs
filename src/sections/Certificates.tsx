@@ -17,7 +17,7 @@ export default function Certificates() {
 
     return (
         <section id="certificates">
-            <div className="section-max">
+            <div className="container">
                 <h2 className="section-title">{t.certificates.eyebrow}</h2>
                 <div className="portfolio-grid">
                     {coursesData.specializations.map((spec) => (

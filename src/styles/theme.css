@@ -215,8 +215,8 @@ button:focus-visible {
     z-index: 0;
 }
 
-.section-max {
-    max-width: 1180px;
+.container {
+    max-width: 768px;
     margin: 0 auto;
 }
 
@@ -243,19 +243,19 @@ button:focus-visible {
 .section-title {
     font-family: var(--font-outfit), sans-serif;
     font-weight: 800;
-    font-size: clamp(32px, 4vw, 48px);
+    font-size: clamp(24px, 4vw, 30px);
     letter-spacing: -0.03em;
     color: var(--text-primary);
     line-height: 1.1;
 }
 
 section {
-    padding: 80px 24px;
+    padding: 64px 24px;
     overflow-x: clip;
 }
 
 @media (max-width: 480px) {
     section {
-        padding: 60px 24px;
+        padding: 48px 24px;
     }
 }

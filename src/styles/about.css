@@ -37,33 +37,6 @@
     align-items: center;
 }
 
-.bento-profile-frame {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 1/1;
-    overflow: hidden;
-    display: block;
-}
-
-.bento-profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.bento-card--profile:hover .bento-profile-img {
-    transform: scale(1.04);
-}
-
-@media (max-width: 768px) {
-    .bento-profile-img {
-        object-position: bottom center;
-    }
-}
-
 .bento-profile-location {
     position: absolute;
     bottom: 20px;
@@ -86,30 +59,6 @@
 
 .bento-location-icon {
     color: var(--accent-blue);
-}
-
-/* Identity Block (inside bio card) */
-.bento-id-head {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.bento-id-name {
-    font-family: var(--font-outfit), sans-serif;
-    font-size: clamp(18px, 2.5vw, 32px);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    color: var(--text-primary);
-    margin: 0;
-}
-
-.bento-id-role {
-    font-family: var(--font-sans);
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--accent-blue);
-    margin: 0;
 }
 
 /* Bio Card Specifics */
@@ -207,7 +156,7 @@
 }
 
 .bento-title-icon {
-    color: var(--accent-blue);
+    color: var(--text-secondary);
 }
 
 .bento-education-list {
@@ -373,13 +322,8 @@
         grid-template-columns: minmax(220px, 300px) 1fr;
     }
 
-    .bento-card--profile {
-        grid-column: 1 / 2;
-        grid-row: 1 / 3;
-    }
-
     .bento-card--bio {
-        grid-column: 2 / 3;
+        grid-column: 1 / 3;
         grid-row: 1 / 3;
     }
 

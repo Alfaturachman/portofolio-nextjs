@@ -152,11 +152,11 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    padding: 14px 20px;
+    padding: 10px 16px;
     background: var(--card-bg);
-    border-radius: 16px;
+    border-radius: 12px;
     font-family: var(--font-jakarta), sans-serif;
-    font-size: 0.95rem;
+    font-size: 14px;
     font-weight: 600;
     color: var(--text-primary);
     transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
@@ -172,8 +172,8 @@
 }
 
 .tool-icon img {
-    width: 1em;
-    height: 1em;
+    width: 14px;
+    height: 14px;
     object-fit: contain;
 }
 

@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 24px;
-    margin-top: 56px;
+    margin-top: 32px;
 }
 
 /* Bento Cards: Apple HIG Premium Card Aesthetic */
@@ -97,7 +97,7 @@
 
 .bento-id-name {
     font-family: var(--font-outfit), sans-serif;
-    font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+    font-size: clamp(18px, 2.5vw, 32px);
     font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--text-primary);
@@ -116,13 +116,13 @@
 .bento-card--bio {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
 }
 
 .bento-bio-body {
     font-family: var(--font-sans);
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.6;
     color: var(--text-secondary);
     display: flex;
     flex-direction: column;
@@ -137,7 +137,7 @@
 /* Focus Card Specifics */
 .bento-card-title {
     font-family: var(--font-outfit), sans-serif;
-    font-size: 21px;
+    font-size: 22px;
     font-weight: 700;
     color: var(--text-primary);
     margin: 0 0 20px 0;

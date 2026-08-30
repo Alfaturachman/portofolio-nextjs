@@ -185,7 +185,7 @@
 /* ----- Side Description ----- */
 .hero-description {
     font-family: var(--font-sans);
-    font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+    font-size: clamp(14px, 1.4vw, 18px);
     line-height: 1.7;
     color: var(--text-secondary);
     margin: 0;

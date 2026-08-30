@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
-    margin-top: 56px;
+    margin-top: 32px;
 }
 
 @media (max-width: 1024px) {
@@ -24,7 +24,7 @@
 
 /* ----- View All Projects Redesign ----- */
 .portfolio-view-all-container {
-    margin-top: 56px;
+    margin-top: 32px;
     display: flex;
     justify-content: center;
     width: 100%;

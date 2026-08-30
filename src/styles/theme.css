@@ -243,7 +243,7 @@ button:focus-visible {
 .section-title {
     font-family: var(--font-outfit), sans-serif;
     font-weight: 800;
-    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-size: clamp(32px, 4vw, 48px);
     letter-spacing: -0.03em;
     color: var(--text-primary);
     line-height: 1.1;

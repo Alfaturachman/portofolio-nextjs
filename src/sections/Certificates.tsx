@@ -37,27 +37,7 @@ export default function Certificates() {
                                 />
                             </div>
                             <div className="project-content">
-                                <div className="project-tags">
-                                    <span className="project-tag">
-                                        <FontAwesomeIcon icon={faBuilding} />{' '}
-                                        {spec.provider}
-                                    </span>
-                                    <span className="project-tag">
-                                        <FontAwesomeIcon icon={faCalendarAlt} />{' '}
-                                        2026
-                                    </span>
-                                    <span className="project-tag">
-                                        <FontAwesomeIcon icon={faBookOpen} />{' '}
-                                        {
-                                            coursesData.courses.filter(
-                                                (c) =>
-                                                    c.specializationId ===
-                                                    spec.id,
-                                            ).length
-                                        }{' '}
-                                        {t.certificates.coursesTag}
-                                    </span>
-                                </div>
+
                                 <h3 className="project-title">{spec.title}</h3>
                                 <p className="project-desc">
                                     {t.certificates.certDescPre}

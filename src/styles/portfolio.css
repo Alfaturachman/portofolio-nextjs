@@ -155,7 +155,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding: 16px 16px 16px;
+    padding: 20px;
 }
 
 .project-tags {
@@ -264,8 +264,8 @@
 }
 
 .project-arrow {
-    width: 44px;
-    height: 44px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     background: var(--bg-primary);
     display: flex;

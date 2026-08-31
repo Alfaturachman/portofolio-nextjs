@@ -4,7 +4,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 64px 24px 32px;
+    margin-top: 64px;
+    padding: 0px 24px 32px;
     position: relative;
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
@@ -243,7 +244,8 @@
 
 @media (max-width: 600px) {
     #footer {
-        padding: 32px 24px 24px;
+        margin-top: 24px;
+        padding: 0px 24px 24px;
     }
 
     .footer-hero-heading {

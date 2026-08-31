@@ -33,14 +33,14 @@
 .btn-view-all {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 14px 28px;
+    padding: 4px 16px;
+    max-height: 40px;
     border-radius: 99px;
     background: var(--card-bg);
     color: var(--text-primary);
     font-family: var(--font-sans);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
     transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     position: relative;
@@ -70,11 +70,10 @@
 .btn-view-all-circle {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: var(--accent-blue-soft);
     color: var(--accent-blue);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
@@ -98,13 +97,15 @@
 }
 
 .btn-view-all:hover .btn-view-all-circle {
-    background: #ffffff;
-    color: var(--accent-blue);
-    transform: translateX(4px);
+    color: white;
+}
+
+.btn-view-all-circle svg {
+    transform: rotate(-45deg);
 }
 
 .btn-view-all:hover .btn-view-all-circle svg {
-    transform: scale(1.1);
+    transform: rotate(0deg) scale(1.1);
 }
 
 .project-card {
@@ -243,9 +244,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 16px;
     margin-top: auto;
-    border-top: 1px solid var(--border-subtle);
     text-decoration: none;
 }
 

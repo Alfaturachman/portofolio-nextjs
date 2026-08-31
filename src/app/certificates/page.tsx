@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function CertificatesPage() {
     return (
-        <div style={{ marginTop: '32px' }}>
+        <div style={{ marginTop: '8px' }}>
             <Certificates>
                 <Breadcrumb items={[{ label: 'Certificates' }]} />
             </Certificates>

@@ -1,7 +1,6 @@
 /* ----- Detail Page ----- */
 #detail-header {
     padding-top: 120px;
-    padding-bottom: 80px;
     background: var(--bg-primary);
 }
 
@@ -741,7 +740,7 @@
 }
 
 .next-project-section {
-    padding: 80px 24px;
+    padding: 80px 24px 0px;
 }
 
 .next-project-nav {

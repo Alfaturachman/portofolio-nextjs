@@ -12,18 +12,19 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { useI18n } from '@/lib/i18n/i18n-context';
 
-export default function Certificates() {
+export default function Certificates({ children }: { children?: React.ReactNode }) {
     const { t } = useI18n();
 
     return (
         <section id="certificates">
             <div className="container">
+                {children}
                 <h2 className="section-title">{t.certificates.eyebrow}</h2>
                 <div className="portfolio-grid">
                     {coursesData.specializations.map((spec) => (
                         <Link
                             key={spec.id}
-                            href={`/${spec.id}`}
+                            href={`/certificates/${spec.id}`}
                             className="project-card cert-card"
                             aria-label={`${t.certificates.viewSpecAria}${spec.title}`}
                         >

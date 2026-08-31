@@ -13,7 +13,6 @@ import {
     faExternalLinkAlt,
     faCertificate,
     faInfoCircle,
-    faList,
 } from '@fortawesome/free-solid-svg-icons';
 
 export async function generateStaticParams() {
@@ -34,7 +33,7 @@ export async function generateMetadata({
     };
 }
 
-export default async function CoursesPage({
+export default async function CertificateDetailPage({
     params,
 }: {
     params: Promise<{ id: string }>;
@@ -52,7 +51,7 @@ export default async function CoursesPage({
             <div className="container">
                 <Breadcrumb
                     items={[
-                        { label: 'Certificates', href: '/#certificates' },
+                        { label: 'Certificates', href: '/certificates' },
                         { label: spec.title },
                     ]}
                 />

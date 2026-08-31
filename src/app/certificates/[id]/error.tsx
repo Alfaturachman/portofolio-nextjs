@@ -2,12 +2,12 @@
 
 import ErrorFallback from '@/components/ErrorFallback';
 
-export default function CoursesError({
+export default function CertificateDetailError({
     error,
     reset,
 }: {
     error: Error & { digest?: string };
     reset: () => void;
 }) {
-    return <ErrorFallback error={error} reset={reset} moduleName="Courses" />;
+    return <ErrorFallback error={error} reset={reset} moduleName="Certificates" />;
 }

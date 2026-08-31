@@ -2,9 +2,10 @@
 
 import { skillsCategories } from '@/lib/experiences';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useI18n } from '@/lib/i18n/i18n-context';
 
 const toolIcons: Record<string, string> = {
@@ -32,7 +33,13 @@ const toolIcons: Record<string, string> = {
     'adobe-illustrator-cc': '/assets/images/logo/adobe-illustrator-cc.svg',
 };
 
-export default function Skills() {
+export default function Skills({
+    preview = false,
+    children,
+}: {
+    preview?: boolean;
+    children?: React.ReactNode;
+}) {
     const [expanded, setExpanded] = useState<Set<number>>(new Set());
     const { t } = useI18n();
 
@@ -48,69 +55,134 @@ export default function Skills() {
         });
     };
 
+    const allTools = skillsCategories.flatMap((cat) => cat.tools);
+
+    const renderMarquee = () => (
+        <div className="skills-marquee" aria-hidden="true">
+            <div className="skills-marquee-track">
+                {[...allTools, ...allTools].map((tool, i) => (
+                    <div className="tool-pill" key={`${tool.name}-${i}`}>
+                        <span className="tool-icon">
+                            {toolIcons[tool.icon] ? (
+                                <Image
+                                    src={toolIcons[tool.icon]}
+                                    alt={tool.name}
+                                    width={16}
+                                    height={16}
+                                />
+                            ) : (
+                                <i className={`fab fa-${tool.icon}`} />
+                            )}
+                        </span>
+                        {tool.name}
+                    </div>
+                ))}
+            </div>
+            <div className="skills-marquee-track reverse">
+                {[...allTools, ...allTools].map((tool, i) => (
+                    <div className="tool-pill" key={`${tool.name}-r${i}`}>
+                        <span className="tool-icon">
+                            {toolIcons[tool.icon] ? (
+                                <Image
+                                    src={toolIcons[tool.icon]}
+                                    alt={tool.name}
+                                    width={16}
+                                    height={16}
+                                />
+                            ) : (
+                                <i className={`fab fa-${tool.icon}`} />
+                            )}
+                        </span>
+                        {tool.name}
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+
     return (
         <section id="skills">
             <div className="container">
+                {children}
                 <h2 className="section-title">{t.skills.eyebrow}</h2>
-                <div className="skills-wrapper">
-                    {skillsCategories.map((cat, idx) => {
-                        const isExpanded = expanded.has(idx);
-                        // ponytail: fallback keeps a new category visible in EN
-                        // until its translation is added to skills.json
-                        const translated = t.skills.categories[idx];
-                        return (
-                            <div className="skill-category" key={cat.title}>
-                                <button
-                                    className="category-header"
-                                    onClick={() => toggleCategory(idx)}
-                                    aria-expanded={isExpanded}
-                                >
-                                    <div>
-                                        <h3 className="category-title">
-                                            {translated?.title ?? cat.title}
-                                        </h3>
-                                        <p className="category-desc">
-                                            {translated?.desc ?? cat.desc}
-                                        </p>
-                                    </div>
-                                    <div
-                                        className={`category-chevron${isExpanded ? ' is-expanded' : ''}`}
+                {preview ? (
+                    renderMarquee()
+                ) : (
+                    <div className="skills-wrapper">
+                        {skillsCategories.map((cat, idx) => {
+                            const isExpanded = expanded.has(idx);
+                            // ponytail: fallback keeps a new category visible in EN
+                            // until its translation is added to skills.json
+                            const translated = t.skills.categories[idx];
+                            return (
+                                <div className="skill-category" key={cat.title}>
+                                    <button
+                                        className="category-header"
+                                        onClick={() => toggleCategory(idx)}
+                                        aria-expanded={isExpanded}
                                     >
-                                        <FontAwesomeIcon icon={faChevronDown} />
-                                    </div>
-                                </button>
-                                <div
-                                    className={`category-tools${isExpanded ? ' is-expanded' : ''}`}
-                                >
-                                    {cat.tools.map((tool) => (
-                                        <div
-                                            className="tool-pill"
-                                            key={tool.name}
-                                        >
-                                            <span className="tool-icon">
-                                                {toolIcons[tool.icon] ? (
-                                                    <Image
-                                                        src={
-                                                            toolIcons[tool.icon]
-                                                        }
-                                                        alt={tool.name}
-                                                        width={24}
-                                                        height={24}
-                                                    />
-                                                ) : (
-                                                    <i
-                                                        className={`fab fa-${tool.icon}`}
-                                                    />
-                                                )}
-                                            </span>
-                                            {tool.name}
+                                        <div>
+                                            <h3 className="category-title">
+                                                {translated?.title ?? cat.title}
+                                            </h3>
+                                            <p className="category-desc">
+                                                {translated?.desc ?? cat.desc}
+                                            </p>
                                         </div>
-                                    ))}
+                                        <div
+                                            className={`category-chevron${isExpanded ? ' is-expanded' : ''}`}
+                                        >
+                                            <FontAwesomeIcon icon={faChevronDown} />
+                                        </div>
+                                    </button>
+                                    <div
+                                        className={`category-tools${isExpanded ? ' is-expanded' : ''}`}
+                                    >
+                                        {cat.tools.map((tool) => (
+                                            <div
+                                                className="tool-pill"
+                                                key={tool.name}
+                                            >
+                                                <span className="tool-icon">
+                                                    {toolIcons[tool.icon] ? (
+                                                        <Image
+                                                            src={
+                                                                toolIcons[
+                                                                    tool.icon
+                                                                ]
+                                                            }
+                                                            alt={tool.name}
+                                                            width={24}
+                                                            height={24}
+                                                        />
+                                                    ) : (
+                                                        <i
+                                                            className={`fab fa-${tool.icon}`}
+                                                        />
+                                                    )}
+                                                </span>
+                                                {tool.name}
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
+                            );
+                        })}
+                    </div>
+                )}
+                {preview && (
+                    <div className="portfolio-view-all-container">
+                        <Link href="/skills" className="btn-view-all">
+                            <span>{t.skills.viewAll}</span>
+                            <div className="btn-view-all-circle">
+                                <FontAwesomeIcon
+                                    icon={faArrowRight}
+                                    className="btn-icon"
+                                />
                             </div>
-                        );
-                    })}
-                </div>
+                        </Link>
+                    </div>
+                )}
             </div>
         </section>
     );

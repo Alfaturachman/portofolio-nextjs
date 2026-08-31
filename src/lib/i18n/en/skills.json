@@ -2,18 +2,31 @@
     "eyebrow": "Skills",
     "titleLine1": "Tools & technologies",
     "titleLine2": "I master",
+    "viewAll": "View all skills",
     "categories": [
         {
-            "title": "Frontend Architecture",
-            "desc": "Building responsive and maintainable user interfaces using modern web technologies and component-based development."
+            "title": "Languages",
+            "desc": "Core programming languages used across frontend, backend, and mobile development."
         },
         {
-            "title": "Backend & APIs",
-            "desc": "Developing server-side applications, RESTful APIs, and relational database systems for web applications."
+            "title": "Frontend",
+            "desc": "Component-based UI frameworks for building modern web interfaces."
         },
         {
-            "title": "Mobile & Platform Tooling",
-            "desc": "Working with mobile development, version control, containerization, and design tools across different projects."
+            "title": "Backend",
+            "desc": "Server-side frameworks for building RESTful APIs and web applications."
+        },
+        {
+            "title": "Database",
+            "desc": "Relational database systems for data storage and management."
+        },
+        {
+            "title": "Infrastructure",
+            "desc": "Version control, collaboration, and containerization tooling."
+        },
+        {
+            "title": "Tools",
+            "desc": "Design and prototyping tools for UI/UX workflows."
         }
     ]
 }

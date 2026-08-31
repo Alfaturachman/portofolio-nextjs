@@ -16,7 +16,7 @@ export default function Home() {
             <PortfolioSection limit={2} />
             <Experience />
             <Certificates />
-            <Skills />
+            <Skills preview />
             {/* <Contact /> */}
         </>
     );

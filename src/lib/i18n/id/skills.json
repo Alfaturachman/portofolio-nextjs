@@ -2,18 +2,31 @@
     "eyebrow": "Keahlian",
     "titleLine1": "Teknologi & alat",
     "titleLine2": "yang saya kuasai",
+    "viewAll": "Lihat semua keahlian",
     "categories": [
         {
-            "title": "Arsitektur Frontend",
-            "desc": "Membangun antarmuka pengguna yang responsif dan mudah dirawat dengan teknologi web modern dan pengembangan berbasis komponen."
+            "title": "Bahasa Pemrograman",
+            "desc": "Bahasa inti pemrograman yang digunakan di frontend, backend, dan mobile development."
         },
         {
-            "title": "Backend & API",
-            "desc": "Mengembangkan aplikasi sisi server, RESTful API, dan sistem basis data relasional untuk aplikasi web."
+            "title": "Frontend",
+            "desc": "Framework UI berbasis komponen untuk membangun antarmuka web modern."
         },
         {
-            "title": "Mobile & Tools Platform",
-            "desc": "Bekerja dengan pengembangan mobile, version control, containerization, dan tools desain di berbagai proyek."
+            "title": "Backend",
+            "desc": "Framework sisi server untuk membangun RESTful API dan aplikasi web."
+        },
+        {
+            "title": "Database",
+            "desc": "Sistem basis data relasional untuk penyimpanan dan pengelolaan data."
+        },
+        {
+            "title": "Infrastruktur",
+            "desc": "Version control, kolaborasi, dan containerization."
+        },
+        {
+            "title": "Tools",
+            "desc": "Tools desain dan prototyping untuk alur kerja UI/UX."
         }
     ]
 }

@@ -31,43 +31,60 @@ export const experiences: Experience[] = [
 
 export const skillsCategories = [
     {
-        title: 'Frontend Architecture',
-        desc: 'Building responsive and maintainable user interfaces using modern web technologies and component-based development.',
+        title: 'Languages',
+        desc: 'Core programming languages used across frontend, backend, and mobile development.',
         tools: [
             { name: 'HTML', icon: 'html' },
             { name: 'CSS', icon: 'css' },
-            { name: 'Tailwind CSS', icon: 'tailwind' },
             { name: 'JavaScript', icon: 'javascript' },
             { name: 'TypeScript', icon: 'typescript' },
+            { name: 'Python', icon: 'python' },
+            { name: 'PHP', icon: 'php' },
+            { name: 'Kotlin', icon: 'kotlin' },
+            { name: 'Java', icon: 'java' },
+        ],
+    },
+    {
+        title: 'Frontend',
+        desc: 'Component-based UI frameworks for building modern web interfaces.',
+        tools: [
+            { name: 'Tailwind CSS', icon: 'tailwind' },
             { name: 'React', icon: 'react' },
             { name: 'Next.js', icon: 'nextjs' },
         ],
     },
     {
-        title: 'Backend & APIs',
-        desc: 'Developing server-side applications, RESTful APIs, and relational database systems for web applications.',
+        title: 'Backend',
+        desc: 'Server-side frameworks for building RESTful APIs and web applications.',
         tools: [
             { name: 'Node.js', icon: 'nodejs' },
-            { name: 'Python', icon: 'python' },
             { name: 'Django', icon: 'django' },
-            { name: 'PHP', icon: 'php' },
             { name: 'Laravel', icon: 'laravel' },
             { name: 'CodeIgniter', icon: 'codeigniter' },
+        ],
+    },
+    {
+        title: 'Database',
+        desc: 'Relational database systems for data storage and management.',
+        tools: [
             { name: 'MySQL', icon: 'mysql' },
             { name: 'PostgreSQL', icon: 'postgresql' },
         ],
     },
     {
-        title: 'Mobile & Platform Tooling',
-        desc: 'Working with mobile development, version control, containerization, and design tools across different projects.',
+        title: 'Infrastructure',
+        desc: 'Version control, collaboration, and containerization tooling.',
         tools: [
-            { name: 'Kotlin', icon: 'kotlin' },
-            { name: 'Java', icon: 'java' },
             { name: 'Git', icon: 'git' },
             { name: 'GitHub', icon: 'github' },
             { name: 'Docker', icon: 'docker' },
+        ],
+    },
+    {
+        title: 'Tools',
+        desc: 'Design and prototyping tools for UI/UX workflows.',
+        tools: [
             { name: 'Figma', icon: 'figma' },
-            // { name: 'Adobe Illustrator', icon: 'adobe-illustrator-cc' },
         ],
     },
 ];

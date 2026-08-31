@@ -1,54 +1,70 @@
 /* ===== Hero Section ===== */
 
-/* ----- Background Pattern ----- */
-.hero-bg-pattern {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background-image: radial-gradient(circle, var(--border-subtle) 1px, transparent 1px);
-    background-size: 32px 32px;
-    opacity: 0.5;
-    mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black, transparent);
-    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black, transparent);
-}
-
-[data-theme='dark'] .hero-bg-pattern {
-    opacity: 0.3;
-}
-
 /* ----- Section Base ----- */
 #home {
     display: flex;
     align-items: flex-start;
     position: relative;
     overflow: clip;
-    padding: 120px 48px 24px;
+    padding: 56px 48px 24px;
     background: var(--bg-primary);
 }
 
 #home .container {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
     width: 100%;
 }
 
 /* ----- Profile Row (avatar + identity side by side) ----- */
 .hero-profile-row {
+    width: 100%;
+}
+
+/* Twitter/X-style cover header */
+.hero-banner {
+    margin-top: 32px;
+    border-radius: 24px;
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+}
+
+.hero-banner-img {
+    object-fit: cover;
+}
+
+.hero-profile-body {
     display: flex;
-    align-items: center;
-    gap: 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 0px 24px 0px;
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        border-radius: 16px;
+        margin: 24px 16px 0px;
+        height: 132px;
+        max-width: 420px;
+    }
 }
 
 /* ----- Square Avatar ----- */
 .hero-avatar-wrap {
     flex-shrink: 0;
+    position: relative;
+    z-index: 1;
     width: 160px;
     height: 160px;
-    border-radius: 14px;
+    border-radius: 32px;
     overflow: hidden;
     box-shadow: 0 4px 20px var(--shadow-card);
     transition: border-color 0.2s, box-shadow 0.2s;
+    /* Overlap the banner's bottom edge by ~50% (half the avatar height) */
+    margin-top: -80px;
 }
 
 .hero-avatar {
@@ -60,14 +76,14 @@
 
 /* ----- Identity Block ----- */
 .hero-identity {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 6px;
 }
 
 .hero-name {
     font-family: var(--font-outfit), sans-serif;
-    font-size: clamp(22px, 3vw, 30px);
+    font-size: clamp(18px, 3vw, 28px);
     font-weight: 700;
     letter-spacing: -0.025em;
     color: var(--text-primary);
@@ -90,7 +106,7 @@
     font-family: var(--font-outfit), sans-serif;
     font-size: 14px;
     color: var(--text-muted);
-    margin: 0;
+    margin-top: 8px;
 }
 
 /* ----- Social Links ----- */
@@ -98,7 +114,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-top: 8px;
+    margin-top: 16px;
 }
 
 .hero-social-link {
@@ -149,26 +165,27 @@
 }
 
 .hero-cta-primary {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 160px;
-    height: 44px;
-    padding: 0 24px;
-    border-radius: 10px;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 10px 16px;
+    border-radius: 12px;
     background: var(--accent);
     color: var(--inverse-text);
-    font-family: var(--font-outfit), sans-serif;
+    font-family: var(--font-jakarta), sans-serif;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
-    transition: background 0.2s, transform 0.18s, box-shadow 0.2s;
-    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
 }
 
 .hero-cta-primary:hover {
     background: var(--accent-blue);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 91, 219, 0.2);
 }
 
 [data-theme='dark'] .hero-cta-primary {
@@ -206,36 +223,30 @@
 }
 
 /* ----- Responsive ----- */
-@media (max-width: 1024px) {
-    #home {
-        padding: 112px 32px 80px;
-    }
-}
-
 @media (max-width: 768px) {
     #home {
-        padding: 112px 24px 64px;
+        padding: 56px 24px 64px;
     }
 
-    .hero-profile-row {
+    .hero-profile-body {
         gap: 20px;
     }
 
     .hero-avatar-wrap {
         width: 120px;
         height: 120px;
+        margin-top: -60px;
     }
 }
 
 @media (max-width: 480px) {
     #home {
-        padding: 112px 24px 16px;
+        padding: 56px 0px 16px;
     }
 
-    .hero-profile-row {
-        flex-direction: column;
-        align-items: flex-start;
+    .hero-profile-body {
         gap: 16px;
+        padding: 0px 32px 0px;
     }
 
     .hero-cta-row {
@@ -246,6 +257,19 @@
     .hero-cta-primary {
         justify-content: center;
         width: 100%;
+    }
+
+    .hero-avatar-wrap {
+        width: 112px;
+        height: 112px;
+        border-radius: 24px;
+        margin-top: -56px;
+    }
+
+    .hero-social-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
     }
 }
 

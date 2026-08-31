@@ -53,58 +53,67 @@ export default function Hero() {
 
     return (
         <section id="home" aria-label="Introduction">
-            <div className="hero-bg-pattern" aria-hidden="true" />
             <div className="container">
                 {/* Profile card row */}
                 <div className="hero-profile-row hero-fade-in-1">
-                    {/* Square profile photo */}
-                    <div className="hero-avatar-wrap">
+                    {/* Banner (aurora blobs + base image) */}
+                    <div className="hero-banner" aria-hidden="true">
                         <Image
-                            src="/assets/images/profile/profile_almavi.PNG"
-                            alt="Alfaturachman Maulana Pahlevi"
-                            width={120}
-                            height={120}
-                            className="hero-avatar"
+                            src="/assets/images/banner/atmosphere.png"
+                            alt=""
+                            fill
+                            sizes="100vw"
                             priority
+                            className="hero-banner-img"
                         />
                     </div>
 
-                    {/* Identity block */}
-                    <div className="hero-identity">
-                        <h1 className="hero-name">Alfaturachman Maulana Pahlevi</h1>
-                        <p className="hero-role">{t.hero.role}</p>
-                        <p className="hero-location">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
-                                <circle cx="12" cy="10" r="3" />
-                            </svg>
-                            Semarang, Indonesia
-                        </p>
+                    {/* Profile body */}
+                    <div className="hero-profile-body">
+                        <div className="hero-avatar-wrap">
+                            <Image
+                                src="/assets/images/profile/profile_almavi.PNG"
+                                alt="Alfaturachman Maulana Pahlevi"
+                                width={120}
+                                height={120}
+                                className="hero-avatar"
+                                priority
+                            />
+                        </div>
 
-                        {/* Social links */}
-                        <nav className="hero-socials" aria-label="Social media links">
-                            {socials.map((s) => (
-                                <a
-                                    key={s.id}
-                                    id={`hero-social-${s.id}`}
-                                    href={s.href}
-                                    target={s.href.startsWith('mailto') ? undefined : '_blank'}
-                                    rel={s.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-                                    className="hero-social-link"
-                                    aria-label={s.label}
-                                >
-                                    {s.icon}
-                                </a>
-                            ))}
-                        </nav>
+                        <div className="hero-identity">
+                            <h1 className="hero-name">Alfaturachman Maulana Pahlevi</h1>
+                            <p className="hero-role">{t.hero.role}</p>
+                            <p className="hero-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                    <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                Semarang, Indonesia
+                            </p>
+
+                            <nav className="hero-socials" aria-label="Social media links">
+                                {socials.map((s) => (
+                                    <a
+                                        key={s.id}
+                                        id={`hero-social-${s.id}`}
+                                        href={s.href}
+                                        target={s.href.startsWith('mailto') ? undefined : '_blank'}
+                                        rel={s.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+                                        className="hero-social-link"
+                                        aria-label={s.label}
+                                    >
+                                        {s.icon}
+                                    </a>
+                                ))}
+                            </nav>
+
+                            {/* CTA */}
+                            <Link href="/portfolio" className="hero-cta-primary" id="hero-cta-projects">
+                                {t.hero.ctaProjects}
+                            </Link>
+                        </div>
                     </div>
-                </div>
-
-                {/* CTA row */}
-                <div className="hero-cta-row hero-fade-in-3">
-                    <Link href="/portfolio" className="hero-cta-primary" id="hero-cta-projects">
-                        {t.hero.ctaProjects}
-                    </Link>
                 </div>
             </div>
         </section>

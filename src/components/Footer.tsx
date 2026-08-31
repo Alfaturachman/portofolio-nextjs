@@ -61,7 +61,7 @@ export default function Footer() {
                                 <span>GitHub</span>
                             </a>
                             <a
-                                href="https://www.linkedin.com/in/alfaturachman-maulana-pahlevi-4981302b6/"
+                                href="https://www.linkedin.com/in/alfaturachman-maulana-pahlevi/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="footer-social-link"

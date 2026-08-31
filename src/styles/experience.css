@@ -37,14 +37,14 @@
 }
 
 .experience-line {
-    width: 1px;
+    width: 0;
     flex-grow: 1;
-    background-color: #e5e7eb;
-    margin-top: 6px;
+    border-left: 2px dashed #e5e7eb;
+    margin-top: 8px;
 }
 
 [data-theme="dark"] .experience-line {
-    background-color: #374151;
+    border-color: #374151;
 }
 
 .experience-content-wrapper {

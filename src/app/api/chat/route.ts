@@ -122,7 +122,7 @@ About Alfaturachman:
 - Status: National Finalist at PIMNAS 38
 - Email: alfaturachmanpahlevi@gmail.com
 - GitHub: https://github.com/Alfaturachman
-- LinkedIn: https://www.linkedin.com/in/alfaturachman-maulana-pahlevi-4981302b6/
+- LinkedIn: https://www.linkedin.com/in/alfaturachman-maulana-pahlevi/
 
 Skills:
 ${skillsCategories.map((cat) => `${cat.title}: ${cat.tools.map((t) => t.name).join(', ')}`).join('\n')}

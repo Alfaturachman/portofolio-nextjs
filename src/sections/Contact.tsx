@@ -36,7 +36,7 @@ export default function Contact() {
                             />
                         </a>
                         <a
-                            href="https://www.linkedin.com/in/alfaturachman-maulana-pahlevi-4981302b6/"
+                            href="https://www.linkedin.com/in/alfaturachman-maulana-pahlevi/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="premium-link-item"

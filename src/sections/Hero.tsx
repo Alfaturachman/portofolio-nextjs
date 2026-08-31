@@ -17,7 +17,7 @@ const socials = [
     },
     {
         id: 'linkedin',
-        href: 'https://www.linkedin.com/in/alfaturachman-maulana-pahlevi-4981302b6/',
+        href: 'https://www.linkedin.com/in/alfaturachman-maulana-pahlevi/',
         label: 'LinkedIn',
         icon: (
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

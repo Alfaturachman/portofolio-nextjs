@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
     return (
-        <div style={{ marginTop: '60px' }}>
+        <div style={{ marginTop: '32px' }}>
             <PortfolioSection>
                 <Breadcrumb items={[{ label: 'Portfolio' }]} />
             </PortfolioSection>

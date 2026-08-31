@@ -104,7 +104,7 @@ export default function Navbar() {
 
     return (
         <nav ref={navRef} id="navbar" aria-label={t.navbar.mainNavAria}>
-            <div className="nav-inner glass">
+            <div className="nav-inner">
                 <Link
                     href="/"
                     className="nav-logo"

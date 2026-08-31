@@ -5,8 +5,7 @@
 }
 
 .chatbot-desktop-toggle {
-    padding: 12px 12px;
-    min-height: 44px;
+    padding: 8px;
     display: inline-flex;
     align-items: center;
     cursor: pointer;

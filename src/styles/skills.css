@@ -12,8 +12,7 @@
 
 .skill-category {
     display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 48px;
+    gap: 16px;
     align-items: start;
     padding-bottom: 48px;
     border-bottom: 1px solid var(--border-subtle);
@@ -35,6 +34,7 @@
 .category-header {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 12px;
     background: none;
     border: none;
@@ -89,8 +89,8 @@
     }
 
     .category-chevron {
-        width: 44px;
-        height: 44px;
+        width: 40px;
+        height: 40px;
         border-radius: 12px;
         background: white;
         display: flex;
@@ -152,7 +152,8 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    padding: 10px 16px;
+    height: 40px;
+    padding: 0 16px;
     background: var(--card-bg);
     border-radius: 12px;
     font-family: var(--font-jakarta), sans-serif;
@@ -168,12 +169,13 @@
 }
 
 .tool-icon {
-    font-size: 1.3rem;
+    display: inline-flex;
+    font-size: 16px;
 }
 
 .tool-icon img {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     object-fit: contain;
 }
 

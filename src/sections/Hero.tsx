@@ -105,9 +105,6 @@ export default function Hero() {
                     <Link href="/portfolio" className="hero-cta-primary" id="hero-cta-projects">
                         {t.hero.ctaProjects}
                     </Link>
-                    <Link href="/#about" className="hero-cta-ghost" id="hero-cta-about">
-                        {t.hero.ctaAbout}
-                    </Link>
                 </div>
             </div>
         </section>

@@ -70,6 +70,13 @@ export default function Footer() {
                                 <span>LinkedIn</span>
                             </a>
                             <a
+                                href="mailto:alfaturachmanpahlevi@gmail.com"
+                                className="footer-social-link"
+                            >
+                                <FontAwesomeIcon icon={faEnvelope} />
+                                <span>Email</span>
+                            </a>
+                            <a
                                 href="https://www.instagram.com/al.mavi/"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -77,13 +84,6 @@ export default function Footer() {
                             >
                                 <FontAwesomeIcon icon={faInstagram} />
                                 <span>Instagram</span>
-                            </a>
-                            <a
-                                href="mailto:alfaturachmanpahlevi@gmail.com"
-                                className="footer-social-link"
-                            >
-                                <FontAwesomeIcon icon={faEnvelope} />
-                                <span>Email</span>
                             </a>
                         </div>
                     </div>

@@ -131,7 +131,7 @@ export default async function DetailPage({
 
                                 {project.privacy === 'Private' && (
                                     <div className="project-alert">
-                                        <FontAwesomeIcon icon={faInfoCircle} />
+                                        <FontAwesomeIcon icon={faInfoCircle} style={{ marginTop: '4px' }} />
                                         <span>
                                             <Tx k="portfolio.detail.privateNotice" />
                                         </span>

@@ -62,14 +62,14 @@
 
 .category-title {
     font-family: var(--font-outfit), sans-serif;
-    font-size: 1.5rem;
+    font-size: clamp(20px, 2vw, 22px);
     font-weight: 800;
     color: var(--text-primary);
     letter-spacing: -0.02em;
 }
 
 .category-desc {
-    font-size: 0.95rem;
+    font-size: clamp(14px, 2vw, 16px);
     color: var(--text-secondary);
     line-height: 1.6;
 }

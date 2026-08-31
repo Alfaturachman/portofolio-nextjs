@@ -8,10 +8,11 @@ import {
     faFlask,
     faUniversity,
     faGraduationCap,
+    type IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
 import { useI18n } from '@/lib/i18n/i18n-context';
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, IconDefinition> = {
     briefcase: faBriefcase,
     flask: faFlask,
     university: faUniversity,

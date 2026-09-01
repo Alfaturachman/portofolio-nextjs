@@ -83,6 +83,7 @@
 
 .btn-view-all-circle svg {
     font-size: 12px;
+    transform: rotate(-45deg);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -100,29 +101,30 @@
     color: white;
 }
 
-.btn-view-all-circle svg {
-    transform: rotate(-45deg);
-}
-
 .btn-view-all:hover .btn-view-all-circle svg {
     transform: rotate(0deg) scale(1.1);
 }
 
 .project-card {
-    background: var(--card-bg);
-    border-radius: 24px 24px 0 0;
-    transition:
-        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex;
     flex-direction: column;
     height: 100%;
     overflow: hidden;
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .project-card:hover {
+    border-color: var(--border-slightly);
     transform: translateY(-2px);
+}
+
+[data-theme='dark'] .project-card:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 4px 20px rgba(59, 91, 219, 0.08);
 }
 
 .project-img-wrapper {
@@ -156,69 +158,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding-top: 16px;
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 16px;
-}
-
-.project-tag {
-    padding: 6px 14px;
-    border-radius: 100px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    background: var(--bg-primary);
-    color: var(--text-secondary);
-    border: 1px solid var(--border-lighter);
-    transition: all 0.3s ease;
-}
-
-.project-tag i {
-    margin-right: 4px;
-}
-
-.project-tag.type-badge.team {
-    color: var(--accent-blue);
-    border-color: rgba(59, 91, 219, 0.2);
-    background: var(--accent-blue-soft);
-}
-
-.project-tag.type-badge.freelance {
-    color: #d97706;
-    border-color: rgba(217, 119, 6, 0.2);
-    background: rgba(217, 119, 6, 0.1);
-}
-
-[data-theme='dark'] .project-tag.type-badge.freelance {
-    color: #fbbf24;
-    background: rgba(251, 191, 36, 0.1);
-    border-color: rgba(251, 191, 36, 0.15);
-}
-
-.project-card:hover .project-tag {
-    background: var(--card-bg);
-    border-color: var(--border-subtle);
-    color: var(--text-primary);
-}
-
-.project-card:hover .project-tag.type-badge.team {
-    background: var(--card-bg);
-    border-color: var(--border-subtle);
-    color: var(--accent-blue);
-}
-
-.project-card:hover .project-tag.type-badge.freelance {
-    background: var(--card-bg);
-    border-color: var(--border-subtle);
-    color: #d97706;
-}
-
-[data-theme='dark'] .project-card:hover .project-tag.type-badge.freelance {
-    color: #fbbf24;
+    padding: 20px;
 }
 
 .project-title {
@@ -235,57 +175,6 @@
     font-size: 14px;
     line-height: 1.6;
     color: var(--text-secondary);
-    margin-bottom: 16px;
     font-weight: 400;
     flex-grow: 1;
-}
-
-.project-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: auto;
-    text-decoration: none;
-}
-
-.project-link-text {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--text-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    opacity: 0.6;
-    transition: opacity 0.3s;
-}
-
-.project-card:hover .project-link-text {
-    opacity: 1;
-}
-
-.project-arrow {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: var(--bg-secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-primary);
-    font-size: 1rem;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.project-card:hover .project-arrow {
-    background: var(--accent-blue);
-    color: #fff;
-}
-
-.project-arrow-icon {
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    transform: rotate(-45deg);
-    font-size: 12px;
-}
-
-.project-card:hover .project-arrow-icon {
-    transform: rotate(0deg);
 }

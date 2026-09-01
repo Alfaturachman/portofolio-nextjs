@@ -84,17 +84,6 @@ function ProjectCard({
                         p.id
                     ] ?? p.cardDesc}
                 </p>
-                <div className="project-footer">
-                    <span className="project-link-text">
-                        {t.portfolio.cardViewDetails}
-                    </span>
-                    <div className="project-arrow">
-                        <FontAwesomeIcon
-                            icon={faArrowRight}
-                            className="project-arrow-icon"
-                        />
-                    </div>
-                </div>
             </div>
         </Link>
     );

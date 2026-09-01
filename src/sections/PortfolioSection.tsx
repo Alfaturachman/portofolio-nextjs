@@ -4,9 +4,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { projects } from '@/lib/projects';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useI18n } from '@/lib/i18n/i18n-context';
+import ViewAll from '@/components/ViewAll';
 
 export default function PortfolioSection({
     limit,
@@ -29,17 +28,10 @@ export default function PortfolioSection({
                     ))}
                 </div>
                 {limit && (
-                    <div className="portfolio-view-all-container">
-                        <Link href="/portfolio" className="btn-view-all">
-                            <span>{t.portfolio.viewAll}</span>
-                            <div className="btn-view-all-circle">
-                                <FontAwesomeIcon
-                                    icon={faArrowRight}
-                                    className="btn-icon"
-                                />
-                            </div>
-                        </Link>
-                    </div>
+                    <ViewAll
+                        href="/portfolio"
+                        label={t.portfolio.viewAll}
+                    />
                 )}
             </div>
         </section>

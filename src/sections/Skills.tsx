@@ -2,11 +2,11 @@
 
 import { skillsCategories } from '@/lib/experiences';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { useI18n } from '@/lib/i18n/i18n-context';
+import ViewAll from '@/components/ViewAll';
 
 const toolIcons: Record<string, string> = {
     html: '/assets/images/logo/html.svg',
@@ -165,17 +165,7 @@ export default function Skills({
                     </div>
                 )}
                 {preview && (
-                    <div className="portfolio-view-all-container">
-                        <Link href="/skills" className="btn-view-all">
-                            <span>{t.skills.viewAll}</span>
-                            <div className="btn-view-all-circle">
-                                <FontAwesomeIcon
-                                    icon={faArrowRight}
-                                    className="btn-icon"
-                                />
-                            </div>
-                        </Link>
-                    </div>
+                    <ViewAll href="/skills" label={t.skills.viewAll} />
                 )}
             </div>
         </section>

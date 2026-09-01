@@ -11,9 +11,19 @@ import {
     faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { useI18n } from '@/lib/i18n/i18n-context';
+import ViewAll from '@/components/ViewAll';
 
-export default function Certificates({ children }: { children?: React.ReactNode }) {
+export default function Certificates({
+    children,
+    limit,
+}: {
+    children?: React.ReactNode;
+    limit?: number;
+}) {
     const { t } = useI18n();
+    const displayedSpecs = limit
+        ? coursesData.specializations.slice(0, limit)
+        : coursesData.specializations;
 
     return (
         <section id="certificates">
@@ -21,7 +31,7 @@ export default function Certificates({ children }: { children?: React.ReactNode 
                 {children}
                 <h2 className="section-title">{t.certificates.eyebrow}</h2>
                 <div className="cert-list">
-                    {coursesData.specializations.map((spec) => (
+                    {displayedSpecs.map((spec) => (
                         <Link
                             key={spec.id}
                             href={`/certificates/${spec.id}`}
@@ -59,6 +69,12 @@ export default function Certificates({ children }: { children?: React.ReactNode 
                         </Link>
                     ))}
                 </div>
+                {limit && (
+                    <ViewAll
+                        href="/certificates"
+                        label={t.certificates.viewAll}
+                    />
+                )}
             </div>
         </section>
     );

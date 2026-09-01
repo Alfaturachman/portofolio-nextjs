@@ -22,8 +22,8 @@
     }
 }
 
-/* ----- View All Projects Redesign ----- */
-.portfolio-view-all-container {
+/* ----- View All Button ----- */
+.view-all-container {
     margin-top: 32px;
     display: flex;
     justify-content: center;

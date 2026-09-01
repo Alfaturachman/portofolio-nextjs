@@ -89,6 +89,10 @@
     gap: 6px;
 }
 
+.experience-org svg {
+    margin-top: -2px;
+}
+
 [data-theme="dark"] .experience-org {
     color: #d1d5db;
 }

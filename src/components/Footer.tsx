@@ -2,16 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faArrowRight,
-    faArrowUp,
-    faEnvelope,
-} from '@fortawesome/free-solid-svg-icons';
-import {
-    faGithub,
-    faLinkedin,
-    faInstagram,
-} from '@fortawesome/free-brands-svg-icons';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { useI18n } from '@/lib/i18n/i18n-context';
 
 export default function Footer() {
@@ -44,51 +35,6 @@ export default function Footer() {
     return (
         <footer id="footer" ref={footerRef}>
             <div className="footer-inner">
-                {/* Middle Connect Row */}
-                <div className="footer-mid-row">
-                    <div className="footer-connect-block">
-                        <p className="footer-connect-label">
-                            {t.footer.connectLabel}
-                        </p>
-                        <div className="footer-socials">
-                            <a
-                                href="https://github.com/Alfaturachman"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="footer-social-link"
-                            >
-                                <FontAwesomeIcon icon={faGithub} />
-                                <span>GitHub</span>
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/alfaturachman-maulana-pahlevi/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="footer-social-link"
-                            >
-                                <FontAwesomeIcon icon={faLinkedin} />
-                                <span>LinkedIn</span>
-                            </a>
-                            <a
-                                href="mailto:alfaturachmanpahlevi@gmail.com"
-                                className="footer-social-link"
-                            >
-                                <FontAwesomeIcon icon={faEnvelope} />
-                                <span>Email</span>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/al.mavi/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="footer-social-link"
-                            >
-                                <FontAwesomeIcon icon={faInstagram} />
-                                <span>Instagram</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
                 {/* Bottom Bar */}
                 <div className="footer-bottom-bar">
                     <span className="footer-copyright-text">

@@ -155,6 +155,7 @@
     height: 40px;
     padding: 0 16px;
     background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
     border-radius: 12px;
     font-family: var(--font-jakarta), sans-serif;
     font-size: 14px;

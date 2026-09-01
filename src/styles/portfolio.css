@@ -82,7 +82,7 @@
 }
 
 .btn-view-all-circle svg {
-    font-size: 0.85rem;
+    font-size: 12px;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -249,7 +249,7 @@
 }
 
 .project-link-text {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     color: var(--text-primary);
     text-transform: uppercase;
@@ -263,8 +263,8 @@
 }
 
 .project-arrow {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     background: var(--bg-primary);
     display: flex;
@@ -283,6 +283,7 @@
 .project-arrow-icon {
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     transform: rotate(-45deg);
+    font-size: 12px;
 }
 
 .project-card:hover .project-arrow-icon {

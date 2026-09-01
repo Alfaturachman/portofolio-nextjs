@@ -236,3 +236,11 @@ section {
         padding: 72px 24px 0;
     }
 }
+
+/* Route pages (e.g. /portfolio, /skills, [...]/[id]) wrap their sections
+   in .route-content. Reduce clear-space below the fixed navbar on the
+   FIRST/top section only (detail pages have a bottom nav section too). */
+.route-content > section:first-child {
+    --route-pad-top: 88px;
+    padding-top: var(--route-pad-top);
+}

@@ -47,6 +47,7 @@ export default async function CertificateDetailPage({
     );
 
     return (
+        <div className="route-content">
         <section id="courses-detail">
             <div className="container">
                 <Breadcrumb
@@ -212,5 +213,6 @@ export default async function CertificateDetailPage({
                 </div>
             </div>
         </section>
+        </div>
     );
 }

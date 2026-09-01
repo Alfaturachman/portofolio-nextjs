@@ -21,12 +21,14 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
     return (
-        <section id="blog-section" style={{ marginTop: '60px' }}>
+        <div className="route-content">
+            <section id="blog-section">
             <div className="container">
                 <Breadcrumb items={[{ label: 'Blog' }]} />
                 <BlogHeader />
                 <BlogFilter articles={articles} />
             </div>
         </section>
+        </div>
     );
 }

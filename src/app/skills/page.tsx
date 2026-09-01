@@ -14,10 +14,10 @@ export const metadata: Metadata = {
 
 export default function SkillsPage() {
     return (
-        <div style={{ marginTop: '8px' }}>
+        <div className="route-content">
             <Skills>
                 <Breadcrumb items={[{ label: 'Skills' }]} />
-            </ Skills>
+            </Skills>
         </div>
     );
 }

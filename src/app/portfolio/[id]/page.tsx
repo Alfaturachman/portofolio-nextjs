@@ -53,7 +53,7 @@ export default async function DetailPage({
     const isGithubLink = project.github && project.github !== '#';
 
     return (
-        <>
+        <div className="route-content">
             <section id="detail-header">
                 <div className="container">
                     <Breadcrumb
@@ -151,6 +151,6 @@ export default async function DetailPage({
                     />
                 </div>
             </section>
-        </>
+        </div>
     );
 }

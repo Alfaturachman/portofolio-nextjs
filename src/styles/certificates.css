@@ -32,8 +32,6 @@
 
 /* ----- Courses Detail Page ----- */
 #courses-detail {
-    padding-top: 120px;
-    padding-bottom: 80px;
     background: var(--bg-primary);
 }
 

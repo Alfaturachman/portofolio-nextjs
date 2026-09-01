@@ -1,6 +1,6 @@
 export default function DetailLoading() {
     return (
-        <>
+        <div className="route-content">
             <section id="detail-header">
                 <div className="container">
                     <div
@@ -108,6 +108,6 @@ export default function DetailLoading() {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     );
 }

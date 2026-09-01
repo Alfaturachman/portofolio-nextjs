@@ -4,6 +4,7 @@ import '@/styles/blog.css';
 
 export default function BlogDetailLoading() {
     return (
+        <div className="route-content">
         <section id="blog-detail-section">
             <div className="container">
                 <div className="breadcrumb" style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 24 }}>
@@ -51,5 +52,6 @@ export default function BlogDetailLoading() {
                 </div>
             </div>
         </section>
+        </div>
     );
 }

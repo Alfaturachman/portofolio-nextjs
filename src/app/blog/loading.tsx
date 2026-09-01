@@ -5,7 +5,8 @@ import '@/styles/blog.css';
 
 export default function BlogListLoading() {
     return (
-        <section id="blog-section" style={{ marginTop: '20px' }}>
+        <div className="route-content">
+        <section id="blog-section">
             <div className="container">
                 <div
                     className="breadcrumb"
@@ -144,5 +145,6 @@ export default function BlogListLoading() {
                 </div>
             </div>
         </section>
+        </div>
     );
 }

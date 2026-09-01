@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function CertificatesPage() {
     return (
-        <div style={{ marginTop: '8px' }}>
+        <div className="route-content">
             <Certificates>
                 <Breadcrumb items={[{ label: 'Certificates' }]} />
             </Certificates>

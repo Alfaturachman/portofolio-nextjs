@@ -41,6 +41,7 @@ export default async function BlogDetail({
     if (!article) notFound();
 
     return (
+        <div className="route-content">
         <section id="blog-detail-section">
             <div className="container pt-20">
                 <Breadcrumb
@@ -83,5 +84,6 @@ export default async function BlogDetail({
                 </div>
             </div>
         </section>
+        </div>
     );
 }

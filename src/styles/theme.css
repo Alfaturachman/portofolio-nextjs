@@ -134,20 +134,6 @@ html.has-custom-cursor button {
     top: 0;
 }
 
-.glass {
-    background: var(--glass-bg);
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    border: 1px solid var(--glass-border);
-}
-
-.glass-dark {
-    background: rgba(17, 24, 39, 0.7);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
 /* HIG: Visible focus indicators for keyboard navigation */
 :focus-visible {
     outline: 2px solid var(--accent-blue);
@@ -174,15 +160,6 @@ button:focus-visible {
 
     html {
         scroll-behavior: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .glass {
-        background: rgba(255, 255, 255, 0.85);
-    }
-    [data-theme='dark'] .glass {
-        background: rgba(17, 24, 39, 0.85);
     }
 }
 

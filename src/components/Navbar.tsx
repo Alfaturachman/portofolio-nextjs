@@ -103,6 +103,7 @@ export default function Navbar() {
     ];
 
     return (
+        <header className="nav-shell">
         <nav ref={navRef} id="navbar" aria-label={t.navbar.mainNavAria}>
             <div className="nav-inner">
                 <Link
@@ -217,32 +218,33 @@ export default function Navbar() {
                     </button>
                 </div>
             </div>
-            {isMenuOpen && (
-                <div
-                    className="mobile-overlay"
-                    onClick={closeMenu}
-                    aria-hidden="true"
-                />
-            )}
-            <div
-                ref={menuRef}
-                className={`mobile-menu glass${isMenuOpen ? ' open' : ''}`}
-                id="mobileMenu"
-                role="menu"
-                aria-label={t.navbar.menuAria}
-            >
-                {links.map((link) => (
-                    <a
-                        key={link.href}
-                        href={link.href}
-                        className={'mobile-link'}
-                        role="menuitem"
-                        onClick={(e) => handleNavClick(e, link.href)}
-                    >
-                        {link.label}
-                    </a>
-                ))}
-            </div>
         </nav>
+        {isMenuOpen && (
+            <div
+                className="mobile-overlay"
+                onClick={closeMenu}
+                aria-hidden="true"
+            />
+        )}
+        <div
+            ref={menuRef}
+            className={`mobile-menu${isMenuOpen ? ' open' : ''}`}
+            id="mobileMenu"
+            role="menu"
+            aria-label={t.navbar.menuAria}
+        >
+            {links.map((link) => (
+                <a
+                    key={link.href}
+                    href={link.href}
+                    className={'mobile-link'}
+                    role="menuitem"
+                    onClick={(e) => handleNavClick(e, link.href)}
+                >
+                    {link.label}
+                </a>
+            ))}
+        </div>
+        </header>
     );
 }

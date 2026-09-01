@@ -5,9 +5,13 @@ import ImageCarousel from '@/components/ImageCarousel';
 import Breadcrumb from '@/components/Breadcrumb';
 import ProjectMeta from '@/components/ProjectMeta';
 import Tx from '@/components/Tx';
+import StorySection from '@/components/StorySection';
 import NextProjectNav from '@/components/NextProjectNav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import {
+    faExternalLinkAlt,
+    faInfoCircle,
+} from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export async function generateStaticParams() {
@@ -65,28 +69,65 @@ export default async function DetailPage({
 
                     <h1 className="detail-title">{project.title}</h1>
 
+                    <p className="detail-intro">
+                        <Tx
+                            k={`portfolio.cardDescriptions.${project.id}`}
+                            fallback={project.cardDesc}
+                        />
+                    </p>
+
+                    <ProjectMeta project={project} />
+
                     <ImageCarousel
                         images={project.gallery}
                         title={project.title}
                     />
 
-                    <ProjectMeta project={project} />
-
                     <div className="detail-content-grid">
                         <div className="detail-main">
-                            <h2 className="detail-section-title">
-                                <Tx k="portfolio.detail.overview" />
-                            </h2>
-                            <p className="detail-text">
+                            <StorySection
+                                labelKey="portfolio.detail.sections.overview"
+                            >
                                 <Tx
                                     k={`portfolio.detail.descriptions.${project.id}`}
                                     fallback={project.desc}
                                 />
-                            </p>
-                        </div>
+                            </StorySection>
 
-                        <aside className="detail-sidebar">
-                            <div className="detail-sidebar-card">
+                            {project.problem && (
+                                <StorySection
+                                    labelKey="portfolio.detail.sections.problem"
+                                >
+                                    <Tx
+                                        k={`portfolio.detail.problems.${project.id}`}
+                                        fallback={project.problem}
+                                    />
+                                </StorySection>
+                            )}
+
+                            {project.solution && (
+                                <StorySection
+                                    labelKey="portfolio.detail.sections.solution"
+                                >
+                                    <Tx
+                                        k={`portfolio.detail.solutions.${project.id}`}
+                                        fallback={project.solution}
+                                    />
+                                </StorySection>
+                            )}
+
+                            {project.outcome && (
+                                <StorySection
+                                    labelKey="portfolio.detail.sections.outcome"
+                                >
+                                    <Tx
+                                        k={`portfolio.detail.outcomes.${project.id}`}
+                                        fallback={project.outcome}
+                                    />
+                                </StorySection>
+                            )}
+
+                            <aside className="detail-sidebar-card">
                                 <h3 className="detail-sidebar-title">
                                     <Tx k="portfolio.detail.technologies" />
                                 </h3>
@@ -131,14 +172,14 @@ export default async function DetailPage({
 
                                 {project.privacy === 'Private' && (
                                     <div className="project-alert">
-                                        <FontAwesomeIcon icon={faInfoCircle} style={{ marginTop: '4px' }} />
+                                        <FontAwesomeIcon icon={faInfoCircle} />
                                         <span>
                                             <Tx k="portfolio.detail.privateNotice" />
                                         </span>
                                     </div>
                                 )}
-                            </div>
-                        </aside>
+                            </aside>
+                        </div>
                     </div>
                 </div>
             </section>

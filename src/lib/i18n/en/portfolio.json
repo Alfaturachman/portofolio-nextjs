@@ -66,7 +66,12 @@
         }
     },
     "detail": {
-        "overview": "Overview",
+        "sections": {
+            "overview": "Overview",
+            "problem": "Problem",
+            "solution": "Solution",
+            "outcome": "Outcome"
+        },
         "technologies": "Technologies",
         "liveDemo": "Live Demo",
         "sourceCode": "Source Code",

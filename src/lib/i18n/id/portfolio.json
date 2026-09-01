@@ -66,7 +66,12 @@
         }
     },
     "detail": {
-        "overview": "Ringkasan",
+        "sections": {
+            "overview": "Ringkasan",
+            "problem": "Masalah",
+            "solution": "Solusi",
+            "outcome": "Hasil"
+        },
         "technologies": "Teknologi",
         "liveDemo": "Lihat Demo",
         "sourceCode": "Kode Sumber",
@@ -88,6 +93,51 @@
             "pusdataru-jateng": "Sistem informasi manajemen pengaduan berbasis web untuk Provinsi Jawa Tengah (Pusdataru Jateng) yang memungkinkan warga mengajukan, melacak, dan mengelola pengaduan publik secara digital. Dibangun dengan Laravel dan MySQL, sistem ini merapikan alur kerja mulai dari pengajuan pengaduan, verifikasi, penugasan ke dinas terkait, hingga pelacakan penyelesaian.",
             "sertifikasi": "Sistem Machine Learning end-to-end untuk skrining risiko stroke beserta portofolio visual eksekutif yang dikembangkan untuk asesmen Certified Data Scientist (BNSP). Dibangun menggunakan dataset klinis stroke dari Kaggle yang dikontekstualisasikan untuk program Posbindu PTM di Kota Semarang dengan metodologi CRISP-DM yang ketat dan 11 unit kompetensi SKKNI, proyek ini membangun pipeline preprocessing bebas kebocoran data. Sistem membandingkan 5 algoritma ML — mencapai F1-score Logistic Regression terbaik sebesar 0,6538 (+11,55% dari baseline literatur) — serta mengintegrasikan SHAP (SHapley Additive exPlanations) untuk interpretabilitas fitur klinis yang transparan.",
             "kireikies": "Website untuk toko Kireikies Cookies yang menampilkan katalog produk dan informasi toko. Proyek ini dibangun dengan fokus pada UI yang bersih dan pengalaman pengguna yang halus untuk memperkuat branding produk artisan."
+        },
+        "problems": {
+            "renstra-ft": "Fakultas belum memiliki sumber informasi terpusat untuk memantau capaian KPI dan beban kerja dosen, sehingga target strategis jangka panjang sulit dievaluasi secara konsisten.",
+            "portfolio-ft": "Dokumentasi mata kuliah di lingkungan Fakultas Teknik tersebar, sehingga silabus, materi, dan tugas sulit ditemukan, dilacak, dan dikelola versinya untuk keperluan akreditasi.",
+            "medical-checkup-ft": "Data kesehatan yang dikumpulkan anjungan kesehatan mandiri berbasis IoT belum memiliki sistem terpusat untuk penyimpanan, pemantauan, atau pelaporan.",
+            "atr-bpn-jateng": "Alur kerja surat resmi, disposisi, dan agenda masih dikelola manual, memperlambat proses administrasi internal dan distribusi informasi publik.",
+            "crumb-rubber": "Pencatatan bahan baku, produksi, dan stok masih manual, sehingga pabrik tidak memiliki visibilitas stok yang akurat secara real-time.",
+            "iconnet-monitoring": "Laporan gangguan layanan disampaikan melalui kanal informal, sehingga teknisi sulit melacak, memprioritaskan, dan menyelesaikan gangguan.",
+            "disnaker-agenda": "Penjadwalan dan pencatatan sesi mediasi antara pekerja dan pengusaha dikelola manual, sehingga pelacakan dan pelaporan menjadi rumit.",
+            "stedi": "Penilaian penyakit paru sangat bergantung pada interpretasi spesialis terhadap suara yang direkam, yang dapat memakan waktu dan bersifat subjektif.",
+            "posyandu": "Catatan tumbuh kembang dan imunisasi balita masih disimpan di Buku Pink manual, sehingga data sulit dicari, dilacak, dan dilaporkan.",
+            "nomadenstuff": "Thrift shop yang menjual barang unik satuan kesulitan mengelola reservasi, detail ukuran, dan ongkos kirim tanpa platform khusus.",
+            "pusdataru-jateng": "Pengaduan publik masuk melalui kanal yang terpecah tanpa alur kerja terpusat untuk verifikasi, penugasan, dan pelacakan penyelesaian.",
+            "sertifikasi": "Skrining risiko stroke pada program Posbindu PTM belum memiliki alat pendukung keputusan berbasis bukti yang dapat diinterpretasikan bagi petugas kesehatan.",
+            "kireikies": "Toko Kireikies Cookies belum memiliki kehadiran daring untuk menampilkan katalog produk dan informasi toko."
+        },
+        "solutions": {
+            "renstra-ft": "Mengembangkan sistem informasi perencanaan strategis dengan dashboard untuk memantau target tahunan serta mendukung penyusunan laporan EWMP.",
+            "portfolio-ft": "Membangun sistem dokumentasi akademik terpusat yang melacak silabus, materi kuliah, dan tugas di seluruh mata kuliah FT.",
+            "medical-checkup-ft": "Membangun sistem manajemen kesehatan berbasis web yang menerima data kesehatan dari anjungan melalui API dan menyimpannya secara terpusat untuk pemantauan, analisis, dan pelaporan.",
+            "atr-bpn-jateng": "Mengembangkan portal web yang mengelola surat masuk dan keluar, alur disposisi, agenda, serta distribusi informasi publik untuk kantor wilayah.",
+            "crumb-rubber": "Membangun sistem inventori yang mencakup bahan baku, produk olahan, dan laporan stok real-time di seluruh siklus produksi.",
+            "iconnet-monitoring": "Membangun sistem monitoring tempat pengguna melaporkan gangguan dan teknisi mengelola penyelesaian dengan dashboard, alur notifikasi, dan riwayat laporan.",
+            "disnaker-agenda": "Membuat sistem agenda digital untuk menjadwalkan, mencatat, dan melacak sesi mediasi ketenagakerjaan dengan pelacakan status dan pembuatan laporan.",
+            "stedi": "Mengembangkan stetoskop digital yang merekam suara paru-paru dan menganalisisnya dengan model deep learning untuk mendukung diagnosis.",
+            "posyandu": "Mendigitalkan catatan tumbuh kembang dan imunisasi dengan sistem web berbasis Laravel, mencatat perkembangan dan imunisasi anak setiap minggu.",
+            "nomadenstuff": "Membangun aplikasi e-commerce dengan fitur reservasi produk, panduan ukuran yang detail, dan perhitungan ongkos kirim otomatis untuk inventori barang satuan.",
+            "pusdataru-jateng": "Mengembangkan sistem manajemen pengaduan berbasis Laravel yang menangani pengajuan, verifikasi, penugasan ke dinas terkait, dan pelacakan penyelesaian.",
+            "sertifikasi": "Membangun sistem machine learning end-to-end dengan metodologi CRISP-DM, membandingkan lima algoritma dengan pipeline preprocessing bebas kebocoran data dan SHAP untuk interpretasi fitur yang transparan.",
+            "kireikies": "Membangun website katalog produk dengan Next.js, berfokus pada UI yang bersih dan interaksi yang halus untuk branding toko."
+        },
+        "outcomes": {
+            "renstra-ft": "Sistem menyediakan akses terpusat terhadap data kinerja strategis, sehingga pihak fakultas dapat memantau progres dan mengidentifikasi target yang memerlukan perhatian lebih lanjut.",
+            "portfolio-ft": "Dosen dan mahasiswa mengakses materi kuliah dari satu platform terintegrasi dengan pengelolaan versi, mendukung dokumentasi yang konsisten dan persiapan akreditasi.",
+            "medical-checkup-ft": "Pihak kesehatan memperoleh akses terstruktur terhadap data kesehatan anjungan, mendukung layanan kesehatan digital dan pemantauan kesehatan masyarakat.",
+            "atr-bpn-jateng": "Proses administrasi berjalan digital dengan alur kerja terlacak, dan masyarakat memperoleh akses informasi pertanahan yang lebih mudah di Jawa Tengah.",
+            "crumb-rubber": "Sistem memberikan visibilitas stok yang akurat mulai dari penerimaan karet mentah hingga produk jadi, mendukung operasional pabrik yang lebih efisien.",
+            "iconnet-monitoring": "Laporan gangguan terlacak secara real-time dengan riwayat status yang jelas, memberikan pandangan terstruktur atas performa layanan.",
+            "disnaker-agenda": "Petugas mediasi mengelola jadwal dan catatan sesi secara digital serta dapat membuat laporan dari riwayat sesi yang lengkap.",
+            "stedi": "Perangkat memberikan analisis suara paru-paru berbantuan AI sebagai sinyal tambahan untuk mendukung dokter dalam diagnosis.",
+            "posyandu": "Kader Posyandu dan tenaga kesehatan mengakses catatan digital yang dapat dicari dengan pelaporan terstruktur sebagai pengganti buku manual.",
+            "nomadenstuff": "Pelanggan dapat mereservasi barang dan memperoleh estimasi ongkir yang akurat, sementara pemilik mengelola katalog barang unik dalam satu tempat.",
+            "pusdataru-jateng": "Warga dapat mengajukan dan melacak pengaduan secara digital, dan pihak berwenang mengikuti alur kerja terstruktur dari verifikasi hingga penyelesaian.",
+            "sertifikasi": "Model Logistic Regression terbaik mencapai F1-score sebesar 0,6538 — peningkatan 11,55% dari baseline literatur — dengan SHAP menjelaskan fitur klinis di balik setiap prediksi.",
+            "kireikies": "Pelanggan dapat menjelajahi katalog produk dan informasi toko secara daring, memperkuat branding produk artisan."
         }
     }
 }

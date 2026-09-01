@@ -14,6 +14,9 @@ export interface Project {
     github: string;
     websiteType: string;
     sector: string;
+    problem?: string;
+    solution?: string;
+    outcome?: string;
 }
 
 export interface BlogArticle {

@@ -20,27 +20,26 @@ export default function Certificates({ children }: { children?: React.ReactNode 
             <div className="container">
                 {children}
                 <h2 className="section-title">{t.certificates.eyebrow}</h2>
-                <div className="portfolio-grid">
+                <div className="cert-list">
                     {coursesData.specializations.map((spec) => (
                         <Link
                             key={spec.id}
                             href={`/certificates/${spec.id}`}
-                            className="project-card cert-card"
+                            className="cert-row"
                             aria-label={`${t.certificates.viewSpecAria}${spec.title}`}
                         >
-                            <div className="project-img-wrapper cert-logo-wrap">
+                            <div className="cert-logo">
                                 <Image
                                     src="/assets/images/logo/ibm.svg"
-                                    alt="IBM"
+                                    alt={spec.provider}
                                     width={120}
                                     height={40}
-                                    className="cert-brand-logo"
+                                    className="cert-logo-img"
                                 />
                             </div>
-                            <div className="project-content">
-
-                                <h3 className="project-title">{spec.title}</h3>
-                                <p className="project-desc">
+                            <div className="cert-body">
+                                <h3 className="cert-title">{spec.title}</h3>
+                                <p className="cert-desc">
                                     {t.certificates.certDescPre}
                                     {spec.provider}
                                     {t.certificates.certDescMid}
@@ -50,17 +49,12 @@ export default function Certificates({ children }: { children?: React.ReactNode 
                                     )}
                                     {t.certificates.certDescPost}
                                 </p>
-                                <span className="project-footer">
-                                    <span className="project-link-text">
-                                        {t.certificates.viewCredential}
-                                    </span>
-                                    <div className="project-arrow">
-                                        <FontAwesomeIcon
-                                            icon={faArrowRight}
-                                            className="project-arrow-icon"
-                                        />
-                                    </div>
-                                </span>
+                            </div>
+                            <div className="cert-arrow">
+                                <FontAwesomeIcon
+                                    icon={faArrowRight}
+                                    className="cert-arrow-icon"
+                                />
                             </div>
                         </Link>
                     ))}

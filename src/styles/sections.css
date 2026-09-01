@@ -13,7 +13,8 @@
     .experience-content:hover,
     .next-project-link:hover,
     .meta-pill:hover,
-    .course-item:hover {
+    .course-item:hover,
+    .cert-row:hover {
         transform: none;
     }
 }

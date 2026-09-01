@@ -2,6 +2,7 @@
     "badge": "Available for work",
     "greeting": "Hi, I'm Almavi.",
     "role": "Software Engineer",
+    "bio": "I'm a Software Engineer specializing in backend development, DevOps, and applied machine learning. I focus on building reliable, end-to-end systems that combine clean architecture with practical AI solutions, turning complex engineering problems into intuitive products designed for real-world impact.",
     "titlePre": "I build software that ",
     "titleHighlight": "solves ",
     "titlePost": "real problems.",

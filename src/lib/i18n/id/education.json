@@ -1,0 +1,21 @@
+{
+    "eyebrow": "Pendidikan",
+    "items": [
+        {
+            "date": "SEP 2025 — JUL 2027",
+            "badge": "Sedang Berjalan",
+            "title": "Sarjana Sains Teknologi Informasi",
+            "org": "Universitas Dian Nuswantoro",
+            "gpa": "3.90",
+            "desc": "• Dipublikasikan di SINTA 3 JAIC: \"Methodologically Sound Class-Imbalance Handling Detection via Training-Only Oversampling.\"\n• Dipublikasikan di SINTA 2 JTI: \"Automatic Detection of Foot Arch Using Clarke's Angle Calculation Through A Web-Integrated System for Children.\"\n• Menerima pendanaan proyek sebesar US$3.150 dari EPICS in IEEE untuk program STEDI: Peningkatan Kualitas Skrining Pra-Diagnostik di Posyandu Lansia."
+        },
+        {
+            "date": "SEP 2022 — JUL 2025",
+            "badge": "Lulus",
+            "title": "Diploma Tiga Teknologi Informasi",
+            "org": "Universitas Dian Nuswantoro",
+            "gpa": "3.89",
+            "desc": "• Tugas Akhir: Mengembangkan aplikasi web dan Android untuk manajemen crumb rubber di UMKM Repro Semarang dengan metode Traveling Salesman Problem."
+        }
+    ]
+}

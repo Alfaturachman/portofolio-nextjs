@@ -1,7 +1,7 @@
 :root {
     color-scheme: light;
-    --bg-primary: #f5f5f7;
-    --bg-secondary: #f1f5f9;
+    --bg-primary: #fff;
+    --bg-secondary: #f5f5f7;
     --glass-bg: rgba(255, 255, 255, 0.45);
     --glass-border: rgba(255, 255, 255, 0.5);
     --glass-shadow: rgba(160, 148, 130, 0.18);
@@ -10,8 +10,8 @@
     --accent-blue: #2563eb;
     --accent-blue-soft: rgba(37, 99, 235, 0.12);
     --text-primary: #1d1d1f;
-    --text-secondary: #6e6e73;
-    --text-muted: #78716c;
+    --text-secondary: #5e5e63;
+    --text-muted: #86868b;
     --card-bg: #ffffff;
     --border-subtle: rgba(15, 23, 42, 0.06);
     --border-light: rgba(26, 22, 16, 0.05);
@@ -23,7 +23,7 @@
     --overlay-light: rgba(26, 22, 16, 0.08);
     --inverse-text: #ffffff;
     --color-white: #ffffff;
-    --footer-bg: #f5f5f7;
+    --footer-bg: #ffffff;
     --footer-text: #1a1610;
 }
 

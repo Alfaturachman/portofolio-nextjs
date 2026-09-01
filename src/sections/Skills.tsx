@@ -57,48 +57,42 @@ export default function Skills({
 
     const allTools = skillsCategories.flatMap((cat) => cat.tools);
 
-    const renderMarquee = () => (
-        <div className="skills-marquee" aria-hidden="true">
-            <div className="skills-marquee-track">
-                {[...allTools, ...allTools].map((tool, i) => (
-                    <div className="tool-pill" key={`${tool.name}-${i}`}>
-                        <span className="tool-icon">
-                            {toolIcons[tool.icon] ? (
-                                <Image
-                                    src={toolIcons[tool.icon]}
-                                    alt={tool.name}
-                                    width={16}
-                                    height={16}
-                                />
-                            ) : (
-                                <i className={`fab fa-${tool.icon}`} />
-                            )}
-                        </span>
-                        {tool.name}
-                    </div>
-                ))}
+    // ponytail: reverse row shifts its phase by half a set so same-named pills
+    // never align across rows within the visible loop (translate stays in
+    // [-50%,0] => seamless, no cut-off)
+    const renderToolPills = (tools: typeof allTools, key: string) =>
+        [...tools, ...tools].map((tool, i) => (
+            <div className="tool-pill" key={`${key}-${tool.name}-${i}`}>
+                <span className="tool-icon">
+                    {toolIcons[tool.icon] ? (
+                        <Image
+                            src={toolIcons[tool.icon]}
+                            alt={tool.name}
+                            width={16}
+                            height={16}
+                        />
+                    ) : (
+                        <i className={`fab fa-${tool.icon}`} />
+                    )}
+                </span>
+                {tool.name}
             </div>
-            <div className="skills-marquee-track reverse">
-                {[...allTools, ...allTools].map((tool, i) => (
-                    <div className="tool-pill" key={`${tool.name}-r${i}`}>
-                        <span className="tool-icon">
-                            {toolIcons[tool.icon] ? (
-                                <Image
-                                    src={toolIcons[tool.icon]}
-                                    alt={tool.name}
-                                    width={16}
-                                    height={16}
-                                />
-                            ) : (
-                                <i className={`fab fa-${tool.icon}`} />
-                            )}
-                        </span>
-                        {tool.name}
-                    </div>
-                ))}
+        ));
+
+    const renderMarquee = () => {
+        const cut = Math.floor(allTools.length / 2);
+        const reverseTools = [...allTools.slice(cut), ...allTools.slice(0, cut)];
+        return (
+            <div className="skills-marquee" aria-hidden="true">
+                <div className="skills-marquee-track">
+                    {renderToolPills(allTools, 't')}
+                </div>
+                <div className="skills-marquee-track reverse">
+                    {renderToolPills(reverseTools, 'r')}
+                </div>
             </div>
-        </div>
-    );
+        );
+    };
 
     return (
         <section id="skills">

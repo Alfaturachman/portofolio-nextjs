@@ -3,6 +3,10 @@
     background: var(--bg-primary);
 }
 
+#education {
+    background: var(--bg-primary);
+}
+
 .experience-list {
     display: flex;
     flex-direction: column;
@@ -12,8 +16,7 @@
 
 .experience-list-item {
     display: flex;
-    gap: 15px;
-    padding-bottom: 24px;
+    gap: 16px;
 }
 
 .experience-timeline-container {
@@ -49,7 +52,6 @@
 
 .experience-content-wrapper {
     flex: 1;
-    padding-bottom: 10px;
 }
 
 .experience-date {
@@ -91,6 +93,18 @@
     color: #d1d5db;
 }
 
+.experience-gpa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.experience-gpa-sep {
+    width: 1px;
+    height: 12px;
+    background: var(--text-secondary);
+}
+
 .experience-desc-list {
     margin-top: 10px;
     list-style: disc;
@@ -103,7 +117,7 @@
     line-height: 1.75;
     color: var(--text-secondary);
     margin-bottom: 6px;
-    max-width: 450px;
+    max-width: 100%;
 }
 
 [data-theme="dark"] .experience-desc-list li {

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import ImagePreview from '@/components/ImagePreview';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faChevronLeft,
@@ -40,15 +41,21 @@ export default function ImageCarousel({
                     <FontAwesomeIcon icon={faChevronLeft} />
                 </button>
                 <div className="gallery-image-wrapper">
-                    <Image
+                    <ImagePreview
                         src={images[activeIndex]}
                         alt={`${title} screenshot ${activeIndex + 1}`}
-                        fill
-                        sizes="100vw"
-                        quality={95}
-                        unoptimized
-                        priority
-                    />
+                    >
+                        <Image
+                            src={images[activeIndex]}
+                            alt={`${title} screenshot ${activeIndex + 1}`}
+                            fill
+                            sizes="100vw"
+                            quality={95}
+                            unoptimized
+                            priority
+                            style={{ cursor: 'pointer' }}
+                        />
+                    </ImagePreview>
                 </div>
                 <button
                     className="gallery-arrow right"

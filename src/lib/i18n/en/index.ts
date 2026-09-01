@@ -4,6 +4,7 @@ import hero from './hero.json';
 import about from './about.json';
 import skills from './skills.json';
 import experience from './experience.json';
+import education from './education.json';
 import portfolio from './portfolio.json';
 import certificates from './certificates.json';
 import courses from './courses.json';
@@ -20,6 +21,7 @@ const en = {
     about,
     skills,
     experience,
+    education,
     portfolio,
     certificates,
     courses,

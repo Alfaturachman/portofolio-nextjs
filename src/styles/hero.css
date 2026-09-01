@@ -83,11 +83,11 @@
 
 .hero-name {
     font-family: var(--font-outfit), sans-serif;
-    font-size: clamp(18px, 3vw, 28px);
+    font-size: clamp(20px, 3vw, 28px);
     font-weight: 700;
     letter-spacing: -0.025em;
     color: var(--text-primary);
-    margin: 0;
+    margin-bottom: 4px;
     line-height: 1.1;
 }
 
@@ -96,17 +96,45 @@
     font-size: 16px;
     font-weight: 500;
     color: var(--accent-blue);
-    margin: 0;
+    margin-bottom: 8px;
+}
+
+.hero-bio {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: clamp(14px, 1.5vw, 16px);
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    max-width: 100%;
+}
+
+.hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 14px;
+    margin-top: 8px;
 }
 
 .hero-location {
     display: flex;
     align-items: center;
     gap: 5px;
-    font-family: var(--font-outfit), sans-serif;
-    font-size: 14px;
     color: var(--text-muted);
-    margin-top: 8px;
+}
+
+.hero-availability {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #22c55e;
+}
+
+.hero-meta-divider {
+    width: 1px;
+    height: 14px;
+    background: var(--border-slightly);
 }
 
 /* ----- Social Links ----- */
@@ -145,16 +173,6 @@
 
 .hero-social-link:active {
     transform: scale(0.96);
-}
-
-/* ----- Bio / Description ----- */
-.hero-bio {
-    font-family: var(--font-outfit), sans-serif;
-    font-size: clamp(15px, 1.5vw, 17px);
-    line-height: 1.75;
-    color: var(--text-secondary);
-    margin: 0;
-    max-width: 620px;
 }
 
 /* ----- CTA Row ----- */

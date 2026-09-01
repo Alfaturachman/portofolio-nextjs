@@ -57,4 +57,5 @@ export interface Experience {
     org: string;
     orgIcon: string;
     desc: string;
+    gpa?: string;
 }

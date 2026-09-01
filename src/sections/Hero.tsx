@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { useI18n } from '@/lib/i18n/i18n-context';
 
 const socials = [
@@ -84,12 +86,17 @@ export default function Hero() {
                         <div className="hero-identity">
                             <h1 className="hero-name">Alfaturachman Maulana Pahlevi</h1>
                             <p className="hero-role">{t.hero.role}</p>
-                            <p className="hero-location">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                                    <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
-                                    <circle cx="12" cy="10" r="3" />
-                                </svg>
-                                Semarang, Indonesia
+                            <p className="hero-bio">{t.hero.bio}</p>
+                            <p className="hero-meta">
+                                <span className="hero-availability">
+                                    <FontAwesomeIcon icon={faBriefcase} />
+                                    {t.hero.badge}
+                                </span>
+                                <span className="hero-meta-divider" aria-hidden="true" />
+                                <span className="hero-location">
+                                    <FontAwesomeIcon icon={faMapMarkerAlt} />
+                                    Semarang, Indonesia
+                                </span>
                             </p>
 
                             <nav className="hero-socials" aria-label="Social media links">

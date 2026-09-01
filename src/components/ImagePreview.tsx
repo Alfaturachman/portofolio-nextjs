@@ -2,8 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function ImagePreview({
     src,
@@ -47,13 +45,6 @@ export default function ImagePreview({
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div className="cert-img-wrapper">
-                            <button
-                                className="modal-close"
-                                onClick={close}
-                                aria-label="Close modal"
-                            >
-                                <FontAwesomeIcon icon={faXmark} />
-                            </button>
                             <Image
                                 src={src}
                                 alt={alt}

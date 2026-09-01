@@ -6,9 +6,9 @@
         {
             "date": "AGU 2024 — SEKARANG",
             "badge": "Saat Ini",
-            "title": "Developer Full Stack & ML",
+            "title": "Developer Full-Stack & ML",
             "org": "Freelance / Proyek Independen",
-            "desc": "• Mengembangkan aplikasi web dan perangkat lunak secara end-to-end.\n• Membangun layanan backend, basis data, dan antarmuka pengguna.\n• Menjelajah machine learning, deep learning, dan integrasi AI.\n• Menerjemahkan kebutuhan proyek menjadi solusi perangkat lunak yang fungsional."
+            "desc": "• Merancang dan mengirimkan aplikasi web end-to-end, dari kebutuhan dan UI hingga API backend.\n• Membangun layanan backend yang skalabel: RESTful API, skema basis data relasional, dan integrasi pihak ketiga.\n• Menerapkan machine learning dan deep learning pada masalah nyata: pelatihan model, evaluasi, dan integrasi."
         },
         {
             "date": "NOV 2025",
@@ -20,7 +20,7 @@
         {
             "date": "JUN 2024 — JUL 2025",
             "badge": "Magang",
-            "title": "Magang Web Developer",
+            "title": "Magang Full-Stack Web Developer",
             "org": "Fakultas Teknik UDINUS",
             "desc": "• Mengembangkan sistem informasi akademik bekerja sama dengan stakeholder universitas.\n• Merancang skema basis data relasional dan mengintegrasikan RESTful API.\n• Mengembangkan frontend untuk mempermudah alur kerja operasional staf universitas."
         }

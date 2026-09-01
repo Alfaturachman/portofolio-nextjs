@@ -15,6 +15,7 @@
     justify-content: center;
     background: white;
     position: relative;
+    aspect-ratio: 32/9;
 }
 
 /* ponytail: needs 2 classes to out-rank .project-img-wrapper img,
@@ -23,7 +24,7 @@
     display: block;
     position: static !important;
     width: auto;
-    height: 48px;
+    height: 40px;
     max-width: 60%;
     object-fit: contain;
     opacity: 1 !important;

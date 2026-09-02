@@ -114,12 +114,14 @@
     border: 1px solid var(--border-subtle);
     border-radius: 16px;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition:
+        transform .6s cubic-bezier(.22, 1, .36, 1),
+        box-shadow .6s cubic-bezier(.22, 1, .36, 1);
 }
 
 .project-card:hover {
     border-color: var(--border-slightly);
-    transform: translateY(-2px);
+    transform: translateZ(0) scale(1.012);
 }
 
 [data-theme='dark'] .project-card:hover {

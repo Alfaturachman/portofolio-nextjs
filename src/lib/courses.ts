@@ -51,8 +51,8 @@ export const coursesData: {
         {
             id: 'pimnas-peserta',
             title: 'Peserta Pekan Ilmiah Mahasiswa Nasional (PIMNAS) 2025',
-            provider: 'Simbelmawa',
-            issuer: 'Belmawa & Kemdiktisaintek',
+            provider: 'Kemdiktisaintek',
+            issuer: 'Belmawa',
             skills: [
                 'PKM-KI',
                 'Kesehatan',
@@ -67,8 +67,8 @@ export const coursesData: {
         {
             id: 'pimnas-pendanaan',
             title: 'Peraih Pendanaan & Finalis PIMNAS PKM-KI 2025',
-            provider: 'Simbelmawa',
-            issuer: 'Belmawa & Kemdiktisaintek',
+            provider: 'Kemdiktisaintek',
+            issuer: 'Belmawa',
             skills: [
                 'PKM-KI',
                 'Karya Inovatif',
@@ -83,8 +83,8 @@ export const coursesData: {
         {
             id: 'bnsp-junior-mobile-programmer',
             title: 'Sertifikat Kompetensi Kerja – Junior Mobile Programmer',
-            provider: 'LSP Universitas Dian Nuswantoro',
-            issuer: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+            provider: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+            issuer: 'LSP Universitas Dian Nuswantoro',
             skills: [
                 'Mobile Programming',
                 'Kotlin',
@@ -98,9 +98,9 @@ export const coursesData: {
         },
         {
             id: 'apti-pemrograman-web',
-            title: 'Sertifikat Kompetensi Keahlian – Pemrograman Web (Predikat: A)',
-            provider: 'TI D3 Universitas Dian Nuswantoro',
-            issuer: 'Asosiasi Profesi Telematika Indonesia (APTI)',
+            title: 'Sertifikat Kompetensi Keahlian – Pemrograman Web',
+            provider: 'Asosiasi Profesi Telematika Indonesia (APTI)',
+            issuer: 'LSP Universitas Dian Nuswantoro',
             skills: [
                 'Web Programming',
                 'Frontend',

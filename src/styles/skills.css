@@ -54,7 +54,7 @@
 
 .category-chevron {
     display: none;
-    font-size: 1rem;
+    font-size: 16px;
     color: var(--text-tertiary);
     transition: transform 0.3s ease;
     flex-shrink: 0;
@@ -112,7 +112,7 @@
 
     .category-chevron i,
     .category-chevron svg {
-        font-size: 0.85rem;
+        font-size: 14px;
         color: var(--text-muted);
         transition: transform 0.35s ease, color 0.3s ease;
     }

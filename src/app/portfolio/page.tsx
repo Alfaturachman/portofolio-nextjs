@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import PortfolioSection from '@/sections/PortfolioSection';
 import Breadcrumb from '@/components/Breadcrumb';
+import Tx from '@/components/Tx';
 
 export const metadata: Metadata = {
     title: 'Portfolio | Alfaturachman Maulana Pahlevi',
@@ -16,7 +17,7 @@ export default function PortfolioPage() {
     return (
         <div className="route-content">
             <PortfolioSection>
-                <Breadcrumb items={[{ label: 'Portfolio' }]} />
+                <Breadcrumb items={[{ label: <Tx k="navbar.portfolio" /> }]} />
             </PortfolioSection>
         </div>
     );

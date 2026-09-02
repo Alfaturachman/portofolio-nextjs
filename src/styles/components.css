@@ -39,7 +39,7 @@
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
     color: var(--text-primary);
-    font-size: 1.1rem;
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +67,7 @@
 
 .cert-modal-title {
     margin-bottom: 12px;
-    font-size: 1.5rem;
+    font-size: 24px;
     padding-right: 40px;
 }
 
@@ -288,21 +288,21 @@
 }
 
 .error-fallback-icon {
-    font-size: 3rem;
+    font-size: 48px;
     color: var(--accent-blue);
     margin-bottom: 24px;
 }
 
 .error-fallback-title {
     font-family: var(--font-outfit), sans-serif;
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 12px;
 }
 
 .error-fallback-desc {
-    font-size: 1rem;
+    font-size: 16px;
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 32px;
@@ -323,7 +323,7 @@
     border-radius: 99px;
     font-family: var(--font-sans);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;

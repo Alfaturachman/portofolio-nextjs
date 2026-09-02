@@ -54,8 +54,12 @@ export default async function CertificateDetailPage({
             <div className="container">
                 <Breadcrumb
                     items={[
-                        { label: 'Certificates', href: '/certificates' },
-                        { label: spec.title },
+                        { label: <Tx k="navbar.certificates" />, href: '/certificates' },
+                        {
+                            label: (
+                                <CertTitle id={spec.id} fallback={spec.title} />
+                            ),
+                        },
                     ]}
                 />
 
@@ -122,19 +126,6 @@ export default async function CertificateDetailPage({
                             <Tx k="courses.viewCredential" />
                         </a>
                         )}
-                    </div>
-                </div>
-
-                <div className="spec-skills">
-                    <h3 className="detail-sidebar-title">
-                        <Tx k="courses.skillsCovered" />
-                    </h3>
-                    <div className="tech-stack-list">
-                        {spec.skills.map((s) => (
-                            <span className="tech-tag" key={s}>
-                                {s}
-                            </span>
-                        ))}
                     </div>
                 </div>
 

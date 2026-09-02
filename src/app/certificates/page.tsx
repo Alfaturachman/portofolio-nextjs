@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Certificates from '@/sections/Certificates';
 import Breadcrumb from '@/components/Breadcrumb';
+import Tx from '@/components/Tx';
 
 export const metadata: Metadata = {
     title: 'Certificates | Alfaturachman Maulana Pahlevi',
@@ -16,7 +17,7 @@ export default function CertificatesPage() {
     return (
         <div className="route-content">
             <Certificates>
-                <Breadcrumb items={[{ label: 'Certificates' }]} />
+                <Breadcrumb items={[{ label: <Tx k="navbar.certificates" /> }]} />
             </Certificates>
         </div>
     );

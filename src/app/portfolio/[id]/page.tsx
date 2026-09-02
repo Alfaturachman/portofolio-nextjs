@@ -62,7 +62,7 @@ export default async function DetailPage({
                 <div className="container">
                     <Breadcrumb
                         items={[
-                            { label: 'Portfolio', href: '/portfolio' },
+                            { label: <Tx k="navbar.portfolio" />, href: '/portfolio' },
                             { label: project.title },
                         ]}
                     />

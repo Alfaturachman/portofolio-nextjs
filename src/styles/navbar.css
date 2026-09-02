@@ -5,8 +5,8 @@
     right: 0;
     z-index: 1000;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        background: rgba(255, 255, 255, .8);
-    border-color: var(--glass-border);
+    background: rgba(255, 255, 255, .8);
+    border: 1px solid var(--border-subtle);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
 }
@@ -25,6 +25,7 @@
     background: rgba(17, 24, 39, 0.8);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
 }
 
 .nav-logo {
@@ -78,7 +79,7 @@
 
 .lang-toggle {
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 14px;
     letter-spacing: 0.05em;
 }
 
@@ -99,7 +100,7 @@
     cursor: pointer;
     color: var(--text-secondary);
     transition: all 0.3s ease;
-    font-size: 1rem;
+    font-size: 16px;
     align-items: center;
     justify-content: center;
 }
@@ -197,7 +198,7 @@
 .mobile-link {
     padding: 12px 18px;
     border-radius: 12px;
-    font-size: 0.95rem;
+    font-size: 16px;
     font-weight: 600;
     color: var(--text-secondary);
     text-decoration: none;

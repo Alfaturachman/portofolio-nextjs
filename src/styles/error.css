@@ -40,7 +40,7 @@
 
 .not-found-title {
     font-family: var(--font-outfit), sans-serif;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 12px;
@@ -49,7 +49,7 @@
 }
 
 .not-found-desc {
-    font-size: 0.95rem;
+    font-size: 16px;
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 32px;
@@ -66,7 +66,7 @@
     background: var(--accent);
     color: var(--inverse-text);
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 14px;
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;

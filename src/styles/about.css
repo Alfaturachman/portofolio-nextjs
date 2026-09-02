@@ -48,7 +48,7 @@
     color: #ffffff;
     padding: 8px 16px;
     border-radius: 99px;
-    font-size: 0.8rem;
+    font-size: 12px;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -135,7 +135,7 @@
 
 .bento-focus-list li strong {
     font-family: var(--font-sans);
-    font-size: 0.95rem;
+    font-size: 16px;
     font-weight: 600;
     color: var(--text-primary);
     display: block;
@@ -144,7 +144,7 @@
 
 .bento-focus-list li p {
     font-family: var(--font-sans);
-    font-size: 0.85rem;
+    font-size: 14px;
     color: var(--text-secondary);
     margin: 0;
 }

@@ -2,7 +2,6 @@
     "provider": "Provider",
     "issuer": "Issuer",
     "courses": "Courses",
-    "skillsCovered": "Skills Covered",
     "viewCredential": "View Credential",
     "certBadge": "Professional Certificate",
     "aboutTitle": "About this Professional Certificate",

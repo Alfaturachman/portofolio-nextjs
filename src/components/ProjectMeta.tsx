@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faBriefcase,
@@ -11,46 +10,26 @@ import {
     faBuilding,
     faLockOpen,
     faLock,
-    faChevronDown,
-    faInfoCircle,
 } from '@fortawesome/free-solid-svg-icons';
 import type { Project } from '@/lib/types';
 import { useI18n } from '@/lib/i18n/i18n-context';
+import MetaWrapper from './MetaWrapper';
 
 interface ProjectMetaProps {
     project: Project;
 }
 
 export default function ProjectMeta({ project }: ProjectMetaProps) {
-    const [isOpen, setIsOpen] = useState(false);
     const { t } = useI18n();
     const V = t.portfolio.meta.values;
     const val = (dict: Record<string, string> | undefined, key: string) =>
         dict?.[key] ?? key;
 
     return (
-        <div className={`detail-meta-wrapper ${isOpen ? 'is-open' : ''}`}>
-            {/* Mobile Expand / Collapse Button */}
-            <button
-                type="button"
-                className="meta-toggle-btn"
-                onClick={() => setIsOpen(!isOpen)}
-                aria-expanded={isOpen}
-                aria-label={t.portfolio.meta.toggleAria}
-            >
-                <div className="meta-toggle-left">
-                    <div className="meta-pill-icon">
-                        <FontAwesomeIcon icon={faInfoCircle} />
-                    </div>
-                    <span>{t.portfolio.meta.toggleLabel}</span>
-                </div>
-                <FontAwesomeIcon
-                    icon={faChevronDown}
-                    className={`meta-chevron ${isOpen ? 'rotate' : ''}`}
-                />
-            </button>
-
-            {/* Collapsible Meta Pills Container */}
+        <MetaWrapper
+            label={t.portfolio.meta.toggleLabel}
+            ariaLabel={t.portfolio.meta.toggleAria}
+        >
             <div className="detail-meta">
                 <div className="meta-pill">
                     <div className="meta-pill-icon">
@@ -112,6 +91,6 @@ export default function ProjectMeta({ project }: ProjectMetaProps) {
                     </div>
                 </div>
             </div>
-        </div>
+        </MetaWrapper>
     );
 }

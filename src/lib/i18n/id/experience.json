@@ -18,11 +18,11 @@
             "desc": "• Berhasil membawa inovasi tim melaju sebagai Finalis Nasional pada Pekan Ilmiah Mahasiswa Nasional (PIMNAS) 38 di bawah skema PKM Karya Inovatif (PKM-KI).\n• Berhasil melakukan eskalasi proyek ke tingkat global dan memenangkan hibah internasional proyek kemanusiaan dari EPICS in IEEE (Jon C. Taenzer Memorial Fund) sebesar US$3,150.\n• Terdaftar resmi sebagai Inventor dalam Hak Kekayaan Intelektual (HKI) Desain Industri untuk perangkat fisik Monitor Box STEDI."
         },
         {
-            "date": "JUN 2024 — JUL 2025",
+            "date": "JUNI 2024 — JULI 2025",
             "badge": "Magang",
             "title": "Magang Full-Stack Web Developer",
             "org": "Fakultas Teknik UDINUS",
-            "desc": "• Mengembangkan sistem informasi akademik bekerja sama dengan stakeholder universitas.\n• Merancang skema basis data relasional dan mengintegrasikan RESTful API.\n• Mengembangkan frontend untuk mempermudah alur kerja operasional staf universitas."
+            "desc": "• Mengembangkan dan memelihara empat sistem berbasis web untuk perencanaan strategis, manajemen akademik, pengabdian kepada masyarakat, dan operasional kesehatan fakultas, berkolaborasi dengan pemangku kepentingan universitas.\n• RENSTRA FT: Sistem perencanaan strategis dan pemantauan KPI untuk rencana strategis fakultas dan beban kerja dosen.\n• Portfolio MK FT: Platform terpusat untuk mengelola dan mendokumentasikan materi kuliah fakultas.\n• UMKM Repro: Sistem manajemen rantai pasok untuk produksi karet remah dan optimasi rute pengiriman menggunakan TSP, Nearest Neighbor, dan Haversine.\n• Medical Checkup FT: Platform kesehatan yang terintegrasi dengan kiosk mandiri berbasis IoT untuk manajemen data pasien."
         }
     ]
 }

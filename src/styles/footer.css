@@ -33,18 +33,6 @@
     border-top: none;
 }
 
-/* Apple HIG Hero Card (Vibrancy & Glassmorphism) */
-
-.footer-hero-heading {
-    font-family: var(--font-outfit), -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: clamp(2.1rem, 3.8vw, 3.2rem);
-    font-weight: 800;
-    color: var(--text-primary);
-    letter-spacing: -0.035em;
-    line-height: 1.15;
-    margin: 0 0 16px 0;
-}
-
 .footer-hero-subtext {
     font-size: 1.05rem;
     color: var(--text-muted);
@@ -107,7 +95,7 @@
 }
 
 .footer-copyright-text {
-    font-size: 0.88rem;
+    font-size: 14px;
     color: var(--text-muted);
     letter-spacing: -0.005em;
 }
@@ -175,12 +163,6 @@
         padding: 0px 24px 24px;
     }
 
-    .footer-hero-heading {
-        font-size: clamp(1.6rem, 6.5vw, 2.1rem);
-        margin-bottom: 10px;
-        letter-spacing: -0.03em;
-    }
-
     .footer-hero-subtext {
         font-size: 0.92rem;
         line-height: 1.45;
@@ -197,7 +179,7 @@
     }
 
     .footer-copyright-text {
-        font-size: 0.8rem;
+        font-size: 12px;
     }
 
     .footer-back-to-top-text {

@@ -8,5 +8,11 @@
     "certDescPost": ".",
     "viewCredential": "Lihat Kredensial",
     "viewAll": "Lihat Semua Sertifikat",
-    "viewSpecAria": "Lihat sertifikat: "
+    "viewSpecAria": "Lihat sertifikat: ",
+    "specs": {
+        "pimnas-peserta": "Peserta Pekan Ilmiah Mahasiswa Nasional (PIMNAS) 2025",
+        "pimnas-pendanaan": "Peraih Pendanaan & Finalis PIMNAS PKM-KI 2025",
+        "bnsp-junior-mobile-programmer": "Sertifikat Kompetensi – Junior Mobile Programmer",
+        "apti-pemrograman-web": "Sertifikat Kompetensi – Pemrograman Web"
+    }
 }

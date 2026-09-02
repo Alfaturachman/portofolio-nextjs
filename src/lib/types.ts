@@ -38,6 +38,7 @@ export interface Specialization {
     credentialUrl: string;
     credential: string;
     image: string;
+    logo: string;
 }
 
 export interface Course {

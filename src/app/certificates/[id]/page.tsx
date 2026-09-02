@@ -5,6 +5,8 @@ import { coursesData } from '@/lib/courses';
 import ImagePreview from '@/components/ImagePreview';
 import Breadcrumb from '@/components/Breadcrumb';
 import Tx from '@/components/Tx';
+import CoursesMetaWrapper from '@/components/CoursesMetaWrapper';
+import CertTitle from '@/components/CertTitle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faBuilding,
@@ -59,8 +61,11 @@ export default async function CertificateDetailPage({
 
                 <div className="detail-header-row">
                     <div className="detail-header-info">
-                        <h1 className="detail-title">{spec.title}</h1>
-                        <div className="detail-meta">
+                        <h1 className="detail-title">
+                            <CertTitle id={spec.id} fallback={spec.title} />
+                        </h1>
+                        <CoursesMetaWrapper>
+                            <div className="detail-meta">
                             <div className="meta-pill">
                                 <div className="meta-pill-icon">
                                     <FontAwesomeIcon icon={faBuilding} />
@@ -87,6 +92,7 @@ export default async function CertificateDetailPage({
                                     </span>
                                 </div>
                             </div>
+                            {courses.length > 0 && (
                             <div className="meta-pill">
                                 <div className="meta-pill-icon">
                                     <FontAwesomeIcon icon={faBookOpen} />
@@ -100,9 +106,12 @@ export default async function CertificateDetailPage({
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                            )}
+                            </div>
+                        </CoursesMetaWrapper>
                     </div>
                     <div className="detail-header-cert">
+                        {spec.credentialUrl && spec.credentialUrl !== '#' && (
                         <a
                             href={spec.credentialUrl}
                             target="_blank"
@@ -112,6 +121,7 @@ export default async function CertificateDetailPage({
                             <FontAwesomeIcon icon={faExternalLinkAlt} />
                             <Tx k="courses.viewCredential" />
                         </a>
+                        )}
                     </div>
                 </div>
 
@@ -146,6 +156,7 @@ export default async function CertificateDetailPage({
                                 </div>
                             </ImagePreview>
                         </div>
+                        {courses.length > 0 && (
                         <div className="spec-cert-info">
                             <div className="spec-cert-badge">
                                 <FontAwesomeIcon icon={faCertificate} />
@@ -165,9 +176,11 @@ export default async function CertificateDetailPage({
                                 </p>
                             </div>
                         </div>
+                        )}
                     </div>
                 </div>
 
+                {courses.length > 0 && (
                 <div className="courses-list">
                     <h2 className="detail-section-title">
                         <Tx k="courses.courses" /> ({courses.length})
@@ -211,6 +224,7 @@ export default async function CertificateDetailPage({
                         ))}
                     </ul>
                 </div>
+                )}
             </div>
         </section>
         </div>

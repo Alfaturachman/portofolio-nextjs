@@ -8,5 +8,11 @@
     "certDescPost": ".",
     "viewCredential": "View Credential",
     "viewAll": "View All Certificates",
-    "viewSpecAria": "View certificate: "
+    "viewSpecAria": "View certificate: ",
+    "specs": {
+        "pimnas-peserta": "Participant of National Student Scientific Week (PIMNAS) 2025",
+        "pimnas-pendanaan": "Grant Recipient & PIMNAS PKM-KI 2025 Finalist",
+        "bnsp-junior-mobile-programmer": "Certificate of Competence – Junior Mobile Programmer",
+        "apti-pemrograman-web": "Certificate of Competence – Web Programming"
+    }
 }

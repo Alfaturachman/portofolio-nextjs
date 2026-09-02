@@ -31,16 +31,19 @@ export default function Certificates({
                 {children}
                 <h2 className="section-title">{t.certificates.eyebrow}</h2>
                 <div className="cert-list">
-                    {displayedSpecs.map((spec) => (
+                    {displayedSpecs.map((spec) => {
+                        const specTitles = t.certificates.specs as Record<string, string> | undefined;
+                        const title = specTitles?.[spec.id] ?? spec.title;
+                        return (
                         <Link
                             key={spec.id}
                             href={`/certificates/${spec.id}`}
                             className="cert-row"
-                            aria-label={`${t.certificates.viewSpecAria}${spec.title}`}
+                            aria-label={`${t.certificates.viewSpecAria}${title}`}
                         >
                             <div className="cert-logo">
                                 <Image
-                                    src="/assets/images/logo/ibm.svg"
+                                    src={spec.logo}
                                     alt={spec.provider}
                                     width={120}
                                     height={40}
@@ -48,12 +51,12 @@ export default function Certificates({
                                 />
                             </div>
                             <div className="cert-body">
-                                <h3 className="cert-title">{spec.title}</h3>
+                                <h3 className="cert-title">{title}</h3>
                                 <p className="cert-desc">
                                     {t.certificates.certDescPre}
                                     {spec.provider}
                                     {t.certificates.certDescMid}
-                                    {spec.title.replace(
+                                    {title.replace(
                                         `${spec.provider} `,
                                         '',
                                     )}
@@ -67,7 +70,8 @@ export default function Certificates({
                                 />
                             </div>
                         </Link>
-                    ))}
+                        );
+                    })}
                 </div>
                 {limit && (
                     <ViewAll

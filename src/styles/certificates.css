@@ -20,12 +20,14 @@
     border-radius: 14px;
     text-decoration: none;
     color: inherit;
-    transition: all 0.3s ease;
+    transition:
+        transform .6s cubic-bezier(.22, 1, .36, 1),
+        box-shadow .6s cubic-bezier(.22, 1, .36, 1);
 }
 
 .cert-row:hover {
     border-color: var(--border-slightly);
-    transform: translateX(4px);
+    transform: translateZ(0) scale(1.012);
 }
 
 [data-theme='dark'] .cert-row:hover {
@@ -77,6 +79,7 @@
 .cert-arrow {
     width: 36px;
     height: 36px;
+    font-size: 13px;
     border-radius: 50%;
     background: var(--bg-secondary);
     display: flex;
@@ -126,7 +129,6 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 32px;
-    margin-bottom: 32px;
 }
 
 .detail-header-info {
@@ -135,7 +137,6 @@
 
 .detail-header-cert {
     flex-shrink: 0;
-    padding-top: 8px;
 }
 
 @media (max-width: 768px) {
@@ -160,7 +161,6 @@
 }
 
 .spec-cert-preview {
-    margin-bottom: 40px;
     padding: 20px;
     background: var(--card-bg);
     border: 1px solid var(--border-subtle);
@@ -179,13 +179,17 @@
     max-width: 200px;
 }
 
+.spec-cert-image-box:only-child {
+    max-width: none;
+}
+
 .spec-cert-image {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
     border: 1px solid var(--border-subtle);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .spec-cert-image img {
@@ -240,10 +244,6 @@
 }
 
 @media (min-width: 641px) {
-    .spec-cert-preview {
-        padding: 24px 28px;
-    }
-
     .spec-cert-img-row {
         flex-direction: row;
         gap: 24px;
@@ -253,6 +253,10 @@
     .spec-cert-image-box {
         flex: 0 0 220px;
         max-width: none;
+    }
+
+    .spec-cert-image-box:only-child {
+        flex: 1;
     }
 
     .spec-cert-info {
@@ -275,17 +279,17 @@
 }
 
 .courses-list {
-    margin-top: 16px;
+    margin-top: 48px;
 }
 
 .courses-list .detail-section-title {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .courses-grid {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -294,17 +298,19 @@
 .course-item {
     display: flex;
     gap: 20px;
-    padding: 20px 24px;
+    padding: 20px 20px;
     background: var(--card-bg);
     border: 1px solid var(--border-subtle);
     border-radius: 14px;
-    transition: all 0.3s ease;
+    transition:
+        transform .6s cubic-bezier(.22, 1, .36, 1),
+        box-shadow .6s cubic-bezier(.22, 1, .36, 1);
     align-items: flex-start;
 }
 
 .course-item:hover {
     border-color: var(--border-slightly);
-    transform: translateX(4px);
+    transform: translateZ(0) scale(1.012);
 }
 
 [data-theme='dark'] .course-item:hover {
@@ -347,16 +353,20 @@
 .course-skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 10px;
 }
 
 .course-skill {
-    font-size: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 12px;
     font-weight: 600;
-    color: var(--text-secondary);
     background: var(--bg-secondary);
-    padding: 4px 12px;
-    border-radius: 100px;
+    color: var(--text-secondary);
     border: 1px solid var(--border-lighter);
 }
 
@@ -364,12 +374,12 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.8rem;
+    font-size: 12px;
     font-weight: 600;
     color: var(--accent-blue);
     text-decoration: none;
     padding: 10px 16px;
-    min-height: 44px; /* HIG Touch Target Minimum */
+    height: 40px;
     box-sizing: border-box;
     border-radius: 8px;
     background: var(--accent-blue-soft);

@@ -82,7 +82,7 @@ export const coursesData: {
         },
         {
             id: 'bnsp-junior-mobile-programmer',
-            title: 'Sertifikat Kompetensi Kerja – Junior Mobile Programmer',
+            title: 'Sertifikat Kompetensi – Junior Mobile Programmer',
             provider: 'Badan Nasional Sertifikasi Profesi (BNSP)',
             issuer: 'LSP Universitas Dian Nuswantoro',
             skills: [
@@ -93,7 +93,23 @@ export const coursesData: {
             ],
             credentialUrl: '#',
             credential: '',
-            image: '/assets/certificate/Specializations/sertifikasi-bnsp-junior-mobile-programmer.jpg',
+            image: '/assets/certificate/Specializations/bnsp-junior-mobile-developer.png',
+            logo: '/assets/images/logo/Badan_Nasional_Sertifikasi_Profesi.png',
+        },
+        {
+            id: 'bnsp-web-developer',
+            title: 'Sertifikat Kompetensi – Web Developer',
+            provider: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+            issuer: 'LSP Universitas Dian Nuswantoro',
+            skills: [
+                'Web Programming',
+                'Frontend',
+                'Backend',
+                'Sertifikasi BNSP',
+            ],
+            credentialUrl: '#',
+            credential: '',
+            image: '/assets/certificate/Specializations/bnsp-web-developer.png',
             logo: '/assets/images/logo/Badan_Nasional_Sertifikasi_Profesi.png',
         },
         {
@@ -109,7 +125,7 @@ export const coursesData: {
             ],
             credentialUrl: '#',
             credential: '',
-            image: '/assets/certificate/Specializations/sertifikasi-apti.jpg',
+            image: '/assets/certificate/Specializations/apti-web-programming.png',
             logo: '/assets/images/logo/apti.png',
         },
     ],

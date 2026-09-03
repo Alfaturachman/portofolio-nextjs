@@ -242,7 +242,7 @@ export const projects: Project[] = [
         privacy: 'Private',
         cardDesc:
             'Digital replacement of the manual pink book for toddler growth records and immunization schedules.',
-        desc: "A web-based Posyandu information system built with Laravel PHP to digitize toddler growth and immunization records. Every week, children's immunizations and developmental progress are recorded — replacing the traditional pink book (Buku Pink) system with a fully digital, searchable, and reportable database.",
+        desc: "A web-based Posyandu information system built with Laravel PHP to digitize toddler growth and immunization records. Every week, children's immunizations and developmental progress are recorded - replacing the traditional pink book (Buku Pink) system with a fully digital, searchable, and reportable database.",
         problem:
             'Toddler growth and immunization records were kept in the manual pink book (Buku Pink), making data hard to search, track, and report.',
         solution:
@@ -326,13 +326,13 @@ export const projects: Project[] = [
         privacy: 'Public',
         cardDesc:
             'Machine learning system for stroke risk screening, built for the BNSP data scientist certification.',
-        desc: 'An end-to-end Machine Learning stroke risk screening system and executive visual portfolio developed for the Certified Data Scientist (BNSP) assessment. Built using a clinical stroke dataset from Kaggle contextualized for the Posbindu PTM program in Semarang City under strict CRISP-DM methodology and 11 SKKNI competency units, the project engineers a leak-free preprocessing pipeline. It benchmarks 5 ML algorithms—achieving a champion Logistic Regression F1-score of 0.6538 (+11.55% over baseline literature)—and integrates SHAP (SHapley Additive exPlanations) for transparent clinical feature interpretability.',
+        desc: 'An end-to-end Machine Learning stroke risk screening system and executive visual portfolio developed for the Certified Data Scientist (BNSP) assessment. Built using a clinical stroke dataset from Kaggle contextualized for the Posbindu PTM program in Semarang City under strict CRISP-DM methodology and 11 SKKNI competency units, the project engineers a leak-free preprocessing pipeline. It benchmarks 5 ML algorithms - achieving a champion Logistic Regression F1-score of 0.6538 (+11.55% over baseline literature) - and integrates SHAP (SHapley Additive exPlanations) for transparent clinical feature interpretability.',
         problem:
             'Stroke risk screening in the Posbindu PTM program lacked an evidence-based, interpretable decision-support tool for health officers.',
         solution:
             'Built an end-to-end machine learning system under CRISP-DM, benchmarking five algorithms with a leak-free preprocessing pipeline and SHAP for transparent feature interpretation.',
         outcome:
-            'The champion Logistic Regression model achieved an F1-score of 0.6538 — an 11.55% improvement over baseline literature — with SHAP explaining the clinical features behind each prediction.',
+            'The champion Logistic Regression model achieved an F1-score of 0.6538 - an 11.55% improvement over baseline literature - with SHAP explaining the clinical features behind each prediction.',
         role: 'Data Scientist',
         year: '2026',
         websiteType: 'Infographic',

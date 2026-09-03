@@ -13,7 +13,7 @@ export default function Home() {
             <Analytics />
             <Hero />
             <PortfolioSection limit={2} />
-            <Experience />
+            <Experience compact />
             <Education />
             <Certificates limit={2} />
             <Skills preview />

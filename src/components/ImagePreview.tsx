@@ -52,7 +52,13 @@ export default function ImagePreview({
                                 width={800}
                                 height={600}
                                 unoptimized
-                                style={{ width: '100%', height: 'auto' }}
+                                style={{
+                                    maxWidth: '100%',
+                                    maxHeight: '85svh',
+                                    width: 'auto',
+                                    height: 'auto',
+                                    objectFit: 'contain',
+                                }}
                             />
                         </div>
                     </div>

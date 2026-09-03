@@ -2,15 +2,15 @@
     "eyebrow": "Pendidikan",
     "items": [
         {
-            "date": "SEP 2025 — SEKARANG",
+            "date": "SEP 2025 - SEKARANG",
             "badge": "Sedang Berjalan",
             "title": "Sarjana Sains Teknologi Informasi",
             "org": "Universitas Dian Nuswantoro",
             "gpa": "3.90",
-            "desc": "• Dipublikasikan di SINTA 3 JAIC: \"Methodologically Sound Class-Imbalance Handling Detection via Training-Only Oversampling.\"\n• Dipublikasikan di SINTA 2 JTI: \"Automatic Detection of Foot Arch Using Clarke's Angle Calculation Through A Web-Integrated System for Children.\""
+            "desc": "• Dipublikasikan di SINTA 3 JAIC: \"Methodologically Sound Class-Imbalance Handling Detection via Training-Only Oversampling\"\n• Dipublikasikan di SINTA 2 JTI: \"Automatic Detection of Foot Arch Using Clarke's Angle Calculation Through A Web-Integrated System for Children\""
         },
         {
-            "date": "SEP 2022 — JULI 2025",
+            "date": "SEP 2022 - JULI 2025",
             "badge": "Lulus",
             "title": "Diploma Tiga Teknologi Informasi",
             "org": "Universitas Dian Nuswantoro",

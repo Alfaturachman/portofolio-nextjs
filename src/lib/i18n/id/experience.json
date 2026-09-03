@@ -2,23 +2,37 @@
     "eyebrow": "Pengalaman",
     "titleLine1": "Perjalanan & riwayat",
     "titleLine2": "karier saya",
+    "viewAll": "Lihat semua pengalaman",
+    "duration": {
+        "year": "tahun",
+        "years": "tahun",
+        "month": "bulan",
+        "months": "bulan"
+    },
     "items": [
         {
-            "date": "AGU 2024 — SEKARANG",
+            "date": "AGU 2024 - SEKARANG",
             "badge": "Saat Ini",
             "title": "Developer Full-Stack & ML",
             "org": "Freelance / Proyek Independen",
             "desc": "• Merancang dan mengirimkan aplikasi web end-to-end, dari kebutuhan dan UI hingga API backend.\n• Membangun layanan backend yang skalabel: RESTful API, skema basis data relasional, dan integrasi pihak ketiga.\n• Menerapkan machine learning dan deep learning pada masalah nyata: pelatihan model, evaluasi, dan integrasi."
         },
         {
-            "date": "MEI 2025 — MARET 2026",
+            "date": "MEI 2025 - MARET 2026",
             "badge": "Finalis PIMNAS & Awardee IEEE",
             "title": "STEDI: Pre-Diagnostic Screening Assistant for Elderly Health Posts",
-            "org": "Kemendikbudristek & IEEE Foundation",
+            "org": "Kemendikbudristek & EPICS in IEEE",
             "desc": "• Berhasil membawa inovasi tim melaju sebagai Finalis Nasional pada Pekan Ilmiah Mahasiswa Nasional (PIMNAS) 38 di bawah skema PKM Karya Inovatif (PKM-KI).\n• Berhasil melakukan eskalasi proyek ke tingkat global dan memenangkan hibah internasional proyek kemanusiaan dari EPICS in IEEE (Jon C. Taenzer Memorial Fund) sebesar US$3,150.\n• Terdaftar resmi sebagai Inventor dalam Hak Kekayaan Intelektual (HKI) Desain Industri untuk perangkat fisik Monitor Box STEDI."
         },
         {
-            "date": "JUNI 2024 — JULI 2025",
+            "date": "SEPT 2024 - MEI 2025",
+            "badge": "EPICS in IEEE",
+            "title": "E-Growth: Digital Growth Monitoring Platform",
+            "org": "EPICS in IEEE",
+            "desc": "• Mengembangkan komponen fungsional E-Growth, platform berbasis cloud yang terintegrasi dengan perangkat pengukuran pediatri F-Scale.\n• Mengimplementasikan pemantauan dan visualisasi digital parameter pertumbuhan anak serta analisis lengkung kaki untuk deteksi dini kaki datar dan kaki cekung (cavus).\n• Mendukung implementasi lapangan di TK Ainun Habibie, memungkinkan pengukuran pertumbuhan dan struktur kaki sekitar 100 siswa untuk dilaporkan dan dipantau secara digital."
+        },
+        {
+            "date": "JUNI 2024 - JUNE 2025",
             "badge": "Magang",
             "title": "Magang Full-Stack Web Developer",
             "org": "Fakultas Teknik UDINUS",

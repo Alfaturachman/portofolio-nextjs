@@ -31,14 +31,14 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-    title: 'Alfaturachman Maulana Pahlevi | Software Engineer Portfolio',
+    title: 'Alfaturachman Maulana Pahlevi | Software Engineer',
     description:
         'Portfolio of Alfaturachman Maulana Pahlevi - Software Engineer focused on DevOps and AI solutions. Discover my projects in Full-Stack development and Machine Learning.',
     keywords:
         'Alfaturachman Maulana Pahlevi, Alfaturachman, Software Engineer, DevOps, AI, Machine Learning, Portfolio, Web Developer',
     authors: [{ name: 'Alfaturachman Maulana Pahlevi' }],
     openGraph: {
-        title: 'Alfaturachman Maulana Pahlevi | Software Engineer Portfolio',
+        title: 'Alfaturachman Maulana Pahlevi | Software Engineer',
         description:
             'Software Engineer focused on DevOps and AI solutions. Explore my latest works and technical expertise.',
         url: 'https://almavi.vercel.app/',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Alfaturachman Maulana Pahlevi | Software Engineer Portfolio',
+        title: 'Alfaturachman Maulana Pahlevi | Software Engineer',
         description:
             'Software Engineer focused on DevOps and AI solutions. Explore my latest works and technical expertise.',
         images: ['https://almavi.vercel.app/assets/images/logo/logo-seo.png'],

@@ -13,6 +13,7 @@
 .breadcrumb-list {
     display: flex;
     align-items: center;
+    max-height: 36px;
     gap: 6px;
     list-style: none;
     padding: 0;

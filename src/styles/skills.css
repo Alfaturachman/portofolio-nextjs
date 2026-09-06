@@ -178,11 +178,13 @@
     width: 16px;
     height: 16px;
     object-fit: contain;
+    transition: filter 0.2s ease;
 }
 
-[data-theme='dark'] .tool-icon img[src*='nextjs'],
-[data-theme='dark'] .tool-icon img[src*='github'],
-[data-theme='dark'] .tool-icon img[src*='django'] {
+/* ponytail: invert monochrome black logos in dark mode so they are white and readable against dark cards */
+[data-theme='dark'] .tool-pill img[src*='nextjs'],
+[data-theme='dark'] .tool-pill img[src*='github'],
+[data-theme='dark'] .tool-pill img[src*='django'] {
     filter: brightness(0) invert(1);
 }
 
@@ -216,16 +218,31 @@
     animation: skillsMarquee 90s linear infinite;
 }
 
-.skills-marquee-track.reverse {
-    animation: skillsMarqueeReverse 90s linear infinite;
-}
-
 .skills-marquee:hover .skills-marquee-track {
     animation-play-state: paused;
 }
 
 .skills-marquee-track .tool-pill {
     flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 16px;
+    gap: 0;
+}
+
+.skills-marquee-track .tool-icon {
+    font-size: 32px;
+}
+
+.skills-marquee-track .tool-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.skills-marquee-track .tool-pill:hover {
+    transform: scale(1.04);
 }
 
 @keyframes skillsMarquee {
@@ -234,15 +251,6 @@
     }
     to {
         transform: translateX(-50%);
-    }
-}
-
-@keyframes skillsMarqueeReverse {
-    from {
-        transform: translateX(-50%);
-    }
-    to {
-        transform: translateX(0);
     }
 }
 

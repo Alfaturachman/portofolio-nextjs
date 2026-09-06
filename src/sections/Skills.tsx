@@ -12,7 +12,7 @@ const toolIcons: Record<string, string> = {
     html: '/assets/images/logo/html.svg',
     javascript: '/assets/images/logo/javascript.svg',
     react: '/assets/images/logo/react.svg',
-    nextjs: '/assets/images/logo/nextjs.svg',
+    nextjs: '/assets/images/logo/nextjs.svg?v=2',
     python: '/assets/images/logo/python.svg',
     php: '/assets/images/logo/php.svg',
     laravel: '/assets/images/logo/laravel.svg',
@@ -21,7 +21,7 @@ const toolIcons: Record<string, string> = {
     kotlin: '/assets/images/logo/kotlin.svg',
     java: '/assets/images/logo/java.svg',
     git: '/assets/images/logo/git.svg',
-    github: '/assets/images/logo/github.svg',
+    github: '/assets/images/logo/github.svg?v=2',
     docker: '/assets/images/logo/docker.svg',
     figma: '/assets/images/logo/figma.svg',
     css: '/assets/images/logo/css.svg',
@@ -29,7 +29,7 @@ const toolIcons: Record<string, string> = {
     postgresql: '/assets/images/logo/postgresql.svg',
     nodejs: '/assets/images/logo/nodejs.svg',
     typescript: '/assets/images/logo/typescript.svg',
-    django: '/assets/images/logo/django.svg',
+    django: '/assets/images/logo/django.svg?v=2',
     'adobe-illustrator-cc': '/assets/images/logo/adobe-illustrator-cc.svg',
 };
 
@@ -63,36 +63,26 @@ export default function Skills({
     const renderToolPills = (tools: typeof allTools, key: string) =>
         [...tools, ...tools].map((tool, i) => (
             <div className="tool-pill" key={`${key}-${tool.name}-${i}`}>
-                <span className="tool-icon">
-                    {toolIcons[tool.icon] ? (
-                        <Image
-                            src={toolIcons[tool.icon]}
-                            alt={tool.name}
-                            width={16}
-                            height={16}
-                        />
-                    ) : (
-                        <i className={`fab fa-${tool.icon}`} />
-                    )}
-                </span>
-                {tool.name}
+                {toolIcons[tool.icon] ? (
+                    <Image
+                        src={toolIcons[tool.icon]}
+                        alt={tool.name}
+                        width={40}
+                        height={40}
+                    />
+                ) : (
+                    <i className={`fab fa-${tool.icon}`} />
+                )}
             </div>
         ));
 
-    const renderMarquee = () => {
-        const cut = Math.floor(allTools.length / 2);
-        const reverseTools = [...allTools.slice(cut), ...allTools.slice(0, cut)];
-        return (
-            <div className="skills-marquee" aria-hidden="true">
-                <div className="skills-marquee-track">
-                    {renderToolPills(allTools, 't')}
-                </div>
-                <div className="skills-marquee-track reverse">
-                    {renderToolPills(reverseTools, 'r')}
-                </div>
+    const renderMarquee = () => (
+        <div className="skills-marquee" aria-hidden="true">
+            <div className="skills-marquee-track">
+                {renderToolPills(allTools, 't')}
             </div>
-        );
-    };
+        </div>
+    );
 
     return (
         <section id="skills">

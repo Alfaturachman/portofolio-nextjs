@@ -16,8 +16,7 @@
         "posyandu": "Pengganti digital Buku Pink manual untuk catatan tumbuh kembang balita dan jadwal imunisasi.",
         "nomadenstuff": "Aplikasi web e-commerce untuk thrift shop dengan fitur reservasi produk dan perhitungan ongkir.",
         "pusdataru-jateng": "Platform bagi warga untuk mengajukan dan melacak pengaduan publik di Jawa Tengah.",
-        "sertifikasi": "Sistem machine learning untuk skrining risiko stroke, dibangun untuk sertifikasi data scientist BNSP.",
-        "kireikies": "Website katalog produk untuk toko Kireikies Cookies."
+        "sertifikasi": "Sistem machine learning untuk skrining risiko stroke, dibangun untuk sertifikasi data scientist BNSP."
     },
     "meta": {
         "toggleAria": "Tampilkan Spesifikasi Proyek",
@@ -91,8 +90,7 @@
             "posyandu": "Sistem informasi Posyandu berbasis web yang dibangun dengan Laravel PHP untuk mendigitalkan catatan tumbuh kembang balita dan imunisasi. Setiap minggu, imunisasi dan perkembangan anak dicatat - menggantikan sistem Buku Pink tradisional dengan basis data digital yang dapat dicari dan dilaporkan sepenuhnya.",
             "nomadenstuff": "NomadenStuff Ecommerce adalah aplikasi e-commerce yang dibangun khusus untuk bisnis thrift shop. Platform ini mengelola inventaris unik berupa barang satuan yang khas di dunia thrifting, dengan fitur seperti reservasi produk, panduan ukuran yang detail, dan perhitungan ongkos kirim otomatis.",
             "pusdataru-jateng": "Sistem informasi manajemen pengaduan berbasis web untuk Provinsi Jawa Tengah (Pusdataru Jateng) yang memungkinkan warga mengajukan, melacak, dan mengelola pengaduan publik secara digital. Dibangun dengan Laravel dan MySQL, sistem ini merapikan alur kerja mulai dari pengajuan pengaduan, verifikasi, penugasan ke dinas terkait, hingga pelacakan penyelesaian.",
-            "sertifikasi": "Sistem Machine Learning end-to-end untuk skrining risiko stroke beserta portofolio visual eksekutif yang dikembangkan untuk asesmen Certified Data Scientist (BNSP). Dibangun menggunakan dataset klinis stroke dari Kaggle yang dikontekstualisasikan untuk program Posbindu PTM di Kota Semarang dengan metodologi CRISP-DM yang ketat dan 11 unit kompetensi SKKNI, proyek ini membangun pipeline preprocessing bebas kebocoran data. Sistem membandingkan 5 algoritma ML - mencapai F1-score Logistic Regression terbaik sebesar 0,6538 (+11,55% dari baseline literatur) - serta mengintegrasikan SHAP (SHapley Additive exPlanations) untuk interpretabilitas fitur klinis yang transparan.",
-            "kireikies": "Website untuk toko Kireikies Cookies yang menampilkan katalog produk dan informasi toko. Proyek ini dibangun dengan fokus pada UI yang bersih dan pengalaman pengguna yang halus untuk memperkuat branding produk artisan."
+            "sertifikasi": "Sistem Machine Learning end-to-end untuk skrining risiko stroke beserta portofolio visual eksekutif yang dikembangkan untuk asesmen Certified Data Scientist (BNSP). Dibangun menggunakan dataset klinis stroke dari Kaggle yang dikontekstualisasikan untuk program Posbindu PTM di Kota Semarang dengan metodologi CRISP-DM yang ketat dan 11 unit kompetensi SKKNI, proyek ini membangun pipeline preprocessing bebas kebocoran data. Sistem membandingkan 5 algoritma ML - mencapai F1-score Logistic Regression terbaik sebesar 0,6538 (+11,55% dari baseline literatur) - serta mengintegrasikan SHAP (SHapley Additive exPlanations) untuk interpretabilitas fitur klinis yang transparan."
         },
         "problems": {
             "renstra-ft": "Fakultas belum memiliki sumber informasi terpusat untuk memantau capaian KPI dan beban kerja dosen, sehingga target strategis jangka panjang sulit dievaluasi secara konsisten.",
@@ -106,8 +104,7 @@
             "posyandu": "Catatan tumbuh kembang dan imunisasi balita masih disimpan di Buku Pink manual, sehingga data sulit dicari, dilacak, dan dilaporkan.",
             "nomadenstuff": "Thrift shop yang menjual barang unik satuan kesulitan mengelola reservasi, detail ukuran, dan ongkos kirim tanpa platform khusus.",
             "pusdataru-jateng": "Pengaduan publik masuk melalui kanal yang terpecah tanpa alur kerja terpusat untuk verifikasi, penugasan, dan pelacakan penyelesaian.",
-            "sertifikasi": "Skrining risiko stroke pada program Posbindu PTM belum memiliki alat pendukung keputusan berbasis bukti yang dapat diinterpretasikan bagi petugas kesehatan.",
-            "kireikies": "Toko Kireikies Cookies belum memiliki kehadiran daring untuk menampilkan katalog produk dan informasi toko."
+            "sertifikasi": "Skrining risiko stroke pada program Posbindu PTM belum memiliki alat pendukung keputusan berbasis bukti yang dapat diinterpretasikan bagi petugas kesehatan."
         },
         "solutions": {
             "renstra-ft": "Mengembangkan sistem informasi perencanaan strategis dengan dashboard untuk memantau target tahunan serta mendukung penyusunan laporan EWMP.",
@@ -121,8 +118,7 @@
             "posyandu": "Mendigitalkan catatan tumbuh kembang dan imunisasi dengan sistem web berbasis Laravel, mencatat perkembangan dan imunisasi anak setiap minggu.",
             "nomadenstuff": "Membangun aplikasi e-commerce dengan fitur reservasi produk, panduan ukuran yang detail, dan perhitungan ongkos kirim otomatis untuk inventori barang satuan.",
             "pusdataru-jateng": "Mengembangkan sistem manajemen pengaduan berbasis Laravel yang menangani pengajuan, verifikasi, penugasan ke dinas terkait, dan pelacakan penyelesaian.",
-            "sertifikasi": "Membangun sistem machine learning end-to-end dengan metodologi CRISP-DM, membandingkan lima algoritma dengan pipeline preprocessing bebas kebocoran data dan SHAP untuk interpretasi fitur yang transparan.",
-            "kireikies": "Membangun website katalog produk dengan Next.js, berfokus pada UI yang bersih dan interaksi yang halus untuk branding toko."
+            "sertifikasi": "Membangun sistem machine learning end-to-end dengan metodologi CRISP-DM, membandingkan lima algoritma dengan pipeline preprocessing bebas kebocoran data dan SHAP untuk interpretasi fitur yang transparan."
         },
         "outcomes": {
             "renstra-ft": "Sistem menyediakan akses terpusat terhadap data kinerja strategis, sehingga pihak fakultas dapat memantau progres dan mengidentifikasi target yang memerlukan perhatian lebih lanjut.",
@@ -136,8 +132,7 @@
             "posyandu": "Kader Posyandu dan tenaga kesehatan mengakses catatan digital yang dapat dicari dengan pelaporan terstruktur sebagai pengganti buku manual.",
             "nomadenstuff": "Pelanggan dapat mereservasi barang dan memperoleh estimasi ongkir yang akurat, sementara pemilik mengelola katalog barang unik dalam satu tempat.",
             "pusdataru-jateng": "Warga dapat mengajukan dan melacak pengaduan secara digital, dan pihak berwenang mengikuti alur kerja terstruktur dari verifikasi hingga penyelesaian.",
-            "sertifikasi": "Model Logistic Regression terbaik mencapai F1-score sebesar 0,6538 - peningkatan 11,55% dari baseline literatur - dengan SHAP menjelaskan fitur klinis di balik setiap prediksi.",
-            "kireikies": "Pelanggan dapat menjelajahi katalog produk dan informasi toko secara daring, memperkuat branding produk artisan."
+            "sertifikasi": "Model Logistic Regression terbaik mencapai F1-score sebesar 0,6538 - peningkatan 11,55% dari baseline literatur - dengan SHAP menjelaskan fitur klinis di balik setiap prediksi."
         }
     }
 }

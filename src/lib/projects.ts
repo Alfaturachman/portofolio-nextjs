@@ -341,28 +341,4 @@ export const projects: Project[] = [
         demo: '#',
         github: 'https://github.com/Alfaturachman/data-scientist-bnsp',
     },
-    {
-        id: 'kireikies',
-        image: '/assets/images/projects/project-kireikies-menu.png',
-        gallery: ['/assets/images/projects/project-kireikies-menu.png'],
-        title: 'Kireikies Cookies Website',
-        type: 'Freelance',
-        privacy: 'Public',
-        cardDesc:
-            'Product catalog website for the Kireikies Cookies store.',
-        desc: 'Website for Kireikies Cookies store, showcasing product catalog and store information. This project was built with a focus on clean UI and smooth user experience to enhance artisan product branding.',
-        problem:
-            'The Kireikies Cookies store had no online presence to showcase its product catalog and store information.',
-        solution:
-            'Built a Next.js product catalog website with clean UI and smooth interactions for the store brand.',
-        outcome:
-            'Customers can browse the product catalog and store details online, strengthening the artisan product brand.',
-        role: 'Frontend Developer',
-        year: '2026',
-        websiteType: 'Landing Page',
-        sector: 'Retail',
-        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
-        demo: 'https://kireikies-cookies.vercel.app/',
-        github: 'https://github.com/Alfaturachman/kireikies-cookies',
-    },
 ];

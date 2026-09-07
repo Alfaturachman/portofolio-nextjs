@@ -14,8 +14,7 @@
     display: grid;
     gap: 16px;
     align-items: start;
-    padding-bottom: 48px;
-    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 24px;
 }
 
 .skill-category:last-child {
@@ -36,28 +35,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-    cursor: pointer;
     width: 100%;
-    outline: none;
-}
-
-.category-header:focus-visible {
-    outline: 2px solid var(--accent-blue);
-    outline-offset: 4px;
-    border-radius: 8px;
-}
-
-.category-chevron {
-    display: none;
-    font-size: 16px;
-    color: var(--text-tertiary);
-    transition: transform 0.3s ease;
-    flex-shrink: 0;
 }
 
 .category-title {
@@ -85,65 +63,6 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        gap: 16px;
-    }
-
-    .category-chevron {
-        width: 40px;
-        height: 40px;
-        border-radius: 12px;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        margin-left: auto;
-        margin-top: 2px;
-        transition: background 0.25s ease, transform 0.25s ease;
-    }
-
-    [data-theme='dark'] .category-chevron {
-        background: var(--card-bg);
-    }
-
-    .category-header:hover .category-chevron {
-        background: var(--accent-blue-soft);
-    }
-
-    .category-chevron i,
-    .category-chevron svg {
-        font-size: 14px;
-        color: var(--text-muted);
-        transition: transform 0.35s ease, color 0.3s ease;
-    }
-
-    .category-header:hover .category-chevron svg,
-    .category-chevron:hover svg {
-        color: var(--accent-blue);
-    }
-
-    .category-chevron.is-expanded i,
-    .category-chevron.is-expanded svg {
-        transform: rotate(180deg);
-        color: var(--accent-blue);
-    }
-
-    .category-tools {
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition:
-            max-height 0.35s ease,
-            opacity 0.3s ease,
-            margin 0.3s ease;
-        margin-top: 0;
-        gap: 0;
-    }
-
-    .category-tools.is-expanded {
-        max-height: 2000px;
-        opacity: 1;
-        margin-top: 8px;
         gap: 16px;
     }
 }

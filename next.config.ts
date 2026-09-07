@@ -24,6 +24,9 @@ const nextConfig: NextConfig = {
     turbopack: {
         root: process.cwd(),
     },
+    images: {
+        qualities: [75, 90, 95],
+    },
     headers: async () => [
         {
             source: '/(.*)',

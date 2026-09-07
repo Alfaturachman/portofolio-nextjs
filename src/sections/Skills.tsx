@@ -2,9 +2,6 @@
 
 import { skillsCategories } from '@/lib/experiences';
 import Image from 'next/image';
-import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { useI18n } from '@/lib/i18n/i18n-context';
 import ViewAll from '@/components/ViewAll';
 
@@ -40,20 +37,7 @@ export default function Skills({
     preview?: boolean;
     children?: React.ReactNode;
 }) {
-    const [expanded, setExpanded] = useState<Set<number>>(new Set());
     const { t } = useI18n();
-
-    const toggleCategory = (idx: number) => {
-        setExpanded((prev) => {
-            const next = new Set(prev);
-            if (next.has(idx)) {
-                next.delete(idx);
-            } else {
-                next.add(idx);
-            }
-            return next;
-        });
-    };
 
     const allTools = skillsCategories.flatMap((cat) => cat.tools);
 
@@ -94,17 +78,12 @@ export default function Skills({
                 ) : (
                     <div className="skills-wrapper">
                         {skillsCategories.map((cat, idx) => {
-                            const isExpanded = expanded.has(idx);
                             // ponytail: fallback keeps a new category visible in EN
                             // until its translation is added to skills.json
                             const translated = t.skills.categories[idx];
                             return (
                                 <div className="skill-category" key={cat.title}>
-                                    <button
-                                        className="category-header"
-                                        onClick={() => toggleCategory(idx)}
-                                        aria-expanded={isExpanded}
-                                    >
+                                    <div className="category-header">
                                         <div>
                                             <h3 className="category-title">
                                                 {translated?.title ?? cat.title}
@@ -113,15 +92,8 @@ export default function Skills({
                                                 {translated?.desc ?? cat.desc}
                                             </p>
                                         </div>
-                                        <div
-                                            className={`category-chevron${isExpanded ? ' is-expanded' : ''}`}
-                                        >
-                                            <FontAwesomeIcon icon={faChevronDown} />
-                                        </div>
-                                    </button>
-                                    <div
-                                        className={`category-tools${isExpanded ? ' is-expanded' : ''}`}
-                                    >
+                                    </div>
+                                    <div className="category-tools">
                                         {cat.tools.map((tool) => (
                                             <div
                                                 className="tool-pill"

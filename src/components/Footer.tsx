@@ -1,13 +1,10 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
-import { useI18n } from '@/lib/i18n/i18n-context';
+import { socials } from '@/lib/socials';
 
 export default function Footer() {
     const footerRef = useRef<HTMLElement>(null);
-    const { t } = useI18n();
 
     useEffect(() => {
         const footer = footerRef.current;
@@ -28,29 +25,26 @@ export default function Footer() {
         };
     }, []);
 
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
     return (
         <footer id="footer" ref={footerRef}>
-            <div className="footer-inner">
-                {/* Bottom Bar */}
-                <div className="footer-bottom-bar">
-                    <span className="footer-copyright-text">
-                        &copy; {new Date().getFullYear()} Alfaturachman Maulana Pahlevi
-                    </span>
-                    <button
-                        onClick={scrollToTop}
-                        className="footer-back-to-top-btn"
-                        aria-label={t.footer.backToTopAria}
-                    >
-                        <span className="footer-back-to-top-text">
-                            {t.footer.backToTop}
-                        </span>
-                        <FontAwesomeIcon icon={faArrowUp} />
-                    </button>
-                </div>
+            <div className="footer-bottom-bar">
+                <span className="footer-copyright-text">
+                    &copy; {new Date().getFullYear()} Alfaturachman Maulana Pahlevi
+                </span>
+                <nav className="footer-socials" aria-label="Social media links">
+                    {socials.map((s) => (
+                        <a
+                            key={s.id}
+                            href={s.href}
+                            target={s.href.startsWith('mailto') ? undefined : '_blank'}
+                            rel={s.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+                            className="hero-social-link"
+                            aria-label={s.label}
+                        >
+                            {s.icon}
+                        </a>
+                    ))}
+                </nav>
             </div>
         </footer>
     );

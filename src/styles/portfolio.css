@@ -124,11 +124,6 @@
     transform: translateZ(0) scale(1.012);
 }
 
-[data-theme='dark'] .project-card:hover {
-    border-color: var(--accent-blue);
-    box-shadow: 0 4px 20px rgba(59, 91, 219, 0.08);
-}
-
 .project-img-wrapper {
     width: 100%;
     aspect-ratio: 16/9;

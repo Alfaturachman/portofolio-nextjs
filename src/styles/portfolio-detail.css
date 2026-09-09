@@ -233,6 +233,11 @@
     transition: all 0.3s ease;
 }
 
+
+[data-theme='dark'] .meta-pill-icon {
+    background: var(--bg-primary);
+}
+
 .meta-pill-icon i,
 .meta-pill-icon svg {
     font-size: 14px;
@@ -837,6 +842,11 @@
         flex-direction: row;
         text-align: left;
     }
+}
+
+
+[data-theme='dark'] .next-project-link svg {
+    background: var(--bg-primary);
 }
 
 .next-project-link i,

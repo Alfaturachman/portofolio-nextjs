@@ -10,7 +10,7 @@
     margin-top: 32px;
 }
 
-.cert-row {
+.cert-card {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -25,14 +25,9 @@
         box-shadow .6s cubic-bezier(.22, 1, .36, 1);
 }
 
-.cert-row:hover {
+.cert-card:hover {
     border-color: var(--border-slightly);
     transform: translateZ(0) scale(1.012);
-}
-
-[data-theme='dark'] .cert-row:hover {
-    border-color: var(--accent-blue);
-    box-shadow: 0 4px 20px rgba(59, 91, 219, 0.08);
 }
 
 .cert-logo {
@@ -90,7 +85,12 @@
     transition: all 0.3s ease;
 }
 
-.cert-row:hover .cert-arrow {
+
+[data-theme='dark'] .cert-arrow {
+    background: var(--bg-primary);
+}
+
+.cert-card:hover .cert-arrow {
     background: var(--accent-blue);
     color: #fff;
 }
@@ -101,12 +101,12 @@
     transform: rotate(-45deg);
 }
 
-.cert-row:hover .cert-arrow-icon {
+.cert-card:hover .cert-arrow-icon {
     transform: rotate(0deg);
 }
 
 @media (max-width: 768px) {
-    .cert-row {
+    .cert-card {
         gap: 14px;
         padding: 14px 16px;
     }

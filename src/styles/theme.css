@@ -23,28 +23,27 @@
 }
 
 [data-theme='dark'] {
-    color-scheme: dark;
-    --bg-primary: #0b1120;
-    --bg-secondary: #111827;
-    --glass-bg: rgba(17, 24, 39, 0.65);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --accent: #f8fafc;
-    --accent-soft: #94a3b8;
-    --accent-blue: #3b82f6;
-    --accent-blue-soft: rgba(59, 130, 246, 0.18);
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-    --text-muted: #94a3b8;
-    --card-bg: #111827;
-    --border-subtle: rgba(255, 255, 255, 0.08);
-    --border-light: rgba(255, 255, 255, 0.05);
-    --border-lighter: rgba(255, 255, 255, 0.03);
-    --shadow-card:
-        0 4px 12px rgba(0, 0, 0, 0.25), 0 16px 40px rgba(0, 0, 0, 0.35);
-    --border-slightly: rgba(255, 255, 255, 0.1);
-    --overlay-light: rgba(255, 255, 255, 0.06);
-    --inverse-text: #0f172a;
-    --footer-bg: #020617;
+  color-scheme: dark;
+  --bg-primary: #000000;                /* Pure Black untuk sistem OLED */
+  --bg-secondary: #1c1c1e;              /* Elevasi tingkat 1 (System Background Secondary) */
+  --glass-bg: rgba(28, 28, 30, 0.70);    /* Efek translucent / frosted glass Apple */
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --accent: #ffffff;
+  --accent-soft: #8e8e93;               /* Abu-abu sistem Apple */
+  --accent-blue: #0a84ff;               /* SF System Blue untuk Dark Mode */
+  --accent-blue-soft: rgba(10, 132, 255, 0.15);
+  --text-primary: #ffffff;              /* SF Label Primary */
+  --text-secondary: rgba(235, 235, 245, 0.6); /* SF Label Secondary */
+  --text-muted: rgba(235, 235, 245, 0.3);     /* SF Label Tertiary */
+  --card-bg: #1c1c1e;                   /* Elemen kartu di atas background hitam */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(255, 255, 255, 0.04);
+  --border-lighter: rgba(255, 255, 255, 0.06);
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.5); /* Shadow lebih gelap karena background hitam */
+  --border-slightly: rgba(255, 255, 255, 0.2);
+  --overlay-light: rgba(255, 255, 255, 0.06);
+  --inverse-text: #000000;
+  --footer-bg: #000000;
 }
 
 @theme {

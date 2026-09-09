@@ -38,7 +38,7 @@ export default function Certificates({
                         <Link
                             key={spec.id}
                             href={`/certificates/${spec.id}`}
-                            className="cert-row"
+                            className="cert-card"
                             aria-label={`${t.certificates.viewSpecAria}${title}`}
                         >
                             <div className="cert-logo">

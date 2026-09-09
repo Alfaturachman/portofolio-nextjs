@@ -14,7 +14,7 @@
     .next-project-link:hover,
     .meta-pill:hover,
     .course-item:hover,
-    .cert-row:hover {
+    .cert-card:hover {
         transform: none;
     }
 }

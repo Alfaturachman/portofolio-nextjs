@@ -112,7 +112,7 @@ export default function Navbar() {
                     onClick={(e) => handleNavClick(e, '/')}
                     aria-label="Home"
                 >
-                    almavi<span>.</span>
+                    Almavi<span>.</span>
                 </Link>
                 <div className="nav-links" role="list">
                     {links.map((link) => (

@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         siteName: 'almavi',
         images: [
             {
-                url: 'https://almavi.vercel.app/assets/images/logo/logo-seo.png',
+                url: 'https://almavi.vercel.app/assets/images/banner/banner-seo.png',
             },
         ],
         locale: 'en_US',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         title: 'Alfaturachman Maulana Pahlevi | Software Engineer',
         description:
             'Software Engineer focused on DevOps and AI solutions. Explore my latest works and technical expertise.',
-        images: ['https://almavi.vercel.app/assets/images/logo/logo-seo.png'],
+        images: ['https://almavi.vercel.app/assets/images/banner/banner-seo.png'],
     },
     robots: {
         index: true,

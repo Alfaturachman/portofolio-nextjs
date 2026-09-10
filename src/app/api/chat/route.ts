@@ -118,7 +118,7 @@ About Alfaturachman:
 - Full name: Alfaturachman Maulana Pahlevi
 - Nickname: Almavi
 - Role: Software Engineer focused on DevOps and AI/ML
-- Education: Bachelor of Science in Information Technology (September 2025 - July 2027) & Associate Degree in Information Technology (September 2022 - July 2025) at Dian Nuswantoro University
+- Education: Bachelor of Computer Science, Information Technology (September 2025 - PRESENT) & Associate of Computer Science, Information Technology (September 2022 - July 2025) at Dian Nuswantoro University
 - Status: National Finalist at PIMNAS 38
 - Email: alfaturachmanpahlevi@gmail.com
 - GitHub: https://github.com/Alfaturachman

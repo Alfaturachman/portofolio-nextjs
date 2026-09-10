@@ -19,8 +19,8 @@
     "specs": {
         "pimnas-peserta": "Participant of PIMNAS 2025",
         "pimnas-pendanaan": "Grant Recipient PIMNAS 2025",
-        "bnsp-web-developer": "Certificate of Competence – Web Developer",
-        "bnsp-junior-mobile-programmer": "Certificate of Competence – Junior Mobile Programmer",
-        "apti-pemrograman-web": "Certificate of Competence – Web Programming"
+        "bnsp-web-developer": "Certificate of Competence - Web Developer",
+        "bnsp-junior-mobile-programmer": "Certificate of Competence - Junior Mobile Programmer",
+        "apti-pemrograman-web": "Certificate of Competence - Web Programming"
     }
 }

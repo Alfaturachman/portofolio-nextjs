@@ -10,7 +10,7 @@ export const experiences: Experience[] = [
         desc: '• Successfully advanced the team\'s innovation to the National Finals of the 38th Pekan Ilmiah Mahasiswa Nasional (PIMNAS) under the Student Creativity Program for Innovative Works (PKM-KI).\n• Scaled the project to an international level, securing a US$3,150 humanitarian technology grant from EPICS in IEEE (Jon C. Taenzer Memorial Fund).\n• Officially registered as a co-inventor in the Industrial Design Intellectual Property Rights (HKI) for the STEDI Monitor Box physical device.',
     },
     {
-        date: 'SEPT 2024 - MAY 2025',
+        date: 'OCT 2024 - JUNE 2025',
         badge: 'EPICS in IEEE',
         title: 'E-Growth: Digital Growth Monitoring Platform',
         org: 'EPICS in IEEE',
@@ -34,7 +34,7 @@ export const educations: Experience[] = [
     {
         date: 'SEP 2025 - JUL 2027',
         badge: 'In Progress',
-        title: 'Bachelor of Science in Information Technology',
+        title: 'Bachelor of Computer Science, Information Technology',
         org: 'Dian Nuswantoro University',
         orgIcon: 'university',
         gpa: '3.90',
@@ -43,7 +43,7 @@ export const educations: Experience[] = [
     {
         date: 'SEP 2022 - JUL 2025',
         badge: 'Graduated',
-        title: 'Associate Degree in Information Technology',
+        title: 'Associate of Computer Science, Information Technology',
         org: 'Dian Nuswantoro University',
         orgIcon: 'university',
         gpa: '3.89',

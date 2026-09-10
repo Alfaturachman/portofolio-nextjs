@@ -8,9 +8,11 @@ import { useI18n } from '@/lib/i18n/i18n-context';
 export default function Tx({
     k,
     fallback,
+    values,
 }: {
     k: string;
     fallback?: string;
+    values?: Record<string, string | number>;
 }) {
     const { t } = useI18n();
 
@@ -23,5 +25,12 @@ export default function Tx({
         }
     }
 
-    return <>{typeof value === 'string' ? value : fallback}</>;
+    let str = typeof value === 'string' ? value : fallback;
+    if (str && values) {
+        Object.entries(values).forEach(([key, val]) => {
+            str = str?.replace(`{${key}}`, String(val));
+        });
+    }
+
+    return <>{str}</>;
 }

@@ -15,7 +15,7 @@
 
 .contact-huge-text {
     font-family: var(--font-jakarta), sans-serif;
-    font-weight: 800;
+    font-weight: 700;
     font-size: clamp(3rem, 9vw, 7rem);
     line-height: 0.95;
     letter-spacing: -0.05em;

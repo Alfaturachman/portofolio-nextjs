@@ -30,47 +30,6 @@
     flex-shrink: 0;
 }
 
-/* Apple HIG Pill Button */
-.footer-hero-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    min-height: 54px;
-    padding: 16px 36px;
-    background: var(--text-primary);
-    color: var(--card-bg);
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: -0.01em;
-    text-decoration: none;
-    transition: all 0.4s ease;
-    white-space: nowrap;
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-.footer-hero-btn svg {
-    font-size: 16px;
-    transition: transform 0.4s ease;
-}
-
-.footer-hero-btn:hover {
-    background: var(--accent-blue);
-    color: #ffffff;
-    transform: translateY(-2px);
-    gap: 16px;
-}
-
-.footer-hero-btn:hover svg {
-    transform: translateX(4px);
-}
-
-.footer-hero-btn:active {
-    transform: scale(0.97) translateY(0);
-}
-
 /* Bottom Bar */
 .footer-bottom-bar {
     position: relative;
@@ -90,7 +49,7 @@
 
 .footer-copyright-text {
     font-size: 14px;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     letter-spacing: -0.005em;
 }
 
@@ -101,20 +60,10 @@
     gap: 12px;
 }
 
-.footer-socials .hero-social-link {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-}
 
 @media (max-width: 900px) {
     #footer {
         padding: 48px 20px 28px;
-    }
-
-    .footer-hero-btn {
-        width: 100%;
-        justify-content: center;
     }
 }
 
@@ -131,12 +80,6 @@
 
     .desktop-only-br {
         display: none;
-    }
-
-    .footer-hero-btn {
-        min-height: 50px;
-        padding: 14px 24px;
-        font-size: 16px;
     }
 
     .footer-copyright-text {

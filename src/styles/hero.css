@@ -160,8 +160,8 @@
 }
 
 [data-theme='dark'] .hero-social-link {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.08);
+    background: var(--card-bg);
+    border: none;
 }
 
 .hero-social-link:hover {

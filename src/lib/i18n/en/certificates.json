@@ -3,15 +3,22 @@
     "titleLine1": "Certificates I have",
     "titleLine2": "earned",
     "coursesTag": "Courses",
-    "certDescPre": "Professional certification from ",
-    "certDescMid": " that covers the fundamentals of ",
-    "certDescPost": ".",
+    "certDesc": "01 Jan 2025",
+    "dates": {
+        "ibm-devops-software-engineering": "18 May 2026",
+        "ibm-machine-learning": "18 May 2026",
+        "pimnas-peserta": "04 December 2025",
+        "pimnas-pendanaan": "04 December 2025",
+        "bnsp-web-developer": "28 January 2025",
+        "bnsp-junior-mobile-programmer": "17 September 2024",
+        "apti-pemrograman-web": "22 January 2024"
+    },
     "viewCredential": "View Credential",
     "viewAll": "View All Certificates",
     "viewSpecAria": "View certificate: ",
     "specs": {
-        "pimnas-peserta": "Participant of National Student Scientific Week (PIMNAS) 2025",
-        "pimnas-pendanaan": "Grant Recipient & PIMNAS PKM-KI 2025 Finalist",
+        "pimnas-peserta": "Participant of PIMNAS 2025",
+        "pimnas-pendanaan": "Grant Recipient PIMNAS 2025",
         "bnsp-web-developer": "Certificate of Competence – Web Developer",
         "bnsp-junior-mobile-programmer": "Certificate of Competence – Junior Mobile Programmer",
         "apti-pemrograman-web": "Certificate of Competence – Web Programming"

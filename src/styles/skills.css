@@ -41,7 +41,7 @@
 .category-title {
     font-family: var(--font-outfit), sans-serif;
     font-size: clamp(20px, 2vw, 22px);
-    font-weight: 800;
+    font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.02em;
 }

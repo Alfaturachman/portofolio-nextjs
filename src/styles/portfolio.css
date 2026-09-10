@@ -39,7 +39,7 @@
     background: var(--bg-secondary);
     color: var(--text-primary);
     font-family: var(--font-sans);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 14px;
     text-decoration: none;
     transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
@@ -119,6 +119,10 @@
         box-shadow .6s cubic-bezier(.22, 1, .36, 1);
 }
 
+[data-theme="dark"] .project-card {
+    border: none;
+}
+
 .project-card:hover {
     border-color: var(--border-slightly);
     transform: translateZ(0) scale(1.012);
@@ -161,7 +165,7 @@
 .project-title {
     font-family: var(--font-outfit), sans-serif;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-primary);
     letter-spacing: -0.02em;
     line-height: 1.3;

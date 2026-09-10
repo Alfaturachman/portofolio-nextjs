@@ -159,11 +159,13 @@ export default async function CertificateDetailPage({
                                     <Tx k="courses.aboutTitle" />
                                 </h3>
                                 <p>
-                                    <Tx k="courses.aboutPre" />
-                                    <strong>{spec.provider}</strong>
-                                    <Tx k="courses.aboutMid" />
-                                    {courses.length}
-                                    <Tx k="courses.aboutEnd" />
+                                    <Tx 
+                                        k="courses.aboutDesc" 
+                                        values={{ 
+                                            provider: spec.provider, 
+                                            count: courses.length 
+                                        }} 
+                                    />
                                 </p>
                             </div>
                         </div>

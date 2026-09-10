@@ -34,6 +34,8 @@ export default function Certificates({
                     {displayedSpecs.map((spec) => {
                         const specTitles = t.certificates.specs as Record<string, string> | undefined;
                         const title = specTitles?.[spec.id] ?? spec.title;
+                        const specDates = t.certificates.dates as Record<string, string> | undefined;
+                        const date = specDates?.[spec.id] ?? t.certificates.certDesc;
                         return (
                         <Link
                             key={spec.id}
@@ -52,16 +54,7 @@ export default function Certificates({
                             </div>
                             <div className="cert-body">
                                 <h3 className="cert-title">{title}</h3>
-                                <p className="cert-desc">
-                                    {t.certificates.certDescPre}
-                                    {spec.provider}
-                                    {t.certificates.certDescMid}
-                                    {title.replace(
-                                        `${spec.provider} `,
-                                        '',
-                                    )}
-                                    {t.certificates.certDescPost}
-                                </p>
+                                <p className="cert-desc">{date}</p>
                             </div>
                             <div className="cert-arrow">
                                 <FontAwesomeIcon

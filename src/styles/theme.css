@@ -11,7 +11,7 @@
     --text-primary: #1d1d1f;
     --text-secondary: #5e5e63;
     --text-muted: #86868b;
-    --card-bg: #ffffff;
+    --card-bg: #fafafa;
     --border-subtle: rgba(15, 23, 42, 0.06);
     --border-light: rgba(26, 22, 16, 0.05);
     --border-lighter: rgba(0, 0, 0, 0.04);
@@ -24,22 +24,22 @@
 
 [data-theme='dark'] {
   color-scheme: dark;
-  --bg-primary: #000000;                /* Pure Black untuk sistem OLED */
-  --bg-secondary: #1c1c1e;              /* Elevasi tingkat 1 (System Background Secondary) */
-  --glass-bg: rgba(28, 28, 30, 0.70);    /* Efek translucent / frosted glass Apple */
+  --bg-primary: #000000;                
+  --bg-secondary: #1c1c1e;              
+  --glass-bg: rgba(28, 28, 30, 0.70);    
   --glass-border: rgba(255, 255, 255, 0.12);
   --accent: #ffffff;
-  --accent-soft: #8e8e93;               /* Abu-abu sistem Apple */
-  --accent-blue: #0a84ff;               /* SF System Blue untuk Dark Mode */
+  --accent-soft: #8e8e93;               
+  --accent-blue: #0a84ff;               
   --accent-blue-soft: rgba(10, 132, 255, 0.15);
-  --text-primary: #ffffff;              /* SF Label Primary */
-  --text-secondary: rgba(235, 235, 245, 0.6); /* SF Label Secondary */
-  --text-muted: rgba(235, 235, 245, 0.3);     /* SF Label Tertiary */
-  --card-bg: #1c1c1e;                   /* Elemen kartu di atas background hitam */
+  --text-primary: #ffffff;              
+  --text-secondary: #b3b3b7; 
+  --text-muted: rgba(235, 235, 245, 0.3);     
+  --card-bg: #1c1c1e;                   
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-light: rgba(255, 255, 255, 0.04);
   --border-lighter: rgba(255, 255, 255, 0.06);
-  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.5); /* Shadow lebih gelap karena background hitam */
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.5); 
   --border-slightly: rgba(255, 255, 255, 0.2);
   --overlay-light: rgba(255, 255, 255, 0.06);
   --inverse-text: #000000;
@@ -177,7 +177,7 @@ button:focus-visible {
 
 .section-title {
     font-family: var(--font-outfit), sans-serif;
-    font-weight: 800;
+    font-weight: 700;
     font-size: clamp(24px, 4vw, 30px);
     letter-spacing: -0.03em;
     color: var(--text-primary);

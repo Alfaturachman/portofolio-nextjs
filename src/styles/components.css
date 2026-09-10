@@ -185,7 +185,7 @@
 .loader-text {
     font-family: var(--font-outfit), sans-serif;
     font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -0.05em;
     color: var(--text-primary);
     overflow: hidden;

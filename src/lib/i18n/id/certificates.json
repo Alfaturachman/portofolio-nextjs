@@ -3,15 +3,22 @@
     "titleLine1": "Sertifikat yang telah",
     "titleLine2": "saya raih",
     "coursesTag": "Kursus",
-    "certDescPre": "Sertifikasi profesional dari ",
-    "certDescMid": " yang mencakup dasar-dasar ",
-    "certDescPost": ".",
+    "certDesc": "01 Jan 2025",
+    "dates": {
+        "ibm-devops-software-engineering": "18 Mei 2026",
+        "ibm-machine-learning": "18 Mei 2026",
+        "pimnas-peserta": "04 Desember 2025",
+        "pimnas-pendanaan": "04 Desember 2025",
+        "bnsp-web-developer": "28 Januari 2025",
+        "bnsp-junior-mobile-programmer": "17 September 2024",
+        "apti-pemrograman-web": "22 Januari 2024"
+    },
     "viewCredential": "Lihat Kredensial",
     "viewAll": "Lihat Semua Sertifikat",
     "viewSpecAria": "Lihat sertifikat: ",
     "specs": {
-        "pimnas-peserta": "Peserta Pekan Ilmiah Mahasiswa Nasional (PIMNAS) 2025",
-        "pimnas-pendanaan": "Peraih Pendanaan & Finalis PIMNAS PKM-KI 2025",
+        "pimnas-peserta": "Peserta PIMNAS 2025",
+        "pimnas-pendanaan": "Peraih Pendanaan PIMNAS 2025",
         "bnsp-web-developer": "Sertifikat Kompetensi – Web Developer",
         "bnsp-junior-mobile-programmer": "Sertifikat Kompetensi – Junior Mobile Programmer",
         "apti-pemrograman-web": "Sertifikat Kompetensi – Pemrograman Web"

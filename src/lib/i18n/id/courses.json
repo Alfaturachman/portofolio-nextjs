@@ -5,9 +5,7 @@
     "viewCredential": "Lihat Kredensial",
     "certBadge": "Sertifikat Profesional",
     "aboutTitle": "Tentang Sertifikat Profesional Ini",
-    "aboutPre": "Sertifikat Profesional ini dari ",
-    "aboutMid": " diperoleh setelah menyelesaikan seluruh ",
-    "aboutEnd": " kursus di bawah ini. Setiap kursus mencakup keterampilan dan konsep penting yang membangun menuju Sertifikat Profesional penuh.",
+    "aboutDesc": "Sertifikat Profesional ini dari {provider} diperoleh setelah menyelesaikan seluruh {count} kursus di bawah ini.",
     "toggleAria": "Tampilkan Spesifikasi Sertifikat",
     "toggleLabel": "Spesifikasi Sertifikat"
 }

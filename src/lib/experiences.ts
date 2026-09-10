@@ -2,14 +2,6 @@ import type { Experience } from './types';
 
 export const experiences: Experience[] = [
     {
-        date: 'AUG 2024 - PRESENT',
-        badge: 'Current',
-        title: 'Full-Stack & ML Developer',
-        org: 'Freelance / Independent Projects',
-        orgIcon: 'briefcase',
-        desc: '• Architecting and shipping end-to-end web applications from requirements and UI to backend APIs.\n• Building scalable backend services: RESTful APIs, relational database schemas, and third-party integrations.\n• Applying machine learning and deep learning to real-world problems: model training, evaluation, and integration.',
-    },
-    {
         date: 'MAY 2025 - MARCH 2026',
         badge: 'PIMNAS Finalist & IEEE Awardee',
         title: 'STEDI: Pre-Diagnostic Screening Assistant for Elderly Health Posts',
@@ -23,7 +15,7 @@ export const experiences: Experience[] = [
         title: 'E-Growth: Digital Growth Monitoring Platform',
         org: 'EPICS in IEEE',
         orgIcon: 'flask',
-        desc: '• Developed the functional components of E-Growth, a cloud-based platform integrated with the F-Scale pediatric measurement device.\n• Implemented digital monitoring and visualization of child growth parameters and foot-arch analysis for early detection of flat foot and cavus foot.\n• Supported field implementation at kindergarten/TK Ainun Habibie, enabling approximately 100 students\' growth and foot-structure measurements to be digitally reported and monitored.',
+        desc: '• Developed the functional components of E-Growth, a web-based platform integrated with the F-Scale pediatric measurement device to centralize patient data.\n• Implemented digital monitoring and visualization of child growth parameters and foot-arch analysis for early detection of flat foot and cavus foot.\n• Supported field implementation and testing at TK Ainun Habibie and local community health posts (Posyandu), enabling digital growth and foot-structure monitoring for approximately 20 children.',
     },
     {
         date: 'JUN 2024 - JUL 2025',

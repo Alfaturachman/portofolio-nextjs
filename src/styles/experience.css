@@ -27,8 +27,8 @@
 }
 
 .experience-dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background-color: var(--text-secondary);
     margin-top: 2px;

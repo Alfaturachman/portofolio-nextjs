@@ -45,7 +45,7 @@
 
 @media (max-width: 480px) {
     .hero-banner {
-        border-radius: 16px;
+        border-radius: 20px;
         margin: 24px 16px 0px;
         height: 132px;
         max-width: 420px;

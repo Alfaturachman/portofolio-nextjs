@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
 import { useChatbot } from '@/lib/chatbot-context';
 
@@ -112,7 +113,22 @@ export default function Navbar() {
                     onClick={(e) => handleNavClick(e, '/')}
                     aria-label="Home"
                 >
-                    Almavi<span>.</span>
+                    <Image
+                        src="/assets/images/logo/almavi_black.svg"
+                        alt="Almavi"
+                        width={32}
+                        height={32}
+                        className="nav-logo-img nav-logo-black"
+                        priority
+                    />
+                    <Image
+                        src="/assets/images/logo/almavi_white.svg"
+                        alt="Almavi"
+                        width={32}
+                        height={32}
+                        className="nav-logo-img nav-logo-white"
+                        priority
+                    />
                 </Link>
                 <div className="nav-links" role="list">
                     {links.map((link) => (

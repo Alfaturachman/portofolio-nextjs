@@ -7,7 +7,7 @@ export const experiences: Experience[] = [
         title: 'STEDI: Pre-Diagnostic Screening Assistant for Elderly Health Posts',
         org: 'Ministry of Education & EPICS in IEEE',
         orgIcon: 'flask',
-        desc: '• Successfully advanced the team\'s innovation to the National Finals of the 38th Pekan Ilmiah Mahasiswa Nasional (PIMNAS) under the Student Creativity Program for Innovative Works (PKM-KI).\n• Scaled the project to an international level, securing a US$3,150 humanitarian technology grant from EPICS in IEEE (Jon C. Taenzer Memorial Fund).\n• Officially registered as a co-inventor in the Industrial Design Intellectual Property Rights (HKI) for the STEDI Monitor Box physical device.',
+        desc: '• As a team member, helped advance the STEDI innovation to the National Finals of the 38th Pekan Ilmiah Mahasiswa Nasional (PIMNAS) under the Student Creativity Program for Innovative Works (PKM-KI).\n• As part of the team, helped scale the project to an international level, securing a US$3,150 humanitarian technology grant from EPICS in IEEE (Jon C. Taenzer Memorial Fund).\n• Officially registered as a co-inventor in the Industrial Design Intellectual Property Rights (HKI) for the STEDI Monitor Box physical device.',
     },
     {
         date: 'OCT 2024 - JUNE 2025',

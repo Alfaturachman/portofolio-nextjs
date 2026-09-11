@@ -89,13 +89,23 @@
     color: var(--text-primary);
     margin-bottom: 4px;
     line-height: 1.1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.hero-verified {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
 }
 
 .hero-role {
     font-family: var(--font-outfit), sans-serif;
     font-size: 16px;
     font-weight: 500;
-    color: var(--accent-blue);
+    color: var(--text-secondary);
     margin-bottom: 8px;
 }
 
@@ -128,7 +138,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    color: #22c55e;
+    color: var(--text-secondary);
 }
 
 .hero-meta-divider {
@@ -166,9 +176,15 @@
 
 .hero-social-link:hover {
     color: #ffffff;
-    background: var(--accent-blue);
-    border-color: var(--accent-blue);
+    background: #0b1120;
+    border-color: #0b1120;
     transform: translateY(-2px);
+}
+
+[data-theme='dark'] .hero-social-link:hover {
+    color: #0b1120;
+    background: #ffffff;
+    border-color: #ffffff;
 }
 
 .hero-social-link:active {

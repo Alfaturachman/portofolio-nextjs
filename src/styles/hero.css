@@ -101,6 +101,14 @@
     flex-shrink: 0;
 }
 
+.hero-verified-badge {
+    fill: var(--verified-badge);
+}
+
+.hero-verified-check {
+    fill: var(--verified-check);
+}
+
 .hero-role {
     font-family: var(--font-outfit), sans-serif;
     font-size: 16px;

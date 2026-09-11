@@ -20,6 +20,8 @@
     --overlay-light: rgba(26, 22, 16, 0.08);
     --inverse-text: #ffffff;
     --footer-bg: #ffffff;
+    --verified-badge: #000000;
+    --verified-check: #ffffff;
 }
 
 [data-theme='dark'] {
@@ -42,8 +44,10 @@
   --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.5); 
   --border-slightly: rgba(255, 255, 255, 0.2);
   --overlay-light: rgba(255, 255, 255, 0.06);
-  --inverse-text: #000000;
-  --footer-bg: #000000;
+--inverse-text: #000000;
+    --footer-bg: #000000;
+    --verified-badge: #ffffff;
+    --verified-check: #000000;
 }
 
 @theme {

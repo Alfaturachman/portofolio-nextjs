@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         siteName: 'almavi',
         images: [
             {
-                url: 'https://almavi.vercel.app/assets/images/banner/banner-seo.png',
+                url: 'https://almavi.vercel.app/assets/images/banner/banner-seo-almavi.png',
             },
         ],
         locale: 'en_US',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         title: 'Alfaturachman Maulana Pahlevi | Full-Stack Developer',
         description:
             'Full-Stack Developer focused on system infrastructure and machine learning systems. Explore my latest works and technical expertise.',
-        images: ['https://almavi.vercel.app/assets/images/banner/banner-seo.png'],
+        images: ['https://almavi.vercel.app/assets/images/banner/banner-seo-almavi.png'],
     },
     robots: {
         index: true,
@@ -82,8 +82,8 @@ export default function RootLayout({
             <head>
                 <link
                     rel="icon"
-                    type="image/svg+xml"
-                    href="/assets/images/logo/logo.svg"
+                    type="image/png"
+                    href="/assets/images/logo/logo-almavi-black.png"
                 />
                 <link rel="manifest" href="/manifest.json" />
                 <meta name="theme-color" content="#3b5bdb" />

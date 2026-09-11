@@ -114,7 +114,7 @@ export default function Navbar() {
                     aria-label="Home"
                 >
                     <Image
-                        src="/assets/images/logo/almavi_black.svg"
+                        src="/assets/images/logo/logo-almavi-black.png"
                         alt="Almavi"
                         width={32}
                         height={32}
@@ -122,7 +122,7 @@ export default function Navbar() {
                         priority
                     />
                     <Image
-                        src="/assets/images/logo/almavi_white.svg"
+                        src="/assets/images/logo/logo-almavi-white.png"
                         alt="Almavi"
                         width={32}
                         height={32}

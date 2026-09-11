@@ -75,6 +75,7 @@
     padding: 0 16px;
     background: var(--card-bg);
     border-radius: 12px;
+    border: 1px solid var(--border-subtle);
     font-family: var(--font-jakarta), sans-serif;
     font-size: 14px;
     font-weight: 600;
@@ -106,6 +107,12 @@
     filter: brightness(0) invert(1);
 }
 
+[data-theme='dark'] .skills-marquee-track .marquee-pill img[src*='nextjs'],
+[data-theme='dark'] .skills-marquee-track .marquee-pill img[src*='github'],
+[data-theme='dark'] .skills-marquee-track .marquee-pill img[src*='django'] {
+    filter: brightness(0) invert(1);
+}
+
 /* ===== Marquee Preview (homepage) ===== */
 .skills-marquee {
     position: relative;
@@ -113,7 +120,7 @@
     flex-direction: column;
     gap: 20px;
     margin-top: 24px;
-    -webkit-mask-image: linear-gradient(
+        -webkit-mask-image: linear-gradient(
         to right,
         transparent,
         black 3rem,
@@ -131,23 +138,37 @@
 
 .skills-marquee-track {
     display: flex;
+    padding-top: 8px;
+    padding-bottom: 8px;
     width: max-content;
     gap: 12px;
-    animation: skillsMarquee 90s linear infinite;
+    animation: skillsMarquee 60s linear infinite;
 }
 
 .skills-marquee:hover .skills-marquee-track {
     animation-play-state: paused;
 }
 
-.skills-marquee-track .tool-pill {
+.skills-marquee-track .marquee-pill {
+    display: inline-flex;
     flex-shrink: 0;
-    width: 64px;
-    height: 64px;
-    padding: 0;
+    align-items: center;
     justify-content: center;
-    border-radius: 16px;
-    gap: 0;
+    width: 56px;
+    height: 56px;
+    padding: 12px;
+    gap: 8px;
+    border-radius: 14px;
+    border: 1px solid var(--border-subtle);
+    overflow: hidden;
+    background: var(--card-bg);
+    font-family: var(--font-jakarta), sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    cursor: default;
+    box-sizing: border-box;
 }
 
 .skills-marquee-track .tool-icon {
@@ -159,7 +180,7 @@
     height: 40px;
 }
 
-.skills-marquee-track .tool-pill:hover {
+.skills-marquee-track .marquee-pill:hover {
     transform: scale(1.04);
 }
 

@@ -46,7 +46,7 @@ export default function Skills({
     // [-50%,0] => seamless, no cut-off)
     const renderToolPills = (tools: typeof allTools, key: string) =>
         [...tools, ...tools].map((tool, i) => (
-            <div className="tool-pill" key={`${key}-${tool.name}-${i}`}>
+            <div className="marquee-pill" key={`${key}-${tool.name}-${i}`}>
                 {toolIcons[tool.icon] ? (
                     <Image
                         src={toolIcons[tool.icon]}

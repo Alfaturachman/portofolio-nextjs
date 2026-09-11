@@ -221,23 +221,22 @@
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition:
+        transform .6s cubic-bezier(.22, 1, .36, 1),
+        box-shadow .6s cubic-bezier(.22, 1, .36, 1);
 }
 
 .hero-cta-primary:hover {
-    background: var(--accent-blue);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(59, 91, 219, 0.2);
+    transform: translateZ(0) scale(1.02);
 }
 
 [data-theme='dark'] .hero-cta-primary {
-    background: #f8fafc;
-    color: #0b1120;
+    background: #fff;
+    color: #000;
 }
 
 [data-theme='dark'] .hero-cta-primary:hover {
-    background: var(--accent-blue);
-    color: #fff;
+    transform: translateZ(0) scale(1.02);
 }
 
 /* ----- Fade-in Animations ----- */

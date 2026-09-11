@@ -98,7 +98,12 @@ export default function Chatbot() {
     }, [messages]);
 
     useEffect(() => {
-        if (isOpen) {
+        // ponytail: body-scroll lock only on mobile where the panel is fullscreen.
+        // Desktop keeps the page scrollable behind the 440px panel.
+        const lockOnMobile =
+            isOpen &&
+            window.matchMedia('(max-width: 480px)').matches;
+        if (lockOnMobile) {
             document.body.style.overflow = 'hidden';
             setTimeout(() => inputRef.current?.focus(), 300);
         } else {
@@ -251,7 +256,7 @@ export default function Chatbot() {
                             <div className="chatbot-header-info">
                                 <div className="chatbot-avatar">
                                     <img
-                                        src="/assets/images/logo/api.svg"
+                                        src="/assets/images/logo/mavi-bot-white.svg"
                                         alt="Mavi"
                                     />
                                 </div>
@@ -277,7 +282,7 @@ export default function Chatbot() {
                             <div className="chatbot-welcome">
                                 <div className="chatbot-welcome-icon">
                                     <img
-                                        src="/assets/images/logo/api.svg"
+                                        src="/assets/images/logo/mavi-bot-white.svg"
                                         alt="Mavi"
                                     />
                                 </div>

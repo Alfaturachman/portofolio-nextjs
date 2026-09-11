@@ -6,7 +6,7 @@
     "welcomeTitle": "Hi, I'm Mavi. How can I help?",
     "placeholder": "Ask me anything you want",
     "sendAria": "Send message",
-    "disclaimer": "Mavi can make mistakes. ask about skills, projects, or experience.",
+    "disclaimer": "Mavi can make mistakes. ask about projects or experience.",
     "errorGeneric": "Sorry, I encountered an error. Please try again.",
     "errorNetwork": "Connection error. Please check your network and try again."
 }

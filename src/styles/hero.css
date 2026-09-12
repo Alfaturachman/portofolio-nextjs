@@ -129,7 +129,7 @@
 .hero-meta {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 16px;
     font-family: var(--font-outfit), sans-serif;
     font-size: 14px;
     margin-top: 8px;
@@ -311,6 +311,21 @@
         width: 40px;
         height: 40px;
         border-radius: 10px;
+    }
+
+    .hero-meta {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .hero-availability,
+    .hero-location {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    .hero-meta-divider {
+        display: none;
     }
 }
 

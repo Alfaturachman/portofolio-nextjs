@@ -38,7 +38,7 @@ export const educations: Experience[] = [
         org: 'Dian Nuswantoro University',
         orgIcon: 'university',
         gpa: '3.90',
-        desc: '• Published at SINTA 3 JAIC: "Methodologically Sound Class-Imbalance Handling Detection via Training-Only Oversampling"\n• Published at SINTA 2 JTI: "Automatic Detection of Foot Arch Using Clarke\'s Angle Calculation Through A Web-Integrated System for Children"',
+        desc: '• Published at SINTA 3 JAIC: "Methodologically Sound Class-Imbalance Handling in YOLOv8 Hand Fracture Detection via Training-Only Oversampling"\n• Published at SINTA 2 JTI: "Automatic Detection of Foot Arch Using Clarke\'s Angle Calculation Through A Web-Integrated System for Children"',
     },
     {
         date: 'SEP 2022 - JUL 2025',

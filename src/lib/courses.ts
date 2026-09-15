@@ -94,7 +94,7 @@ export const coursesData: {
             credentialUrl: '#',
             credential: '',
             image: '/assets/certificate/Specializations/bnsp-web-developer.png',
-            logo: '/assets/images/logo/Badan_Nasional_Sertifikasi_Profesi.png',
+            logo: '/assets/images/logo/logo-bnsp.png',
         },
         {
             id: 'bnsp-junior-mobile-programmer',
@@ -126,7 +126,7 @@ export const coursesData: {
             credentialUrl: '#',
             credential: '',
             image: '/assets/certificate/Specializations/apti-web-programming.png',
-            logo: '/assets/images/logo/apti.png',
+            logo: '/assets/images/logo/logo-apti.png',
         },
     ],
     courses: [

@@ -110,7 +110,7 @@ export const coursesData: {
             credentialUrl: '#',
             credential: '',
             image: '/assets/certificate/Specializations/bnsp-junior-mobile-developer.png',
-            logo: '/assets/images/logo/Badan_Nasional_Sertifikasi_Profesi.png',
+            logo: '/assets/images/logo/logo-bnsp.png',
         },
         {
             id: 'apti-pemrograman-web',

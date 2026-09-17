@@ -131,6 +131,11 @@
         margin-bottom: 24px;
     }
 
+    .detail-meta-wrapper.is-open {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .meta-toggle-btn {
         display: flex;
         align-items: center;

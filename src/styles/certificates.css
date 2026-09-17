@@ -166,6 +166,7 @@
 @media (max-width: 768px) {
     .detail-header-row {
         flex-direction: column;
+        align-items: stretch;
     }
     .detail-header-cert {
         width: 100%;

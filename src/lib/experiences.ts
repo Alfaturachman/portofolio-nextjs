@@ -34,7 +34,7 @@ export const educations: Experience[] = [
     {
         date: 'SEP 2025 - JUL 2027',
         badge: 'In Progress',
-        title: 'Bachelor of Computer Science, Information Technology',
+        title: 'Bachelor of Computer Science, Informatics Engineering',
         org: 'Dian Nuswantoro University',
         orgIcon: 'university',
         gpa: '3.90',
@@ -43,7 +43,7 @@ export const educations: Experience[] = [
     {
         date: 'SEP 2022 - JUL 2025',
         badge: 'Graduated',
-        title: 'Associate of Computer Science, Information Technology',
+        title: 'Associate of Computer Science, Informatics Engineering',
         org: 'Dian Nuswantoro University',
         orgIcon: 'university',
         gpa: '3.89',

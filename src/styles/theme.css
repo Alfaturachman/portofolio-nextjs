@@ -199,7 +199,7 @@ section {
     }
 }
 
-/* Route pages (e.g. /portfolio, /skills, [...]/[id]) wrap their sections
+/* Route pages (e.g. /projects, /skills, [...]/[id]) wrap their sections
    in .route-content. Reduce clear-space below the fixed navbar on the
    FIRST/top section only (detail pages have a bottom nav section too). */
 .route-content > section:first-child {

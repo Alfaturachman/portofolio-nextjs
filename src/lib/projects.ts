@@ -124,7 +124,7 @@ export const projects: Project[] = [
             '/assets/images/projects/project-rubber-mitra.png',
             '/assets/images/projects/project-rubber-stok.png',
         ],
-        title: 'Crumb Rubber',
+        title: 'UMKM Repro',
         type: 'Freelance',
         privacy: 'Private',
         cardDesc:

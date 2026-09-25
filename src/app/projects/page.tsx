@@ -1,24 +1,24 @@
 import { Metadata } from 'next';
-import PortfolioSection from '@/sections/PortfolioSection';
+import Projects from '@/sections/Projects';
 import Breadcrumb from '@/components/Breadcrumb';
 import Tx from '@/components/Tx';
 
 export const metadata: Metadata = {
-    title: 'Portfolio | Alfaturachman Maulana Pahlevi',
+    title: 'Projects | Alfaturachman Maulana Pahlevi',
     description: 'Explore the projects and solutions I have built.',
     openGraph: {
-        title: 'Portfolio | Alfaturachman Maulana Pahlevi',
+        title: 'Projects | Alfaturachman Maulana Pahlevi',
         description: 'Explore the projects and solutions I have built.',
-        url: 'https://almavi.vercel.app/portfolio',
+        url: 'https://almavi.vercel.app/projects',
     },
 };
 
-export default function PortfolioPage() {
+export default function ProjectsPage() {
     return (
         <div className="route-content">
-            <PortfolioSection>
+            <Projects>
                 <Breadcrumb items={[{ label: <Tx k="navbar.portfolio" /> }]} />
-            </PortfolioSection>
+            </Projects>
         </div>
     );
 }

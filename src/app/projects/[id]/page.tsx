@@ -33,7 +33,7 @@ export async function generateMetadata({
     }
 
     return {
-        title: `${project.title} | Portfolio`,
+        title: `${project.title} | Projects`,
         description: project.cardDesc,
         keywords: project.tags,
     };
@@ -62,7 +62,7 @@ export default async function DetailPage({
                 <div className="container">
                     <Breadcrumb
                         items={[
-                            { label: <Tx k="navbar.portfolio" />, href: '/portfolio' },
+                            { label: <Tx k="navbar.portfolio" />, href: '/projects' },
                             { label: project.title },
                         ]}
                     />

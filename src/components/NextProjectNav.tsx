@@ -27,7 +27,7 @@ export default function NextProjectNav({
     return (
         <div className="next-project-nav">
             <Link
-                href={`/portfolio/${prev.id}`}
+                href={`/projects/${prev.id}`}
                 className="next-project-link prev"
             >
                 <FontAwesomeIcon icon={faArrowLeft} />
@@ -40,7 +40,7 @@ export default function NextProjectNav({
             </Link>
             <div className="next-project-nav-divider">
                 <Link
-                    href="/portfolio"
+                    href="/projects"
                     className="next-project-nav-dot"
                     aria-label={viewAll}
                     title={viewAll}
@@ -49,7 +49,7 @@ export default function NextProjectNav({
                 </Link>
             </div>
             <Link
-                href={`/portfolio/${next.id}`}
+                href={`/projects/${next.id}`}
                 className="next-project-link next"
             >
                 <FontAwesomeIcon icon={faArrowRight} />

@@ -7,7 +7,7 @@ import { projects } from '@/lib/projects';
 import { useI18n } from '@/lib/i18n/i18n-context';
 import ViewAll from '@/components/ViewAll';
 
-export default function PortfolioSection({
+export default function Projects({
     limit,
     children,
 }: {
@@ -18,7 +18,7 @@ export default function PortfolioSection({
     const displayedProjects = limit ? projects.slice(0, limit) : projects;
 
     return (
-        <section id="portfolio">
+        <section id="projects">
             <div className="container">
                 {children}
                 <h2 className="section-title">{t.portfolio.eyebrow}</h2>
@@ -29,7 +29,7 @@ export default function PortfolioSection({
                 </div>
                 {limit && (
                     <ViewAll
-                        href="/portfolio"
+                        href="/projects"
                         label={t.portfolio.viewAll}
                     />
                 )}
@@ -50,7 +50,7 @@ function ProjectCard({
     const { t } = useI18n();
 
     return (
-        <Link href={`/portfolio/${p.id}`} className="project-card">
+        <Link href={`/projects/${p.id}`} className="project-card">
             <div className="project-img-wrapper">
                 {!loaded && <div className="skeleton" />}
                 <Image

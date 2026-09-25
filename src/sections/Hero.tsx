@@ -57,7 +57,12 @@ export default function Hero() {
                                     />
                                     <path
                                         className="hero-verified-check"
-                                        d="m9.053 14.9-3.5-3.5 1.238-1.238 2.262 2.262 5.315-5.315L15.5 8.35l-6.447 6.55Z"
+                                        d="M7.2 11.2L9.7 13.7L14.8 8.6"
+                                        fill="none"
+                                        stroke="var(--verified-check)"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                     />
                                 </svg>
                             </h1>
@@ -92,7 +97,7 @@ export default function Hero() {
                             </nav>
 
                             {/* CTA */}
-                            <Link href="/portfolio" className="hero-cta-primary" id="hero-cta-projects">
+                            <Link href="/projects" className="hero-cta-primary" id="hero-cta-projects">
                                 {t.hero.ctaProjects}
                             </Link>
                         </div>

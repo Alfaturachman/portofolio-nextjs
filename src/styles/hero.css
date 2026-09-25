@@ -106,7 +106,8 @@
 }
 
 .hero-verified-check {
-    fill: var(--verified-check);
+    fill: none;
+    stroke: var(--verified-check);
 }
 
 .hero-role {

@@ -21,7 +21,7 @@ export default function Hero() {
                             src="/assets/images/banner/monochrome-banner.png"
                             alt=""
                             fill
-                            sizes="(max-width: 480px) 90vw, (max-width: 900px) calc(100vw - 96px), 768px"
+                            sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 1200px"
                             priority
                             className="hero-banner-img"
                         />
@@ -33,8 +33,8 @@ export default function Hero() {
                             <Image
                                 src="/assets/images/profile/profile_almavi.PNG"
                                 alt="Alfaturachman Maulana Pahlevi"
-                                width={120}
-                                height={120}
+                                width={160}
+                                height={160}
                                 className="hero-avatar"
                                 priority
                             />

@@ -68,6 +68,63 @@ export default async function CertificateDetailPage({
                         <h1 className="detail-title">
                             <CertTitle id={cert.id} fallback={cert.title} />
                         </h1>
+
+                        <div className="spec-cert-info">
+                            <div className="spec-cert-badge">
+                                <FontAwesomeIcon icon={faCertificate} />
+                                <Tx
+                                    k={
+                                        cert.category === 'Specialization'
+                                            ? 'courses.specializationBadge'
+                                            : cert.category === 'Competency Certification'
+                                            ? 'courses.competencyBadge'
+                                            : cert.category === 'Competition & Award'
+                                            ? 'courses.awardBadge'
+                                            : cert.category === 'Professional Certificate'
+                                            ? 'courses.certBadge'
+                                            : 'courses.generalBadge'
+                                    }
+                                />
+                            </div>
+                            <div className="spec-cert-note">
+                                <h3>
+                                    <FontAwesomeIcon icon={faInfoCircle} />
+                                    <Tx
+                                        k={
+                                            cert.category === 'Specialization'
+                                                ? 'courses.aboutSpecializationTitle'
+                                                : cert.category === 'Competency Certification'
+                                                ? 'courses.aboutCompetencyTitle'
+                                                : cert.category === 'Competition & Award'
+                                                ? 'courses.aboutAwardTitle'
+                                                : cert.category === 'Professional Certificate'
+                                                ? 'courses.aboutTitle'
+                                                : 'courses.aboutGeneralTitle'
+                                        }
+                                    />
+                                </h3>
+                                <p>
+                                    <Tx 
+                                        k={`certificates.descriptions.${cert.id}`} 
+                                        fallback={
+                                            cert.category === 'Specialization'
+                                                ? 'This Specialization is earned after completing all courses below.'
+                                                : cert.category === 'Competency Certification'
+                                                ? 'This competency certification validates professional standards and skills.'
+                                                : cert.category === 'Competition & Award'
+                                                ? 'This award recognizes academic and competition achievements.'
+                                                : 'This certificate validates course completion.'
+                                        }
+                                        values={{ 
+                                            provider: cert.provider, 
+                                            count: courses.length,
+                                            issuer: cert.issuer
+                                        }} 
+                                    />
+                                </p>
+                            </div>
+                        </div>
+
                         <CoursesMetaWrapper>
                             <div className="detail-meta">
                             <div className="meta-pill">
@@ -147,45 +204,6 @@ export default async function CertificateDetailPage({
                                 </div>
                             </ImagePreview>
                         </div>
-                        {courses.length > 0 && (
-                        <div className="spec-cert-info">
-                            <div className="spec-cert-badge">
-                                <FontAwesomeIcon icon={faCertificate} />
-                                <Tx
-                                    k={
-                                        cert.category === 'Specialization'
-                                            ? 'courses.specializationBadge'
-                                            : 'courses.certBadge'
-                                    }
-                                />
-                            </div>
-                            <div className="spec-cert-note">
-                                <h3>
-                                    <FontAwesomeIcon icon={faInfoCircle} />
-                                    <Tx
-                                        k={
-                                            cert.category === 'Specialization'
-                                                ? 'courses.aboutSpecializationTitle'
-                                                : 'courses.aboutTitle'
-                                        }
-                                    />
-                                </h3>
-                                <p>
-                                    <Tx 
-                                        k={
-                                            cert.category === 'Specialization'
-                                                ? 'courses.aboutSpecializationDesc'
-                                                : 'courses.aboutDesc'
-                                        } 
-                                        values={{ 
-                                            provider: cert.provider, 
-                                            count: courses.length 
-                                        }} 
-                                    />
-                                </p>
-                            </div>
-                        </div>
-                        )}
                     </div>
                 </div>
 
@@ -202,7 +220,7 @@ export default async function CertificateDetailPage({
                                     <h3 className="course-title">
                                         {course.title}
                                     </h3>
-                                    {course.skills.length > 0 && (
+                                    {/* {course.skills.length > 0 && (
                                         <div className="course-skills">
                                             {course.skills.map((skill) => (
                                                 <span
@@ -213,7 +231,7 @@ export default async function CertificateDetailPage({
                                                 </span>
                                             ))}
                                         </div>
-                                    )}
+                                    )} */}
                                     {course.credentialUrl &&
                                         course.credentialUrl !== '#' && (
                                             <a

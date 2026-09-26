@@ -20,8 +20,18 @@
     "specs": {
         "pimnas-peserta": "Peserta PIMNAS 2025",
         "pimnas-pendanaan": "Peraih Pendanaan PIMNAS 2025",
-        "bnsp-web-developer": "Sertifikat Kompetensi - Web Developer",
-        "bnsp-junior-mobile-programmer": "Sertifikat Kompetensi - Junior Mobile Programmer",
-        "apti-pemrograman-web": "Sertifikat Kompetensi - Pemrograman Web"
+        "bnsp-web-developer": "Web Developer",
+        "bnsp-junior-mobile-programmer": "Junior Mobile Programmer",
+        "apti-pemrograman-web": "Pemrograman Web"
+    },
+    "descriptions": {
+        "ibm-ai-foundations-for-everyone": "Spesialisasi ini dari IBM diperoleh setelah menyelesaikan seluruh 4 kursus tentang dasar-dasar Artificial Intelligence (AI).",
+        "ibm-devops-software-engineering": "Sertifikat Profesional ini dari IBM diperoleh setelah menyelesaikan seluruh 15 kursus tentang DevOps dan Rekayasa Perangkat Lunak.",
+        "ibm-machine-learning": "Sertifikat Profesional ini dari IBM diperoleh setelah menyelesaikan seluruh 5 kursus tentang Machine Learning dan Deep Learning.",
+        "pimnas-peserta": "Sertifikat resmi keikutsertaan sebagai Finalis / Peserta Pekan Ilmiah Mahasiswa Nasional (PIMNAS) ke-38 dari Kemdiktisaintek dan Belmawa.",
+        "pimnas-pendanaan": "Sertifikat penghargaan atas keberhasilan meraih pendanaan Program Kreativitas Mahasiswa bidang Karya Inovatif (PKM-KI) 2025 dari Kemdiktisaintek dan Belmawa.",
+        "bnsp-web-developer": "Sertifikat Kompetensi resmi Badan Nasional Sertifikasi Profesi (BNSP) melalui LSP Universitas Dian Nuswantoro dalam skema Web Developer.",
+        "bnsp-junior-mobile-programmer": "Sertifikat Kompetensi resmi Badan Nasional Sertifikasi Profesi (BNSP) melalui LSP Universitas Dian Nuswantoro dalam skema Junior Mobile Programmer.",
+        "apti-pemrograman-web": "Sertifikat Kompetensi Keahlian dari Asosiasi Profesi Telematika Indonesia (APTI) melalui LSP Universitas Dian Nuswantoro untuk standarisasi keahlian di bidang Pemrograman Web."
     }
 }

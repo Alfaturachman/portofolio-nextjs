@@ -100,7 +100,7 @@
     font-size: clamp(24px, 6vw, 30px);
     line-height: 1.1;
     color: var(--text-primary);
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .detail-intro {
@@ -172,11 +172,26 @@
     }
 
     .meta-toggle-btn .meta-pill-icon {
-        background: var(--accent-blue-soft);
+        background: var(--bg-secondary);
     }
     .meta-toggle-btn .meta-pill-icon svg,
     .meta-toggle-btn .meta-pill-icon i {
-        color: var(--accent-blue);
+        color: var(--text-primary);
+    }
+
+    [data-theme='dark'] .meta-toggle-btn .meta-pill-icon {
+        background: var(--bg-primary);
+    }
+    [data-theme='dark'] .meta-toggle-btn .meta-pill-icon svg,
+    [data-theme='dark'] .meta-toggle-btn .meta-pill-icon i {
+        color: var(--text-primary);
+    }
+
+    .meta-toggle-btn:hover .meta-pill-icon {
+        background: var(--bg-primary);
+    }
+    [data-theme='dark'] .meta-toggle-btn:hover .meta-pill-icon {
+        background: var(--bg-secondary);
     }
 
     .meta-count-badge {
@@ -202,7 +217,7 @@
 
     .meta-chevron.rotate {
         transform: rotate(180deg);
-        color: var(--accent-blue);
+        color: var(--text-primary);
     }
 
     .detail-meta-wrapper .detail-meta {
@@ -218,7 +233,7 @@
     .detail-meta-wrapper.is-open .detail-meta {
         max-height: 600px;
         opacity: 1;
-        margin-top: 12px;
+        padding-top: 12px;
     }
 
     .meta-pill {

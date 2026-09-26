@@ -9,6 +9,15 @@
     "specializationBadge": "Spesialisasi",
     "aboutSpecializationTitle": "Tentang Spesialisasi Ini",
     "aboutSpecializationDesc": "Spesialisasi ini dari {provider} diperoleh setelah menyelesaikan seluruh {count} kursus di bawah ini.",
+    "competencyBadge": "Sertifikasi Kompetensi",
+    "aboutCompetencyTitle": "Tentang Sertifikasi Kompetensi Ini",
+    "aboutCompetencyDesc": "Sertifikasi kompetensi resmi ini diterbitkan oleh {provider} melalui {issuer} untuk memvalidasi standar keahlian dan kompetensi profesional.",
+    "awardBadge": "Kompetisi & Penghargaan",
+    "aboutAwardTitle": "Tentang Penghargaan Ini",
+    "aboutAwardDesc": "Penghargaan ini dianugerahkan oleh {provider} melalui {issuer} atas pencapaian prestasi akademik dan kompetisi nasional.",
+    "generalBadge": "Sertifikat",
+    "aboutGeneralTitle": "Tentang Sertifikat Ini",
+    "aboutGeneralDesc": "Sertifikat ini diterbitkan oleh {provider} melalui {issuer}.",
     "toggleAria": "Tampilkan Spesifikasi Sertifikat",
     "toggleLabel": "Spesifikasi Sertifikat"
 }

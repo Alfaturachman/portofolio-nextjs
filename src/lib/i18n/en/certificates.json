@@ -20,8 +20,18 @@
     "specs": {
         "pimnas-peserta": "Participant of PIMNAS 2025",
         "pimnas-pendanaan": "Grant Recipient PIMNAS 2025",
-        "bnsp-web-developer": "Certificate of Competence - Web Developer",
-        "bnsp-junior-mobile-programmer": "Certificate of Competence - Junior Mobile Programmer",
-        "apti-pemrograman-web": "Certificate of Competence - Web Programming"
+        "bnsp-web-developer": "Web Developer",
+        "bnsp-junior-mobile-programmer": "Junior Mobile Programmer",
+        "apti-pemrograman-web": "Web Programming"
+    },
+    "descriptions": {
+        "ibm-ai-foundations-for-everyone": "This Specialization from IBM is earned after completing all 4 courses covering the foundations of Artificial Intelligence (AI).",
+        "ibm-devops-software-engineering": "This Professional Certificate from IBM is earned after completing all 15 courses in DevOps and Software Engineering.",
+        "ibm-machine-learning": "This Professional Certificate from IBM is earned after completing all 5 courses in Machine Learning and Deep Learning.",
+        "pimnas-peserta": "Official certificate of participation as a Finalist / Participant in the 38th National Student Scientific Week (PIMNAS) by Kemdiktisaintek and Belmawa.",
+        "pimnas-pendanaan": "Award certificate for securing funding in the Student Creativity Program for Innovative Works (PKM-KI) 2025 by Kemdiktisaintek and Belmawa.",
+        "bnsp-web-developer": "Official Certificate of Competence from the National Professional Certification Agency (BNSP) through LSP Universitas Dian Nuswantoro in the Web Developer scheme.",
+        "bnsp-junior-mobile-programmer": "Official Certificate of Competence from the National Professional Certification Agency (BNSP) through LSP Universitas Dian Nuswantoro in the Junior Mobile Programmer scheme.",
+        "apti-pemrograman-web": "Professional Competency Certificate from the Indonesian Telematics Professional Association (APTI) through LSP Universitas Dian Nuswantoro for skill standardization in Web Programming."
     }
 }

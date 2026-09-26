@@ -56,8 +56,8 @@ export const skillsCategories = [
         title: 'Languages',
         desc: 'Core programming languages used across frontend, backend, and mobile development.',
         tools: [
-            { name: 'HTML', icon: 'html' },
-            { name: 'CSS', icon: 'css' },
+            // { name: 'HTML', icon: 'html' },
+            // { name: 'CSS', icon: 'css' },
             { name: 'JavaScript', icon: 'javascript' },
             { name: 'TypeScript', icon: 'typescript' },
             { name: 'Python', icon: 'python' },

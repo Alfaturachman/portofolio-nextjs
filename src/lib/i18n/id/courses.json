@@ -6,6 +6,9 @@
     "certBadge": "Sertifikat Profesional",
     "aboutTitle": "Tentang Sertifikat Profesional Ini",
     "aboutDesc": "Sertifikat Profesional ini dari {provider} diperoleh setelah menyelesaikan seluruh {count} kursus di bawah ini.",
+    "specializationBadge": "Spesialisasi",
+    "aboutSpecializationTitle": "Tentang Spesialisasi Ini",
+    "aboutSpecializationDesc": "Spesialisasi ini dari {provider} diperoleh setelah menyelesaikan seluruh {count} kursus di bawah ini.",
     "toggleAria": "Tampilkan Spesifikasi Sertifikat",
     "toggleLabel": "Spesifikasi Sertifikat"
 }

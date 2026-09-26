@@ -29,11 +29,20 @@ export interface BlogArticle {
     tags: string[];
 }
 
-export interface Specialization {
+export type CertificateCategory =
+    | 'Professional Certificate'
+    | 'Specialization'
+    | 'Competency Certification'
+    | 'Competition & Award'
+    | (string & {});
+
+export interface Certificate {
     id: string;
     title: string;
+    category?: CertificateCategory;
     provider: string;
     issuer: string;
+    date: string;
     skills: string[];
     credentialUrl: string;
     credential: string;
@@ -41,9 +50,12 @@ export interface Specialization {
     logo: string;
 }
 
+export type Specialization = Certificate;
+
 export interface Course {
     id: number;
-    specializationId: string;
+    certificateId: string;
+    specializationId?: string;
     title: string;
     provider: string;
     issuer: string;

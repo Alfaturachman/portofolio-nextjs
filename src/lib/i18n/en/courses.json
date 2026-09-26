@@ -6,6 +6,9 @@
     "certBadge": "Professional Certificate",
     "aboutTitle": "About this Professional Certificate",
     "aboutDesc": "This Professional Certificate from {provider} is earned after completing all {count} courses below.",
+    "specializationBadge": "Specialization",
+    "aboutSpecializationTitle": "About this Specialization",
+    "aboutSpecializationDesc": "This Specialization from {provider} is earned after completing all {count} courses below.",
     "toggleAria": "Toggle Certificate Specifications",
     "toggleLabel": "Certificate Specifications"
 }

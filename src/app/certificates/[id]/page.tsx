@@ -18,7 +18,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export async function generateStaticParams() {
-    return coursesData.specializations.map((s) => ({ id: s.id }));
+    return coursesData.certificates.map((s) => ({ id: s.id }));
 }
 
 export async function generateMetadata({
@@ -27,11 +27,11 @@ export async function generateMetadata({
     params: Promise<{ id: string }>;
 }): Promise<Metadata> {
     const { id } = await params;
-    const spec = coursesData.specializations.find((s) => s.id === id);
-    if (!spec) return { title: 'Not Found' };
+    const cert = coursesData.certificates.find((s) => s.id === id);
+    if (!cert) return { title: 'Not Found' };
     return {
-        title: `${spec.title} Courses | Portfolio`,
-        description: `Courses from ${spec.title} specialization`,
+        title: `${cert.title} Courses | Portfolio`,
+        description: `Courses from ${cert.title}`,
     };
 }
 
@@ -41,11 +41,11 @@ export default async function CertificateDetailPage({
     params: Promise<{ id: string }>;
 }) {
     const { id } = await params;
-    const spec = coursesData.specializations.find((s) => s.id === id);
-    if (!spec) notFound();
+    const cert = coursesData.certificates.find((s) => s.id === id);
+    if (!cert) notFound();
 
     const courses = coursesData.courses.filter(
-        (c) => c.specializationId === spec.id,
+        (c) => c.certificateId === cert.id || c.specializationId === cert.id,
     );
 
     return (
@@ -57,7 +57,7 @@ export default async function CertificateDetailPage({
                         { label: <Tx k="navbar.certificates" />, href: '/certificates' },
                         {
                             label: (
-                                <CertTitle id={spec.id} fallback={spec.title} />
+                                <CertTitle id={cert.id} fallback={cert.title} />
                             ),
                         },
                     ]}
@@ -66,7 +66,7 @@ export default async function CertificateDetailPage({
                 <div className="detail-header-row">
                     <div className="detail-header-info">
                         <h1 className="detail-title">
-                            <CertTitle id={spec.id} fallback={spec.title} />
+                            <CertTitle id={cert.id} fallback={cert.title} />
                         </h1>
                         <CoursesMetaWrapper>
                             <div className="detail-meta">
@@ -79,7 +79,7 @@ export default async function CertificateDetailPage({
                                         <Tx k="courses.provider" />
                                     </span>
                                     <span className="meta-pill-value">
-                                        {spec.provider}
+                                        {cert.provider}
                                     </span>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@ export default async function CertificateDetailPage({
                                         <Tx k="courses.issuer" />
                                     </span>
                                     <span className="meta-pill-value">
-                                        {spec.issuer}
+                                        {cert.issuer}
                                     </span>
                                 </div>
                             </div>
@@ -115,9 +115,9 @@ export default async function CertificateDetailPage({
                         </CoursesMetaWrapper>
                     </div>
                     <div className="detail-header-cert">
-                        {spec.credentialUrl && spec.credentialUrl !== '#' && (
+                        {cert.credentialUrl && cert.credentialUrl !== '#' && (
                         <a
-                            href={spec.credentialUrl}
+                            href={cert.credentialUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-action primary"
@@ -133,13 +133,13 @@ export default async function CertificateDetailPage({
                     <div className="spec-cert-img-row">
                         <div className="spec-cert-image-box">
                             <ImagePreview
-                                src={spec.image}
-                                alt={`${spec.title} Certificate`}
+                                src={cert.image}
+                                alt={`${cert.title} Certificate`}
                             >
                                 <div className="spec-cert-image">
                                     <Image
-                                        src={spec.image}
-                                        alt={`${spec.title} Certificate`}
+                                        src={cert.image}
+                                        alt={`${cert.title} Certificate`}
                                         width={800}
                                         height={600}
                                         priority
@@ -151,18 +151,34 @@ export default async function CertificateDetailPage({
                         <div className="spec-cert-info">
                             <div className="spec-cert-badge">
                                 <FontAwesomeIcon icon={faCertificate} />
-                                <Tx k="courses.certBadge" />
+                                <Tx
+                                    k={
+                                        cert.category === 'Specialization'
+                                            ? 'courses.specializationBadge'
+                                            : 'courses.certBadge'
+                                    }
+                                />
                             </div>
                             <div className="spec-cert-note">
                                 <h3>
                                     <FontAwesomeIcon icon={faInfoCircle} />
-                                    <Tx k="courses.aboutTitle" />
+                                    <Tx
+                                        k={
+                                            cert.category === 'Specialization'
+                                                ? 'courses.aboutSpecializationTitle'
+                                                : 'courses.aboutTitle'
+                                        }
+                                    />
                                 </h3>
                                 <p>
                                     <Tx 
-                                        k="courses.aboutDesc" 
+                                        k={
+                                            cert.category === 'Specialization'
+                                                ? 'courses.aboutSpecializationDesc'
+                                                : 'courses.aboutDesc'
+                                        } 
                                         values={{ 
-                                            provider: spec.provider, 
+                                            provider: cert.provider, 
                                             count: courses.length 
                                         }} 
                                     />

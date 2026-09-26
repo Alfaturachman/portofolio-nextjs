@@ -47,12 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.6,
     }))
 
-    const coursePages: MetadataRoute.Sitemap = coursesData.specializations.map((s) => ({
+    const certPages: MetadataRoute.Sitemap = coursesData.certificates.map((s) => ({
         url: `${BASE_URL}/certificates/${s.id}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.5,
     }))
 
-    return [...staticPages, ...projectPages, ...blogPages, ...coursePages]
+    return [...staticPages, ...projectPages, ...blogPages, ...certPages]
 }

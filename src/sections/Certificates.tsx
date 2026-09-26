@@ -21,9 +21,12 @@ export default function Certificates({
     limit?: number;
 }) {
     const { t } = useI18n();
-    const displayedSpecs = limit
-        ? coursesData.specializations.slice(0, limit)
-        : coursesData.specializations;
+    const sortedCerts = [...coursesData.certificates].sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+    );
+    const displayedCerts = limit
+        ? sortedCerts.slice(0, limit)
+        : sortedCerts;
 
     return (
         <section id="certificates">
@@ -31,22 +34,22 @@ export default function Certificates({
                 {children}
                 <h2 className="section-title">{t.certificates.eyebrow}</h2>
                 <div className="cert-list">
-                    {displayedSpecs.map((spec) => {
+                    {displayedCerts.map((cert) => {
                         const specTitles = t.certificates.specs as Record<string, string> | undefined;
-                        const title = specTitles?.[spec.id] ?? spec.title;
+                        const title = specTitles?.[cert.id] ?? cert.title;
                         const specDates = t.certificates.dates as Record<string, string> | undefined;
-                        const date = specDates?.[spec.id] ?? t.certificates.certDesc;
+                        const date = specDates?.[cert.id] ?? t.certificates.certDesc;
                         return (
                         <Link
-                            key={spec.id}
-                            href={`/certificates/${spec.id}`}
+                            key={cert.id}
+                            href={`/certificates/${cert.id}`}
                             className="cert-card"
                             aria-label={`${t.certificates.viewSpecAria}${title}`}
                         >
                             <div className="cert-logo">
                                 <Image
-                                    src={spec.logo}
-                                    alt={spec.provider}
+                                    src={cert.logo}
+                                    alt={cert.provider}
                                     width={120}
                                     height={40}
                                     className="cert-logo-img"

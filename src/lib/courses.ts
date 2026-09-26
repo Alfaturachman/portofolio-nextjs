@@ -1,15 +1,18 @@
-import type { Specialization, Course } from './types';
+import type { Certificate, Course } from './types';
 
 export const coursesData: {
-    specializations: Specialization[];
+    certificates: Certificate[];
     courses: Course[];
+    specializations: Certificate[];
 } = {
-    specializations: [
+    certificates: [
         {
             id: 'ibm-devops-software-engineering',
             title: 'IBM DevOps and Software Engineering',
+            category: 'Professional Certificate',
             provider: 'IBM',
             issuer: 'Coursera',
+            date: '2026-05-18',
             skills: [
                 'DevOps',
                 'Software Engineering',
@@ -22,14 +25,16 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/professional-cert/1OVGPIEULHS5',
             credential: '1OVGPIEULHS5',
-            image: '/assets/certificate/Specializations/IBM DevOps and Software Engineering.jpg',
+            image: '/assets/certificates/IBM DevOps and Software Engineering.jpg',
             logo: '/assets/images/logo/ibm.svg',
         },
         {
             id: 'ibm-machine-learning',
             title: 'IBM Machine Learning',
+            category: 'Professional Certificate',
             provider: 'IBM',
             issuer: 'Coursera',
+            date: '2026-05-18',
             skills: [
                 'Machine Learning',
                 'Python',
@@ -45,14 +50,37 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/professional-cert/G9QD5BA2LI68',
             credential: 'G9QD5BA2LI68',
-            image: '/assets/certificate/Specializations/IBM Machine Learning.jpg',
+            image: '/assets/certificates/IBM Machine Learning.jpg',
+            logo: '/assets/images/logo/ibm.svg',
+        },
+        {
+            id: 'ibm-ai-foundations-for-everyone',
+            title: 'AI Foundations for Everyone',
+            category: 'Specialization',
+            provider: 'IBM',
+            issuer: 'Coursera',
+            date: '2026-09-25',
+            skills: [
+                'Artificial Intelligence (AI)',
+                'Generative AI',
+                'Prompt Engineering',
+                'Chatbots',
+                'IBM Watson',
+                'Machine Learning',
+            ],
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/specialization/7VNLDPYRA9M2',
+            credential: '7VNLDPYRA9M2',
+            image: '/assets/certificates/IBM AI Foundations for Everyone Specialization.jpg',
             logo: '/assets/images/logo/ibm.svg',
         },
         {
             id: 'pimnas-peserta',
             title: 'Peserta Pekan Ilmiah Mahasiswa Nasional (PIMNAS) 2025',
+            category: 'Competition & Award',
             provider: 'Kemdiktisaintek',
             issuer: 'Belmawa',
+            date: '2025-12-04',
             skills: [
                 'PKM-KI',
                 'Kesehatan',
@@ -61,14 +89,16 @@ export const coursesData: {
             ],
             credentialUrl: '#',
             credential: '',
-            image: '/assets/certificate/Specializations/PESERTA-PIMNAS.jpg',
+            image: '/assets/certificates/PESERTA-PIMNAS.jpg',
             logo: '/assets/images/logo/Ministry_of_Education_and_Culture_of_Republic_of_Indonesia.svg',
         },
         {
             id: 'pimnas-pendanaan',
             title: 'Peraih Pendanaan & Finalis PIMNAS PKM-KI 2025',
+            category: 'Competition & Award',
             provider: 'Kemdiktisaintek',
             issuer: 'Belmawa',
+            date: '2025-12-04',
             skills: [
                 'PKM-KI',
                 'Karya Inovatif',
@@ -77,14 +107,16 @@ export const coursesData: {
             ],
             credentialUrl: '#',
             credential: '',
-            image: '/assets/certificate/Specializations/PENDANAAN-PKM.jpg',
+            image: '/assets/certificates/PENDANAAN-PKM.jpg',
             logo: '/assets/images/logo/Ministry_of_Education_and_Culture_of_Republic_of_Indonesia.svg',
         },
         {
             id: 'bnsp-web-developer',
             title: 'Sertifikat Kompetensi – Web Developer',
+            category: 'Competency Certification',
             provider: 'Badan Nasional Sertifikasi Profesi (BNSP)',
             issuer: 'LSP Universitas Dian Nuswantoro',
+            date: '2025-01-28',
             skills: [
                 'Web Programming',
                 'Frontend',
@@ -93,14 +125,16 @@ export const coursesData: {
             ],
             credentialUrl: '#',
             credential: '',
-            image: '/assets/certificate/Specializations/bnsp-web-developer.png',
+            image: '/assets/certificates/bnsp-web-developer.png',
             logo: '/assets/images/logo/logo-bnsp.png',
         },
         {
             id: 'bnsp-junior-mobile-programmer',
             title: 'Sertifikat Kompetensi – Junior Mobile Programmer',
+            category: 'Competency Certification',
             provider: 'Badan Nasional Sertifikasi Profesi (BNSP)',
             issuer: 'LSP Universitas Dian Nuswantoro',
+            date: '2024-09-17',
             skills: [
                 'Mobile Programming',
                 'Kotlin',
@@ -109,14 +143,16 @@ export const coursesData: {
             ],
             credentialUrl: '#',
             credential: '',
-            image: '/assets/certificate/Specializations/bnsp-junior-mobile-developer.png',
+            image: '/assets/certificates/bnsp-junior-mobile-developer.png',
             logo: '/assets/images/logo/logo-bnsp.png',
         },
         {
             id: 'apti-pemrograman-web',
             title: 'Sertifikat Kompetensi Keahlian – Pemrograman Web',
+            category: 'Competency Certification',
             provider: 'Asosiasi Profesi Telematika Indonesia (APTI)',
             issuer: 'LSP Universitas Dian Nuswantoro',
+            date: '2024-01-22',
             skills: [
                 'Web Programming',
                 'Frontend',
@@ -125,14 +161,17 @@ export const coursesData: {
             ],
             credentialUrl: '#',
             credential: '',
-            image: '/assets/certificate/Specializations/apti-web-programming.png',
+            image: '/assets/certificates/apti-web-programming.png',
             logo: '/assets/images/logo/logo-apti.png',
         },
     ],
+    get specializations() {
+        return this.certificates;
+    },
     courses: [
         {
             id: 1,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'Introduction to DevOps',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -144,7 +183,7 @@ export const coursesData: {
         },
         {
             id: 2,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'Introduction to Cloud Computing',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -156,7 +195,7 @@ export const coursesData: {
         },
         {
             id: 3,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'Introduction to Agile Development and Scrum',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -168,7 +207,7 @@ export const coursesData: {
         },
         {
             id: 4,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'Introduction to Software Engineering',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -180,7 +219,7 @@ export const coursesData: {
         },
         {
             id: 5,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'Getting Started with Git and GitHub',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -192,7 +231,7 @@ export const coursesData: {
         },
         {
             id: 6,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'Hands-on Introduction to Linux Commands and Shell Scripting',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -204,7 +243,7 @@ export const coursesData: {
         },
         {
             id: 7,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'Python for Data Science, AI & Development',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -216,7 +255,7 @@ export const coursesData: {
         },
         {
             id: 8,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'Developing AI Applications with Python and Flask',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -228,7 +267,7 @@ export const coursesData: {
         },
         {
             id: 9,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'Introduction to Containers w/ Docker, Kubernetes & OpenShift',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -240,7 +279,7 @@ export const coursesData: {
         },
         {
             id: 10,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'Application Development using Microservices and Serverless',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -252,7 +291,7 @@ export const coursesData: {
         },
         {
             id: 11,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'Introduction to Test and Behavior Driven Development',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -264,7 +303,7 @@ export const coursesData: {
         },
         {
             id: 12,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'Continuous Integration and Continuous Delivery (CI/CD)',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -276,7 +315,7 @@ export const coursesData: {
         },
         {
             id: 13,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'Application Security for Developers and DevOps Professionals',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -288,7 +327,7 @@ export const coursesData: {
         },
         {
             id: 14,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'Monitoring and Observability for Development and DevOps',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -300,7 +339,7 @@ export const coursesData: {
         },
         {
             id: 15,
-            specializationId: 'ibm-devops-software-engineering',
+            certificateId: 'ibm-devops-software-engineering',
             title: 'DevOps Capstone Project',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -312,7 +351,7 @@ export const coursesData: {
         },
         {
             id: 16,
-            specializationId: 'ibm-machine-learning',
+            certificateId: 'ibm-machine-learning',
             title: 'Exploratory Data Analysis for Machine Learning',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -329,7 +368,7 @@ export const coursesData: {
         },
         {
             id: 17,
-            specializationId: 'ibm-machine-learning',
+            certificateId: 'ibm-machine-learning',
             title: 'Supervised Machine Learning: Regression',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -346,7 +385,7 @@ export const coursesData: {
         },
         {
             id: 18,
-            specializationId: 'ibm-machine-learning',
+            certificateId: 'ibm-machine-learning',
             title: 'Supervised Machine Learning: Classification',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -363,7 +402,7 @@ export const coursesData: {
         },
         {
             id: 19,
-            specializationId: 'ibm-machine-learning',
+            certificateId: 'ibm-machine-learning',
             title: 'Unsupervised Machine Learning',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -375,7 +414,7 @@ export const coursesData: {
         },
         {
             id: 20,
-            specializationId: 'ibm-machine-learning',
+            certificateId: 'ibm-machine-learning',
             title: 'Deep Learning and Reinforcement Learning',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -392,7 +431,7 @@ export const coursesData: {
         },
         {
             id: 21,
-            specializationId: 'ibm-machine-learning',
+            certificateId: 'ibm-machine-learning',
             title: 'Machine Learning Capstone',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -400,6 +439,74 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/HY9R2194EZJT',
             credential: 'HY9R2194EZJT',
+            image: '#',
+        },
+        {
+            id: 22,
+            certificateId: 'ibm-ai-foundations-for-everyone',
+            title: 'Introduction to Artificial Intelligence (AI)',
+            provider: 'IBM',
+            issuer: 'Coursera',
+            skills: [
+                'Artificial Intelligence (AI)',
+                'Machine Learning',
+                'Deep Learning',
+                'Neural Networks',
+            ],
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/HJP3ZZUP1LZ1',
+            credential: 'HJP3ZZUP1LZ1',
+            image: '#',
+        },
+        {
+            id: 23,
+            certificateId: 'ibm-ai-foundations-for-everyone',
+            title: 'Generative AI: Introduction and Applications',
+            provider: 'IBM',
+            issuer: 'Coursera',
+            skills: [
+                'Generative AI',
+                'Large Language Models (LLM)',
+                'AI Ethics',
+                'Artificial Intelligence (AI)',
+            ],
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/SC1KGCTL9OO4',
+            credential: 'SC1KGCTL9OO4',
+            image: '#',
+        },
+        {
+            id: 24,
+            certificateId: 'ibm-ai-foundations-for-everyone',
+            title: 'Generative AI: Prompt Engineering Basics',
+            provider: 'IBM',
+            issuer: 'Coursera',
+            skills: [
+                'Prompt Engineering',
+                'Generative AI',
+                'ChatGPT',
+                'AI Prompts',
+            ],
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/LD22NVUWRANC',
+            credential: 'LD22NVUWRANC',
+            image: '#',
+        },
+        {
+            id: 25,
+            certificateId: 'ibm-ai-foundations-for-everyone',
+            title: 'Building AI Powered Chatbots Without Programming',
+            provider: 'IBM',
+            issuer: 'Coursera',
+            skills: [
+                'Chatbots',
+                'IBM Watson Assistant',
+                'Conversational AI',
+                'No-Code',
+            ],
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/verify/L6R8H55DEA5U',
+            credential: 'L6R8H55DEA5U',
             image: '#',
         },
     ],

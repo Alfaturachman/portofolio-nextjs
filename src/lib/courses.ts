@@ -202,7 +202,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/PUUPJRYMVFWY',
             credential: 'PUUPJRYMVFWY',
-            image: '#',
+
+            image: '/assets/courses/Coursera PUUPJRYMVFWY.jpg',
         },
         {
             id: 2,
@@ -214,7 +215,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/KWII2E29GUCP',
             credential: 'KWII2E29GUCP',
-            image: '#',
+
+            image: '/assets/courses/Coursera KWII2E29GUCP.jpg',
         },
         {
             id: 3,
@@ -226,7 +228,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/B58WYKB58HX3',
             credential: 'B58WYKB58HX3',
-            image: '#',
+
+            image: '/assets/courses/Coursera B58WYKB58HX3.jpg',
         },
         {
             id: 4,
@@ -238,7 +241,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/9YNVBW6VFS74',
             credential: '9YNVBW6VFS74',
-            image: '#',
+
+            image: '/assets/courses/Coursera 9YNVBW6VFS74.jpg',
         },
         {
             id: 5,
@@ -250,7 +254,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/QU0UD8JBBN5Y',
             credential: 'QU0UD8JBBN5Y',
-            image: '#',
+
+            image: '/assets/courses/Coursera QU0UD8JBBN5Y.jpg',
         },
         {
             id: 6,
@@ -262,7 +267,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/NTXSWHCXGP3M',
             credential: 'NTXSWHCXGP3M',
-            image: '#',
+
+            image: '/assets/courses/Coursera NTXSWHCXGP3M.jpg',
         },
         {
             id: 7,
@@ -274,7 +280,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/00CUZNBVXHAY',
             credential: '00CUZNBVXHAY',
-            image: '#',
+
+            image: '/assets/courses/Coursera 00CUZNBVXHAY.jpg',
         },
         {
             id: 8,
@@ -286,7 +293,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/N0Y5ATDNQA8A',
             credential: 'N0Y5ATDNQA8A',
-            image: '#',
+
+            image: '/assets/courses/Coursera N0Y5ATDNQA8A.jpg',
         },
         {
             id: 9,
@@ -298,7 +306,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/X9VP7V6B22F2',
             credential: 'X9VP7V6B22F2',
-            image: '#',
+
+            image: '/assets/courses/Coursera X9VP7V6B22F2.jpg',
         },
         {
             id: 10,
@@ -310,7 +319,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/9ZP2USR1M7WN',
             credential: '9ZP2USR1M7WN',
-            image: '#',
+
+            image: '/assets/courses/Coursera 9ZP2USR1M7WN.jpg',
         },
         {
             id: 11,
@@ -322,7 +332,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/COIY4WLZRL9Q',
             credential: 'COIY4WLZRL9Q',
-            image: '#',
+
+            image: '/assets/courses/Coursera COIY4WLZRL9Q.jpg',
         },
         {
             id: 12,
@@ -334,7 +345,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/TKS66EQVG4WU',
             credential: 'TKS66EQVG4WU',
-            image: '#',
+
+            image: '/assets/courses/Coursera TKS66EQVG4WU.jpg',
         },
         {
             id: 13,
@@ -346,7 +358,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/GN3SHQZ0PIQT',
             credential: 'GN3SHQZ0PIQT',
-            image: '#',
+
+            image: '/assets/courses/Coursera GN3SHQZ0PIQT.jpg',
         },
         {
             id: 14,
@@ -358,7 +371,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/IOTESW68DTO6',
             credential: 'IOTESW68DTO6',
-            image: '#',
+
+            image: '/assets/courses/Coursera IOTESW68DTO6.jpg',
         },
         {
             id: 15,
@@ -370,7 +384,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/SUCIDKC0FR58',
             credential: 'SUCIDKC0FR58',
-            image: '#',
+
+            image: '/assets/courses/Coursera SUCIDKC0FR58.jpg',
         },
         {
             id: 16,
@@ -388,7 +403,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/SAA3BLB5E3QO',
             credential: 'SAA3BLB5E3QO',
-            image: '#',
+
+            image: '/assets/courses/Coursera SAA3BLB5E3QO.jpg',
         },
         {
             id: 17,
@@ -406,7 +422,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/6SUJ6TU2MQNA',
             credential: '6SUJ6TU2MQNA',
-            image: '#',
+
+            image: '/assets/courses/Coursera 6SUJ6TU2MQNA.jpg',
         },
         {
             id: 18,
@@ -424,7 +441,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/011MJYE22PMJ',
             credential: '011MJYE22PMJ',
-            image: '#',
+
+            image: '/assets/courses/Coursera 011MJYE22PMJ.jpg',
         },
         {
             id: 19,
@@ -437,7 +455,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/HIMXITQQ04QJ',
             credential: 'HIMXITQQ04QJ',
-            image: '#',
+
+            image: '/assets/courses/Coursera HIMXITQQ04QJ.jpg',
         },
         {
             id: 20,
@@ -454,7 +473,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/UQ9WUR4Q8OM6',
             credential: 'UQ9WUR4Q8OM6',
-            image: '#',
+
+            image: '/assets/courses/Coursera UQ9WUR4Q8OM6.jpg',
         },
         {
             id: 21,
@@ -466,7 +486,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/HY9R2194EZJT',
             credential: 'HY9R2194EZJT',
-            image: '#',
+
+            image: '/assets/courses/Coursera HY9R2194EZJT.jpg',
         },
         {
             id: 22,
@@ -483,7 +504,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/HJP3ZZUP1LZ1',
             credential: 'HJP3ZZUP1LZ1',
-            image: '#',
+
+            image: '/assets/courses/Coursera HJP3ZZUP1LZ1.jpg',
         },
         {
             id: 23,
@@ -500,7 +522,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/SC1KGCTL9OO4',
             credential: 'SC1KGCTL9OO4',
-            image: '#',
+
+            image: '/assets/courses/Coursera SC1KGCTL9OO4.jpg',
         },
         {
             id: 24,
@@ -517,7 +540,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/LD22NVUWRANC',
             credential: 'LD22NVUWRANC',
-            image: '#',
+
+            image: '/assets/courses/Coursera LD22NVUWRANC.jpg',
         },
         {
             id: 25,
@@ -534,7 +558,8 @@ export const coursesData: {
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/L6R8H55DEA5U',
             credential: 'L6R8H55DEA5U',
-            image: '#',
+
+            image: '/assets/courses/Coursera L6R8H55DEA5U.jpg',
         },
     ],
 };

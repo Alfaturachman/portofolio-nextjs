@@ -2,6 +2,7 @@
     "provider": "Penyedia",
     "issuer": "Penerbit",
     "courses": "Kursus",
+    "courseOf": "Kursus {current} dari {total}",
     "viewCredential": "Lihat Kredensial",
     "certBadge": "Sertifikat Profesional",
     "aboutTitle": "Tentang Sertifikat Profesional Ini",

@@ -2,6 +2,7 @@
     "provider": "Provider",
     "issuer": "Issuer",
     "courses": "Courses",
+    "courseOf": "Course {current} of {total}",
     "viewCredential": "View Credential",
     "certBadge": "Professional Certificate",
     "aboutTitle": "About this Professional Certificate",

@@ -164,39 +164,76 @@ export default async function CertificateDetailPage({
                         <Tx k="courses.courses" /> ({courses.length})
                     </h2>
                     <ul className="courses-grid">
-                        {courses.map((course, idx) => (
-                            <li className="course-item" key={course.id}>
-                                <div className="course-number">{idx + 1}</div>
-                                <div className="course-body">
-                                    <h3 className="course-title">
-                                        {course.title}
-                                    </h3>
-                                    {/* {course.skills.length > 0 && (
-                                        <div className="course-skills">
-                                            {course.skills.map((skill) => (
-                                                <span
-                                                    className="course-skill"
-                                                    key={skill}
-                                                >
-                                                    {skill}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    )} */}
-                                    {course.credentialUrl &&
-                                        course.credentialUrl !== '#' && (
-                                            <a
-                                                href={course.credentialUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="course-credential"
+                        {courses.map((course, idx) => {
+                            const courseImg =
+                                course.image && course.image !== '#'
+                                    ? course.image
+                                    : course.credential
+                                    ? `/assets/courses/Coursera ${course.credential}.jpg`
+                                    : null;
+                            return (
+                                <li className="course-item" key={course.id}>
+                                    {courseImg && (
+                                        <div className="course-thumb-box">
+                                            <ImagePreview
+                                                src={courseImg}
+                                                alt={`${course.title} Certificate`}
                                             >
-                                                <Tx k="courses.viewCredential" />
-                                            </a>
-                                        )}
-                                </div>
-                            </li>
-                        ))}
+                                                <div className="course-thumb">
+                                                    <Image
+                                                        src={courseImg}
+                                                        alt={`${course.title} Certificate`}
+                                                        width={120}
+                                                        height={90}
+                                                        className="course-thumb-img"
+                                                    />
+                                                </div>
+                                            </ImagePreview>
+                                        </div>
+                                    )}
+                                    <div className="course-body">
+                                        <div className="course-title-group">
+                                            <h3 className="course-title">
+                                                {course.title}
+                                            </h3>
+                                            <span className="course-index">
+                                                <Tx
+                                                    k="courses.courseOf"
+                                                    values={{
+                                                        current: idx + 1,
+                                                        total: courses.length,
+                                                    }}
+                                                    fallback={`Course ${idx + 1} of ${courses.length}`}
+                                                />
+                                            </span>
+                                        </div>
+                                        {/* {course.skills.length > 0 && (
+                                            <div className="course-skills">
+                                                {course.skills.map((skill) => (
+                                                    <span
+                                                        className="course-skill"
+                                                        key={skill}
+                                                    >
+                                                        {skill}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        )} */}
+                                        {course.credentialUrl &&
+                                            course.credentialUrl !== '#' && (
+                                                <a
+                                                    href={course.credentialUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="course-credential"
+                                                >
+                                                    <Tx k="courses.viewCredential" />
+                                                </a>
+                                            )}
+                                    </div>
+                                </li>
+                            );
+                        })}
                     </ul>
                 </div>
                 )}

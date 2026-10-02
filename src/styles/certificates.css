@@ -65,16 +65,35 @@
 }
 
 .cert-desc {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
     font-size: 14px;
     line-height: 1.5;
     color: var(--text-secondary);
     margin: 0;
 }
 
+.cert-category {
+    font-weight: 500;
+}
+
+.cert-divider {
+    width: 1px;
+    height: 12px;
+    background: var(--border-slightly);
+    flex-shrink: 0;
+}
+
+.cert-date {
+    white-space: nowrap;
+}
+
 .cert-arrow {
     width: 36px;
     height: 36px;
-    font-size: 13px;
+    font-size: 12px;
     border-radius: 50%;
     background: var(--bg-secondary);
     display: flex;
@@ -122,6 +141,10 @@
     .cert-title {
         font-size: 16px;
     }
+    .cert-desc {
+        font-size: 12px;
+        gap: 6px;
+    }
 }
 
 /* ----- Courses Detail Page ----- */
@@ -133,6 +156,8 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
 }
 
 .detail-header-info {
@@ -167,13 +192,14 @@
     .detail-header-row {
         flex-direction: column;
         align-items: stretch;
+        gap: 16px;
     }
     .detail-header-cert {
         width: 100%;
     }
     .detail-header-cert .btn-action {
         width: 100%;
-        margin-bottom: 24px;
+        margin-bottom: 0;
     }
 }
 
@@ -301,7 +327,7 @@
     }
 
     .spec-cert-note p {
-        font-size: 13px;
+        font-size: 12px;
         line-height: 1.6;
     }
 }

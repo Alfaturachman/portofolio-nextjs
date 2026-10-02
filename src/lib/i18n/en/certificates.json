@@ -8,6 +8,7 @@
         "ibm-ai-foundations-for-everyone": "25 September 2026",
         "ibm-devops-software-engineering": "18 May 2026",
         "ibm-machine-learning": "18 May 2026",
+        "ibm-introduction-to-machine-learning": "18 May 2026",
         "pimnas-peserta": "04 December 2025",
         "pimnas-pendanaan": "04 December 2025",
         "bnsp-web-developer": "28 January 2025",
@@ -27,7 +28,8 @@
     "descriptions": {
         "ibm-ai-foundations-for-everyone": "This Specialization from IBM is earned after completing all 4 courses covering the foundations of Artificial Intelligence (AI).",
         "ibm-devops-software-engineering": "This Professional Certificate from IBM is earned after completing all 15 courses in DevOps and Software Engineering.",
-        "ibm-machine-learning": "This Professional Certificate from IBM is earned after completing all 5 courses in Machine Learning and Deep Learning.",
+        "ibm-machine-learning": "This Professional Certificate from IBM is earned after completing all 6 courses in Machine Learning and Deep Learning.",
+        "ibm-introduction-to-machine-learning": "This Specialization from IBM is earned after completing all 4 courses covering the fundamentals of Machine Learning.",
         "pimnas-peserta": "Official certificate of participation as a Finalist / Participant in the 38th National Student Scientific Week (PIMNAS) by Kemdiktisaintek and Belmawa.",
         "pimnas-pendanaan": "Award certificate for securing funding in the Student Creativity Program for Innovative Works (PKM-KI) 2025 by Kemdiktisaintek and Belmawa.",
         "bnsp-web-developer": "Official Certificate of Competence from the National Professional Certification Agency (BNSP) through LSP Universitas Dian Nuswantoro in the Web Developer scheme.",

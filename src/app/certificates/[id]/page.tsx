@@ -5,13 +5,9 @@ import { coursesData } from '@/lib/courses';
 import ImagePreview from '@/components/ImagePreview';
 import Breadcrumb from '@/components/Breadcrumb';
 import Tx from '@/components/Tx';
-import CoursesMetaWrapper from '@/components/CoursesMetaWrapper';
 import CertTitle from '@/components/CertTitle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faBuilding,
-    faGraduationCap,
-    faBookOpen,
     faExternalLinkAlt,
     faCertificate,
     faInfoCircle,
@@ -125,51 +121,6 @@ export default async function CertificateDetailPage({
                             </div>
                         </div>
 
-                        <CoursesMetaWrapper>
-                            <div className="detail-meta">
-                            <div className="meta-pill">
-                                <div className="meta-pill-icon">
-                                    <FontAwesomeIcon icon={faBuilding} />
-                                </div>
-                                <div className="meta-pill-text">
-                                    <span className="meta-pill-label">
-                                        <Tx k="courses.provider" />
-                                    </span>
-                                    <span className="meta-pill-value">
-                                        {cert.provider}
-                                    </span>
-                                </div>
-                            </div>
-                            <div className="meta-pill">
-                                <div className="meta-pill-icon">
-                                    <FontAwesomeIcon icon={faGraduationCap} />
-                                </div>
-                                <div className="meta-pill-text">
-                                    <span className="meta-pill-label">
-                                        <Tx k="courses.issuer" />
-                                    </span>
-                                    <span className="meta-pill-value">
-                                        {cert.issuer}
-                                    </span>
-                                </div>
-                            </div>
-                            {courses.length > 0 && (
-                            <div className="meta-pill">
-                                <div className="meta-pill-icon">
-                                    <FontAwesomeIcon icon={faBookOpen} />
-                                </div>
-                                <div className="meta-pill-text">
-                                    <span className="meta-pill-label">
-                                        <Tx k="courses.courses" />
-                                    </span>
-                                    <span className="meta-pill-value">
-                                        {courses.length}
-                                    </span>
-                                </div>
-                            </div>
-                            )}
-                            </div>
-                        </CoursesMetaWrapper>
                     </div>
                     <div className="detail-header-cert">
                         {cert.credentialUrl && cert.credentialUrl !== '#' && (
@@ -240,9 +191,6 @@ export default async function CertificateDetailPage({
                                                 rel="noopener noreferrer"
                                                 className="course-credential"
                                             >
-                                                <FontAwesomeIcon
-                                                    icon={faCertificate}
-                                                />
                                                 <Tx k="courses.viewCredential" />
                                             </a>
                                         )}

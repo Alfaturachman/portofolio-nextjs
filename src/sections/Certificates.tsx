@@ -5,9 +5,6 @@ import Image from 'next/image';
 import { coursesData } from '@/lib/courses';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faBuilding,
-    faCalendarAlt,
-    faBookOpen,
     faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { useI18n } from '@/lib/i18n/i18n-context';
@@ -39,6 +36,16 @@ export default function Certificates({
                         const title = specTitles?.[cert.id] ?? cert.title;
                         const specDates = t.certificates.dates as Record<string, string> | undefined;
                         const date = specDates?.[cert.id] ?? t.certificates.certDesc;
+                        const category =
+                            cert.category === 'Specialization'
+                                ? t.courses.specializationBadge
+                                : cert.category === 'Competency Certification'
+                                ? t.courses.competencyBadge
+                                : cert.category === 'Competition & Award'
+                                ? t.courses.awardBadge
+                                : cert.category === 'Professional Certificate'
+                                ? t.courses.certBadge
+                                : cert.category;
                         return (
                         <Link
                             key={cert.id}
@@ -57,7 +64,15 @@ export default function Certificates({
                             </div>
                             <div className="cert-body">
                                 <h3 className="cert-title">{title}</h3>
-                                <p className="cert-desc">{date}</p>
+                                <p className="cert-desc">
+                                    {category && (
+                                        <>
+                                            <span className="cert-category">{category}</span>
+                                            <span className="cert-divider" aria-hidden="true" />
+                                        </>
+                                    )}
+                                    <span className="cert-date">{date}</span>
+                                </p>
                             </div>
                             <div className="cert-arrow">
                                 <FontAwesomeIcon

@@ -7,28 +7,6 @@ export const coursesData: {
 } = {
     certificates: [
         {
-            id: 'ibm-devops-software-engineering',
-            title: 'IBM DevOps and Software Engineering',
-            category: 'Professional Certificate',
-            provider: 'IBM',
-            issuer: 'Coursera',
-            date: '2026-05-18',
-            skills: [
-                'DevOps',
-                'Software Engineering',
-                'CI/CD',
-                'Agile Methodologies',
-                'Linux',
-                'Git',
-                'Docker',
-            ],
-            credentialUrl:
-                'https://www.coursera.org/account/accomplishments/professional-cert/1OVGPIEULHS5',
-            credential: '1OVGPIEULHS5',
-            image: '/assets/certificates/IBM DevOps and Software Engineering.jpg',
-            logo: '/assets/images/logo/ibm.svg',
-        },
-        {
             id: 'ibm-machine-learning',
             title: 'IBM Machine Learning',
             category: 'Professional Certificate',
@@ -51,6 +29,51 @@ export const coursesData: {
                 'https://www.coursera.org/account/accomplishments/professional-cert/G9QD5BA2LI68',
             credential: 'G9QD5BA2LI68',
             image: '/assets/certificates/IBM Machine Learning.jpg',
+            logo: '/assets/images/logo/ibm.svg',
+        },
+        {
+            id: 'ibm-introduction-to-machine-learning',
+            title: 'IBM Introduction to Machine Learning',
+            category: 'Specialization',
+            provider: 'IBM',
+            issuer: 'Coursera',
+            date: '2026-05-18',
+            skills: [
+                'Machine Learning',
+                'Exploratory Data Analysis',
+                'Supervised Learning',
+                'Unsupervised Learning',
+                'Linear Regression',
+                'Classification',
+                'Python',
+                'Scikit-learn',
+            ],
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/specialization/C1ITBGE5WI0Z',
+            credential: 'C1ITBGE5WI0Z',
+            image: '/assets/certificates/IBM Introduction to Machine Learning.jpg',
+            logo: '/assets/images/logo/ibm.svg',
+        },
+                {
+            id: 'ibm-devops-software-engineering',
+            title: 'IBM DevOps and Software Engineering',
+            category: 'Professional Certificate',
+            provider: 'IBM',
+            issuer: 'Coursera',
+            date: '2026-05-18',
+            skills: [
+                'DevOps',
+                'Software Engineering',
+                'CI/CD',
+                'Agile Methodologies',
+                'Linux',
+                'Git',
+                'Docker',
+            ],
+            credentialUrl:
+                'https://www.coursera.org/account/accomplishments/professional-cert/1OVGPIEULHS5',
+            credential: '1OVGPIEULHS5',
+            image: '/assets/certificates/IBM DevOps and Software Engineering.jpg',
             logo: '/assets/images/logo/ibm.svg',
         },
         {
@@ -352,6 +375,7 @@ export const coursesData: {
         {
             id: 16,
             certificateId: 'ibm-machine-learning',
+            specializationId: 'ibm-introduction-to-machine-learning',
             title: 'Exploratory Data Analysis for Machine Learning',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -369,6 +393,7 @@ export const coursesData: {
         {
             id: 17,
             certificateId: 'ibm-machine-learning',
+            specializationId: 'ibm-introduction-to-machine-learning',
             title: 'Supervised Machine Learning: Regression',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -386,6 +411,7 @@ export const coursesData: {
         {
             id: 18,
             certificateId: 'ibm-machine-learning',
+            specializationId: 'ibm-introduction-to-machine-learning',
             title: 'Supervised Machine Learning: Classification',
             provider: 'IBM',
             issuer: 'Coursera',
@@ -403,6 +429,7 @@ export const coursesData: {
         {
             id: 19,
             certificateId: 'ibm-machine-learning',
+            specializationId: 'ibm-introduction-to-machine-learning',
             title: 'Unsupervised Machine Learning',
             provider: 'IBM',
             issuer: 'Coursera',

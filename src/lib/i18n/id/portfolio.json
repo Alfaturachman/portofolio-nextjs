@@ -16,7 +16,7 @@
         "egrowth": "Platform web terintegrasi perangkat F-Scale untuk memantau pertumbuhan anak dan mendeteksi kelainan lengkung kaki.",
         "nomadenstuff": "Aplikasi web e-commerce untuk thrift shop dengan fitur reservasi produk dan perhitungan ongkir.",
         "pusdataru-jateng": "Platform bagi warga untuk mengajukan dan melacak pengaduan publik di Jawa Tengah.",
-        "sertifikasi": "Sistem machine learning untuk skrining risiko stroke, dibangun untuk sertifikasi data scientist BNSP."
+        "sertifikasi": "Sistem machine learning untuk skrining risiko stroke, dibangun untuk Sertifikat data scientist BNSP."
     },
     "meta": {
         "toggleAria": "Tampilkan Spesifikasi Proyek",
@@ -31,7 +31,7 @@
             "role": {
                 "Backend Developer": "Developer Backend",
                 "Backend & API Developer": "Developer Backend & API",
-                "Full-Stack Developer": "Developer Full-Stack",
+                "Full-Stack Developer | Machine Learning Engineer": "Developer Full-Stack | Machine Learning Engineer",
                 "AI & Backend Developer": "Developer AI & Backend",
                 "Data Scientist": "Data Scientist",
                 "Frontend Developer": "Developer Frontend"

@@ -106,7 +106,7 @@ export const projects: Project[] = [
             'Developed a web portal managing incoming and outgoing letters, disposition workflows, agendas, and public information distribution for the regional office.',
         outcome:
             'Administrative processes run digitally with tracked workflows, and the public gains easier access to land information in Central Java.',
-        role: 'Full-Stack Developer',
+        role: 'Full-Stack Developer | Machine Learning Engineer',
         year: '2024',
         websiteType: 'Web Portal',
         sector: 'Government',
@@ -136,7 +136,7 @@ export const projects: Project[] = [
             'Built an inventory system covering raw materials, processed products, and real-time stock reports across the production lifecycle.',
         outcome:
             'The system provides accurate stock visibility from raw rubber intake to finished products, supporting more efficient factory operations.',
-        role: 'Full-Stack Developer',
+        role: 'Full-Stack Developer | Machine Learning Engineer',
         year: '2023',
         websiteType: 'Information System',
         sector: 'Manufacturing',
@@ -165,7 +165,7 @@ export const projects: Project[] = [
             'Built a monitoring system where users report disruptions and technicians manage resolution with dashboards, notification workflows, and historical records.',
         outcome:
             'Outage reports are tracked in real time with clear status history, giving the team a structured view of service performance.',
-        role: 'Full-Stack Developer',
+        role: 'Full-Stack Developer | Machine Learning Engineer',
         year: '2024',
         websiteType: 'Monitoring System',
         sector: 'Corporate',
@@ -193,7 +193,7 @@ export const projects: Project[] = [
             'Developed a Laravel-based complaint management system handling submission, verification, assignment to relevant offices, and resolution tracking.',
         outcome:
             'Citizens can submit and track complaints digitally, and authorities follow a structured workflow from verification to resolution.',
-        role: 'Full-Stack Developer',
+        role: 'Full-Stack Developer | Machine Learning Engineer',
         year: '2025',
         websiteType: 'Information System',
         sector: 'Government',
@@ -221,7 +221,7 @@ export const projects: Project[] = [
             'Created a digital agenda system for scheduling, recording, and tracking labor mediation sessions with status tracking and report generation.',
         outcome:
             'Mediation staff manage schedules and session records digitally and can generate reports from a complete session history.',
-        role: 'Full-Stack Developer',
+        role: 'Full-Stack Developer | Machine Learning Engineer',
         year: '2025',
         websiteType: 'Information System',
         sector: 'Government',
@@ -249,7 +249,7 @@ export const projects: Project[] = [
             'Built E-Growth, a web-based platform integrated with the F-Scale measurement device, providing digital monitoring of growth parameters and automated foot-arch analysis.',
         outcome:
             'Implemented and tested at TK Ainun Habibie and local Posyandu, enabling digital growth and foot-structure monitoring for approximately 20 children.',
-        role: 'Full-Stack Developer',
+        role: 'Full-Stack Developer | Machine Learning Engineer',
         year: '2025',
         websiteType: 'Monitoring System',
         sector: 'Healthcare',
@@ -306,7 +306,7 @@ export const projects: Project[] = [
             'Built an e-commerce app with product reservations, detailed sizing guides, and automated shipping calculations for single-item inventory.',
         outcome:
             'Customers reserve items and get accurate shipping estimates, while the owner manages the one-of-a-kind catalog in one place.',
-        role: 'Full-Stack Developer',
+        role: 'Full-Stack Developer | Machine Learning Engineer',
         year: '2023',
         websiteType: 'E-Commerce',
         sector: 'Retail',

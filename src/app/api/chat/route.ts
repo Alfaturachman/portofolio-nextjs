@@ -117,7 +117,7 @@ const systemPrompt = `You are a helpful assistant for Alfaturachman Maulana Pahl
 About Alfaturachman:
 - Full name: Alfaturachman Maulana Pahlevi
 - Nickname: Almavi
-- Role: Full-Stack Developer focused on system infrastructure and machine learning systems
+- Role: Full-Stack Developer | Machine Learning Engineer focused on system infrastructure and machine learning systems
 - Education: Completed Associate of Computer Science, Informatics Engineering (D3 Teknik Informatika) at Dian Nuswantoro University (September 2022 - July 2025). Now pursuing a Bachelor of Computer Science, Informatics Engineering (S1 Teknik Informatika) at the same university (September 2025 - PRESENT)
 - Status: Freelancer & Student at Dian Nuswantoro University
 - Email: alfaturachmanpahlevi@gmail.com

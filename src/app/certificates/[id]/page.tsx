@@ -66,22 +66,6 @@ export default async function CertificateDetailPage({
                         </h1>
 
                         <div className="spec-cert-info">
-                            <div className="spec-cert-badge">
-                                <FontAwesomeIcon icon={faCertificate} />
-                                <Tx
-                                    k={
-                                        cert.category === 'Specialization'
-                                            ? 'courses.specializationBadge'
-                                            : cert.category === 'Competency Certification'
-                                            ? 'courses.competencyBadge'
-                                            : cert.category === 'Competition & Award'
-                                            ? 'courses.awardBadge'
-                                            : cert.category === 'Professional Certificate'
-                                            ? 'courses.certBadge'
-                                            : 'courses.generalBadge'
-                                    }
-                                />
-                            </div>
                             <div className="spec-cert-note">
                                 <h3>
                                     <FontAwesomeIcon icon={faInfoCircle} />
@@ -89,7 +73,7 @@ export default async function CertificateDetailPage({
                                         k={
                                             cert.category === 'Specialization'
                                                 ? 'courses.aboutSpecializationTitle'
-                                                : cert.category === 'Competency Certification'
+                                                : cert.category === 'Competency Certificate'
                                                 ? 'courses.aboutCompetencyTitle'
                                                 : cert.category === 'Competition & Award'
                                                 ? 'courses.aboutAwardTitle'
@@ -105,8 +89,8 @@ export default async function CertificateDetailPage({
                                         fallback={
                                             cert.category === 'Specialization'
                                                 ? 'This Specialization is earned after completing all courses below.'
-                                                : cert.category === 'Competency Certification'
-                                                ? 'This competency certification validates professional standards and skills.'
+                                                : cert.category === 'Competency Certificate'
+                                                ? 'This Competency Certificate validates professional standards and skills.'
                                                 : cert.category === 'Competition & Award'
                                                 ? 'This award recognizes academic and competition achievements.'
                                                 : 'This certificate validates course completion.'

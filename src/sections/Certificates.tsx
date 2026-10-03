@@ -39,7 +39,7 @@ export default function Certificates({
                         const category =
                             cert.category === 'Specialization'
                                 ? t.courses.specializationBadge
-                                : cert.category === 'Competency Certification'
+                                : cert.category === 'Competency Certificate'
                                 ? t.courses.competencyBadge
                                 : cert.category === 'Competition & Award'
                                 ? t.courses.awardBadge

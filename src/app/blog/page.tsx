@@ -8,12 +8,15 @@ import '@/styles/blog.css';
 export const metadata: Metadata = {
     title: 'Blog | Alfaturachman Maulana Pahlevi',
     description:
-        'A collection of articles about software engineering, web architecture, and DevOps by Alfaturachman Maulana Pahlevi.',
+        'A collection of articles about software engineering, web architecture, machine learning, and DevOps by Alfaturachman Maulana Pahlevi.',
     keywords: [
         'blog',
         'software engineering',
         'devops',
         'web development',
+        'machine learning',
+        'deep learning',
+        'data science',
         'iot',
         'almavi',
     ],

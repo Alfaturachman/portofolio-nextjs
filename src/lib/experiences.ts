@@ -73,6 +73,7 @@ export const skillsCategories = [
             { name: 'Tailwind CSS', icon: 'tailwind' },
             { name: 'React', icon: 'react' },
             { name: 'Next.js', icon: 'nextjs' },
+            { name: 'Bootstrap', icon: 'bootstrap' },
         ],
     },
     {
@@ -83,6 +84,19 @@ export const skillsCategories = [
             { name: 'Django', icon: 'django' },
             { name: 'Laravel', icon: 'laravel' },
             { name: 'CodeIgniter', icon: 'codeigniter' },
+        ],
+    },
+    {
+        title: 'Machine Learning',
+        desc: 'Model development and data science tooling: classical machine learning, deep learning, and computer vision.',
+        tools: [
+            { name: 'Scikit-learn', icon: 'scikit-learn' },
+            { name: 'TensorFlow', icon: 'tensorflow' },
+            { name: 'Keras', icon: 'keras' },
+            { name: 'PyTorch', icon: 'pytorch' },
+            { name: 'NumPy', icon: 'numpy' },
+            { name: 'Matplotlib', icon: 'matplotlib' },
+            { name: 'Jupyter', icon: 'jupyter' },
         ],
     },
     {
@@ -107,6 +121,7 @@ export const skillsCategories = [
         desc: 'Design and prototyping tools for UI/UX workflows.',
         tools: [
             { name: 'Figma', icon: 'figma' },
+            { name: 'Adobe Illustrator', icon: 'adobe-illustrator-cc' },
         ],
     },
 ];

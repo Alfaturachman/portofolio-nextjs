@@ -17,6 +17,10 @@
             "desc": "Framework sisi server untuk membangun RESTful API dan aplikasi web."
         },
         {
+            "title": "Machine Learning",
+            "desc": "Tooling pengembangan model dan data science: machine learning klasik, deep learning, dan computer vision."
+        },
+        {
             "title": "Database",
             "desc": "Sistem basis data relasional untuk penyimpanan dan pengelolaan data."
         },

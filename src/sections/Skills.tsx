@@ -28,6 +28,14 @@ const toolIcons: Record<string, string> = {
     typescript: '/assets/images/logo/typescript.svg',
     django: '/assets/images/logo/django.svg?v=2',
     'adobe-illustrator-cc': '/assets/images/logo/adobe-illustrator-cc.svg',
+    bootstrap: '/assets/images/logo/bootstrap.svg',
+    'scikit-learn': '/assets/images/logo/scikit-learn.svg',
+    tensorflow: '/assets/images/logo/tensorflow.svg',
+    keras: '/assets/images/logo/keras.svg',
+    pytorch: '/assets/images/logo/pytorch.svg',
+    numpy: '/assets/images/logo/numpy.svg',
+    matplotlib: '/assets/images/logo/matplotlib.svg',
+    jupyter: '/assets/images/logo/jupyter.svg',
 };
 
 export default function Skills({
@@ -44,21 +52,26 @@ export default function Skills({
     // ponytail: reverse row shifts its phase by half a set so same-named pills
     // never align across rows within the visible loop (translate stays in
     // [-50%,0] => seamless, no cut-off)
+    //
+    // icon-less tools are dropped here: the marquee pill is a fixed 56px box
+    // showing only the logo, so a missing SVG would render an empty tile.
+    // The /skills grid below still lists them by name.
     const renderToolPills = (tools: typeof allTools, key: string) =>
-        [...tools, ...tools].map((tool, i) => (
-            <div className="marquee-pill" key={`${key}-${tool.name}-${i}`}>
-                {toolIcons[tool.icon] ? (
+        [...tools, ...tools]
+            .filter((tool) => toolIcons[tool.icon])
+            .map((tool, i) => (
+                <div
+                    className="marquee-pill"
+                    key={`${key}-${tool.name}-${i}`}
+                >
                     <Image
                         src={toolIcons[tool.icon]}
                         alt={tool.name}
                         width={40}
                         height={40}
                     />
-                ) : (
-                    <i className={`fab fa-${tool.icon}`} />
-                )}
-            </div>
-        ));
+                </div>
+            ));
 
     const renderMarquee = () => (
         <div className="skills-marquee" aria-hidden="true">
@@ -99,8 +112,8 @@ export default function Skills({
                                                 className="tool-pill"
                                                 key={tool.name}
                                             >
-                                                <span className="tool-icon">
-                                                    {toolIcons[tool.icon] ? (
+                                                {toolIcons[tool.icon] && (
+                                                    <span className="tool-icon">
                                                         <Image
                                                             src={
                                                                 toolIcons[
@@ -111,12 +124,8 @@ export default function Skills({
                                                             width={24}
                                                             height={24}
                                                         />
-                                                    ) : (
-                                                        <i
-                                                            className={`fab fa-${tool.icon}`}
-                                                        />
-                                                    )}
-                                                </span>
+                                                    </span>
+                                                )}
                                                 {tool.name}
                                             </div>
                                         ))}

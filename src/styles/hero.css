@@ -83,7 +83,7 @@
 
 .hero-name {
     font-family: var(--font-outfit), sans-serif;
-    font-size: clamp(20px, 3vw, 28px);
+    font-size: clamp(20px, 3vw, 26px);
     font-weight: 700;
     letter-spacing: -0.025em;
     color: var(--text-primary);
@@ -112,7 +112,7 @@
 
 .hero-role {
     font-family: var(--font-outfit), sans-serif;
-    font-size: 16px;
+    font-size: clamp(14px, 1vw, 16px);
     font-weight: 500;
     color: var(--text-secondary);
     margin-bottom: 8px;
@@ -173,7 +173,7 @@
     border-radius: 14px;
     border: 1px solid var(--border-slightly);
     background: white;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     text-decoration: none;
     transition: all 0.3s ease;
 }

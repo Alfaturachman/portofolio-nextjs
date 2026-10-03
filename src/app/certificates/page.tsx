@@ -5,10 +5,12 @@ import Tx from '@/components/Tx';
 
 export const metadata: Metadata = {
     title: 'Certificates | Alfaturachman Maulana Pahlevi',
-    description: 'Explore my certificates and course specializations.',
+    description:
+        'Explore my certificates and course specializations, including machine learning, deep learning, and DevOps tracks.',
     openGraph: {
         title: 'Certificates | Alfaturachman Maulana Pahlevi',
-        description: 'Explore my certificates and course specializations.',
+        description:
+            'Explore my certificates and course specializations, including machine learning, deep learning, and DevOps tracks.',
         url: 'https://almavi.vercel.app/certificates',
     },
 };

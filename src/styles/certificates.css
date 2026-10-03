@@ -13,7 +13,7 @@
 .cert-card {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
     padding: 16px 20px;
     background: var(--card-bg);
     border: 1px solid var(--border-subtle);
@@ -31,8 +31,8 @@
 }
 
 .cert-logo {
-    width: 72px;
-    height: 72px;
+    width: 64px;
+    height: 64px;
     border-radius: 14px;
     border: 1px solid var(--border-lighter);
     background: white;
@@ -91,32 +91,20 @@
 }
 
 .cert-arrow {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     font-size: 12px;
     border-radius: 50%;
-    background: var(--bg-secondary);
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: var(--text-primary);
+    justify-content: end;
+    color: var(--text-secondary);
     flex-shrink: 0;
     transition: all 0.3s ease;
 }
 
-
-[data-theme='dark'] .cert-arrow {
-    background: var(--bg-primary);
-}
-
 .cert-card:hover .cert-arrow {
-    background: #0b1120;
-    color: #fff;
-}
-
-[data-theme='dark'] .cert-card:hover .cert-arrow {
-    background: #ffffff;
-    color: #0b1120;
+    color: var(--text-primary);
 }
 
 .cert-arrow-icon {
@@ -131,16 +119,24 @@
 
 @media (max-width: 768px) {
     .cert-card {
-        gap: 14px;
+        gap: 0px;
         padding: 14px 16px;
     }
-    .cert-logo {
-        width: 64px;
-        height: 64px;
+
+    .cert-body {
+        margin-left: 12px;
     }
+
+    .cert-logo {
+        width: 58px;
+        height: 58px;
+        border-radius: 12px;
+    }
+
     .cert-title {
         font-size: 16px;
     }
+
     .cert-desc {
         font-size: 12px;
         gap: 6px;
@@ -250,25 +246,6 @@
     margin-top: 12px;
 }
 
-.spec-cert-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    font-weight: 700;
-    color: #0b1120;
-    background: rgba(11, 17, 32, 0.08);
-    padding: 6px 14px;
-    border-radius: 100px;
-    white-space: nowrap;
-    align-self: flex-start;
-}
-
-[data-theme='dark'] .spec-cert-badge {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.14);
-}
-
 .spec-cert-note h3 {
     font-family: var(--font-outfit), sans-serif;
     font-size: 14px;
@@ -319,11 +296,6 @@
 
     .spec-cert-image-box:only-child {
         max-width: none;
-    }
-
-    .spec-cert-badge {
-        font-size: 12px;
-        padding: 5px 12px;
     }
 
     .spec-cert-note p {

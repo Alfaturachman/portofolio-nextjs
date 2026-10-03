@@ -5,10 +5,12 @@ import Tx from '@/components/Tx';
 
 export const metadata: Metadata = {
     title: 'Experience | Alfaturachman Maulana Pahlevi',
-    description: 'My journey and career history.',
+    description:
+        'My journey as a full-stack developer and machine learning engineer, from research and awards to shipped systems.',
     openGraph: {
         title: 'Experience | Alfaturachman Maulana Pahlevi',
-        description: 'My journey and career history.',
+        description:
+            'My journey as a full-stack developer and machine learning engineer, from research and awards to shipped systems.',
         url: 'https://almavi.vercel.app/experience',
     },
 };

@@ -32,7 +32,7 @@ export interface BlogArticle {
 export type CertificateCategory =
     | 'Professional Certificate'
     | 'Specialization'
-    | 'Competency Certification'
+    | 'Competency Certificate'
     | 'Competition & Award'
     | (string & {});
 

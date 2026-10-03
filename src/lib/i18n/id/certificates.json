@@ -17,7 +17,7 @@
     },
     "viewCredential": "Lihat Kredensial",
     "viewAll": "Lihat Semua Sertifikat",
-    "viewSpecAria": "Lihat sertifikat: ",
+    "viewSpecAria": "Lihat Sertifikat: ",
     "specs": {
         "pimnas-peserta": "Peserta PIMNAS 2025",
         "pimnas-pendanaan": "Peraih Pendanaan PIMNAS 2025",
@@ -32,8 +32,8 @@
         "ibm-introduction-to-machine-learning": "Spesialisasi ini dari IBM diperoleh setelah menyelesaikan seluruh 4 kursus tentang dasar-dasar Machine Learning.",
         "pimnas-peserta": "Sertifikat resmi keikutsertaan sebagai Finalis / Peserta Pekan Ilmiah Mahasiswa Nasional (PIMNAS) ke-38 dari Kemdiktisaintek dan Belmawa.",
         "pimnas-pendanaan": "Sertifikat penghargaan atas keberhasilan meraih pendanaan Program Kreativitas Mahasiswa bidang Karya Inovatif (PKM-KI) 2025 dari Kemdiktisaintek dan Belmawa.",
-        "bnsp-web-developer": "Sertifikat Kompetensi resmi Badan Nasional Sertifikasi Profesi (BNSP) melalui LSP Universitas Dian Nuswantoro dalam skema Web Developer.",
-        "bnsp-junior-mobile-programmer": "Sertifikat Kompetensi resmi Badan Nasional Sertifikasi Profesi (BNSP) melalui LSP Universitas Dian Nuswantoro dalam skema Junior Mobile Programmer.",
+        "bnsp-web-developer": "Sertifikat Kompetensi resmi Badan Nasional Sertifikat Profesi (BNSP) melalui LSP Universitas Dian Nuswantoro dalam skema Web Developer.",
+        "bnsp-junior-mobile-programmer": "Sertifikat Kompetensi resmi Badan Nasional Sertifikat Profesi (BNSP) melalui LSP Universitas Dian Nuswantoro dalam skema Junior Mobile Programmer.",
         "apti-pemrograman-web": "Sertifikat Kompetensi Keahlian dari Asosiasi Profesi Telematika Indonesia (APTI) melalui LSP Universitas Dian Nuswantoro untuk standarisasi keahlian di bidang Pemrograman Web."
     }
 }

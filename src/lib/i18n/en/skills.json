@@ -17,6 +17,10 @@
             "desc": "Server-side frameworks for building RESTful APIs and web applications."
         },
         {
+            "title": "Machine Learning",
+            "desc": "Model development and data science tooling: classical machine learning, deep learning, and computer vision."
+        },
+        {
             "title": "Database",
             "desc": "Relational database systems for data storage and management."
         },

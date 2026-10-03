@@ -31,16 +31,28 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-    title: 'Alfaturachman Maulana Pahlevi | Full-Stack Developer',
+    title: 'Alfaturachman Maulana Pahlevi | Full-Stack Developer | Machine Learning Engineer',
     description:
-        'Portfolio of Alfaturachman Maulana Pahlevi - Full-Stack Developer focused on system infrastructure and machine learning systems. Discover my projects in Full-Stack development and Machine Learning.',
-    keywords:
-        'Alfaturachman Maulana Pahlevi, Alfaturachman, Full-Stack Developer, DevOps, AI, Machine Learning, Portfolio, Web Developer',
+        'Portfolio of Alfaturachman Maulana Pahlevi - Full-Stack Developer | Machine Learning Engineer focused on system infrastructure and machine learning systems. Discover my projects in Full-Stack development and Machine Learning.',
+    keywords: [
+        'Alfaturachman Maulana Pahlevi',
+        'Alfaturachman',
+        'Almavi',
+        'Full-Stack Developer',
+        'Machine Learning Engineer',
+        'Machine Learning',
+        'Deep Learning',
+        'Data Science',
+        'Artificial Intelligence',
+        'DevOps',
+        'Python',
+        'Portfolio',
+    ],
     authors: [{ name: 'Alfaturachman Maulana Pahlevi' }],
     openGraph: {
-        title: 'Alfaturachman Maulana Pahlevi | Full-Stack Developer',
+        title: 'Alfaturachman Maulana Pahlevi | Full-Stack Developer | Machine Learning Engineer',
         description:
-            'Full-Stack Developer focused on system infrastructure and machine learning systems. Explore my latest works and technical expertise.',
+            'Full-Stack Developer | Machine Learning Engineer focused on system infrastructure and machine learning systems. Explore my latest works and technical expertise.',
         url: 'https://almavi.vercel.app/',
         siteName: 'almavi',
         images: [
@@ -53,9 +65,9 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Alfaturachman Maulana Pahlevi | Full-Stack Developer',
+        title: 'Alfaturachman Maulana Pahlevi | Full-Stack Developer | Machine Learning Engineer',
         description:
-            'Full-Stack Developer focused on system infrastructure and machine learning systems. Explore my latest works and technical expertise.',
+            'Full-Stack Developer | Machine Learning Engineer focused on system infrastructure and machine learning systems. Explore my latest works and technical expertise.',
         images: ['https://almavi.vercel.app/assets/images/banner/banner-seo-almavi.png'],
     },
     robots: {
@@ -114,12 +126,21 @@ export default function RootLayout({
                                 'https://www.instagram.com/al.mavi/',
                                 'https://twitter.com/alfaturachman',
                             ],
-                            jobTitle: 'Full-Stack Developer',
+                            jobTitle: 'Full-Stack Developer | Machine Learning Engineer',
+                            alumniOf: {
+                                '@type': 'CollegeOrUniversity',
+                                name: 'Dian Nuswantoro University',
+                            },
                             knowsAbout: [
                                 'DevOps',
                                 'Artificial Intelligence',
                                 'Full-Stack Development',
                                 'Machine Learning',
+                                'Deep Learning',
+                                'Data Science',
+                                'CRISP-DM',
+                                'Model Interpretability',
+                                'Python',
                             ],
                         }),
                     }}

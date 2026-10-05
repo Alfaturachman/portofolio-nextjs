@@ -10,6 +10,18 @@ import {
 import { useI18n } from '@/lib/i18n/i18n-context';
 import ViewAll from '@/components/ViewAll';
 
+const MONTHS_EN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const MONTHS_ID = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+
+function formatCertDate(dateStr?: string, lang: 'en' | 'id' = 'en', fallback = '01 Jan 2025') {
+    if (!dateStr) return fallback;
+    const [y, m, d] = dateStr.split('-');
+    const mIdx = Number(m) - 1;
+    if (mIdx < 0 || mIdx > 11 || !d || !y) return fallback;
+    const months = lang === 'id' ? MONTHS_ID : MONTHS_EN;
+    return `${d.padStart(2, '0')} ${months[mIdx]} ${y}`;
+}
+
 export default function Certificates({
     children,
     limit,
@@ -17,7 +29,7 @@ export default function Certificates({
     children?: React.ReactNode;
     limit?: number;
 }) {
-    const { t } = useI18n();
+    const { t, lang } = useI18n();
     const sortedCerts = [...coursesData.certificates].sort(
         (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
     );
@@ -35,7 +47,7 @@ export default function Certificates({
                         const specTitles = t.certificates.specs as Record<string, string> | undefined;
                         const title = specTitles?.[cert.id] ?? cert.title;
                         const specDates = t.certificates.dates as Record<string, string> | undefined;
-                        const date = specDates?.[cert.id] ?? t.certificates.certDesc;
+                        const date = specDates?.[cert.id] ?? formatCertDate(cert.date, lang, t.certificates.certDesc);
                         const category =
                             cert.category === 'Specialization'
                                 ? t.courses.specializationBadge
@@ -72,6 +84,16 @@ export default function Certificates({
                                         </>
                                     )}
                                     <span className="cert-date">{date}</span>
+                                    {cert.status && cert.status !== 'completed' && (
+                                        <>
+                                            <span className="cert-divider" aria-hidden="true" />
+                                            <span className={`cert-status-badge status-${cert.status}`}>
+                                                {cert.status === 'in-progress'
+                                                    ? lang === 'id' ? 'Sedang Berjalan' : 'In Progress'
+                                                    : lang === 'id' ? 'Segera Hadir' : 'Coming Soon'}
+                                            </span>
+                                        </>
+                                    )}
                                 </p>
                             </div>
                             <div className="cert-arrow">

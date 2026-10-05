@@ -20,5 +20,11 @@
     "aboutGeneralTitle": "Tentang Sertifikat  Ini",
     "aboutGeneralDesc": "Sertifikat  ini diterbitkan oleh {provider} melalui {issuer}.",
     "toggleAria": "Tampilkan Spesifikasi Sertifikat ",
-    "toggleLabel": "Spesifikasi Sertifikat "
+    "toggleLabel": "Spesifikasi Sertifikat ",
+    "viewCourse": "Lihat Kursus",
+    "viewSpecialization": "Lihat Spesialisasi",
+    "statusInProgress": "Sedang Berjalan",
+    "statusComingSoon": "Segera Hadir",
+    "completed": "Selesai",
+    "inProgressDesc": "{completed} dari {total} kursus telah diselesaikan ({percent}%)."
 }

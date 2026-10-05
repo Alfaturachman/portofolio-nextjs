@@ -24,6 +24,7 @@ const toolIcons: Record<string, string> = {
     css: '/assets/images/logo/css.svg',
     tailwind: '/assets/images/logo/tailwind.svg',
     postgresql: '/assets/images/logo/postgresql.svg',
+    mariadb: '/assets/images/logo/mariadb.svg',
     nodejs: '/assets/images/logo/nodejs.svg',
     typescript: '/assets/images/logo/typescript.svg',
     django: '/assets/images/logo/django.svg?v=2',

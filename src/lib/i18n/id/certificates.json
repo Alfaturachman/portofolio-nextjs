@@ -5,15 +5,19 @@
     "coursesTag": "Kursus",
     "certDesc": "01 Jan 2025",
     "dates": {
-        "ibm-ai-foundations-for-everyone": "25 September 2026",
+        "devops-pro-linux-docker-kubernetes-ci-cd-iac": "05 Okt 2026",
+        "ibm-introduction-to-data-science": "01 Okt 2026",
+        "google-project-management": "05 Okt 2026",
+        "applied-cryptography": "30 Sep 2026",
+        "ibm-ai-foundations-for-everyone": "25 Sep 2026",
         "ibm-devops-software-engineering": "18 Mei 2026",
         "ibm-machine-learning": "18 Mei 2026",
         "ibm-introduction-to-machine-learning": "18 Mei 2026",
-        "pimnas-peserta": "04 Desember 2025",
-        "pimnas-pendanaan": "04 Desember 2025",
-        "bnsp-web-developer": "28 Januari 2025",
-        "bnsp-junior-mobile-programmer": "17 September 2024",
-        "apti-pemrograman-web": "22 Januari 2024"
+        "pimnas-peserta": "04 Des 2025",
+        "pimnas-pendanaan": "04 Des 2025",
+        "bnsp-web-developer": "28 Jan 2025",
+        "bnsp-junior-mobile-programmer": "17 Sep 2024",
+        "apti-pemrograman-web": "22 Jan 2024"
     },
     "viewCredential": "Lihat Kredensial",
     "viewAll": "Lihat Semua Sertifikat",
@@ -26,6 +30,10 @@
         "apti-pemrograman-web": "Pemrograman Web"
     },
     "descriptions": {
+        "devops-pro-linux-docker-kubernetes-ci-cd-iac": "Spesialisasi ini dari KodeKloud sedang berjalan, mencakup Linux, Docker, Kubernetes, CI/CD, dan Infrastructure as Code.",
+        "ibm-introduction-to-data-science": "Spesialisasi ini dari IBM sedang berjalan, mencakup konsep dasar data science, tools, metodologi, dan basis data SQL dengan Python.",
+        "google-project-management": "Sertifikat Profesional ini dari Google diperoleh setelah menyelesaikan seluruh 7 kursus tentang manajemen proyek tradisional dan agile.",
+        "applied-cryptography": "Spesialisasi ini dari University of Colorado System diperoleh setelah menyelesaikan seluruh 4 kursus tentang Kriptografi Terapan.",
         "ibm-ai-foundations-for-everyone": "Spesialisasi ini dari IBM diperoleh setelah menyelesaikan seluruh 4 kursus tentang dasar-dasar Artificial Intelligence (AI).",
         "ibm-devops-software-engineering": "Sertifikat Profesional ini dari IBM diperoleh setelah menyelesaikan seluruh 15 kursus tentang DevOps dan Rekayasa Perangkat Lunak.",
         "ibm-machine-learning": "Sertifikat Profesional ini dari IBM diperoleh setelah menyelesaikan seluruh 6 kursus tentang Machine Learning dan Deep Learning.",

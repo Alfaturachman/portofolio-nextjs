@@ -103,13 +103,15 @@
 /* ponytail: invert monochrome black logos in dark mode so they are white and readable against dark cards */
 [data-theme='dark'] .tool-pill img[src*='nextjs'],
 [data-theme='dark'] .tool-pill img[src*='github'],
-[data-theme='dark'] .tool-pill img[src*='django'] {
+[data-theme='dark'] .tool-pill img[src*='django'],
+[data-theme='dark'] .tool-pill img[src*='mariadb'] {
     filter: brightness(0) invert(1);
 }
 
 [data-theme='dark'] .skills-marquee-track .marquee-pill img[src*='nextjs'],
 [data-theme='dark'] .skills-marquee-track .marquee-pill img[src*='github'],
-[data-theme='dark'] .skills-marquee-track .marquee-pill img[src*='django'] {
+[data-theme='dark'] .skills-marquee-track .marquee-pill img[src*='django'],
+[data-theme='dark'] .skills-marquee-track .marquee-pill img[src*='mariadb'] {
     filter: brightness(0) invert(1);
 }
 

@@ -11,6 +11,7 @@ import {
     faExternalLinkAlt,
     faCertificate,
     faInfoCircle,
+    faClock,
 } from '@fortawesome/free-solid-svg-icons';
 
 export async function generateStaticParams() {
@@ -115,31 +116,70 @@ export default async function CertificateDetailPage({
                             className="btn-action primary"
                         >
                             <FontAwesomeIcon icon={faExternalLinkAlt} />
-                            <Tx k="courses.viewCredential" />
+                            <Tx
+                                k={cert.status === 'in-progress' || cert.status === 'coming-soon' ? 'courses.viewSpecialization' : 'courses.viewCredential'}
+                                fallback={cert.status === 'in-progress' || cert.status === 'coming-soon' ? 'View Specialization' : 'View Credential'}
+                            />
                         </a>
                         )}
                     </div>
                 </div>
 
                 <div className="spec-cert-preview">
-                    <div className="spec-cert-img-row">
-                        <div className="spec-cert-image-box">
-                            <ImagePreview
-                                src={cert.image}
-                                alt={`${cert.title} Certificate`}
-                            >
-                                <div className="spec-cert-image">
-                                    <Image
-                                        src={cert.image}
-                                        alt={`${cert.title} Certificate`}
-                                        width={800}
-                                        height={600}
-                                        priority
+                    {cert.image && cert.image !== '#' && cert.status !== 'in-progress' && cert.status !== 'coming-soon' ? (
+                        <div className="spec-cert-img-row">
+                            <div className="spec-cert-image-box">
+                                <ImagePreview
+                                    src={cert.image}
+                                    alt={`${cert.title} Certificate`}
+                                >
+                                    <div className="spec-cert-image">
+                                        <Image
+                                            src={cert.image}
+                                            alt={`${cert.title} Certificate`}
+                                            width={800}
+                                            height={600}
+                                            priority
+                                        />
+                                    </div>
+                                </ImagePreview>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="spec-progress-card">
+                            <div className="spec-progress-header">
+                                <div className="spec-progress-badge">
+                                    <span className="spec-progress-dot" />
+                                    <Tx
+                                        k={cert.status === 'coming-soon' ? 'courses.statusComingSoon' : 'courses.statusInProgress'}
+                                        fallback={cert.status === 'coming-soon' ? 'Coming Soon' : 'In Progress'}
                                     />
                                 </div>
-                            </ImagePreview>
+                                <span className="spec-progress-count">
+                                    {courses.filter(c => c.status === 'completed' || !!c.credential).length} / {courses.length} <Tx k="courses.completed" fallback="Completed" />
+                                </span>
+                            </div>
+                            <div className="spec-progress-bar-bg">
+                                <div
+                                    className="spec-progress-bar-fill"
+                                    style={{
+                                        width: `${Math.round((courses.filter(c => c.status === 'completed' || !!c.credential).length / (courses.length || 1)) * 100)}%`
+                                    }}
+                                />
+                            </div>
+                            <p className="spec-progress-desc">
+                                <Tx
+                                    k="courses.inProgressDesc"
+                                    values={{
+                                        completed: courses.filter(c => c.status === 'completed' || !!c.credential).length,
+                                        total: courses.length,
+                                        percent: Math.round((courses.filter(c => c.status === 'completed' || !!c.credential).length / (courses.length || 1)) * 100)
+                                    }}
+                                    fallback={`${courses.filter(c => c.status === 'completed' || !!c.credential).length} of ${courses.length} courses completed (${Math.round((courses.filter(c => c.status === 'completed' || !!c.credential).length / (courses.length || 1)) * 100)}%).`}
+                                />
+                            </p>
                         </div>
-                    </div>
+                    )}
                 </div>
 
                 {courses.length > 0 && (
@@ -157,8 +197,8 @@ export default async function CertificateDetailPage({
                                     : null;
                             return (
                                 <li className="course-item" key={course.id}>
-                                    {courseImg && (
-                                        <div className="course-thumb-box">
+                                    <div className="course-thumb-box">
+                                        {courseImg ? (
                                             <ImagePreview
                                                 src={courseImg}
                                                 alt={`${course.title} Certificate`}
@@ -173,23 +213,45 @@ export default async function CertificateDetailPage({
                                                     />
                                                 </div>
                                             </ImagePreview>
-                                        </div>
-                                    )}
+                                        ) : (
+                                            <div className="course-thumb course-thumb-placeholder">
+                                                <FontAwesomeIcon icon={faClock} />
+                                            </div>
+                                        )}
+                                    </div>
                                     <div className="course-body">
                                         <div className="course-title-group">
-                                            <h3 className="course-title">
-                                                {course.title}
-                                            </h3>
-                                            <span className="course-index">
-                                                <Tx
-                                                    k="courses.courseOf"
-                                                    values={{
-                                                        current: idx + 1,
-                                                        total: courses.length,
-                                                    }}
-                                                    fallback={`Course ${idx + 1} of ${courses.length}`}
-                                                />
-                                            </span>
+                                            <div className="course-title-row">
+                                                <h3 className="course-title">
+                                                    {course.title}
+                                                </h3>
+                                                {course.status && course.status !== 'completed' && (
+                                                    <span className={`course-status-badge status-${course.status}`}>
+                                                        <Tx
+                                                            k={course.status === 'in-progress' ? 'courses.statusInProgress' : 'courses.statusComingSoon'}
+                                                            fallback={course.status === 'in-progress' ? 'In Progress' : 'Coming Soon'}
+                                                        />
+                                                    </span>
+                                                )}
+                                            </div>
+                                            <div className="course-meta">
+                                                <span className="course-index">
+                                                    <Tx
+                                                        k="courses.courseOf"
+                                                        values={{
+                                                            current: idx + 1,
+                                                            total: courses.length,
+                                                        }}
+                                                        fallback={`Course ${idx + 1} of ${courses.length}`}
+                                                    />
+                                                </span>
+                                                {course.duration && (
+                                                    <>
+                                                        <span className="course-meta-divider">•</span>
+                                                        <span className="course-duration">{course.duration}</span>
+                                                    </>
+                                                )}
+                                            </div>
                                         </div>
                                         {/* {course.skills.length > 0 && (
                                             <div className="course-skills">
@@ -211,7 +273,11 @@ export default async function CertificateDetailPage({
                                                     rel="noopener noreferrer"
                                                     className="course-credential"
                                                 >
-                                                    <Tx k="courses.viewCredential" />
+                                                    <FontAwesomeIcon icon={faExternalLinkAlt} />
+                                                    <Tx
+                                                        k={course.status === 'completed' || !!course.credential ? 'courses.viewCredential' : 'courses.viewCourse'}
+                                                        fallback={course.status === 'completed' || !!course.credential ? 'View Credential' : 'View Course'}
+                                                    />
                                                 </a>
                                             )}
                                     </div>

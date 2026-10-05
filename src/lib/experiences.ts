@@ -104,6 +104,7 @@ export const skillsCategories = [
         desc: 'Relational database systems for data storage and management.',
         tools: [
             { name: 'MySQL', icon: 'mysql' },
+            { name: 'MariaDB', icon: 'mariadb' },
             { name: 'PostgreSQL', icon: 'postgresql' },
         ],
     },

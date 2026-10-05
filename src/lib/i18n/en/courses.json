@@ -20,5 +20,11 @@
     "aboutGeneralTitle": "About this Certificate",
     "aboutGeneralDesc": "This certificate is issued by {provider} through {issuer}.",
     "toggleAria": "Toggle Certificate Specifications",
-    "toggleLabel": "Certificate Specifications"
+    "toggleLabel": "Certificate Specifications",
+    "viewCourse": "View Course",
+    "viewSpecialization": "View Specialization",
+    "statusInProgress": "In Progress",
+    "statusComingSoon": "Coming Soon",
+    "completed": "Completed",
+    "inProgressDesc": "{completed} of {total} courses completed ({percent}%)."
 }

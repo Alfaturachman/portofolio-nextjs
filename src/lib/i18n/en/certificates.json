@@ -5,15 +5,19 @@
     "coursesTag": "Courses",
     "certDesc": "01 Jan 2025",
     "dates": {
-        "ibm-ai-foundations-for-everyone": "25 September 2026",
+        "devops-pro-linux-docker-kubernetes-ci-cd-iac": "05 Oct 2026",
+        "ibm-introduction-to-data-science": "01 Oct 2026",
+        "google-project-management": "05 Oct 2026",
+        "applied-cryptography": "30 Sep 2026",
+        "ibm-ai-foundations-for-everyone": "25 Sep 2026",
         "ibm-devops-software-engineering": "18 May 2026",
         "ibm-machine-learning": "18 May 2026",
         "ibm-introduction-to-machine-learning": "18 May 2026",
-        "pimnas-peserta": "04 December 2025",
-        "pimnas-pendanaan": "04 December 2025",
-        "bnsp-web-developer": "28 January 2025",
-        "bnsp-junior-mobile-programmer": "17 September 2024",
-        "apti-pemrograman-web": "22 January 2024"
+        "pimnas-peserta": "04 Dec 2025",
+        "pimnas-pendanaan": "04 Dec 2025",
+        "bnsp-web-developer": "28 Jan 2025",
+        "bnsp-junior-mobile-programmer": "17 Sep 2024",
+        "apti-pemrograman-web": "22 Jan 2024"
     },
     "viewCredential": "View Credential",
     "viewAll": "View All Certificates",
@@ -26,6 +30,10 @@
         "apti-pemrograman-web": "Web Programming"
     },
     "descriptions": {
+        "devops-pro-linux-docker-kubernetes-ci-cd-iac": "This Specialization from KodeKloud is currently in progress, covering Linux, Docker, Kubernetes, CI/CD, and Infrastructure as Code.",
+        "ibm-introduction-to-data-science": "This Specialization from IBM is currently in progress, covering foundational data science concepts, tools, methodologies, and SQL databases with Python.",
+        "google-project-management": "This Professional Certificate from Google is earned after completing all 7 courses covering traditional and agile project management.",
+        "applied-cryptography": "This Specialization from University of Colorado System is earned after completing all 4 courses in Applied Cryptography.",
         "ibm-ai-foundations-for-everyone": "This Specialization from IBM is earned after completing all 4 courses covering the foundations of Artificial Intelligence (AI).",
         "ibm-devops-software-engineering": "This Professional Certificate from IBM is earned after completing all 15 courses in DevOps and Software Engineering.",
         "ibm-machine-learning": "This Professional Certificate from IBM is earned after completing all 6 courses in Machine Learning and Deep Learning.",

@@ -40,6 +40,7 @@ export interface Certificate {
     id: string;
     title: string;
     category?: CertificateCategory;
+    status?: 'completed' | 'in-progress' | 'coming-soon' | (string & {});
     provider: string;
     issuer: string;
     date: string;
@@ -63,6 +64,8 @@ export interface Course {
     credentialUrl: string;
     credential: string;
     image: string;
+    status?: 'completed' | 'in-progress' | 'coming-soon' | (string & {});
+    duration?: string;
 }
 
 export interface Experience {

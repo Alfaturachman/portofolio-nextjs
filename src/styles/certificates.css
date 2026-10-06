@@ -654,12 +654,3 @@
     color: var(--text-secondary);
     line-height: 1.3;
 }
-
-.course-meta-divider {
-    color: var(--text-muted);
-}
-
-.course-duration {
-    font-weight: 500;
-    color: var(--text-secondary);
-}

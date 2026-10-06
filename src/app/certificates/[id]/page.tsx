@@ -245,12 +245,6 @@ export default async function CertificateDetailPage({
                                                         fallback={`Course ${idx + 1} of ${courses.length}`}
                                                     />
                                                 </span>
-                                                {course.duration && (
-                                                    <>
-                                                        <span className="course-meta-divider">•</span>
-                                                        <span className="course-duration">{course.duration}</span>
-                                                    </>
-                                                )}
                                             </div>
                                         </div>
                                         {/* {course.skills.length > 0 && (

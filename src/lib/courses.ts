@@ -857,7 +857,6 @@ export const coursesData: {
             provider: 'KodeKloud',
             issuer: 'Coursera',
             status: 'completed',
-            duration: '12 hours',
             skills: [
                 'Linux',
                 'Shell Scripting',
@@ -878,7 +877,6 @@ export const coursesData: {
             provider: 'KodeKloud',
             issuer: 'Coursera',
             status: 'coming-soon',
-            duration: '12 hours',
             skills: [
                 'Git',
                 'GitHub',
@@ -899,7 +897,6 @@ export const coursesData: {
             provider: 'KodeKloud',
             issuer: 'Coursera',
             status: 'coming-soon',
-            duration: '11 hours',
             skills: [
                 'Docker',
                 'Containers',
@@ -920,7 +917,6 @@ export const coursesData: {
             provider: 'KodeKloud',
             issuer: 'Coursera',
             status: 'coming-soon',
-            duration: '11 hours',
             skills: [
                 'Kubernetes',
                 'K8s',
@@ -941,7 +937,6 @@ export const coursesData: {
             provider: 'KodeKloud',
             issuer: 'Coursera',
             status: 'coming-soon',
-            duration: '9 hours',
             skills: [
                 'Infrastructure as Code (IaC)',
                 'Terraform',

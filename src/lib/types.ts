@@ -65,7 +65,6 @@ export interface Course {
     credential: string;
     image: string;
     status?: 'completed' | 'in-progress' | 'coming-soon' | (string & {});
-    duration?: string;
 }
 
 export interface Experience {

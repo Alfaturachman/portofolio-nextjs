@@ -976,7 +976,7 @@ export const coursesData: {
             title: 'Tools for Data Science',
             provider: 'IBM',
             issuer: 'Coursera',
-            status: 'coming-soon',
+            status: 'completed',
             skills: [
                 'Data Science Tools',
                 'Jupyter Notebook',
@@ -986,9 +986,9 @@ export const coursesData: {
                 'Watson Studio',
             ],
             credentialUrl:
-                'https://www.coursera.org/organizations/udinus/learn/open-source-tools-for-data-science?specialization=introduction-data-science',
-            credential: '',
-            image: '',
+                'https://www.coursera.org/account/accomplishments/verify/LVQMKBLLB6NA',
+            credential: 'LVQMKBLLB6NA',
+            image: '/assets/courses/Coursera LVQMKBLLB6NA.jpg',
         },
         {
             id: 44,

@@ -876,7 +876,7 @@ export const coursesData: {
             title: 'Source Control & CI/CD - Hands-On',
             provider: 'KodeKloud',
             issuer: 'Coursera',
-            status: 'coming-soon',
+            status: 'completed',
             skills: [
                 'Git',
                 'GitHub',
@@ -885,9 +885,9 @@ export const coursesData: {
                 'Continuous Integration',
             ],
             credentialUrl:
-                'https://www.coursera.org/organizations/udinus/learn/source-control-ci-cd-hands-on?specialization=devops-linux-docker-kubernetes-ci-cd-iac',
-            credential: '',
-            image: '',
+                'https://www.coursera.org/account/accomplishments/verify/82XR4DFKIMQO',
+            credential: '82XR4DFKIMQO',
+            image: '/assets/courses/Coursera 82XR4DFKIMQO.jpg',
         },
         {
             id: 39,

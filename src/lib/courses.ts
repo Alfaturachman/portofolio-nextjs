@@ -29,7 +29,7 @@ export const coursesData: {
                 'https://www.coursera.org/specializations/devops-linux-docker-kubernetes-ci-cd-iac',
             credential: '',
             image: '',
-            logo: '/assets/images/logo/kodekloud.png',
+            logo: '/assets/images/logo/kodekloud.svg',
         },
         {
             id: 'ibm-introduction-to-data-science',

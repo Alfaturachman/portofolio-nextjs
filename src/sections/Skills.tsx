@@ -36,7 +36,7 @@ const toolIcons: Record<string, string> = {
     pytorch: '/assets/images/logo/pytorch.svg',
     numpy: '/assets/images/logo/numpy.svg',
     matplotlib: '/assets/images/logo/matplotlib.svg',
-    jupyter: '/assets/images/logo/jupyter.svg',
+    jupyter: '/assets/images/logo/jupyter-notebook.svg',
 };
 
 export default function Skills({

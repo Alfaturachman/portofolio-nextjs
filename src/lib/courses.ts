@@ -13,7 +13,7 @@ export const coursesData: {
             status: 'in-progress',
             provider: 'KodeKloud',
             issuer: 'Coursera',
-            date: '2026-10-05',
+            date: '2026-10-07',
             skills: [
                 'DevOps',
                 'Linux',
@@ -35,10 +35,10 @@ export const coursesData: {
             id: 'ibm-introduction-to-data-science',
             title: 'Introduction to Data Science',
             category: 'Specialization',
-            status: 'in-progress',
+            status: 'completed',
             provider: 'IBM',
             issuer: 'Coursera',
-            date: '2026-10-01',
+            date: '2026-10-08',
             skills: [
                 'Data Science',
                 'Python',
@@ -49,9 +49,9 @@ export const coursesData: {
                 'Jupyter Notebooks',
             ],
             credentialUrl:
-                'https://www.coursera.org/specializations/introduction-data-science',
-            credential: '',
-            image: '',
+                'https://www.coursera.org/account/accomplishments/specialization/YRQ961GL50KD',
+            credential: 'YRQ961GL50KD',
+            image: '/assets/certificates/Introduction to Data Science Specialization.jpg',
             logo: '/assets/images/logo/ibm.svg',
         },
         {
@@ -294,6 +294,7 @@ export const coursesData: {
             title: 'Introduction to DevOps',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['DevOps', 'CI/CD', 'Agile'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/PUUPJRYMVFWY',
@@ -307,6 +308,7 @@ export const coursesData: {
             title: 'Introduction to Cloud Computing',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['Cloud Computing', 'IaaS', 'PaaS', 'SaaS'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/KWII2E29GUCP',
@@ -320,6 +322,7 @@ export const coursesData: {
             title: 'Introduction to Agile Development and Scrum',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['Agile', 'Scrum', 'Sprint Planning', 'Kanban'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/B58WYKB58HX3',
@@ -333,6 +336,7 @@ export const coursesData: {
             title: 'Introduction to Software Engineering',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['Software Engineering', 'SDLC', 'UML', 'Design Patterns'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/9YNVBW6VFS74',
@@ -346,6 +350,7 @@ export const coursesData: {
             title: 'Getting Started with Git and GitHub',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['Git', 'GitHub', 'Version Control', 'Branching'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/QU0UD8JBBN5Y',
@@ -359,6 +364,7 @@ export const coursesData: {
             title: 'Hands-on Introduction to Linux Commands and Shell Scripting',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['Linux', 'Shell Scripting', 'Bash', 'Command Line'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/NTXSWHCXGP3M',
@@ -372,6 +378,7 @@ export const coursesData: {
             title: 'Python for Data Science, AI & Development',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['Python', 'Data Science', 'Pandas', 'NumPy'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/00CUZNBVXHAY',
@@ -385,6 +392,7 @@ export const coursesData: {
             title: 'Developing AI Applications with Python and Flask',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['Python', 'Flask', 'REST API', 'AI'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/N0Y5ATDNQA8A',
@@ -398,6 +406,7 @@ export const coursesData: {
             title: 'Introduction to Containers w/ Docker, Kubernetes & OpenShift',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['Docker', 'Kubernetes', 'OpenShift', 'Containers'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/X9VP7V6B22F2',
@@ -411,6 +420,7 @@ export const coursesData: {
             title: 'Application Development using Microservices and Serverless',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['Microservices', 'Serverless', 'REST API', 'Cloud Native'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/9ZP2USR1M7WN',
@@ -424,6 +434,7 @@ export const coursesData: {
             title: 'Introduction to Test and Behavior Driven Development',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['TDD', 'BDD', 'Testing', 'Python'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/COIY4WLZRL9Q',
@@ -437,6 +448,7 @@ export const coursesData: {
             title: 'Continuous Integration and Continuous Delivery (CI/CD)',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['CI/CD', 'Jenkins', 'DevOps', 'Automation'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/TKS66EQVG4WU',
@@ -450,6 +462,7 @@ export const coursesData: {
             title: 'Application Security for Developers and DevOps Professionals',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['Security', 'DevSecOps', 'OWASP', 'Threat Modeling'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/GN3SHQZ0PIQT',
@@ -463,6 +476,7 @@ export const coursesData: {
             title: 'Monitoring and Observability for Development and DevOps',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['Monitoring', 'Observability', 'Prometheus', 'Grafana'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/IOTESW68DTO6',
@@ -476,6 +490,7 @@ export const coursesData: {
             title: 'DevOps Capstone Project',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['DevOps', 'CI/CD', 'Docker', 'Kubernetes'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/SUCIDKC0FR58',
@@ -490,6 +505,7 @@ export const coursesData: {
             title: 'Exploratory Data Analysis for Machine Learning',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'EDA',
                 'Python',
@@ -509,6 +525,7 @@ export const coursesData: {
             title: 'Supervised Machine Learning: Regression',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Regression',
                 'Linear Regression',
@@ -528,6 +545,7 @@ export const coursesData: {
             title: 'Supervised Machine Learning: Classification',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Classification',
                 'Logistic Regression',
@@ -547,6 +565,7 @@ export const coursesData: {
             title: 'Unsupervised Machine Learning',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['Clustering', 'K-Means', 'PCA', 'Anomaly Detection'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/HIMXITQQ04QJ',
@@ -560,6 +579,7 @@ export const coursesData: {
             title: 'Deep Learning and Reinforcement Learning',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Deep Learning',
                 'Reinforcement Learning',
@@ -578,6 +598,7 @@ export const coursesData: {
             title: 'Machine Learning Capstone',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: ['Machine Learning', 'Python', 'Capstone', 'Project'],
             credentialUrl:
                 'https://www.coursera.org/account/accomplishments/verify/HY9R2194EZJT',
@@ -591,6 +612,7 @@ export const coursesData: {
             title: 'Introduction to Artificial Intelligence (AI)',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Artificial Intelligence (AI)',
                 'Machine Learning',
@@ -609,6 +631,7 @@ export const coursesData: {
             title: 'Generative AI: Introduction and Applications',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Generative AI',
                 'Large Language Models (LLM)',
@@ -627,6 +650,7 @@ export const coursesData: {
             title: 'Generative AI: Prompt Engineering Basics',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Prompt Engineering',
                 'Generative AI',
@@ -645,6 +669,7 @@ export const coursesData: {
             title: 'Building AI Powered Chatbots Without Programming',
             provider: 'IBM',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Chatbots',
                 'IBM Watson Assistant',
@@ -663,6 +688,7 @@ export const coursesData: {
             title: 'Foundations of Project Management',
             provider: 'Google',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Project Management',
                 'Project Life Cycle',
@@ -680,6 +706,7 @@ export const coursesData: {
             title: 'Project Initiation: Starting a Successful Project',
             provider: 'Google',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Project Charter',
                 'Stakeholder Analysis',
@@ -697,6 +724,7 @@ export const coursesData: {
             title: 'Project Planning: Putting It All Together',
             provider: 'Google',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Project Planning',
                 'Risk Management',
@@ -714,6 +742,7 @@ export const coursesData: {
             title: 'Project Execution: Running the Project',
             provider: 'Google',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Project Execution',
                 'Quality Management',
@@ -731,6 +760,7 @@ export const coursesData: {
             title: 'Agile Project Management',
             provider: 'Google',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Agile Methodologies',
                 'Scrum',
@@ -748,6 +778,7 @@ export const coursesData: {
             title: 'Capstone: Applying Project Management in the Real World',
             provider: 'Google',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Project Management Capstone',
                 'Documentation',
@@ -765,6 +796,7 @@ export const coursesData: {
             title: 'Accelerate Your Job Search with AI',
             provider: 'Google',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Artificial Intelligence (AI)',
                 'Generative AI',
@@ -783,6 +815,7 @@ export const coursesData: {
             title: 'Cryptography and Information Theory',
             provider: 'University of Colorado System',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Information Theory',
                 'Entropy',
@@ -801,6 +834,7 @@ export const coursesData: {
             title: 'Symmetric Cryptography',
             provider: 'University of Colorado System',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Symmetric Cryptography',
                 'Block Ciphers',
@@ -820,6 +854,7 @@ export const coursesData: {
             title: 'Asymmetric Cryptography and Key Management',
             provider: 'University of Colorado System',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Asymmetric Cryptography',
                 'Public-Key Infrastructure (PKI)',
@@ -838,6 +873,7 @@ export const coursesData: {
             title: 'Cryptographic Hash and Integrity Protection',
             provider: 'University of Colorado System',
             issuer: 'Coursera',
+            status: 'completed',
             skills: [
                 'Cryptographic Hash Functions',
                 'Message Authentication Codes (MAC)',
@@ -896,7 +932,7 @@ export const coursesData: {
             title: 'Mastering Docker & Containers - Hands-On Course',
             provider: 'KodeKloud',
             issuer: 'Coursera',
-            status: 'coming-soon',
+            status: 'completed',
             skills: [
                 'Docker',
                 'Containers',
@@ -905,9 +941,9 @@ export const coursesData: {
                 'Containerization',
             ],
             credentialUrl:
-                'https://www.coursera.org/organizations/udinus/learn/mastering-docker-containers-hands-on-course?specialization=devops-linux-docker-kubernetes-ci-cd-iac',
-            credential: '',
-            image: '',
+                'https://www.coursera.org/account/accomplishments/verify/8AOA6Z9S65U6',
+            credential: '8AOA6Z9S65U6',
+            image: '/assets/courses/Coursera 8AOA6Z9S65U6.jpg',
         },
         {
             id: 40,
@@ -997,7 +1033,7 @@ export const coursesData: {
             title: 'Data Science Methodology',
             provider: 'IBM',
             issuer: 'Coursera',
-            status: 'coming-soon',
+            status: 'completed',
             skills: [
                 'Data Science Methodology',
                 'Data Understanding',
@@ -1006,9 +1042,9 @@ export const coursesData: {
                 'Model Evaluation',
             ],
             credentialUrl:
-                'https://www.coursera.org/organizations/udinus/learn/data-science-methodology?specialization=introduction-data-science',
-            credential: '',
-            image: '',
+                'https://www.coursera.org/account/accomplishments/verify/RHT3DLXHUX0Q',
+            credential: 'RHT3DLXHUX0Q',
+            image: '/assets/courses/Coursera RHT3DLXHUX0Q.jpg',
         },
         {
             id: 45,
@@ -1017,7 +1053,7 @@ export const coursesData: {
             title: 'Databases and SQL for Data Science with Python',
             provider: 'IBM',
             issuer: 'Coursera',
-            status: 'coming-soon',
+            status: 'completed',
             skills: [
                 'SQL',
                 'Relational Databases (RDBMS)',
@@ -1026,9 +1062,9 @@ export const coursesData: {
                 'Data Analysis',
             ],
             credentialUrl:
-                'https://www.coursera.org/organizations/udinus/learn/sql-data-science?specialization=introduction-data-science',
-            credential: '',
-            image: '',
+                'https://www.coursera.org/account/accomplishments/verify/B75IP5QRBUIP',
+            credential: 'B75IP5QRBUIP',
+            image: '/assets/courses/Coursera B75IP5QRBUIP.jpg',
         },
     ],
 };

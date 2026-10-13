@@ -10,10 +10,10 @@ export const coursesData: {
             id: 'devops-pro-linux-docker-kubernetes-ci-cd-iac',
             title: 'DevOps Pro: Linux, Docker, Kubernetes, CI/CD & IaC',
             category: 'Specialization',
-            status: 'in-progress',
+            status: 'completed',
             provider: 'KodeKloud',
             issuer: 'Coursera',
-            date: '2026-10-07',
+            date: '2026-10-13',
             skills: [
                 'DevOps',
                 'Linux',
@@ -26,9 +26,9 @@ export const coursesData: {
                 'Automation',
             ],
             credentialUrl:
-                'https://www.coursera.org/specializations/devops-linux-docker-kubernetes-ci-cd-iac',
-            credential: '',
-            image: '',
+                'https://www.coursera.org/account/accomplishments/specialization/2PJYY8Y0BT0C',
+            credential: '2PJYY8Y0BT0C',
+            image: '/assets/certificates/DevOps Pro Linux, Docker, Kubernetes, CICD & IaC.jpg',
             logo: '/assets/images/logo/kodekloud.svg',
         },
         {
@@ -952,7 +952,7 @@ export const coursesData: {
             title: 'Kubernetes Orchestration - Hands-On',
             provider: 'KodeKloud',
             issuer: 'Coursera',
-            status: 'coming-soon',
+            status: 'completed',
             skills: [
                 'Kubernetes',
                 'K8s',
@@ -961,9 +961,9 @@ export const coursesData: {
                 'Deployments',
             ],
             credentialUrl:
-                'https://www.coursera.org/organizations/udinus/learn/kubernetes-orchestration-hands-on?specialization=devops-linux-docker-kubernetes-ci-cd-iac',
-            credential: '',
-            image: '',
+                'https://www.coursera.org/account/accomplishments/verify/J45D636ZSBIY',
+            credential: 'J45D636ZSBIY',
+            image: '/assets/courses/Coursera J45D636ZSBIY.jpg',
         },
         {
             id: 41,
@@ -972,7 +972,7 @@ export const coursesData: {
             title: 'Infrastructure Automation (IaC) - Hands-On',
             provider: 'KodeKloud',
             issuer: 'Coursera',
-            status: 'coming-soon',
+            status: 'completed',
             skills: [
                 'Infrastructure as Code (IaC)',
                 'Terraform',
@@ -981,9 +981,9 @@ export const coursesData: {
                 'Cloud Infrastructure',
             ],
             credentialUrl:
-                'https://www.coursera.org/organizations/udinus/learn/infrastructure-automation-iac-hands-on?specialization=devops-linux-docker-kubernetes-ci-cd-iac',
-            credential: '',
-            image: '',
+                'https://www.coursera.org/account/accomplishments/verify/6DDEADM2GVIE',
+            credential: '6DDEADM2GVIE',
+            image: '/assets/courses/Coursera 6DDEADM2GVIE.jpg',
         },
         {
             id: 42,

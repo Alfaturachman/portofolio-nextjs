@@ -99,6 +99,7 @@ export default function Navbar() {
         { label: t.navbar.portfolio, href: '/projects' },
         // { label: t.navbar.skills, href: '/skills' },
         { label: t.navbar.experience, href: '/experience' },
+        { label: t.navbar.publications, href: '/publications' },
         { label: t.navbar.certificates, href: '/certificates' },
     ];
 

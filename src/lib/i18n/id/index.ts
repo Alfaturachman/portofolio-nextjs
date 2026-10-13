@@ -5,6 +5,7 @@ import about from './about.json';
 import skills from './skills.json';
 import experience from './experience.json';
 import education from './education.json';
+import publications from './publications.json';
 import portfolio from './portfolio.json';
 import certificates from './certificates.json';
 import courses from './courses.json';
@@ -26,6 +27,7 @@ const id: typeof en = {
     skills,
     experience,
     education,
+    publications,
     portfolio,
     certificates,
     courses,

@@ -1,0 +1,25 @@
+{
+    "eyebrow": "Publikasi",
+    "titleLine1": "Karya ilmiah & publikasi",
+    "titleLine2": "riset akademik",
+    "viewAll": "Lihat semua publikasi",
+    "viewPaper": "Lihat Publikasi",
+    "items": [
+        {
+            "date": "OKT 2026",
+            "badge": "SINTA 3",
+            "title": "Methodologically Sound Class-Imbalance Handling in YOLOv8 Hand Fracture Detection via Training-Only Oversampling",
+            "journal": "Journal of Applied Informatics and Computing (JAIC), Vol. 10, No. 5",
+            "authors": "Alfaturachman Maulana Pahlevi, Rohimatun Nisfah, Meysilla Cindy Silsiana, Cinantya Paramita",
+            "desc": "• Mengembangkan protokol evaluasi sadar kebocoran (leakage-aware) yang membatasi oversampling hanya pada split pelatihan, menjaga set validasi dan pengujian tetap murni.\n• Mengevaluasi arsitektur ringan dan medium pada 1.538 citra X-ray fraktur tangan (FracAtlas); YOLOv8m mencapai Recall 0,812 (+73,2%) dan mAP@50 0,832 (+66,6%).\n• Menunjukkan keandalan penapisan klinis yang tinggi (Spesifisitas > 0,96, ROC-AUC > 0,967, FNR 0,061) dengan verifikasi aktivasi Grad-CAM yang terfokus pada fraktur tulang anatomis."
+        },
+        {
+            "date": "APR 2026",
+            "badge": "SINTA 2",
+            "title": "Automatic Detection of Foot Arch Using Clarke's Angle Calculation Through A Web-Integrated System for Children",
+            "journal": "Jurnal Teknik Informatika (JTI), Vol. 19, No. 1",
+            "authors": "Shobiha Awwaliyah, Qalbi Rivantona, Alfaturachman Maulana Pahlevi, Dedi Nurcipto, Menik Dwi Kurniatie",
+            "desc": "• Mengembangkan sistem pemrosesan citra digital otomatis berbasis web untuk perhitungan Clarke's Angle dalam klasifikasi lengkung kaki anak secara non-invasif (flatfoot / pes planus).\n• Diuji dan divalidasi langsung pada 180 anak usia 2–7 tahun di TK & Daycare Habibie Ainun serta Posyandu Kemuning di Semarang.\n• Mencapai akurasi diagnostik 98,89% dibandingkan uji tapak basah konvensional, memungkinkan pemeriksaan real-time yang mudah diakses untuk posyandu dan klinik."
+        }
+    ]
+}

@@ -15,7 +15,7 @@ export const experiences: Experience[] = [
         title: 'E-Growth: Digital Growth Monitoring Platform',
         org: 'EPICS in IEEE',
         orgIcon: 'flask',
-        desc: '• Developed the functional components of E-Growth, a web-based platform integrated with the F-Scale pediatric measurement device to centralize patient data.\n• Implemented digital monitoring and visualization of child growth parameters and foot-arch analysis for early detection of flat foot and cavus foot.\n• Supported field implementation and testing at TK Ainun Habibie and local community health posts (Posyandu), enabling digital growth and foot-structure monitoring for approximately 20 children.',
+        desc: '• Developed the functional components of E-Growth, a web-based platform integrated with the F-Scale pediatric measurement device to centralize patient data.\n• Implemented automated foot-arch detection and classification (flatfoot, normal, and cavus foot) using Clarke\'s Angle calculation and digital image processing.\n• Evaluated and validated the system on 180 children aged 2–7 years across TK & Daycare Habibie Ainun and Posyandu Kemuning in Semarang, achieving 98.89% diagnostic accuracy against conventional wet footprint tests (published at SINTA 2 JTI).',
     },
     {
         date: 'JUN 2024 - JUL 2025',

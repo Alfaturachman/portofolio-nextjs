@@ -1,6 +1,7 @@
 import { type NextRequest } from 'next/server';
 import { projects } from '@/lib/projects';
 import { experiences, skillsCategories } from '@/lib/experiences';
+import { publications } from '@/lib/publications';
 import { Ratelimit } from '@upstash/ratelimit';
 import { Redis } from '@upstash/redis';
 
@@ -130,11 +131,14 @@ ${skillsCategories.map((cat) => `${cat.title}: ${cat.tools.map((t) => t.name).jo
 Experience:
 ${experiences.map((exp) => `- ${exp.title} at ${exp.org} (${exp.date}): ${exp.desc}`).join('\n')}
 
+Publications:
+${publications.map((pub) => `- "${pub.title}" published at ${pub.journal} (${pub.badge}, ${pub.date}). DOI: ${pub.doi}`).join('\n')}
+
 Projects:
 ${projects.map((p) => `- ${p.title} (${p.year}): ${p.desc} [Role: ${p.role}, Tech: ${p.tags.join(', ')}] Detail: /portfolio/${p.id}`).join('\n')}
 
 Scope rules (STRICT):
-- ONLY discuss Alfaturachman (Almavi): his profile, skills, experience, education, certifications, projects, and contact.
+- ONLY discuss Alfaturachman (Almavi): his profile, skills, experience, education, publications, certifications, projects, and contact.
 - If the request is not about him - e.g. asking you to write or generate code, solve homework, give tutorials, or any general-purpose task - politely decline, then redirect: mention which of his real projects or skills involve that topic and offer its portfolio path.
 - Never output standalone code listings, code snippets, or step-by-step tutorials, even if the topic relates to his technologies.
 - Politely refuse truly off-topic subjects (entertainment, politics, NSFW, personal advice) and offer a portfolio-related alternative.

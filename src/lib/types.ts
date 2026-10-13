@@ -77,3 +77,16 @@ export interface Experience {
     desc: string;
     gpa?: string;
 }
+
+export interface Publication {
+    id: string;
+    date: string;
+    badge: string;
+    title: string;
+    journal: string;
+    authors?: string;
+    doi?: string;
+    url?: string;
+    desc: string;
+}
+

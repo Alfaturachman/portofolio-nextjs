@@ -242,13 +242,13 @@ export const projects: Project[] = [
         privacy: 'Private',
         cardDesc:
             'Web platform integrated with the F-Scale device to monitor child growth and detect foot arch abnormalities.',
-        desc: 'E-Growth is a digital growth monitoring platform integrated with the F-Scale pediatric measurement device to centralize patient data. The platform provides digital monitoring and visualization of child growth parameters and foot-arch analysis for early detection of flat foot and cavus foot. Field implementation and testing were carried out at TK Ainun Habibie and local community health posts (Posyandu), enabling digital growth and foot-structure monitoring for approximately 20 children.',
+        desc: "E-Growth is a digital growth monitoring platform integrated with the F-Scale pediatric measurement device to centralize patient data. The platform provides digital monitoring and visualization of child growth parameters and automated foot-arch analysis using Clarke's Angle calculation for early detection of flatfoot, normal, and cavus foot. Field-tested and validated on 180 children aged 2–7 years across TK & Daycare Habibie Ainun and Posyandu Kemuning in Semarang, the system achieved 98.89% diagnostic accuracy against conventional wet footprint tests and was published at SINTA 2 JTI.",
         problem:
             'Child growth and foot-structure data at health posts were recorded manually, making early detection of growth issues and foot arch abnormalities difficult.',
         solution:
-            'Built E-Growth, a web-based platform integrated with the F-Scale measurement device, providing digital monitoring of growth parameters and automated foot-arch analysis.',
+            "Built E-Growth, a web-based platform integrated with the F-Scale measurement device, providing digital monitoring of growth parameters and automated foot-arch analysis using Clarke's Angle calculation.",
         outcome:
-            'Implemented and tested at TK Ainun Habibie and local Posyandu, enabling digital growth and foot-structure monitoring for approximately 20 children.',
+            'Field-tested and validated on 180 children aged 2–7 years across TK & Daycare Habibie Ainun and Posyandu Kemuning Semarang, achieving 98.89% accuracy against wet footprint tests and published at SINTA 2 JTI.',
         role: 'Full-Stack Developer',
         year: '2025',
         websiteType: 'Monitoring System',

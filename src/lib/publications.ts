@@ -9,7 +9,7 @@ export const publications: Publication[] = [
         journal: 'Journal of Applied Informatics and Computing (JAIC), Vol. 10, No. 5',
         authors: 'Alfaturachman Maulana Pahlevi, Rohimatun Nisfah, Meysilla Cindy Silsiana, Cinantya Paramita',
         doi: '10.30871/jaic.v10i5.13637',
-        url: 'https://doi.org/10.30871/jaic.v10i5.13637',
+        url: 'https://jurnal.polibatam.ac.id/index.php/JAIC/article/view/13637',
         desc: '• Developed a leakage-aware evaluation protocol ensuring oversampling is confined exclusively to the training split, preserving pristine validation and test sets.\n• Evaluated lightweight and medium architectures on 1,538 hand-fracture X-ray images (FracAtlas); YOLOv8m achieved a 0.812 Recall (+73.2%) and 0.832 mAP@50 (+66.6%).\n• Demonstrated high clinical screening reliability (Specificity > 0.96, ROC-AUC > 0.967, FNR 0.061) with Grad-CAM activation verifying focus on anatomical bone fracture sites.',
     },
     {

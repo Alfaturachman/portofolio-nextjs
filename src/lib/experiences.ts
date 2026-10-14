@@ -21,7 +21,7 @@ export const experiences: Experience[] = [
     {
         date: 'OCT 2024 - JUNE 2025',
         badge: 'EPICS in IEEE',
-        title: 'Full-Stack Developer - (E-Growth)',
+        title: 'Full-Stack Developer (E-Growth)',
         org: 'EPICS in IEEE',
         orgIcon: 'flask',
         desc: '• Developed functional components for E-Growth: Digital Growth Monitoring Platform, a web-based system integrated with the F-Scale pediatric measurement device to centralize patient data.\n• Implemented automated foot-arch detection and classification (flatfoot, normal, and cavus foot) using Clarke\'s Angle calculation and digital image processing.\n• Evaluated and validated the system on 180 children aged 2–7 years across TK & Daycare Habibie Ainun and Posyandu Kemuning in Semarang, achieving 98.89% diagnostic accuracy against conventional wet footprint tests (published at SINTA 2 JTI).',

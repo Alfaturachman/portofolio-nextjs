@@ -6,6 +6,7 @@
     "certDesc": "01 Jan 2025",
     "dates": {
         "devops-pro-linux-docker-kubernetes-ci-cd-iac": "13 Okt 2026",
+        "ibm-data-science-professional": "15 Okt 2026",
         "ibm-introduction-to-data-science": "08 Okt 2026",
         "google-project-management": "05 Okt 2026",
         "applied-cryptography": "30 Sep 2026",
@@ -31,6 +32,7 @@
     },
     "descriptions": {
         "devops-pro-linux-docker-kubernetes-ci-cd-iac": "Spesialisasi ini dari KodeKloud sedang berjalan, mencakup Linux, Docker, Kubernetes, CI/CD, dan Infrastructure as Code.",
+        "ibm-data-science-professional": "Sertifikat Profesional ini dari IBM mencakup seluruh 12 kursus tentang dasar hingga penerapan Data Science, Python, SQL, Machine Learning, Generative AI, dan persiapan karir.",
         "ibm-introduction-to-data-science": "Spesialisasi ini dari IBM diperoleh setelah menyelesaikan seluruh 4 kursus tentang konsep dasar data science, tools, metodologi, dan basis data SQL dengan Python.",
         "google-project-management": "Sertifikat Profesional ini dari Google diperoleh setelah menyelesaikan seluruh 7 kursus tentang manajemen proyek tradisional dan agile.",
         "applied-cryptography": "Spesialisasi ini dari University of Colorado System diperoleh setelah menyelesaikan seluruh 4 kursus tentang Kriptografi Terapan.",

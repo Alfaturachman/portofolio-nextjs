@@ -6,6 +6,7 @@
     "certDesc": "01 Jan 2025",
     "dates": {
         "devops-pro-linux-docker-kubernetes-ci-cd-iac": "13 Oct 2026",
+        "ibm-data-science-professional": "15 Oct 2026",
         "ibm-introduction-to-data-science": "08 Oct 2026",
         "google-project-management": "05 Oct 2026",
         "applied-cryptography": "30 Sep 2026",
@@ -31,6 +32,7 @@
     },
     "descriptions": {
         "devops-pro-linux-docker-kubernetes-ci-cd-iac": "This Specialization from KodeKloud is currently in progress, covering Linux, Docker, Kubernetes, CI/CD, and Infrastructure as Code.",
+        "ibm-data-science-professional": "This Professional Certificate from IBM covers all 12 courses spanning foundational to advanced applied Data Science, Python, SQL, Machine Learning, Generative AI, and career preparation.",
         "ibm-introduction-to-data-science": "This Specialization from IBM is earned after completing all 4 courses covering foundational data science concepts, tools, methodologies, and SQL databases with Python.",
         "google-project-management": "This Professional Certificate from Google is earned after completing all 7 courses covering traditional and agile project management.",
         "applied-cryptography": "This Specialization from University of Colorado System is earned after completing all 4 courses in Applied Cryptography.",

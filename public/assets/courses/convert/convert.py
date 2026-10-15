@@ -3,7 +3,6 @@ import os
 from pathlib import Path
 import pymupdf as fitz  # PyMuPDF
 
-
 def convert_pdf(pdf_path: Path, output_dir: Path, max_width: int = 1600):
     try:
         doc = fitz.open(str(pdf_path))

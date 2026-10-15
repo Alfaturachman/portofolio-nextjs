@@ -117,8 +117,20 @@ export default async function CertificateDetailPage({
                         >
                             <FontAwesomeIcon icon={faExternalLinkAlt} />
                             <Tx
-                                k={cert.status === 'in-progress' || cert.status === 'coming-soon' ? 'courses.viewSpecialization' : 'courses.viewCredential'}
-                                fallback={cert.status === 'in-progress' || cert.status === 'coming-soon' ? 'View Specialization' : 'View Credential'}
+                                k={
+                                    cert.status === 'in-progress' || cert.status === 'coming-soon'
+                                        ? cert.category === 'Specialization'
+                                            ? 'courses.viewSpecialization'
+                                            : 'courses.viewCourse'
+                                        : 'courses.viewCredential'
+                                }
+                                fallback={
+                                    cert.status === 'in-progress' || cert.status === 'coming-soon'
+                                        ? cert.category === 'Specialization'
+                                            ? 'View Specialization'
+                                            : 'View Course'
+                                        : 'View Credential'
+                                }
                             />
                         </a>
                         )}

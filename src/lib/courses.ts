@@ -1182,7 +1182,7 @@ export const coursesData: {
             title: 'Applied Data Science Capstone',
             provider: 'IBM',
             issuer: 'Coursera',
-            status: 'coming-soon',
+            status: 'completed',
             skills: [
                 'Data Science Capstone',
                 'Data Analysis',
@@ -1191,9 +1191,9 @@ export const coursesData: {
                 'Python',
             ],
             credentialUrl:
-                'https://www.coursera.org/learn/applied-data-science-capstone',
-            credential: '',
-            image: '',
+                'https://www.coursera.org/account/accomplishments/verify/MRDA7V1YWS20',
+            credential: 'MRDA7V1YWS20',
+            image: '/assets/courses/Coursera MRDA7V1YWS20.jpg',
         },
         {
             id: 52,

@@ -1089,12 +1089,12 @@ export const coursesData: {
             title: 'Python Project for Data Science',
             provider: 'IBM',
             issuer: 'Coursera',
-            status: 'coming-soon',
+            status: 'completed',
             skills: ['Python', 'Web Scraping', 'Dashboard', 'Data Analysis'],
             credentialUrl:
-                'https://www.coursera.org/learn/python-project-for-data-science',
-            credential: '',
-            image: '',
+                'https://www.coursera.org/account/accomplishments/verify/P6550AFXL6AG',
+            credential: 'P6550AFXL6AG',
+            image: '/assets/courses/Coursera P6550AFXL6AG.jpg',
         },
         {
             id: 47,

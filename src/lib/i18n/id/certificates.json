@@ -6,7 +6,7 @@
     "certDesc": "01 Jan 2025",
     "dates": {
         "devops-pro-linux-docker-kubernetes-ci-cd-iac": "13 Okt 2026",
-        "ibm-data-science-professional": "15 Okt 2026",
+        "ibm-data-science-professional": "21 Okt 2026",
         "ibm-introduction-to-data-science": "08 Okt 2026",
         "google-project-management": "05 Okt 2026",
         "applied-cryptography": "30 Sep 2026",
@@ -31,19 +31,19 @@
         "apti-pemrograman-web": "Pemrograman Web"
     },
     "descriptions": {
-        "devops-pro-linux-docker-kubernetes-ci-cd-iac": "Spesialisasi ini dari KodeKloud sedang berjalan, mencakup Linux, Docker, Kubernetes, CI/CD, dan Infrastructure as Code.",
-        "ibm-data-science-professional": "Sertifikat Profesional ini dari IBM mencakup seluruh 12 kursus tentang dasar hingga penerapan Data Science, Python, SQL, Machine Learning, Generative AI, dan persiapan karir.",
-        "ibm-introduction-to-data-science": "Spesialisasi ini dari IBM diperoleh setelah menyelesaikan seluruh 4 kursus tentang konsep dasar data science, tools, metodologi, dan basis data SQL dengan Python.",
-        "google-project-management": "Sertifikat Profesional ini dari Google diperoleh setelah menyelesaikan seluruh 7 kursus tentang manajemen proyek tradisional dan agile.",
-        "applied-cryptography": "Spesialisasi ini dari University of Colorado System diperoleh setelah menyelesaikan seluruh 4 kursus tentang Kriptografi Terapan.",
-        "ibm-ai-foundations-for-everyone": "Spesialisasi ini dari IBM diperoleh setelah menyelesaikan seluruh 4 kursus tentang dasar-dasar Artificial Intelligence (AI).",
-        "ibm-devops-software-engineering": "Sertifikat Profesional ini dari IBM diperoleh setelah menyelesaikan seluruh 15 kursus tentang DevOps dan Rekayasa Perangkat Lunak.",
-        "ibm-machine-learning": "Sertifikat Profesional ini dari IBM diperoleh setelah menyelesaikan seluruh 6 kursus tentang Machine Learning dan Deep Learning.",
-        "ibm-introduction-to-machine-learning": "Spesialisasi ini dari IBM diperoleh setelah menyelesaikan seluruh 4 kursus tentang dasar-dasar Machine Learning.",
-        "pimnas-peserta": "Sertifikat resmi keikutsertaan sebagai Finalis / Peserta Pekan Ilmiah Mahasiswa Nasional (PIMNAS) ke-38 dari Kemdiktisaintek dan Belmawa.",
-        "pimnas-pendanaan": "Sertifikat penghargaan atas keberhasilan meraih pendanaan Program Kreativitas Mahasiswa bidang Karya Inovatif (PKM-KI) 2025 dari Kemdiktisaintek dan Belmawa.",
-        "bnsp-web-developer": "Sertifikat Kompetensi resmi Badan Nasional Sertifikat Profesi (BNSP) melalui LSP Universitas Dian Nuswantoro dalam skema Web Developer.",
-        "bnsp-junior-mobile-programmer": "Sertifikat Kompetensi resmi Badan Nasional Sertifikat Profesi (BNSP) melalui LSP Universitas Dian Nuswantoro dalam skema Junior Mobile Programmer.",
-        "apti-pemrograman-web": "Sertifikat Kompetensi Keahlian dari Asosiasi Profesi Telematika Indonesia (APTI) melalui LSP Universitas Dian Nuswantoro untuk standarisasi keahlian di bidang Pemrograman Web."
+        "devops-pro-linux-docker-kubernetes-ci-cd-iac": "Spesialisasi dari KodeKloud ini sedang dalam proses penyelesaian, dengan cakupan materi Linux, Docker, Kubernetes, CI/CD, dan Infrastructure as Code (IaC).",
+        "ibm-data-science-professional": "Sertifikat Profesional dari IBM ini mencakup 12 kursus yang membahas dasar-dasar hingga penerapan Data Science, Python, SQL, Machine Learning, Generative AI, serta persiapan karier.",
+        "ibm-introduction-to-data-science": "Spesialisasi dari IBM ini diperoleh setelah menyelesaikan 4 kursus yang membahas konsep dasar Data Science, perangkat dan metode yang digunakan, serta basis data SQL dengan Python.",
+        "google-project-management": "Sertifikat Profesional dari Google ini diperoleh setelah menyelesaikan 7 kursus yang membahas manajemen proyek dengan pendekatan tradisional dan Agile.",
+        "applied-cryptography": "Spesialisasi dari University of Colorado System ini diperoleh setelah menyelesaikan 4 kursus yang membahas penerapan konsep dan teknik kriptografi.",
+        "ibm-ai-foundations-for-everyone": "Spesialisasi dari IBM ini diperoleh setelah menyelesaikan 4 kursus yang membahas dasar-dasar kecerdasan buatan (Artificial Intelligence/AI).",
+        "ibm-devops-software-engineering": "Sertifikat Profesional dari IBM ini diperoleh setelah menyelesaikan 15 kursus yang membahas praktik DevOps dan rekayasa perangkat lunak.",
+        "ibm-machine-learning": "Sertifikat Profesional dari IBM ini diperoleh setelah menyelesaikan 6 kursus yang membahas Machine Learning dan Deep Learning.",
+        "ibm-introduction-to-machine-learning": "Spesialisasi dari IBM ini diperoleh setelah menyelesaikan 4 kursus yang membahas dasar-dasar Machine Learning.",
+        "pimnas-peserta": "Sertifikat resmi yang menyatakan keikutsertaan sebagai finalis atau peserta dalam Pekan Ilmiah Mahasiswa Nasional (PIMNAS) ke-38, yang diselenggarakan oleh Kemdiktisaintek melalui unit terkait.",
+        "pimnas-pendanaan": "Sertifikat pengakuan atas pendanaan yang diperoleh dalam Program Kreativitas Mahasiswa bidang Karya Inovatif (PKM-KI) tahun 2025 dari Kemdiktisaintek.",
+        "bnsp-web-developer": "Sertifikat Kompetensi dari Badan Nasional Sertifikasi Profesi (BNSP) melalui LSP Universitas Dian Nuswantoro untuk skema kompetensi Web Developer.",
+        "bnsp-junior-mobile-programmer": "Sertifikat Kompetensi dari Badan Nasional Sertifikasi Profesi (BNSP) melalui LSP Universitas Dian Nuswantoro untuk skema kompetensi Junior Mobile Programmer.",
+        "apti-pemrograman-web": "Sertifikat kompetensi di bidang Pemrograman Web melalui LSP Universitas Dian Nuswantoro, dengan keterkaitan pada Asosiasi Profesi Telematika Indonesia (APTI), sesuai keterangan pada sertifikat."
     }
 }

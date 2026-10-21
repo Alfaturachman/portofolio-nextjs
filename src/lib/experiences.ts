@@ -14,7 +14,7 @@ export const experiences: Experience[] = [
         date: 'MAY 2025 - MARCH 2026',
         badge: 'PIMNAS Finalist & IEEE Awardee',
         title: 'AI/ML & Full-Stack Developer (STEDI)',
-        org: 'Ministry of Education & EPICS in IEEE',
+        org: 'PKM & EPICS in IEEE',
         orgIcon: 'flask',
         desc: '• Contributed to developing STEDI: Pre-Diagnostic Screening Assistant for Elderly Health Posts, advancing the innovation to the National Finals of the 38th Pekan Ilmiah Mahasiswa Nasional (PIMNAS) under the Student Creativity Program for Innovative Works (PKM-KI).\n• As part of the team, helped scale the project to an international level, securing a US$3,150 humanitarian technology grant from EPICS in IEEE (Jon C. Taenzer Memorial Fund).\n• Officially registered as a co-inventor in the Industrial Design Intellectual Property Rights (HKI) for the STEDI Monitor Box physical device.',
     },
@@ -32,7 +32,7 @@ export const experiences: Experience[] = [
         badgeType: 'ghost',
         title: 'Full-Stack Web Developer Intern',
         org: 'UDINUS Faculty of Engineering',
-        orgIcon: 'university',
+        orgIcon: 'briefcase',
         desc: '• Developed and maintained four web-based systems for strategic planning, academic management, community service, and faculty healthcare operations, collaborating with university stakeholders.\n• RENSTRA FT: Strategic planning and KPI monitoring system for faculty strategic plans and lecturer workload.\n• Portfolio MK FT: Centralized platform for managing and documenting faculty course materials.\n• UMKM Repro: Supply chain management system for crumb rubber production and delivery route optimization using TSP, Nearest Neighbor, and Haversine.\n• Medical Checkup FT: Health platform integrated with IoT self-service health kiosks for patient data management.',
     },
 ];

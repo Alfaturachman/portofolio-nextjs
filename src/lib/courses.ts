@@ -35,7 +35,7 @@ export const coursesData: {
             id: 'ibm-data-science-professional',
             title: 'IBM Data Science Professional',
             category: 'Professional Certificate',
-            status: 'in-progress',
+            status: 'completed',
             provider: 'IBM',
             issuer: 'Coursera',
             date: '2026-10-15',
@@ -50,9 +50,9 @@ export const coursesData: {
                 'Deep Learning',
             ],
             credentialUrl:
-                'https://www.coursera.org/professional-certificates/ibm-data-science',
-            credential: '',
-            image: '',
+                'https://www.coursera.org/account/accomplishments/professional-cert/3YVF13YZ9BID',
+            credential: '3YVF13YZ9BID',
+            image: '/assets/certificates/IBM Data Science Professional.jpg',
             logo: '/assets/images/logo/ibm.svg',
         },
         {
@@ -1201,7 +1201,7 @@ export const coursesData: {
             title: 'Generative AI: Elevate Your Data Science Career',
             provider: 'IBM',
             issuer: 'Coursera',
-            status: 'coming-soon',
+            status: 'completed',
             skills: [
                 'Generative AI',
                 'Prompt Engineering',
@@ -1210,9 +1210,9 @@ export const coursesData: {
                 'AI Ethics',
             ],
             credentialUrl:
-                'https://www.coursera.org/learn/generative-ai-elevate-your-data-science-career',
-            credential: '',
-            image: '',
+                'https://www.coursera.org/account/accomplishments/verify/I4AEGG9LWAON',
+            credential: 'I4AEGG9LWAON',
+            image: '/assets/courses/Coursera I4AEGG9LWAON.jpg',
         },
         {
             id: 53,
@@ -1220,7 +1220,7 @@ export const coursesData: {
             title: 'Data Scientist Career Guide and Interview Preparation',
             provider: 'IBM',
             issuer: 'Coursera',
-            status: 'coming-soon',
+            status: 'completed',
             skills: [
                 'Career Development',
                 'Interview Preparation',
@@ -1229,9 +1229,9 @@ export const coursesData: {
                 'Technical Communication',
             ],
             credentialUrl:
-                'https://www.coursera.org/learn/career-guide-and-interview-prep-for-data-science',
-            credential: '',
-            image: '',
+                'https://www.coursera.org/account/accomplishments/verify/3YVF13YZ9BID',
+            credential: '3YVF13YZ9BID',
+            image: '/assets/courses/Coursera 3YVF13YZ9BID.jpg',
         },
     ],
 };

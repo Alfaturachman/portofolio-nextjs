@@ -6,7 +6,7 @@
     "certDesc": "01 Jan 2025",
     "dates": {
         "devops-pro-linux-docker-kubernetes-ci-cd-iac": "13 Oct 2026",
-        "ibm-data-science-professional": "15 Oct 2026",
+        "ibm-data-science-professional": "21 Oct 2026",
         "ibm-introduction-to-data-science": "08 Oct 2026",
         "google-project-management": "05 Oct 2026",
         "applied-cryptography": "30 Sep 2026",
@@ -31,19 +31,19 @@
         "apti-pemrograman-web": "Web Programming"
     },
     "descriptions": {
-        "devops-pro-linux-docker-kubernetes-ci-cd-iac": "This Specialization from KodeKloud is currently in progress, covering Linux, Docker, Kubernetes, CI/CD, and Infrastructure as Code.",
-        "ibm-data-science-professional": "This Professional Certificate from IBM covers all 12 courses spanning foundational to advanced applied Data Science, Python, SQL, Machine Learning, Generative AI, and career preparation.",
-        "ibm-introduction-to-data-science": "This Specialization from IBM is earned after completing all 4 courses covering foundational data science concepts, tools, methodologies, and SQL databases with Python.",
-        "google-project-management": "This Professional Certificate from Google is earned after completing all 7 courses covering traditional and agile project management.",
-        "applied-cryptography": "This Specialization from University of Colorado System is earned after completing all 4 courses in Applied Cryptography.",
-        "ibm-ai-foundations-for-everyone": "This Specialization from IBM is earned after completing all 4 courses covering the foundations of Artificial Intelligence (AI).",
-        "ibm-devops-software-engineering": "This Professional Certificate from IBM is earned after completing all 15 courses in DevOps and Software Engineering.",
-        "ibm-machine-learning": "This Professional Certificate from IBM is earned after completing all 6 courses in Machine Learning and Deep Learning.",
-        "ibm-introduction-to-machine-learning": "This Specialization from IBM is earned after completing all 4 courses covering the fundamentals of Machine Learning.",
-        "pimnas-peserta": "Official certificate of participation as a Finalist / Participant in the 38th National Student Scientific Week (PIMNAS) by Kemdiktisaintek and Belmawa.",
-        "pimnas-pendanaan": "Award certificate for securing funding in the Student Creativity Program for Innovative Works (PKM-KI) 2025 by Kemdiktisaintek and Belmawa.",
-        "bnsp-web-developer": "Official Certificate of Competence from the National Professional Certification Agency (BNSP) through LSP Universitas Dian Nuswantoro in the Web Developer scheme.",
-        "bnsp-junior-mobile-programmer": "Official Certificate of Competence from the National Professional Certification Agency (BNSP) through LSP Universitas Dian Nuswantoro in the Junior Mobile Programmer scheme.",
-        "apti-pemrograman-web": "Professional Competency Certificate from the Indonesian Telematics Professional Association (APTI) through LSP Universitas Dian Nuswantoro for skill standardization in Web Programming."
+        "devops-pro-linux-docker-kubernetes-ci-cd-iac": "This KodeKloud Specialization covers five courses focused on Linux, Docker, Kubernetes, CI/CD, and Infrastructure as Code (IaC).",
+        "ibm-data-science-professional": "This IBM Professional Certificate comprises 12 courses covering data science fundamentals, Python, SQL, machine learning, generative AI, and career preparation.",
+        "ibm-introduction-to-data-science": "This IBM Specialization comprises four courses covering foundational data science concepts, tools, methodologies, and SQL databases with Python.",
+        "google-project-management": "This Google Professional Certificate comprises seven courses covering traditional and agile project management.",
+        "applied-cryptography": "This University of Colorado System Specialization comprises four courses covering applied cryptography.",
+        "ibm-ai-foundations-for-everyone": "This IBM Specialization comprises four courses covering the fundamentals of artificial intelligence (AI).",
+        "ibm-devops-software-engineering": "This IBM Professional Certificate comprises 15 courses covering DevOps practices and software engineering.",
+        "ibm-machine-learning": "This IBM Professional Certificate comprises six courses covering machine learning and deep learning.",
+        "ibm-introduction-to-machine-learning": "This IBM Specialization comprises four courses covering the fundamentals of machine learning.",
+        "pimnas-peserta": "Official certificate recognizing participation as a finalist or participant in the 38th National Student Scientific Week (PIMNAS), organized by the relevant Indonesian higher education authorities.",
+        "pimnas-pendanaan": "Certificate documenting funding awarded to the 2025 Student Creativity Program for Innovative Works (PKM-KI), subject to the official certificate wording.",
+        "bnsp-web-developer": "Certificate of Competence issued through LSP Universitas Dian Nuswantoro under the Web Developer competency scheme, within Indonesia's national professional certification framework.",
+        "bnsp-junior-mobile-programmer": "Certificate of Competence issued through LSP Universitas Dian Nuswantoro under the Junior Mobile Programmer competency scheme, within Indonesia's national professional certification framework.",
+        "apti-pemrograman-web": "Professional competency certificate issued through LSP Universitas Dian Nuswantoro in association with the Indonesian Telematics Professional Association (APTI), covering web programming competencies."
     }
 }

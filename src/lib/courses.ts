@@ -33,12 +33,12 @@ export const coursesData: {
         },
         {
             id: 'ibm-data-science-professional',
-            title: 'IBM Data Science Professional',
+            title: 'IBM Data Science',
             category: 'Professional Certificate',
             status: 'completed',
             provider: 'IBM',
             issuer: 'Coursera',
-            date: '2026-10-15',
+            date: '2026-10-21',
             skills: [
                 'Data Science',
                 'Python',
@@ -50,8 +50,8 @@ export const coursesData: {
                 'Deep Learning',
             ],
             credentialUrl:
-                'https://www.coursera.org/account/accomplishments/professional-cert/3YVF13YZ9BID',
-            credential: '3YVF13YZ9BID',
+                'https://www.coursera.org/account/accomplishments/professional-cert/RCFA92Q35ADI',
+            credential: 'RCFA92Q35ADI',
             image: '/assets/certificates/IBM Data Science Professional.jpg',
             logo: '/assets/images/logo/ibm.svg',
         },

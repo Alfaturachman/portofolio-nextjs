@@ -31,7 +31,7 @@ export default function Hero() {
                     <div className="hero-profile-body">
                         <div className="hero-avatar-wrap">
                             <Image
-                                src="/assets/images/profile/profile_almavi.PNG"
+                                src="/assets/images/profile/profile.jpeg"
                                 alt="Alfaturachman Maulana Pahlevi"
                                 width={160}
                                 height={160}

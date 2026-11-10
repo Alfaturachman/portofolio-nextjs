@@ -119,7 +119,7 @@ export default function RootLayout({
                             '@type': 'Person',
                             name: 'Alfaturachman Maulana Pahlevi',
                             url: 'https://almavi.vercel.app/',
-                            image: 'https://almavi.vercel.app/assets/images/profile/profile_almavi.PNG',
+                            image: 'https://almavi.vercel.app/assets/images/profile/profile.jpeg',
                             sameAs: [
                                 'https://github.com/Alfaturachman',
                                 'https://www.linkedin.com/in/alfaturachman-maulana-pahlevi/',

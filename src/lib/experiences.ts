@@ -6,9 +6,9 @@ export const experiences: Experience[] = [
         badge: 'Internship',
         badgeType: 'ghost',
         title: 'IT Support Intern',
-        org: 'PT Kinarya Alihdaya Mandiri (PT KAM)',
+        org: 'PT Kinarya Alihdaya Mandiri',
         orgIcon: 'briefcase',
-        desc: '• Provide day-to-day IT operational support: computer hardware maintenance, operating system & software installation, and workstation peripheral troubleshooting.\n• Assist candidate selection and recruitment operations: coordinating interview schedules (online/offline sessions), managing applicant contact records, and organizing candidate dossiers.\n• Manage computer hardware and software asset inventories, resolve daily user technical issues, and perform routine PC maintenance for office operations.',
+        desc: '• Support candidate recruitment processes from processing and screening applicant data through recruitment platforms based on HRD criteria, compiling candidate information and documents, coordinating interview schedules and formats (online/offline), to reporting compiled results to support the selection stages.\n• Contribute to quality control, validation, and alignment of outsourcing project billing administration documents across multiple clients, including a national tier-1 telecommunications client (20 files totaling over IDR 300 million) and a multinational FMCG manufacturing company, by verifying operational attachments, standardizing legal document formats, and reconciling data to support billing accuracy.\n• Support processing, standardization, and synchronization of outsourced workforce operational data for a national tier-1 telecommunications project (over 150 personnel across dozens of POs) and a construction and infrastructure partner company through cross-system attendance validation (digital attendance app, shift schedules, and timesheets), while contributing to enhancing an interactive Excel-based counseling form using XLOOKUP and dynamic data validation.',
     },
     {
         date: 'MAY 2025 - MARCH 2026',
@@ -33,7 +33,7 @@ export const experiences: Experience[] = [
         title: 'Full-Stack Web Developer Intern',
         org: 'UDINUS Faculty of Engineering',
         orgIcon: 'briefcase',
-        desc: '• Developed and maintained four web-based systems for strategic planning, academic management, community service, and faculty healthcare operations, collaborating with university stakeholders.\n• RENSTRA FT: Strategic planning and KPI monitoring system for faculty strategic plans and lecturer workload.\n• Portfolio MK FT: Centralized platform for managing and documenting faculty course materials.\n• UMKM Repro: Supply chain management system for crumb rubber production and delivery route optimization using TSP, Nearest Neighbor, and Haversine.\n• Medical Checkup FT: Health platform integrated with IoT self-service health kiosks for patient data management.',
+        desc: '• Developed four web-based systems: RENSTRA FT for faculty strategic planning, Portfolio MK FT for course material management, UMKM Repro for supply chain management, and Medical Checkup FT for health data management.\n• Collaborated with lecturers and faculty stakeholders to identify system requirements, develop features, and tailor application functionality to operational and academic needs.\n• Participated in web application development and maintenance, covering database design, API implementation, and user interface development to support workflow digitalization across the faculty.',
     },
 ];
 

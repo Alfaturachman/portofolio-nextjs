@@ -14,8 +14,8 @@
         "date": "OKT 2026 - SEKARANG",
         "badge": "Magang",
         "title": "Magang IT Support",
-        "org": "PT Kinarya Alihdaya Mandiri (PT KAM)",
-        "desc": "• Memberikan dukungan operasional IT harian, termasuk membantu instalasi dan konfigurasi perangkat lunak (software) serta menangani kendala teknis dasar pada perangkat kerja staf.\n• Membantu proses seleksi dan rekrutmen kandidat, meliputi koordinasi jadwal dan media wawancara (daring/luring), rekapitulasi kontak pelamar, serta pengelolaan berkas kandidat.\n• Mengolah dan merekapitulasi data pelamar dari platform rekrutmen, menyusun ringkasan informasi kandidat berdasarkan kriteria yang ditetapkan HRD, serta membantu penyampaian hasil rekapitulasi untuk mendukung proses seleksi."
+        "org": "PT Kinarya Alihdaya Mandiri",
+        "desc": "• Mendukung proses rekrutmen kandidat mulai dari pengolahan dan penyaringan data pelamar melalui platform rekrutmen berdasarkan kriteria HRD, rekapitulasi informasi dan berkas kandidat, koordinasi jadwal serta media wawancara (daring/luring), hingga penyampaian hasil rekapitulasi untuk mendukung tahapan seleksi.\n• Berkontribusi dalam proses quality control, validasi, dan penyelarasan dokumen administrasi penagihan proyek alih daya pada beberapa klien, termasuk klien telekomunikasi tier-1 nasional (20 berkas senilai lebih dari Rp300 juta) dan perusahaan FMCG multinasional pada unit operasional pabrik, melalui pemeriksaan kelengkapan lampiran operasional, penyesuaian format dokumen legal, serta rekonsiliasi data untuk mendukung akurasi proses billing.\n• Mendukung pengolahan, standardisasi, dan sinkronisasi data operasional tenaga alih daya pada proyek klien telekomunikasi tier-1 nasional (lebih dari 150 tenaga kerja dan puluhan PO) serta mitra perusahaan sektor konstruksi dan infrastruktur melalui validasi data presensi lintas sistem (aplikasi presensi digital, jadwal shift, dan timesheet), sekaligus berkontribusi dalam penyempurnaan formulir konseling interaktif berbasis Excel menggunakan XLOOKUP dan validasi data dinamis."
         },
         {
             "date": "MEI 2025 - MARET 2026",
@@ -36,7 +36,7 @@
             "badge": "Magang",
             "title": "Magang Full-Stack Web Developer",
             "org": "Fakultas Teknik UDINUS",
-            "desc": "• Mengembangkan dan memelihara empat sistem berbasis web untuk perencanaan strategis, manajemen akademik, pengabdian kepada masyarakat, dan operasional kesehatan fakultas, berkolaborasi dengan pemangku kepentingan universitas.\n• RENSTRA FT: Sistem perencanaan strategis dan pemantauan KPI untuk rencana strategis fakultas dan beban kerja dosen.\n• Portfolio MK FT: Platform terpusat untuk mengelola dan mendokumentasikan materi kuliah fakultas.\n• UMKM Repro: Sistem manajemen rantai pasok untuk produksi karet remah dan optimasi rute pengiriman menggunakan TSP, Nearest Neighbor, dan Haversine.\n• Medical Checkup FT: Platform kesehatan yang terintegrasi dengan kiosk mandiri berbasis IoT untuk manajemen data pasien."
+            "desc": "• Mengembangkan empat sistem berbasis web, yaitu RENSTRA FT untuk perencanaan strategis fakultas, Portfolio MK FT untuk pengelolaan materi perkuliahan, UMKM Repro untuk manajemen rantai pasok, serta Medical Checkup FT untuk pengelolaan data kesehatan.\n• Berkolaborasi dengan dosen dan pemangku kepentingan fakultas dalam mengidentifikasi kebutuhan sistem, mengembangkan fitur, serta menyesuaikan fungsionalitas aplikasi dengan kebutuhan operasional dan akademik.\n• Terlibat dalam pengembangan dan pemeliharaan aplikasi web, meliputi perancangan basis data, implementasi API, dan pengembangan antarmuka pengguna untuk mendukung digitalisasi proses kerja di lingkungan fakultas."
         }
     ]
 }

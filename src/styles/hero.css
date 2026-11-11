@@ -40,7 +40,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    padding: 0px 24px 0px;
+    padding: 32px 24px 0px;
 }
 
 @media (max-width: 480px) {
@@ -63,8 +63,6 @@
     overflow: hidden;
     box-shadow: 0 4px 20px var(--shadow-card);
     transition: border-color 0.2s, box-shadow 0.2s;
-    /* Overlap the banner's bottom edge by ~50% (half the avatar height) */
-    margin-top: -80px;
 }
 
 .hero-avatar {
@@ -277,7 +275,6 @@
     .hero-avatar-wrap {
         width: 120px;
         height: 120px;
-        margin-top: -60px;
     }
 }
 
@@ -288,7 +285,7 @@
 
     .hero-profile-body {
         gap: 16px;
-        padding: 0px 32px 0px;
+        padding: 24px 32px 0px;
     }
 
     .hero-cta-row {
@@ -305,7 +302,6 @@
         width: 112px;
         height: 112px;
         border-radius: 24px;
-        margin-top: -56px;
     }
 
     .hero-social-link {

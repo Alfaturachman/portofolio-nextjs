@@ -77,21 +77,6 @@ body {
     overflow-x: clip;
 }
 
-html.has-custom-cursor body,
-html.has-custom-cursor a,
-html.has-custom-cursor button {
-    cursor: none;
-}
-
-/* HIG: Respect user motion preferences — disable custom cursor */
-@media (prefers-reduced-motion: reduce) {
-    html.has-custom-cursor body,
-    html.has-custom-cursor a,
-    html.has-custom-cursor button {
-        cursor: auto;
-    }
-}
-
 ::-webkit-scrollbar {
     width: 5px;
 }

@@ -6,7 +6,6 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Cursor from '@/components/Cursor';
 import Chatbot from '@/components/Chatbot';
 import { ThemeProvider } from '@/lib/theme-context';
 import { ChatbotProvider } from '@/lib/chatbot-context';
@@ -149,7 +148,6 @@ export default function RootLayout({
             <body className="min-h-full flex flex-col">
                 <ThemeProvider>
                     <LanguageProvider>
-                        <Cursor />
                         <a href="#main-content" className="skip-link">
                             Skip to content
                         </a>

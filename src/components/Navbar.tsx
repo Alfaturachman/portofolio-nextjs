@@ -7,11 +7,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
 import { useChatbot } from '@/lib/chatbot-context';
 
 const FOCUSABLE = 'a, button, [tabindex]:not([tabindex="-1"])';
+
+const LOGO_BOX_PATH =
+    'M800,1000H200C89.5,1000,0,910.5,0,800V200C0,89.5,89.5,0,200,0h600c110.5,0,200,89.5,200,200v600C1000,910.5,910.5,1000,800,1000z';
+
+const LOGO_MARK_PATHS = [
+    'M498.7,434.5c0,0.1-0.1,0.1-0.1,0.1L322.4,740.1c-3.5,6.1-10.1,9.9-17.2,9.9h-68c-15.2,0-24.8-16.5-17.2-29.7l4.1-7.2L430,355.5c7-12.1,23.6-13.1,32.2-3l33.3,57.7l3,5.2C501.9,421.3,502,428.6,498.7,434.5z',
+    'M592.7,597.3l-0.1,0.1l-34.2,59.3l-48.1,83.3c0,0,0,0.1-0.1,0.1c-3.6,6.1-10.1,9.8-17.1,9.8h-68c-15.3,0-24.8-16.5-17.2-29.7l73.3-128l42.6-74.1c7-12.1,23.6-13.1,32.2-3l33.3,57.7l3,5.2C595.8,584.1,595.9,591.4,592.7,597.3z',
+    'M780,598.3l-5.9,10.4L774,609l-27.6,47.8l-2.5,4.3l0,0l-15,26L706,726.7l-7.7,13.3c-3.5,6.1-10.1,9.9-17.2,9.9h-68c-15.3,0-24.8-16.5-17.2-29.7l39.2-68.2l30.6-53.2c3.5-6.1,3.5-13.7,0-19.8l-172-299l-0.2-0.4c-7.6-13.2,1.9-29.7,17.2-29.7h68c7.1,0,13.6,3.8,17.2,9.9l184,318.7C783.5,584.7,783.5,592.2,780,598.3z',
+];
+
+const LOGO_VARIANTS = [
+    { variant: 'black', bg: '#0D0D0D', fg: '#FDFDFD' },
+    { variant: 'white', bg: '#FFFFFF', fg: '#000000' },
+] as const;
 
 export default function Navbar() {
     const { theme, toggleTheme } = useTheme();
@@ -113,22 +126,22 @@ export default function Navbar() {
                     onClick={(e) => handleNavClick(e, '/')}
                     aria-label="Home"
                 >
-                    <Image
-                        src="/assets/images/logo/logo-almavi-black.png"
-                        alt="Almavi"
-                        width={32}
-                        height={32}
-                        className="nav-logo-img nav-logo-black"
-                        priority
-                    />
-                    <Image
-                        src="/assets/images/logo/logo-almavi-white.png"
-                        alt="Almavi"
-                        width={32}
-                        height={32}
-                        className="nav-logo-img nav-logo-white"
-                        priority
-                    />
+                    {LOGO_VARIANTS.map(({ variant, bg, fg }) => (
+                        <svg
+                            key={variant}
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1000 1000"
+                            className={`nav-logo-img nav-logo-${variant}`}
+                            aria-hidden="true"
+                        >
+                            <path fill={bg} d={LOGO_BOX_PATH} />
+                            <g fill={fg}>
+                                {LOGO_MARK_PATHS.map((d, i) => (
+                                    <path key={i} d={d} />
+                                ))}
+                            </g>
+                        </svg>
+                    ))}
                 </Link>
                 <div className="nav-links" role="list">
                     {links.map((link) => (

@@ -102,52 +102,6 @@
     cursor: grabbing;
 }
 
-/* ----- Custom Cursor ----- */
-.cursor-dot {
-    width: 6px;
-    height: 6px;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    z-index: 10001;
-    pointer-events: none;
-    transition:
-        width 0.2s,
-        height 0.2s;
-    will-change: transform;
-    mix-blend-mode: difference;
-}
-
-.cursor-outline {
-    width: 30px;
-    height: 30px;
-    border: 1.5px solid #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    z-index: 10000;
-    pointer-events: none;
-    transition:
-        width 0.3s,
-        height 0.3s;
-    will-change: transform;
-    mix-blend-mode: difference;
-}
-
-.cursor-dot.pointer {
-    width: 4px;
-    height: 4px;
-}
-
-.cursor-outline.pointer {
-    width: 45px;
-    height: 50px;
-    border-color: transparent;
-}
-
 /* ----- Skeleton ----- */
 .skeleton {
     position: absolute;
@@ -234,10 +188,6 @@
 @media (prefers-reduced-motion: reduce) {
     .skeleton {
         animation: none;
-    }
-    .cursor-dot,
-    .cursor-outline {
-        display: none;
     }
 }
 

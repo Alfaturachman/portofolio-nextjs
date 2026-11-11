@@ -15,18 +15,6 @@ export default function Hero() {
             <div className="container">
                 {/* Profile card row */}
                 <div className="hero-profile-row hero-fade-in-1">
-                    {/* Banner (aurora blobs + base image) */}
-                    <div className="hero-banner" aria-hidden="true">
-                        <Image
-                            src="/assets/images/banner/monochrome-banner.png"
-                            alt=""
-                            fill
-                            sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, 1200px"
-                            priority
-                            className="hero-banner-img"
-                        />
-                    </div>
-
                     {/* Profile body */}
                     <div className="hero-profile-body">
                         <div className="hero-avatar-wrap">
